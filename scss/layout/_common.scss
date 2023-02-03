@@ -1,0 +1,54 @@
+/* layout > common
+============================================================================================================ */
+
+$header_height_pc: 80px;
+$header_height_sp: size_sp(99);
+
+//Basic 基本
+.common-main{
+  width: 100%;
+  height: 100%;
+  margin-top: $header_height_pc;//ヘッダーの高さを入れる
+  padding-bottom: 150px;
+	@include mq_tab {
+	}
+	@include mq_pad {
+	}
+	@include mq_sp {
+    margin-top: $header_height_sp;//ヘッダーの高さを入れる
+    padding-bottom: size_sp(200);
+	}
+}
+
+//TOP トップページ
+.home .common-main{
+  margin-top: 0;
+	@include mq_sp {
+	}
+}
+
+//Archive 記事一覧ページ
+.archive{
+  .common-main{
+    @include mq_tab {
+    }
+    @include mq_sp {
+    }
+  }
+}
+
+//Page 固定ページ
+.page{
+  .common-main{
+    @include mq_sp {
+    }
+  }
+}
+
+//Single 記事詳細ページ
+.single{
+  .common-main{
+    @include mq_sp {
+    }
+  }
+}

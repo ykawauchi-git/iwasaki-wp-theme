@@ -1,0 +1,151 @@
+/* module > top > news
+============================================================================ */
+
+.top-news{
+  position: relative;
+  padding: 128px 0 60px;
+  background: $blue05;
+  margin-top: 177px;
+  @include mq_sp{
+    padding: size_sp(126) 0 size_sp(100);
+    margin-top: size_sp(200);
+  }
+  &__heading{
+    position: absolute;
+    top: -97px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    @include mq_sp{
+      top: size_sp(-100);
+      left: 0;
+      transform: none;
+    }
+    .en{
+      margin-left: 7px;
+      @include mq_sp{
+        margin-left: size_sp(7);
+      }
+    }
+  }
+  &__inner{
+    @include flex(flex, wrap, flex-start, normal, normal, row);
+    max-width: 1162px;
+    width: 100%;
+    margin: 0 auto;
+    @media screen and (max-width: 1200px) {
+      max-width: 95%;
+    }
+    @include mq_sp{
+      max-width: size_sp(670);
+    }
+  }
+  &__post{
+    @include flex(flex, wrap, flex-start, normal, normal, column);
+    @include box-shadow();
+    max-width: 364px;
+    width: (364/1162) * 100%;
+    padding: (30/1162) * 100%;
+    background: $white00;
+    margin-right: (35/1162) * 100%;
+    @include mq_sp{
+      justify-content: space-between;
+      flex-direction: row;
+      max-width: 100%;
+      width: 100%;
+      padding: size_sp(30);
+      margin-right: 0;
+    }
+    &:nth-of-type(n + 2){
+      @include mq_sp{
+        margin-top: size_sp(50);
+      }
+    }
+    &:last-of-type{
+      margin-right: 0;
+    }
+    &Thumb{
+      width: 100%;
+      @include mq_sp{
+        max-width: size_sp(244);
+      }
+      a{
+        display: block;
+        width: 100%;
+        height: 203px;
+        @include mq_sp{
+          height: size_sp(164);
+          margin-top: size_sp(13);
+        }
+      }
+    }
+    &Info{
+      margin-top: 10px;
+      margin-bottom: 15px;
+      @include mq_sp{
+        max-width: size_sp(336);
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+    }
+    &Date{
+      line-height: (24/16);
+      @include mq_sp{
+        @include fz_vw(26);
+        line-height: (37/26);
+      }
+    }
+    &Ttl{
+      @include font-size(16);
+      line-height: (37/16);
+      font-weight: 500;
+      margin-top: 5px;
+      @include mq_sp{
+        @include fz_vw(28);
+        line-height: (58/28);
+        margin-top: 0;
+        margin-top: (58/28) * -0.12em;
+        margin-bottom: (58/28) * -0.5em;
+      }
+      a{
+        text-underline-offset: 3px;
+        &:hover{
+          opacity: 1;
+          text-decoration: underline;
+        }
+      }
+    }
+    &Tag{
+      @include flex(flex, wrap, flex-start, normal, normal, row);
+      margin-top: auto;
+      margin-bottom: -12px;
+      @include mq_sp{
+        margin-top: size_sp(40);
+        margin-bottom: size_sp(-20);
+      }
+      li{
+        @include font-size(12);
+        display: inline-block;
+        padding: 4px 8px;
+        line-height: (17/12);
+        color: $blue03;
+        border: 1px solid $blue03;
+        margin-right: 12px;
+        margin-bottom: 12px;
+        @include mq_sp{
+          @include fz_vw(22);
+          padding: size_sp(10) size_sp(20);
+          line-height: (32/22);
+          margin-right: size_sp(20);
+          margin-bottom: size_sp(20);
+        }
+      }
+    }
+  }
+  .btn__more{
+    margin-top: 50px;
+    @include mq_sp{
+      margin-top: size_sp(80);
+    }
+  }
+}

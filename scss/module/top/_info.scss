@@ -1,0 +1,92 @@
+/* module > top > info
+============================================================================ */
+
+.top-info{
+  margin-top: 50px;
+  @include mq_sp{
+    margin-top: size_sp(70);
+  }
+  &__inner{
+    max-width: 945px;
+    width: 100%;
+    margin: 0 auto;
+    @media screen and (max-width: 1000px) {
+      max-width: 95%;
+    }
+    @include mq_sp{
+      max-width: size_sp(638);
+    }
+  }
+  &__heading{
+    @include font-size(34);
+    padding-left: 5px;
+    line-height: (49/34);
+    letter-spacing: 0.05em;
+    color: $blue02;
+    @include mq_sp{
+      @include fz_vw(46);
+      line-height: (66/46);
+      padding-left: 0;
+      margin-left: size_sp(-16);
+    }
+  }
+  &__box{
+    @include box-shadow();
+    border: 5px solid $blue08;
+    padding: 26px 39px;
+    margin-top: 10px;
+    @include mq_sp{
+      border-width: size_sp(5);
+      padding: size_sp(42) size_sp(29);
+      margin-top: size_sp(56);
+    }
+  }
+  &__post{
+    position: relative;
+    width: 100%;
+    &:nth-of-type(n + 2){
+      margin-top: 30px;
+      @include mq_sp{
+        margin-top: size_sp(100);
+      }
+    }
+  }
+  &__date{
+    position: absolute;
+    top: -4px;
+    left: -54px;
+    z-index: 1;
+    padding: 6px 16px 7px 26px;
+    background: $pink01;
+    line-height: (24/16);
+    font-weight: 500;
+    color: $white00;
+    @include mq_sp{
+      $vw_19: size_sp(19);
+      @include fz_vw(30);
+      line-height: (44/30);
+      padding: size_sp(4) size_sp(16);
+      top: auto;
+      left: size_sp(-50);
+      bottom: calc(100% + #{$vw_19});
+    }
+  }
+  &__ttl{
+    @include font-size(18);
+    line-height: (26/18);
+    font-weight: 500;
+    padding-left: 81px;
+    @include mq_sp{
+      @include fz_vw(28);
+      line-height: (58/28);
+      padding-left: 0;
+    }
+    a{
+      text-underline-offset: 3px;
+      &:hover{
+        opacity: 1;
+        text-decoration: underline;
+      }
+    }
+  }
+}

@@ -1,0 +1,92 @@
+/* base > heading
+============================================================================================================ */
+
+/* 基本設定 */
+h1 {
+	@include font-size(34);
+  @include mq_sp {
+    @include font-size(22);
+  }
+}
+h2 {
+	@include font-size(30);
+  @include mq_sp {
+    @include font-size(20);
+  }
+}
+h3 {
+	@include font-size(24);
+	font-weight: bold;
+}
+h4 {
+	@include font-size(20);
+	font-weight: bold;
+}
+h5 {
+	@include font-size(18);
+	font-weight: bold;
+}
+h6 {
+	@include font-size(18);
+}
+
+.common-heading{
+	position: relative;
+	max-width: 1280px;
+	width: 100%;
+	height: 155px;
+	padding-left: 88px;
+	margin-left: auto;
+	margin-right: auto;
+	@include mq_sp{
+		height: size_sp(155);
+		padding-left: size_sp(88);
+	}
+	&:before{
+		@include box-shadow();
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 164px;
+		height: 155px;
+		background: url(./img/common/icn_heading.svg) no-repeat center/cover;
+		@include mq_sp{
+			width: size_sp(164);
+			height: size_sp(155);
+			background: url(./img/common/icn_heading-sp.svg) no-repeat center/cover;
+		}
+	}
+	.en,.ja{
+		display: block;
+		position: relative;
+		z-index: 2;
+	}
+	.en{
+		@include font-size(86);
+		line-height: 1;
+		letter-spacing: 0.05em;
+		font-weight: 700;
+		color: $blue02;
+		@include mq_sp{
+			@include fz_vw(86);
+		}
+		&:first-letter{
+			color: $white00;
+		}
+	}
+	.ja{
+		@include font-size(30);
+		line-height: (44/30);
+		letter-spacing: 0.05em;
+		font-weight: 500;
+		color: $blue02;
+		padding-left: 85px;
+		margin-top: 16px;
+		@include mq_sp{
+			@include fz_vw(30);
+			padding-left: size_sp(85);
+			margin-top: size_sp(16);
+		}
+	}
+}

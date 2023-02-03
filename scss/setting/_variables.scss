@@ -1,0 +1,41 @@
+@charset "utf-8";
+
+// =============================================================
+// フォント
+// 読み込みは非同期で行って下さい。（script.jpに記載あり）
+// =============================================================
+
+$NotoSans: 'Noto Sans JP', sans-serif;
+
+$base-font-family: $NotoSans;
+$base-font-size: 16;
+$base-font-size-sp: 32;
+
+$base-font-color: $black01;
+$base-font-weight: 300;
+$base-line-height: (33/16);
+$base-line-height-sp: (66/32);
+
+// =============================================================
+// その他設定
+// =============================================================
+
+//背景
+$base-bg-color: $white00;
+
+//アニメーション速度
+$base-anime-sec: .6s;
+
+//デザインの幅
+$designWidth: 1280;
+
+
+// =============================================================
+// ブレイクポイント
+// =============================================================
+$screen-sp-min: 320px;
+$screen-sp-max: 767px;
+$screen-tab-min: ($screen-sp-max + 1);
+$screen-tab-max: 1024px;
+$screen-pc-min: ($screen-tab-max + 1);
+

@@ -1,0 +1,25 @@
+/* module > top > movies
+============================================================================ */
+
+.top-movies{
+  margin-top: 200px;
+  @include mq_sp{
+    margin-top: size_sp(240);
+  }
+  &__heading{}
+  &__inner{
+    max-width: 583px;
+    width: 100%;
+    margin: 70px auto 0;
+    @include mq_sp{
+      max-width: 100%;
+      margin-top: size_sp(100);
+    }
+  }
+  .btn__more{
+    margin-top: 50px;
+    @include mq_sp{
+      margin-top: size_sp(80);
+    }
+  }
+}

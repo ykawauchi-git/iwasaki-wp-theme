@@ -1,0 +1,287 @@
+input[type="text"],input[type="email"],select,textarea{
+  @include font-size(14);
+  @include placeholderColor(#aaa);
+  width: 100%;
+  padding: 2px 7px;
+  min-height: auto;
+  outline: none;
+  background: $white00;
+  border: 1px solid gray;
+  box-sizing: border-box;
+  -webkit-appearance: none;/* ベンダープレフィックス(Google Chrome、Safari用) */
+  -moz-appearance: none;	/* ベンダープレフィックス(Firefox用) */
+  vertical-align: bottom;
+  @include mq_sp{
+    @include fz_vw(28);
+    padding: 0 size_sp(14);
+  }
+}
+
+textarea{
+  height: 238px;
+  @include mq_sp{
+    height: size_sp(540);
+  }
+}
+
+select{
+  height: 39px;
+  -webkit-appearance: none;/* ベンダープレフィックス(Google Chrome、Safari用) */
+  -moz-appearance: none;	/* ベンダープレフィックス(Firefox用) */
+  appearance: none;	/* 標準のスタイルを無効にする */
+  position: relative;
+  background-image: url("../../img/common/arw_select.svg");
+  background-repeat: no-repeat;
+  background-size: 20px;
+  background-position: center right 10px;
+  box-sizing: border-box;
+}
+::-ms-expand {	/* select要素のデザインを無効にする（IE用） */
+display: none;
+}
+
+//ラジオボタン
+.mw_wp_form{
+  .mwform-radio-field.horizontal-item{
+    position: relative;
+    @include mq_sp{
+    }
+    & + .horizontal-item{
+      margin-left: 30px;
+      @include mq_sp{
+        margin-left: size_sp(30);
+      }
+    }
+    &:nth-of-type(n + 3){
+      @include mq_sp{
+        margin-top: size_sp(17);
+      }
+    }
+    &:nth-of-type(3),&:nth-of-type(5){
+      @include mq_sp{
+        margin-left: 0;
+      }
+    }
+    &:nth-of-type(4){
+      margin-left: 0;
+      @include mq_sp{
+        margin-left: size_sp(30);
+      }
+    }
+    &:nth-of-type(n + 4){
+      margin-top: 16px;
+      @include mq_sp{
+        margin-top: size_sp(17);
+      }
+    }
+  }
+}
+.mwform-radio-field-text{
+  @include flex(inline-flex, nowrap, flex-start, center, normal, row);
+  @include font-size(14);
+  font-weight: 300;
+}
+input[type="radio"]{
+  position: absolute;
+  opacity: 0;
+  + .mwform-radio-field-text {
+    &:before {
+      content: '';
+      background: $white00;
+      border-radius: 50%;
+      border: 1px solid darken($black00, 25%);
+      display: inline-block;
+      width: 1em;
+      height: 1em;
+      margin-right: 10px;
+      vertical-align: top;
+      cursor: pointer;
+      text-align: center;
+      transition: all 250ms ease;
+    }
+  }
+  &:checked {
+    + .mwform-radio-field-text {
+      &:before {
+        background-color: #3197EE;
+        box-shadow: inset 0 0 0 2px $white00;
+      }
+    }
+  }
+  &:focus {
+    + .mwform-radio-field-text {
+      &:before {
+        outline: none;
+        border-color: #3197EE;
+      }
+    }
+  }
+  + .mwform-radio-field-text {
+    &:empty {
+      &:before {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+//submit
+input[type="button"], input[type="reset"], input[type="submit"]{
+  cursor: pointer;
+}
+
+.form{
+  &__row{
+    @include flex(flex, wrap, space-between, normal, normal, row);
+    @include mq_sp{
+      align-items: flex-start;
+    }
+    &:nth-of-type(n + 2){
+      margin-top: 30px;
+      @include mq_sp{
+        margin-top: size_sp(60);
+      }
+    }
+    &.kinds{
+      .form__col{
+        &:nth-of-type(2){
+          @include flex(flex, wrap, flex-start, normal, normal, row);
+        }
+      }
+    }
+    &.content{
+      margin-top: 40px;
+      @include mq_sp{
+        margin-top: size_sp(60);
+      }
+    }
+  }
+  &__col{
+    &:first-of-type{
+      @include font-size(14);
+      line-height: 2;
+      width: 584px - 411px;
+      @include mq_sp{
+        @include fz_vw(28);
+        line-height: (35/28);
+        width: 100%;
+        margin-bottom: size_sp(20);
+      }
+    }
+    &:nth-of-type(2){
+      @include font-size(14);
+      width: 411px;
+      @include mq_sp{
+        @include fz_vw(28);
+        width: 100%;
+      }
+    }
+  }
+  &__note{
+    @include font-size(14);
+    display: block;
+    width: 100%;
+    margin-top: 16px;
+    @include mq_sp{
+      @include fz_vw(28);
+      text-indent: -1em;
+      padding-left: 1em;
+      margin-top: size_sp(30);
+    }
+    a{
+      color: blue;
+      text-decoration: underline;
+    }
+  }
+  &__btn{
+    @include flex(flex, wrap, space-between, normal, normal, row);
+    margin-top: 70px;
+    @include mq_sp{
+      align-items: center;
+      flex-direction: column-reverse;
+      margin-top: size_sp(100);
+    }
+    &-col{
+      &.submit{
+        margin-top: 0;
+        @include mq_sp{}
+      }
+      &.back{
+        margin-top: 0;
+        @include mq_sp{}
+        &:before{
+          left: auto;
+          right: 0;
+          transform: rotateY(180deg);
+        }
+        .arrow{
+          right: auto;
+          left: 0;
+          transform: rotateY(180deg);
+        }
+        .corner{
+        }
+      }
+    }
+  }
+}
+
+//入力画面
+.mw_wp_form_input{
+  .error{
+    width: 100%;
+  }
+  .form{
+    &__btn{
+      &-col{
+        &:first-of-type{
+          display: none;
+        }
+      }
+    }
+  }
+}
+//確認画面
+.mw_wp_form_confirm{
+  .form{
+    &__row{
+      margin-top: 40px;
+      @include mq_sp{
+        margin-top: size_sp(64);
+      }
+      &.mail_confirm{
+        display: none;
+      }
+    }
+    &__col{
+      &:nth-of-type(2){
+        @include font-size(14);
+        @include mq_sp{
+          @include fz_vw(28);
+        }
+      }
+    }
+    &__btn{
+      margin-top: 60px;
+      @include mq_sp{
+        margin-top: size_sp(90);
+      }
+      &-col{
+        &.btn__more{
+          margin: 0;
+        }
+        &:first-of-type{
+          display: block;
+        }
+        &.back{
+          @include mq_sp{
+            margin-top: size_sp(70);
+          }
+        }
+      }
+    }
+    &__note{
+      display: none;
+    }
+  }
+}

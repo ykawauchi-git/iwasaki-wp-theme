@@ -1,0 +1,50 @@
+.page-404{
+  padding: 92px 0 0;
+  @include mq_sp{
+    padding: size_sp(132) 0 0;
+  }
+  h2{
+    @include font-size(30);
+    text-align: center;
+    line-height: 1;
+    color: $black00;
+    margin-bottom: 24px;
+    @include mq_sp{
+      @include fz_vw(44);
+      margin-bottom: size_sp(47);
+    }
+  }
+  h3{
+    @include font-size(22);
+    text-align: center;
+    color: $black00;
+    line-height: 1;
+    margin-bottom: 31px;
+    @include mq_sp{
+      @include fz_vw(38);
+      line-height: (65/38);
+      margin-bottom: size_sp(70);
+    }
+  }
+  &__icn{
+    max-width: 155px;
+    margin: 0 auto 21px;
+    @include mq_sp{
+      max-width: size_sp(258);
+      margin-bottom: size_sp(54);
+    }
+  }
+  &__info{
+    @include font-size(14);
+    max-width: 489px;
+    margin: 0 auto;
+    @include mq_sp{
+      @include fz_vw(30);
+      max-width: size_sp(629);
+    }
+    a{
+      text-decoration: underline;
+      text-underline-offset: 1px;
+    }
+  }
+}

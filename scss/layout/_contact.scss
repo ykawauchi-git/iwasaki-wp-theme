@@ -1,0 +1,76 @@
+.page-contact{
+  &__inner{
+    max-width: 584px;
+    width: 100%;
+    margin: 0 auto;
+    @include mq_sp{
+      max-width: size_sp(630);
+    }
+  }
+  .common-heading{
+    margin-bottom: 71px;
+    @include mq_sp{
+      margin-bottom: size_sp(65);
+    }
+  }
+  &__intro{
+    @include font-size(14);
+    @include mq_sp{
+      @include fz_vw(28);
+    }
+    a{
+      color: blue;
+      text-decoration: underline;
+    }
+  }
+  &__note{
+    @include font-size(11);
+    display: block;
+    margin: 71px 0 25px;
+    @include mq_sp{
+      @include fz_vw(28);
+      margin: size_sp(80) 0 size_sp(60);
+    }
+  }
+}
+
+//確認画面
+.page.confirm{
+  .page-contact{
+    &__intro{
+      text-align: center;
+      margin-bottom: 71px;
+      @include mq_sp{
+        margin-bottom: size_sp(100);
+      }
+    }
+  }
+}
+//完了画面
+.page.thanks{
+  .page-contact{
+    .common-heading{
+      margin-bottom: 80px;
+      @include mq_sp{
+        margin-bottom: size_sp(80);
+      }
+    }
+    &__thanksLogo{
+      width: 260px;
+      margin: 0 auto 41px;
+      @include mq_sp{
+        width: size_sp(394);
+        margin-bottom: size_sp(85);
+      }
+    }
+    &__intro{
+      text-align: center;
+      line-height: (32/14);
+      margin-bottom: 69px;
+      @include mq_sp{
+        line-height: (58/28);
+        margin-bottom: size_sp(100);
+      }
+    }
+  }
+}

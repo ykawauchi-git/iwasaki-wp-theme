@@ -1,0 +1,8 @@
+.archive-news{
+  max-width: 764px;
+  width: 100%;
+  margin: 0 auto;
+  @include mq_sp{
+    max-width: size_sp(671);
+  }
+}

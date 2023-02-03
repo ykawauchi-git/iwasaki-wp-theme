@@ -1,0 +1,76 @@
+@charset "utf-8";
+/*!
+Theme Name: IWASAKI GAKUEN
+Theme URI: http://underscores.me/
+Author: Heads.Inc
+Author URI: -------
+Description: IWASAKI GAKUEN Theme
+Version: 1.0.0
+License: GNU General Public License v2 or later
+/*! --------------------------------------------------------------
+　　このCSSファイルは .scssファイルからコンパイルされたものです。
+　　直接編集しないように注意してください。a
+--------------------------------------------------------------- */
+
+/* 基本設定
+============================================================================ */
+
+@import "scss/setting/_color.scss";
+@import "scss/setting/_variables.scss";
+
+
+/* mixin
+============================================================================ */
+
+@import "scss/mixin/_rem.scss";
+@import "scss/mixin/_flex.scss";
+@import "scss/mixin/_mediaqueries.scss";
+@import "scss/mixin/_last-mb.scss";
+@import "scss/mixin/_headline.scss";
+@import "scss/mixin/_mixin.scss";
+@import "scss/mixin/_img.scss";
+@import "scss/mixin/_display.scss";
+
+/* 共通部分
+============================================================================ */
+
+@import "scss/base/_common.scss";
+@import "scss/base/_base.scss";
+@import "scss/base/_heading.scss";
+@import "scss/base/_wordpress.scss";
+@import "scss/base/_wordpress-comments.scss";
+@import "scss/base/_editor-content.scss";
+
+
+/* layout
+============================================================================ */
+
+@import "scss/layout/_common.scss";
+@import "scss/layout/_header.scss";
+@import "scss/layout/_footer.scss";
+@import "scss/layout/_top.scss";
+@import "scss/layout/_archive.scss";
+@import "scss/layout/_single.scss";
+@import "scss/layout/_container.scss";
+@import "scss/layout/_keyvisual.scss";
+@import "scss/layout/_contact.scss";
+@import "scss/layout/_privacy.scss";
+@import "scss/layout/_404.scss";
+
+/* module
+============================================================================ */
+
+@import "scss/module/_pagettl.scss";
+@import "scss/module/_form.scss";
+@import "scss/module/_btn.scss";
+@import "scss/module/_breadcrumbs.scss";
+@import "scss/module/_pagenavi.scss";
+@import "scss/module/_scroll.scss";
+
+//top
+@import "scss/module/top/_kv.scss";
+@import "scss/module/top/_info.scss";
+@import "scss/module/top/_news.scss";
+@import "scss/module/top/_pages.scss";
+@import "scss/module/top/_movies.scss";
+@import "scss/module/top/_banner.scss";

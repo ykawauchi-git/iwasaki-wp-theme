@@ -1,0 +1,43 @@
+/* module > btn
+============================================================================ */
+
+.scroller-status {
+  display: none;
+  margin-top: 50px;
+	@include mq_sp {
+    margin-top: size_sp(60);
+	}
+}
+
+.infinite-scroll-request {
+  animation: scroll-request 1.1s infinite linear;
+  border: 4px solid $red01;
+  border-left: 4px solid $red02;
+  border-radius: 50%;
+  height: 48px;
+  margin: auto;
+  width: 48px;
+}
+
+@keyframes scroll-request {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.infinite-scroll-last,
+.infinite-scroll-error {
+  //color: $white01;
+  line-height: 1;
+  text-align: center;
+	@include mq_sp {
+		@include fz_vw(24);
+	}
+}
+
+.archives__gallery--infinite-scroll{
+	text-align: center;
+}
