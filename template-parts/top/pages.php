@@ -20,7 +20,7 @@
       <figcaption class="top-pages__itemBox right">
         <h3>岩崎学園の教育理念</h3>
         <p>文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。</p>
-        <a href="<?php echo home_url('/');?>" class="top-pages__itemBtn">詳しく見る</a>
+        <a href="<?php echo home_url('/philosphy/');?>" class="top-pages__itemBtn">詳しく見る</a>
       </figcaption>
     </li>
     <li class="top-pages__item left">
@@ -29,7 +29,7 @@
       <figcaption class="top-pages__itemBox left">
         <h3>様々な教育活動</h3>
         <p>文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。</p>
-        <a href="<?php echo home_url('/');?>" class="top-pages__itemBtn">詳しく見る</a>
+        <a href="<?php echo home_url('/support/');?>" class="top-pages__itemBtn">詳しく見る</a>
       </figcaption>
     </li>
     <li class="top-pages__item right">
@@ -38,7 +38,7 @@
       <figcaption class="top-pages__itemBox right">
         <h3>岩崎学園の歴史</h3>
         <p>文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。</p>
-        <a href="<?php echo home_url('/');?>" class="top-pages__itemBtn">詳しく見る</a>
+        <a href="<?php echo home_url('/about/history/');?>" class="top-pages__itemBtn">詳しく見る</a>
       </figcaption>
     </li>
     <li class="top-pages__item left">
@@ -47,7 +47,7 @@
       <figcaption class="top-pages__itemBox left">
         <h3>就職・資格</h3>
         <p>文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。</p>
-        <a href="<?php echo home_url('/');?>" class="top-pages__itemBtn">詳しく見る</a>
+        <a href="<?php echo home_url('/about/career/');?>" class="top-pages__itemBtn">詳しく見る</a>
       </figcaption>
     </li>
     <li class="top-pages__item right">

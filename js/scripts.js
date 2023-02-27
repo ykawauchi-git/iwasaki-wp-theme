@@ -87,11 +87,15 @@ $(function(){
 
 //スムーズスクロール
 $(function () {
+  let header_height = $(".common-header").height();
+  $(window).on("scroll",function(){
+    header_height = $(".common-header").height();
+  })
   $('a[href^="#"]').click(function () {
     var href = $(this).attr("href");
     var target = $(href == "#" || href == "" ? "body" : href);
     var position = target.offset().top;
-    $("html, body").animate({ scrollTop: position }, 700, "swing");
+    $("html, body").animate({ scrollTop: position - header_height - 50 }, 700, "swing");
     return false;
   });
 });

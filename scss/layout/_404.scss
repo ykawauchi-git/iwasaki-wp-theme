@@ -19,7 +19,7 @@
     text-align: center;
     color: $black00;
     line-height: 1;
-    margin-bottom: 31px;
+    margin-bottom: 61px;
     @include mq_sp{
       @include fz_vw(38);
       line-height: (65/38);
@@ -27,11 +27,11 @@
     }
   }
   &__icn{
-    max-width: 155px;
-    margin: 0 auto 21px;
+    max-width: 300px;
+    margin: 0 auto 41px;
     @include mq_sp{
-      max-width: size_sp(258);
-      margin-bottom: size_sp(54);
+      max-width: size_sp(408);
+      margin-bottom: size_sp(84);
     }
   }
   &__info{

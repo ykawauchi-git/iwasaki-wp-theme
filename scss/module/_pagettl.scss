@@ -1,14 +1,30 @@
-.common{
-  &__page{
-		&--headingWrap{}
-    &--ttl{}
+.common-kv{
+  position: relative;
+  height: 330px;
+  z-index: 1;
+  @include mq_sp{
+    height: size_sp(422)
   }
-  &__archive{
-    &--headingWrap{}
-    &--ttl{}
+  &__bg{
+    width: 100%;
+    height: 100%;
   }
-  &__single{
-		&--headingWrap{}
-		&--ttl{}
-	}
+  &__ttl{
+    @include abso-center();
+    @include font-size(30);
+    z-index: 2;
+    line-height: (44/30);
+    text-align: center;
+    //font-weight: 500;
+    letter-spacing: 0.05em;
+    width: 381px;
+    padding: 20px 0;
+    background: rgba($white00,0.8);
+    @include mq_sp{
+      @include fz_vw(36);
+      line-height: (52/36);
+      width: size_sp(402);
+      padding: size_sp(15) 0;
+    }
+  }
 }
