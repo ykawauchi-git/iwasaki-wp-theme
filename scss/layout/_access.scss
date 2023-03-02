@@ -208,27 +208,18 @@ $page-access: ".page-access";
         padding: 8px 0 8px 0.05em;
         border-width: 2px;
         border-style: solid;
+        background: $blue02;
+        color: $white00;
+        border-color: $blue02;
         @include mq_sp{
           width: size_sp(238);
           padding: size_sp(16) 0 size_sp(16) 0.05em;
           border-width: 2px;
         }
-        &.home_page{
-          background: $blue02;
-          color: $white00;
-          border-color: $blue02;
-          &:hover{
-            opacity: 1;
-            transform: scale(1.1);
-          }
-        }
-        &.access{
+        &:hover{
+          opacity: 1;
+          background: $white00;
           color: $blue02;
-          border-color: $blue02;
-          &:hover{
-            opacity: 1;
-            transform: scale(1.1);
-          }
         }
         &:nth-of-type(2){
           margin-left: 30px;

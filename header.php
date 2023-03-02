@@ -59,17 +59,17 @@
 
 				<nav class="common-header__nav sp">
 					<ul class="common-header__menu page">
-						<li><a href="<?php echo home_url('/about/'); ?>">岩崎学園について</a></li>
-						<li><a href="<?php echo home_url('/group/');?>">岩崎学園グループ</a></li>
-						<li><a href="<?php echo home_url('/philosphy/'); ?>">岩崎学園の学び</a></li>
-						<li><a href="<?php echo home_url('/support/');?>">学生支援</a></li>
-						<li><a href="<?php echo home_url( '/movie/' ); ?>">動画で見る岩崎学園</a></li>
+						<li><a href="<?php echo home_url('/about/'); ?>" class="<?php if(is_page('about')){echo "is-current";}?>">岩崎学園について</a></li>
+						<li><a href="<?php echo home_url('/group/');?>" class="<?php if(is_page('group')){echo "is-current";}?>">岩崎学園グループ</a></li>
+						<li><a href="<?php echo home_url('/philosophy/'); ?>" class="<?php if(is_page('philosophy')){echo "is-current";}?>">岩崎学園の学び</a></li>
+						<li><a href="<?php echo home_url('/support/');?>" class="<?php if(is_page('support')){echo "is-current";}?>">学生支援</a></li>
+						<li><a href="<?php echo home_url( '/movie/' ); ?>" class="<?php if(is_page('movie')){echo "is-current";}?>">動画で見る岩崎学園</a></li>
 					</ul>
 					<ul class="common-header__menu contact">
-						<li><a href="<?php echo home_url('/for-parents/'); ?>">保護者の方</a></li>
-						<li><a href="<?php echo home_url('/for-teachers/');?>">高校の先生方</a></li>
-						<li><a href="<?php echo home_url('/for-recruiters/'); ?>">企業の方</a></li>
-						<li><a href="<?php echo home_url('/for-graduates/');?>">卒業生の方</a></li>
+						<li><a href="<?php echo home_url('/for-parents/'); ?>" class="<?php if(is_page('for-parents')){echo "is-current";}?>">保護者の方</a></li>
+						<li><a href="<?php echo home_url('/for-teachers/');?>" class="<?php if(is_page('for-teachers')){echo "is-current";}?>">高校の先生方</a></li>
+						<li><a href="<?php echo home_url('/for-recruiters/'); ?>" class="<?php if(is_page('for-recruiters')){echo "is-current";}?>">企業の方</a></li>
+						<li><a href="<?php echo home_url('/for-graduates/');?>" class="<?php if(is_page('for-graduates')){echo "is-current";}?>">卒業生の方</a></li>
 						<li><a href="<?php echo home_url( '/' ); ?>" target="_blank">教職員採用</a></li>
 					</ul>
 					<ul class="common-header__menu info">
@@ -95,11 +95,11 @@
 				</nav>
 				<nav class="common-header__nav lower">
 					<ul class="common-header__menu page">
-						<li><a href="<?php echo home_url('/about/'); ?>">岩崎学園について</a></li>
-						<li><a href="<?php echo home_url('/group/');?>">岩崎学園グループ</a></li>
-						<li><a href="<?php echo home_url('/philosphy/'); ?>">岩崎学園の学び</a></li>
-						<li><a href="<?php echo home_url('/support/');?>">学生支援</a></li>
-						<li><a href="<?php echo home_url( '/movie/' ); ?>">動画で見る岩崎学園</a></li>
+						<li><a href="<?php echo home_url('/about/'); ?>" class="<?php if(is_page('about')){echo "is-current";}?>">岩崎学園について</a></li>
+						<li><a href="<?php echo home_url('/group/');?>" class="<?php if(is_page('group')){echo "is-current";}?>">岩崎学園グループ</a></li>
+						<li><a href="<?php echo home_url('/philosophy/'); ?>" class="<?php if(is_page('philosophy')){echo "is-current";}?>">岩崎学園の学び</a></li>
+						<li><a href="<?php echo home_url('/support/');?>" class="<?php if(is_page('support')){echo "is-current";}?>">学生支援</a></li>
+						<li><a href="<?php echo home_url( '/movie/' ); ?>" class="<?php if(is_page('movie')){echo "is-current";}?>">動画で見る岩崎学園</a></li>
 					</ul>
 				</nav>
 			</div>

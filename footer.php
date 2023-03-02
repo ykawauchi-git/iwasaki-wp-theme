@@ -10,7 +10,7 @@
     <nav class="common-footer__nav top">
       <ul class="common-footer__navMenu info">
         <li><a href="<?php echo home_url('/contact/');?>" class="contact">お問い合わせ</a></li>
-        <li><a href="<?php echo home_url('/document/');?>" class="document" target="_blank">資料請求</a></li>
+        <li><a href="<?php echo home_url('/document/');?>" class="document">資料請求</a></li>
         <li><a href="<?php echo home_url('/access/');?>" class="access">アクセス</a></li>
       </ul>
       <ul class="common-footer__navMenu contact">
@@ -23,7 +23,7 @@
       <ul class="common-footer__navMenu page">
         <li><a href="<?php echo home_url('/about/');?>">岩崎学園について</a></li>
         <li><a href="<?php echo home_url('/group/');?>">岩崎学園グループ</a></li>
-        <li><a href="<?php echo home_url('/philosphy/');?>">岩崎学園の学び</a></li>
+        <li><a href="<?php echo home_url('/philosophy/');?>">岩崎学園の学び</a></li>
         <li><a href="<?php echo home_url('/support/');?>">学生支援</a></li>
         <li><a href="<?php echo home_url('/movie/');?>">動画で見る岩崎学園</a></li>
       </ul>
@@ -35,7 +35,7 @@
           <span>専門学校</span>
           <ul>
             <li><a href="https://isc.iwasaki.ac.jp/" target="_blank">情報科学専門学校</a></li>
-            <li><a href="https://iscs.iwasaki.ac.jp/" target="_blank">横浜医療情報専門学校</a></li>
+            <li><a href="https://iscs.iwasaki.ac.jp/" target="_blank">横浜スポーツウェルネス専門学校</a></li>
             <li><a href="https://yfc.iwasaki.ac.jp/" target="_blank">横浜ｆカレッジ</a></li>
             <li><a href="https://ycr.iwasaki.ac.jp/" target="_blank">横浜リハビリテーション専門学校</a></li>
             <li><a href="https://yda.iwasaki.ac.jp/index.html" target="_blank">横浜デジタルアーツ専門学校</a></li>

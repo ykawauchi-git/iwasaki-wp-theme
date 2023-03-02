@@ -8,7 +8,7 @@
       <a href="#graduate_university" class="btn__anchor">大学院大学</a>
       <a href="#kindergarten" class="btn__anchor">幼稚園</a>
       <a href="#nursery_school" class="btn__anchor">保育園</a>
-      <a href="#children's_club" class="btn__anchor">児童クラブ</a>
+      <a href="#children_club" class="btn__anchor">児童クラブ</a>
       <a href="#museum" class="btn__anchor">岩崎博物館</a>
     </section>
     <section id="headquarters" class="page-access__cont">
@@ -72,7 +72,7 @@
           </div>
         </li>
         <li class="page-access__item">
-          <h3 class="page-access__itemTtl">横浜医療情報専門学校</h3>
+          <h3 class="page-access__itemTtl">横浜スポーツウェルネス専門学校</h3>
           <div class="page-access__itemRow">
             <figure class="page-access__itemImg"><img src="<?php echo get_stylesheet_directory_uri();?>/img/page/dummy.png" alt="" class="object_fit"></figure>
             <figcaption class="page-access__itemInfo">
@@ -403,7 +403,7 @@
         </li>
       </ul>
     </section>
-    <section id="children's_club" class="page-access__cont">
+    <section id="children_club" class="page-access__cont">
       <h2 class="page-access__contHeading page-ttl"><span>児童クラブ</span></h2>
       <ul class="page-access__list">
         <li class="page-access__item">

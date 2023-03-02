@@ -7,7 +7,7 @@
       <a href="#graduate_university" class="btn__anchor">大学院大学への<br>お問い合わせ</a>
       <a href="#kindergarten" class="btn__anchor">幼稚園への<br>お問い合わせ</a>
       <a href="#nursery_school" class="btn__anchor">保育園への<br>お問い合わせ</a>
-      <a href="#children's_club" class="btn__anchor">児童クラブへの<br>お問い合わせ</a>
+      <a href="#children_club" class="btn__anchor">児童クラブへの<br>お問い合わせ</a>
       <a href="#other" class="btn__anchor">その他の<br>お問い合わせ</a>
     </section>
     <section id="iwasaki" class="page-contact__cont">
@@ -83,7 +83,7 @@
         </li>
         <li class="page-contact__item">
           <div class="page-contact__col">
-            <h3 class="page-contact__ttl">横浜医療情報専門学校</h3>
+            <h3 class="page-contact__ttl">横浜スポーツウェルネス専門学校</h3>
             <p class="page-contact__info">
               <span>Tel : <a href="tel:0120-423-114">0120-423-114<br class="sp-only">（入学情報専用フリーダイヤル）</a></span>
               <span>Tel : <a href="tel:045-474-2311">045-474-2311（代）</a></span>
@@ -218,7 +218,7 @@
         </li>
       </ul>
     </section>
-    <section id="children's_club" class="page-contact__cont">
+    <section id="children_club" class="page-contact__cont">
       <h2 class="page-contact__contTtl page-ttl"><span>児童クラブへのお問い合わせ</span></h2>
       <ul class="page-contact__list">
         <li class="page-contact__item">

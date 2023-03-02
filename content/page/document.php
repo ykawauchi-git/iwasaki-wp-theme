@@ -13,9 +13,9 @@
           </figcaption>
         </li>
         <li class="page-document__item pink01">
-          <figure class="page-document__itemBg"><span class="page-document__itemEn">Medical Information</span><img src="<?php echo get_stylesheet_directory_uri();?>/img/page/dummy.png" alt="横浜医療情報専門学校" class="object_fit"></figure>
+          <figure class="page-document__itemBg"><span class="page-document__itemEn">Medical Information</span><img src="<?php echo get_stylesheet_directory_uri();?>/img/page/dummy.png" alt="横浜スポーツウェルネス専門学校" class="object_fit"></figure>
           <figcaption class="page-document__itemInfo">
-            <h3 class="page-document__itemName">横浜医療情報専門学校</h3>
+            <h3 class="page-document__itemName">横浜スポーツウェルネス専門学校</h3>
             <a href="" class="page-document__itemBtn">資料請求する</a>
           </figcaption>
         </li>

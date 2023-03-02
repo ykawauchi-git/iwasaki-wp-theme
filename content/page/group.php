@@ -28,7 +28,7 @@
           <h3 class="page-group__contName">情報科学専門学校</h3>
           <ul class="page-group__contToggle">
             <li>情報科学専門学校</li>
-            <li>横浜医療情報専門学校</li>
+            <li>横浜スポーツウェルネス専門学校</li>
             <li>横浜ｆカレッジ</li>
             <li>横浜デジタルアーツ専門学校</li>
             <li>横浜リハビリテーション専門学校</li>
@@ -56,10 +56,10 @@
       <div class="page-group__contSlide">
         <div class="page-group__contRow">
           <figcaption class="page-group__contInfo">
-            <h3 class="page-group__contName">横浜医療情報専門学校</h3>
+            <h3 class="page-group__contName">横浜スポーツウェルネス専門学校</h3>
             <ul class="page-group__contToggle">
               <li>情報科学専門学校</li>
-              <li>横浜医療情報専門学校</li>
+              <li>横浜スポーツウェルネス専門学校</li>
               <li>横浜ｆカレッジ</li>
               <li>横浜デジタルアーツ専門学校</li>
               <li>横浜リハビリテーション専門学校</li>
@@ -90,7 +90,7 @@
             <h3 class="page-group__contName">横浜ｆカレッジ</h3>
             <ul class="page-group__contToggle">
               <li>情報科学専門学校</li>
-              <li>横浜医療情報専門学校</li>
+              <li>横浜スポーツウェルネス専門学校</li>
               <li>横浜ｆカレッジ</li>
               <li>横浜デジタルアーツ専門学校</li>
               <li>横浜リハビリテーション専門学校</li>
@@ -121,7 +121,7 @@
             <h3 class="page-group__contName">横浜デジタルアーツ専門学校</h3>
             <ul class="page-group__contToggle">
               <li>情報科学専門学校</li>
-              <li>横浜医療情報専門学校</li>
+              <li>横浜スポーツウェルネス専門学校</li>
               <li>横浜ｆカレッジ</li>
               <li>横浜デジタルアーツ専門学校</li>
               <li>横浜リハビリテーション専門学校</li>
@@ -152,7 +152,7 @@
             <h3 class="page-group__contName">横浜リハビリテーション専門学校</h3>
             <ul class="page-group__contToggle">
               <li>情報科学専門学校</li>
-              <li>横浜医療情報専門学校</li>
+              <li>横浜スポーツウェルネス専門学校</li>
               <li>横浜ｆカレッジ</li>
               <li>横浜デジタルアーツ専門学校</li>
               <li>横浜リハビリテーション専門学校</li>
@@ -183,7 +183,7 @@
             <h3 class="page-group__contName">横浜保育福祉専門学校</h3>
             <ul class="page-group__contToggle">
               <li>情報科学専門学校</li>
-              <li>横浜医療情報専門学校</li>
+              <li>横浜スポーツウェルネス専門学校</li>
               <li>横浜ｆカレッジ</li>
               <li>横浜デジタルアーツ専門学校</li>
               <li>横浜リハビリテーション専門学校</li>
@@ -214,7 +214,7 @@
             <h3 class="page-group__contName">情報科学専門学校</h3>
             <ul class="page-group__contToggle">
               <li>情報科学専門学校</li>
-              <li>横浜医療情報専門学校</li>
+              <li>横浜スポーツウェルネス専門学校</li>
               <li>横浜ｆカレッジ</li>
               <li>横浜デジタルアーツ専門学校</li>
               <li>横浜リハビリテーション専門学校</li>
