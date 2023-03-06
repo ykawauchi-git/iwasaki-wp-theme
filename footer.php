@@ -73,7 +73,8 @@
     </nav>
     <ul class="common-footer__privacy">
       <li><a href="<?php echo home_url('/sitemap/');?>">サイトマップ</a></li>
-      <li><a href="<?php echo home_url('/privacy-policy/');?>">プライバシーポリシー</a></li>
+      <li><a href="<?php echo home_url('/privacy-policy/');?>">サイトポリシー</a></li>
+      <li><a href="<?php echo home_url('/media-policy/');?>">メディアポリシー</a></li>
     </ul>
     <small class="common-footer__copyright">COPYRIGHT &copy; IWASAKI GAKUEN. ALL RIGHTS RESERVED.</small>
   </div>

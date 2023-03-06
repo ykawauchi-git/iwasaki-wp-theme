@@ -64,6 +64,7 @@
       }
     }
     &.bottom{
+      position: relative;
       padding: 50px 0 70px;
       border: {
         top: 1px solid $white00;
@@ -73,6 +74,15 @@
       @include mq_sp{
         padding: size_sp(80) 0 size_sp(100);
         margin-top: size_sp(100);
+        border-bottom: none;
+        &:after{
+          @include abso-center-h();
+          bottom: 0;
+          content: "";
+          width: size_sp(604);
+          height: 1px;
+          background: $white00;
+        }
       }
       h3{
         @include font-size(18);
@@ -351,10 +361,10 @@
       margin-top: size_sp(50);
     }
     li{
-      &:nth-of-type(2){
+      &:nth-of-type(n + 2){
         margin-left: 30px;
         @include mq_sp{
-          margin-left: size_sp(40);
+          margin-left: size_sp(30);
         }
       }
     }

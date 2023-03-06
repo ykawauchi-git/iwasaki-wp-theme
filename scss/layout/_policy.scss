@@ -1,0 +1,252 @@
+/*  layout > policy
+============================================================================================================ */
+
+.page-policy{
+  max-width: 768px;
+  width: 100%;
+  padding-top: 100px;
+  margin: 0 auto;
+  @include mq_sp{
+    max-width: size_sp(650);
+    padding-top: size_sp(100);
+  }
+  &__intro{
+    margin-top: 70px;
+    @include mq_sp{
+      margin-top: size_sp(80);
+    }
+    h2{
+      @include font-size(30);
+      line-height: (44/30);
+      font-weight: 500;
+      text-align: center;
+      color: $blue02;
+      @include mq_sp{
+        @include fz_vw(32);
+        line-height: (46/32);
+      }
+    }
+    p{
+      line-height: (37/16);
+      margin-top: 34px;
+      @include mq_sp{
+        @include fz_vw(28);
+        line-height: (58/28);
+        margin-top: size_sp(41);
+      }
+    }
+  }
+  &__main{
+    max-width: 670px;
+    width: 100%;
+    margin: 94px auto 0;
+    @include mq_sp{
+      margin-top: size_sp(111);
+    }
+    &.privacy,&:nth-of-type(n + 2){
+      margin-top: 144px;
+      @include mq_sp{
+        margin-top: size_sp(141);
+      }
+    }
+    h3{
+      @include font-size(32);
+      line-height: (46/32);
+      letter-spacing: 0.1em;
+      position: relative;
+      padding-bottom: 4px;
+      border-bottom: 4px solid $blue02;
+      @include mq_sp{
+        @include fz_vw(44);
+        line-height: (64/44);
+        padding-bottom: size_sp(10);
+        border-bottom-width: size_sp(4);
+      }
+    }
+    h4{
+      @include font-size(27);
+      line-height: (39/27);
+      letter-spacing: 0.15em;
+      color: $blue03;
+      position: relative;
+      margin-top: 94px;
+      @include mq_sp{
+        @include fz_vw(30);
+        line-height: (58/30);
+        margin-top: size_sp(91);
+      }
+      &:nth-of-type(n + 2){
+        margin-top: 64px;
+        @include mq_sp{
+          margin-top: size_sp(61);
+        }
+      }
+      &:before{
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -6px;
+        z-index: 0;
+        width: 100%;
+        height: 4px;
+        background: $blue07;
+        border-radius: 2px;
+        @include mq_sp{
+          height: size_sp(4);
+          bottom: size_sp(-4);
+        }
+      }
+    }
+    p{
+      max-width: 530px;
+      width: 100%;
+      margin: 24px auto 0;
+      @include mq_sp{
+        @include fz_vw(28);
+        line-height: (58/28);
+        max-width: size_sp(582);
+        margin-top: size_sp(41);
+      }
+      &:nth-of-type(n + 2){
+        margin-top: 28px;
+        @include mq_sp{
+          margin-top: size_sp(53);
+        }
+      }
+    }
+  }
+  &__sns{
+    max-width: 530px;
+    width: 100%;
+    margin: 34px auto 0;
+    @include mq_sp{
+      @include fz_vw(28);
+      max-width: size_sp(582);
+      margin-top: size_sp(50);
+    }
+    &Box{
+      &:nth-of-type(n + 2){
+        margin-top: 50px;
+        @include mq_sp{
+          margin-top: size_sp(80);
+        }
+      }
+    }
+    h5{
+      @include font-size(16);
+      line-height: (24/16);
+      font-weight: 500;
+      @include mq_sp{
+        @include fz_vw(30);
+        line-height: (44/30);
+      }
+    }
+    p{
+      @include flex(flex, wrap, flex-start, center, normal, row);
+      &:nth-of-type(n + 2){
+        margin-top: 14px;
+        @include mq_sp{
+          margin-top: size_sp(30);
+        }
+      }
+      span{
+        &:first-of-type{
+          @include font-size(12);
+          line-height: (17/12);
+          text-align: center;
+          color: $white00;
+          display: block;
+          width: 64px;
+          padding: 4px 0;
+          margin-right: 10px;
+          background: $blue03;
+          @include mq_sp{
+            @include fz_vw(26);
+            line-height: (37/26);
+            width: size_sp(146);
+            padding: size_sp(9) 0 size_sp(7);
+            margin: 0;
+          }
+        }
+        &:last-of-type{
+          @include font-size(14);
+          line-height: (20/14);
+          @include mq_sp{
+            @include fz_vw(28);
+            line-height: (40/28);
+            display: block;
+            width: 100%;
+            margin-top: size_sp(12);
+          }
+        }
+        a{
+          color: $base-font-color;
+        }
+      }
+    }
+  }
+  ul{
+    max-width: 530px;
+    width: 100%;
+    padding-left: 1em;
+    margin: 0 auto;
+    line-height: (37/16);
+    @include mq_sp{
+      @include fz_vw(28);
+      line-height: (58/28);
+      max-width: size_sp(582);
+      padding-left: 1em;
+    }
+    &.no-padding{
+      padding-left: 0;
+      margin-top: 24px;
+      @include mq_sp{
+        margin-top: size_sp(41);
+      }
+    }
+    li{
+      text-indent: -1em;
+      padding-left: 1em;
+    }
+  }
+  ol{
+    padding-left: 1em;
+    margin: 15px 0;
+    @include mq_sp{
+      @include fz_vw(24);
+      display: inline-block;
+      text-align: left;
+      line-height: (42/24);
+      margin: size_sp(20) 0;
+    }
+    li{
+      list-style: inherit;
+      & > ol{
+        padding-left: 2em;
+        margin: 10px 0 20px;
+        @include mq_sp{
+          margin: size_sp(15) 0 size_sp(25);
+        }
+        li{
+          list-style-type: cjk-ideographic;
+        }
+      }
+    }
+  }
+  p{
+    &.last{
+      text-align: right;
+      margin-top: 80px;
+      @include mq_sp{
+        margin-top: size_sp(100);
+      }
+    }
+    a{
+      color: blue;
+      word-break: break-all;
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+  }
+}
