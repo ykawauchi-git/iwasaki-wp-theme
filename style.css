@@ -5040,7 +5040,7 @@ div.wpcf7-mail-sent-ok {
   font-size: 30px;
   font-size: 1.875rem;
   line-height: 1.4666666667;
-  font-weight: 500;
+  font-weight: 700;
   text-align: center;
   color: #00345B;
 }
@@ -5066,11 +5066,11 @@ div.wpcf7-mail-sent-ok {
 .page-policy__main {
   max-width: 670px;
   width: 100%;
-  margin: 94px auto 0;
+  margin: 104px auto 0;
 }
 @media (max-width: 767px) {
   .page-policy__main {
-    margin-top: 14.8vw;
+    margin-top: 16.1333333333vw;
   }
 }
 .page-policy__main.privacy, .page-policy__main:nth-of-type(n + 2) {
