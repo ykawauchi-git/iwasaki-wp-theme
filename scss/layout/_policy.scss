@@ -18,9 +18,12 @@
     h2{
       @include font-size(30);
       line-height: (44/30);
+      letter-spacing: 0.05em;
       font-weight: 700;
       text-align: center;
       color: $blue02;
+      position: relative;
+      left: 0.025em;
       @include mq_sp{
         @include fz_vw(32);
         line-height: (46/32);
