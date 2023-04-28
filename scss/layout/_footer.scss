@@ -64,6 +64,7 @@
       }
     }
     &.bottom{
+      position: relative;
       padding: 50px 0 70px;
       border: {
         top: 1px solid $white00;
@@ -73,6 +74,15 @@
       @include mq_sp{
         padding: size_sp(80) 0 size_sp(100);
         margin-top: size_sp(100);
+        border-bottom: none;
+        &:after{
+          @include abso-center-h();
+          bottom: 0;
+          content: "";
+          width: size_sp(604);
+          height: 1px;
+          background: $white00;
+        }
       }
       h3{
         @include font-size(18);
@@ -257,6 +267,7 @@
         }
       }
       &.institution{
+        font-weight: 300;
         margin-top: 40px;
         @include mq_sp{
           margin-top: size_sp(50);
@@ -339,20 +350,30 @@
     }
   }
   &__privacy{
+    @include flex(flex, wrap, center, normal, normal, row);
     @include font-size(15);
-    display: block;
     text-align: center;
+    font-weight: 300;
     line-height: (21/15);
     margin-top: 30px;
     @include mq_sp{
       @include fz_vw(26);
       margin-top: size_sp(50);
     }
+    li{
+      &:nth-of-type(n + 2){
+        margin-left: 30px;
+        @include mq_sp{
+          margin-left: size_sp(30);
+        }
+      }
+    }
   }
   &__copyright{
     @include font-size(13);
     display: block;
     text-align: center;
+    font-weight: 300;
     line-height: (19/13);
     letter-spacing: 0.095em;
     margin-top: 30px;
