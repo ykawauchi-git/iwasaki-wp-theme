@@ -110,9 +110,11 @@
           margin-top : size_sp(130);
         }
         & span {
-          width : 308px;
-          display: block;
-          margin-left: auto;
+          @include mq_sp{
+            width : size_sp(308);
+            display: block;
+            margin-left: auto;
+          }
         }
       }
     }

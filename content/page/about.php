@@ -28,7 +28,7 @@
   <div class="<?php echo $pageName;?>__philosophy">
     <h2 class="<?php echo $pageName;?>__philosophy-ttl page-heading"><span>教育理念</span></h2>
     <div class="<?php echo $pageName;?>__philosophy-concept">
-        高度な知識と技術、豊かな人間性をつくり<br>
+        高度な知識と技術、<br class="sp-only">豊かな人間性をつくり<br>
       「生活を支える」人材を育てる
     </div>
     <div class="<?php echo $pageName;?>__philosophy-txt">
