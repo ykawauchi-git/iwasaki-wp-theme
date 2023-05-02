@@ -18,18 +18,12 @@
     h2{
       @include font-size(30);
       line-height: (44/30);
-<<<<<<< HEAD
-      font-weight: 500;
-      text-align: center;
-      color: $blue02;
-=======
       letter-spacing: 0.05em;
       font-weight: 700;
       text-align: center;
       color: $blue02;
       position: relative;
       left: 0.025em;
->>>>>>> ef5ba0e26ac7a7c7e60d9c429b3841bf0d226471
       @include mq_sp{
         @include fz_vw(32);
         line-height: (46/32);
@@ -48,15 +42,9 @@
   &__main{
     max-width: 670px;
     width: 100%;
-<<<<<<< HEAD
-    margin: 94px auto 0;
-    @include mq_sp{
-      margin-top: size_sp(111);
-=======
     margin: 104px auto 0;
     @include mq_sp{
       margin-top: size_sp(121);
->>>>>>> ef5ba0e26ac7a7c7e60d9c429b3841bf0d226471
     }
     &.privacy,&:nth-of-type(n + 2){
       margin-top: 144px;

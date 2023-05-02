@@ -1,2 +1,225 @@
 /*  layout > about
 ============================================================================================================ */
+
+.page-about {
+  // 学園メッセージ
+  &__message {
+    padding-top : 88px;
+    @include mq_sp{
+      padding-top : size_sp(101);
+    }
+    &-ttl {
+      font-size: 40px;
+      letter-spacing: 0.05em;
+      width: 490px;
+      padding-left : 186px;
+      position: relative;
+      @include mq_sp{
+        @include fz_vw(42);
+        line-height : (61/42);
+        width : size_sp(424);
+        padding-left : size_sp(116);
+      }
+      &:before {
+        content : "";
+        width : 164px;
+        height : 40px;
+        background-image: url(./img/page/about/icn_ttl.svg);
+        background-repeat: no-repeat;
+        background-size : cover;
+        position: absolute;
+        top : 50%;
+        left : 0;
+        transform: translateY(-50%);
+        box-shadow : 0px 3px 6px rgba(0, 0, 0, 0.16);
+        @include mq_sp{
+          width : size_sp(98);
+          height :size_sp(48);
+          background-image: url(./img/page/about/icn_ttl-sp.svg);
+          box-shadow : 0px size_sp(3) size_sp(6) rgba(0, 0, 0, 0.16);
+        }
+      }
+    }
+    &-inner {
+      width : 100%;
+      height : 450px;
+      margin-top : 37px;
+      position : relative;
+      @include mq_sp{
+        @include mq_sp{
+          height : size_sp(450);
+          margin-top : size_sp(80);
+        }
+      }
+    }
+    &-left {
+      width : 322px;
+      position : absolute;
+      top : 385px;
+      left : 50%;
+      transform : translateX(-163%);
+      z-index: 2;
+      @include mq_sp{
+        width :size_sp(280);
+        top : size_sp(288);
+        left :size_sp(30);
+        transform : translate(0);
+      }
+    }
+    &-right {
+      position : absolute;
+      top : 90px;
+      left : 50%;
+      transform : translateX(-31%);
+      z-index : 1;
+      @include mq_sp{
+        top : size_sp(89);
+        transform : translateX(-50%);
+      }
+      &-high {
+        font-size : 40px;
+        font-weight : 700;
+        line-height : (58/40);
+        letter-spacing: 0.05em;
+        color : $white00;
+        text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.16);
+        padding-left : 74px;
+        @include mq_sp{
+          @include fz_vw(46);
+          line-height: (66/46);
+          text-align: center;
+          text-shadow: 0px 0px size_sp(6) rgba(0, 0, 0, 0.16);
+          padding : 0;
+        }
+      }
+      &-low {
+        font-size: 16px;
+        line-height: (37/16);
+        color: $black01;
+        width: 760px;
+        height: 508px;
+        padding : 14px 30px 14px 74px;
+        margin-top : 21px;
+        background: rgba($blue10, .9);
+        @include mq_sp{
+          @include fz_vw(28);
+          line-height: (58/28);
+          width : size_sp(640);
+          height : size_sp(1608);
+          padding : size_sp(21) size_sp(40);
+          margin-top : size_sp(130);
+        }
+        & span {
+          width : 308px;
+          display: block;
+          margin-left: auto;
+        }
+      }
+    }
+  }
+  &__philosophy {
+    margin-top : 576px;
+    @include mq_sp{
+      margin-top : size_sp(1711);
+    }
+    &-concept {
+      font-size : 37px;
+      font-weight: 700;
+      line-height : (77/37);
+      letter-spacing: .05em;
+      text-align: center;
+      margin-top : 62px;
+      position: relative;
+      &::before {
+        content : "";
+        width : 736px;
+        height : 7px;
+        background-color : $yellow01;
+        position : absolute;
+        top : 72px;
+        left : 50%;
+        transform: translateX(-50%);
+      }
+      &::after {
+        content : "";
+        width : 540px;
+        height : 7px;
+        background-color : $yellow01;
+        position : absolute;
+        top : 150px;
+        left : 50%;
+        transform: translateX(-50%);
+      }
+    }
+    &-txt {
+      font-size : 16px;
+      line-height : (37/16);
+      width : 716px;
+      margin : 0 auto;
+      background: rgba($blue10, .9);
+      padding : 13px 30px;
+      margin-top : 73px;
+    }
+    &-list {
+      margin-top : 200px;
+    }
+    &-item {
+      @include flex(flex, wrap, flex-start, stretch, normal, row);
+      position: relative;
+      z-index: 1;
+      &:not(:first-of-type) {
+        margin-top : 140px;
+      }
+      &:nth-of-type(even) {
+        flex-direction: row-reverse;
+        & .page-about__philosophy-right {
+          &-ttl {
+            text-align : right;
+          }
+        }
+        &:before {
+          left : auto;
+          right : 200px;
+        }
+      }
+      &:before {
+        content : "";
+        width : 100vw;
+        height : 491px;
+        background-color: $blue10;
+        position: absolute;
+        top : 72px;
+        left : 200px;
+        z-index: -1;
+      }
+    }
+    &-left {
+      width : 50%;
+      height : 451px;
+    }
+    &-right {
+      width : 50%;
+      padding : 1px 63px 0px;
+      &-ttl {
+        font-size : 36px;
+        font-weight: 700;
+        line-height : (52/36);
+        color : $blue02;
+      }
+      &-txt {
+        line-height: (37/16);
+        margin-top : 53px;
+      }
+      & .page-group__contBtn {
+        font-size : 15px;
+        line-height : (28/15);
+        width : 246px;
+        margin: 34px auto 0 111px;
+        padding : 11px 0;
+      }
+    }
+  }
+  & .mod-banner {
+    margin-top : 240px;
+  }
+}

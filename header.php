@@ -21,11 +21,7 @@
 		function gtag(){dataLayer.push(arguments);}
 		gtag('js', new Date());
 
-<<<<<<< HEAD
-		gtag('config', 'UA-144028859-1');
-=======
 		gtag('config', 'UA-144028859-1'); 
->>>>>>> ef5ba0e26ac7a7c7e60d9c429b3841bf0d226471
 	</script>
 
 	<?php wp_head(); ?>
