@@ -132,8 +132,13 @@
       text-align: center;
       margin-top : 62px;
       position: relative;
-      &::before {
-        content : "";
+      @include mq_sp{
+        @include fz_vw(37);
+        line-height: (86/37);
+        margin-top : size_sp(63);
+        white-space: nowrap;
+      }
+      & span {
         width : 736px;
         height : 7px;
         background-color : $yellow01;
@@ -141,16 +146,38 @@
         top : 72px;
         left : 50%;
         transform: translateX(-50%);
-      }
-      &::after {
-        content : "";
-        width : 540px;
-        height : 7px;
-        background-color : $yellow01;
-        position : absolute;
-        top : 150px;
-        left : 50%;
-        transform: translateX(-50%);
+        @include mq_sp{
+          width : size_sp(348);
+          height : size_sp(10);
+          top : size_sp(75);
+        }
+        &:before {
+          content : "";
+          width : 540px;
+          height : 7px;
+          background-color : $yellow01;
+          position : absolute;
+          top : 77px;
+          left : 50%;
+          transform: translateX(-50%);
+          @include mq_sp{
+            width : size_sp(386);
+            height : size_sp(10);
+            top : size_sp(86);
+          }
+        }
+        &:after {
+          @include mq_sp{
+            content : "";
+            width : size_sp(540);
+            height : size_sp(10);
+            background-color : $yellow01;
+            position : absolute;
+            top : size_sp(172);
+            left : 50%;
+            transform: translateX(-50%);
+          }
+        }
       }
     }
     &-txt {
@@ -161,9 +188,19 @@
       background: rgba($blue10, .9);
       padding : 13px 30px;
       margin-top : 73px;
+      @include mq_sp{
+        @include fz_vw(28);
+        line-height: (58/28);
+        width : size_sp(640);
+        padding : size_sp(20) size_sp(40);
+        margin-top : size_sp(80);
+      }
     }
     &-list {
       margin-top : 200px;
+      @include mq_sp{
+        margin-top : size_sp(151);
+      }
     }
     &-item {
       @include flex(flex, wrap, flex-start, stretch, normal, row);
@@ -171,17 +208,38 @@
       z-index: 1;
       &:not(:first-of-type) {
         margin-top : 140px;
+        @include mq_sp{
+          margin-top : size_sp(199);
+        }
       }
       &:nth-of-type(even) {
         flex-direction: row-reverse;
-        & .page-about__philosophy-right {
-          &-ttl {
-            text-align : right;
+        & .page-about__philosophy {
+          &-left {
+            @include mq_sp{
+              left: auto;
+              right : 0;
+            }
+          }
+          &-right {
+            &-ttl {
+              text-align : right;
+            }
+            &-txt {
+              @include mq_sp{
+                margin-left : 0;
+                margin-right : auto;
+              }
+            }
           }
         }
         &:before {
           left : auto;
           right : 200px;
+          @include mq_sp{
+            left : auto;
+            right : size_sp(70);
+          }
         }
       }
       &:before {
@@ -193,24 +251,52 @@
         top : 72px;
         left : 200px;
         z-index: -1;
+        @include mq_sp{
+          height : size_sp(1213);
+          top : size_sp(310);
+          left : size_sp(70);
+        }
       }
     }
     &-left {
       width : 50%;
       height : 451px;
+      @include mq_sp{
+        width : size_sp(616);
+        height : size_sp(451);
+        position: absolute;
+        top : size_sp(89);
+        left : 0;
+      }
     }
     &-right {
       width : 50%;
       padding : 1px 63px 0px;
+      @include mq_sp{
+        width : size_sp(630);
+        padding : 0;
+        margin : 0 auto;
+      }
       &-ttl {
         font-size : 36px;
         font-weight: 700;
         line-height : (52/36);
         color : $blue02;
+        @include mq_sp{
+          @include fz_vw(40);
+          line-height: (58/40);
+        }
       }
       &-txt {
         line-height: (37/16);
         margin-top : 53px;
+        @include mq_sp{
+          @include fz_vw(28);
+          line-height: (58/28);
+          width : size_sp(560);
+          margin-top : 521px;
+          margin-left : auto;
+        }
       }
       & .page-group__contBtn {
         font-size : 15px;
@@ -218,10 +304,20 @@
         width : 246px;
         margin: 34px auto 0 111px;
         padding : 11px 0;
+        @include mq_sp{
+          @include fz_vw(24);
+          line-height: (44/24);
+          width : size_sp(414);
+          margin: size_sp(51) auto 0 size_sp(143);
+          padding: size_sp(22) 0;
+        }
       }
     }
   }
   & .mod-banner {
     margin-top : 240px;
+    @include mq_sp{
+      margin-top : size_sp(250);
+    }
   }
 }

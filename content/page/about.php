@@ -29,7 +29,7 @@
     <h2 class="<?php echo $pageName;?>__philosophy-ttl page-heading"><span>教育理念</span></h2>
     <div class="<?php echo $pageName;?>__philosophy-concept">
         高度な知識と技術、<br class="sp-only">豊かな人間性をつくり<br>
-      「生活を支える」人材を育てる
+      「生活を支える」人材を育てる<span></span>
     </div>
     <div class="<?php echo $pageName;?>__philosophy-txt">
       戦後、目覚ましい技術革新によって飛躍的な経済発展を遂げた日本は、物質的に満たされた時代を超えて、「新たな価値」が創造される反面、「新たな課題」も生み出される社会となっています。<br>

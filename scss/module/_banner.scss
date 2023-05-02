@@ -8,6 +8,9 @@
   background-repeat: no-repeat;
   position: relative;
   z-index: 1;
+  @include mq_sp{
+    padding : size_sp(100) 0;
+  }
   &::before {
     content : "";
     width : 100%;
@@ -29,6 +32,11 @@
       color : $blue02;
       background-color : $white00;
       padding: 13px 60px 11px;
+      @include mq_sp{
+        @include fz_vw(44);
+        line-height: (64/44);
+        padding : size_sp(16) size_sp(40);
+      }
     }
   }
   &__txt {
@@ -37,6 +45,12 @@
     text-align: center;
     color: $white00;
     margin-top : 34px;
+    @include mq_sp{
+      @include fz_vw(28);
+      line-height: (58/28);
+      width : size_sp(644);
+      margin : size_sp(50) auto 0;
+    }
   }
   & .page-group__contBtn {
     font-size : 15px;
@@ -47,5 +61,12 @@
     border : solid 2px $white00;
     background-color: transparent;
     margin-top : 34px;
+    @include mq_sp{
+      @include fz_vw(24);
+      line-height: (44/24);
+      width : size_sp(414);
+      padding : size_sp(20) 0;
+      margin-top : size_sp(52);
+    }
   }
 }
