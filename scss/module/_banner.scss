@@ -8,6 +8,9 @@
   background-repeat: no-repeat;
   position: relative;
   z-index: 1;
+  @include mq_tab{
+    padding : 100px 0x;
+  }
   @include mq_sp{
     padding : size_sp(100) 0;
   }
@@ -32,6 +35,11 @@
       color : $blue02;
       background-color : $white00;
       padding: 13px 60px 11px;
+      @include mq_tab{
+        font-size: 44px;
+        line-height: (64/44);
+        padding : 16px 40px;
+      }
       @include mq_sp{
         @include fz_vw(44);
         line-height: (64/44);
@@ -45,6 +53,12 @@
     text-align: center;
     color: $white00;
     margin-top : 34px;
+    @include mq_tab{
+      font-size : 28px;
+      line-height : (58/28);
+      width : 644px;
+      margin : 50px auto 0;
+    }
     @include mq_sp{
       @include fz_vw(28);
       line-height: (58/28);
@@ -61,6 +75,13 @@
     border : solid 2px $white00;
     background-color: transparent;
     margin-top : 34px;
+    @include mq_tab{
+      font-size : 24px;
+      line-height: (44/24);
+      width : 414px;
+      padding : 20px 0;
+      margin-top : 52px;
+    }
     @include mq_sp{
       @include fz_vw(24);
       line-height: (44/24);
