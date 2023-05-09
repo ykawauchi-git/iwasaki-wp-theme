@@ -119,3 +119,11 @@ $(function(){
     });
   });
 });
+
+// 就職・資格サポート
+$(function(){
+	$('.page-career__achievement-question').click(function(){
+		$(this).parent('.page-career__achievement-item').toggleClass('selected');
+		$(this).next('.page-career__achievement-answer').slideToggle();
+	});
+});

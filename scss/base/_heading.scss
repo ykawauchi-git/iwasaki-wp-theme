@@ -133,6 +133,35 @@ h6 {
 	}
 }
 
+.page-subHeading {
+	font-size : 30px;
+	font-weight : 700;
+	line-height : (44/30);
+	letter-spacing: .05em;
+	text-align: center;
+	position: relative;
+	@include mq_sp{
+		@include fz_vw(36);
+		line-height: (52/36);
+	}
+	&:before {
+		content : "";
+		width : 100px;
+		height : 15px;
+		background: url(./img/common/icn_subHeading.svg) no-repeat center/cover;
+		position : absolute;
+		bottom : -31px;
+		left : 50%;
+		transform: translateX(-50%);
+		@include mq_sp{
+			width : size_sp(122);
+			height : size_sp(27);
+			background: url(./img/common/icn_subHeading-sp.svg) no-repeat center/cover;
+	
+		}
+	}
+}
+
 .page-ttl{
 	@include font-size(24);
 	line-height: (35/24);
