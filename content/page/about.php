@@ -49,7 +49,7 @@
             文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。<br>
             文章が入ります、文章が入ります。
           </div>
-          <a href="" target="_blank" class="page-group__contBtn">詳しく見る</a>
+          <a href="<?php echo home_url('/about/history'); ?>" class="page-group__contBtn">詳しく見る</a>
         </div>
       </li>
       <li class="<?php echo $pageName;?>__philosophy-item">
@@ -63,7 +63,7 @@
             文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。<br>
             文章が入ります、文章が入ります。
           </div>
-          <a href="" target="_blank" class="page-group__contBtn">詳しく見る</a>
+          <a href="<?php echo home_url('/about/career'); ?>" class="page-group__contBtn">詳しく見る</a>
         </div>
       </li>
       <li class="<?php echo $pageName;?>__philosophy-item">
@@ -77,7 +77,7 @@
             文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。<br>
             文章が入ります、文章が入ります。
           </div>
-          <a href="" target="_blank" class="page-group__contBtn">詳しく見る</a>
+          <a href="<?php echo home_url('/about/career'); ?>" class="page-group__contBtn">詳しく見る</a>
         </div>
       </li>
     </ul>

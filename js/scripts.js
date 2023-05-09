@@ -5,7 +5,7 @@ let $ = jQuery.noConflict();
 //Web font loader
 window.WebFontConfig = {
   // 以下にフォントを指定する
-  google: { families: ['Noto+Sans+JP:300,400,500,700'] },//使用するフォントと太さだけ指定
+  google: { families: ['Noto+Sans+JP:300,400,500,700',, 'Noto+Serif+JP'] },//使用するフォントと太さだけ指定
   //custom: { families: ['futura-pt'],urls: ['https://use.typekit.net/jxv2kur.css'] },//Adobe Fonts等
   active: function () {
     sessionStorage.fonts = true;
@@ -97,5 +97,25 @@ $(function () {
     var position = target.offset().top;
     $("html, body").animate({ scrollTop: position - header_height - 50 }, 700, "swing");
     return false;
+  });
+});
+
+// 歴史ページ
+$(function(){
+  $(document).ready(function () {
+    $('.page-history__fv').addClass('active');
+  });
+  // 可視範囲で線が伸びる
+  $(window).on('scroll', function() {
+    $('.page-history__item').each(function() { // .js-scrollというクラスが付いている要素に対して
+      
+       var elemPosition = $(this).offset().top,
+           windowHeight = $(window).height(),
+           scroll = $(window).scrollTop();
+       if (scroll > elemPosition - windowHeight + windowHeight / 2) {
+         // if (scroll > elemPosition - windowHeight) イベント発火のタイミグはお好みで
+           $(this).addClass('extend'); // ターゲットにis-showというクラスを追加
+       }
+    });
   });
 });
