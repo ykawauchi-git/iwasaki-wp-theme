@@ -32,6 +32,11 @@
     text-align: center;
     color : $white00;
     margin-bottom : 10px;
+    @include mq_sp{
+      @include fz_vw(44);
+      line-height: (64/44);
+      margin-bottom : size_sp(15);
+    }
   }
   &__ttl {
     @include flex(flex, wrap, center, stretch, normal, row);
@@ -66,6 +71,7 @@
     @include mq_tab{
       font-size : 28px;
       line-height : (58/28);
+      text-align: left;
       width : 644px;
       margin : 50px auto 0;
     }

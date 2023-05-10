@@ -2,27 +2,50 @@
   &__fv {
     background: url(./img/page/career/fv_career.jpg) no-repeat center/cover;
     padding : 55px 0px 54px;
+    @include mq_sp{
+      background: url(./img/page/career/fv_career.jpg) no-repeat left/cover;
+      padding : size_sp(100) 0;
+    }
     &-inner {
       width : 704px;
       padding : 32px 40px 28px;
       margin : 0 auto;
       background-color : rgba($white00, .8);
+      @include mq_sp{
+        width : size_sp(620);
+        padding : size_sp(50) size_sp(30) size_sp(61);
+      }
     }
     &-txt {
       font-size : 16px;
       line-height : (37/16);
       margin-top : 56px;
+      @include mq_sp{
+        @include fz_vw(28);
+        line-height : (58/28);
+        margin-top : size_sp(92);
+      }
     }
   }
   &__figure {
     padding : 100px 0px 150px;
+    @include mq_sp{
+      padding : size_sp(100) 0 size_sp(150);
+    }
     &-item {
       width : 768px;
       height : 470px;
       margin : 0 auto;
       background-color: gray;
+      @include mq_sp{
+        width : size_sp(644);
+        height : size_sp(429);
+      }
       &:nth-of-type(2) {
         margin-top : 50px;
+        @include mq_sp{
+          margin-top : size_sp(50);
+        }
       }
     }
   }
@@ -31,6 +54,9 @@
     padding : 60px 0px 60px;
     position: relative;
     z-index: 1;
+    @include mq_sp{
+      padding : size_sp(89) 0 size_sp(100);
+    }
     &::before {
       content : "";
       width : 100%;
@@ -48,17 +74,35 @@
       letter-spacing: .05em;
       text-align: center;
       color : $white00;
+      @include mq_sp{
+        @include fz_vw(40);
+        line-height : (80/40);
+      }
     }
     &-list {
       width : 762px;
       margin : 40px auto 0;
       @include flex(flex, wrap, space-between, center, normal, row);
+      @include mq_sp{
+        width : size_sp(626);
+        margin-top : size_sp(58);
+        flex-direction: column;
+      }
     }
     &-item {
       width : 361px;
       background-color : $white00;
       position: relative;
       padding : 25px 0 18px;
+      @include mq_sp{
+        width : 100%;
+        padding : size_sp(46) 0 size_sp(33);
+      }
+      &:nth-of-type(2) {
+        @include mq_sp{
+          margin-top : size_sp(50);
+        }
+      }
       &:before {
         content : "";
         width : 68px;
@@ -67,6 +111,10 @@
         position : absolute;
         top : 0;
         left : 0;
+        @include mq_sp{
+          width : size_sp(100);
+          height : size_sp(100);
+        }
       }
     }
     &-name {
@@ -75,12 +123,21 @@
       line-height : (36/25);
       text-align: center;
       color : $blue02;
+      @include mq_sp{
+        @include fz_vw(40);
+        line-height : (58/40);
+      }
     }
     &-txt {
       font-size : 14px;
       line-height : (32/14);
       text-align: center;
       margin-top : 15px;
+      @include mq_sp{
+        @include fz_vw(24);
+        line-height : (54/24);
+        margin-top : size_sp(23);
+      }
     }
     & .page-group__contBtn {
       font-size : 15px;
@@ -91,27 +148,60 @@
       width : 246px;
       padding : 12px 0 11px;
       margin-top : 40px;
+      @include mq_sp{
+        @include fz_vw(24);
+        line-height : (44/24);
+        width : size_sp(414);
+        padding : size_sp(23) 0 size_sp(20);
+        margin-top : size_sp(100);
+      }
     }
   }
   &__work-support {
     width : 768px;
     padding-top : 150px;
     margin : 0 auto;
+    @include mq_sp{
+      width : size_sp(644);
+      padding-top : size_sp(149);
+    }
     &-intro {
       font-size : 16px;
       line-height: (37/16);
       margin-top : 64px;
+      @include mq_sp{
+        @include fz_vw(28);
+        line-height: (58/28);
+        margin-top : size_sp(70);
+      }
     }
     &-list {
       margin-top : 104px;
       @include flex(flex, wrap, space-between, stretch, normal, row);
+      @include mq_sp{
+        justify-content: center;
+        flex-direction: column;
+        margin-top : size_sp(85);
+      }
     }
     &-item {
       width : 367px;
       padding-left : 30px;
       position :relative;
+      @include mq_sp{
+        width : 100%;
+        padding-left : 0;
+      }
       &:nth-of-type(n + 3) {
         margin-top : 104px;
+        @include mq_sp{
+          margin-top : size_sp(84);
+        }
+      }
+      &:nth-of-type(n + 2) {
+        @include mq_sp{
+          margin-top : size_sp(84);
+        }
       }
     }
     &-num {
@@ -124,6 +214,13 @@
       position : absolute;
       top : -41px;
       left : 0px;
+      @include mq_sp{
+        width : size_sp(104);
+        height : size_sp(104);
+        box-shadow : 0px size_sp(3) size_sp(6) rgba($black00, .1);
+        top : size_sp(-34);
+        left : size_sp(-26);
+      }
       & span {
         font-size : 62px;
         line-height : (90/62);
@@ -133,10 +230,18 @@
         top : 50%;
         left : 50%;
         transform : translate(-50%, -55%);
+        @include mq_sp{
+          @include fz_vw(74);
+          line-height: (107/74);
+          -webkit-text-stroke: size_sp(2) $white00;
+        }
       }
     }
     &-img {
       height : 224px;
+      @include mq_sp{
+        height : size_sp(429);
+      }
     }
     &-ttl {
       font-size : 22px;
@@ -145,19 +250,36 @@
       text-align: center;
       color : $blue02;
       margin-top : 15px;
+      @include mq_sp{
+        @include fz_vw(34);
+        line-height : (49/34);
+        margin-top : 30px;
+      }
     }
     &-txt {
       font-size : 16px;
       line-height : (37/16);
       margin-top : 14px;
+      @include mq_sp{
+        @include fz_vw(28);
+        line-height: (58/28);
+        margin-top : size_sp(21);
+      }
     }
   }
   &__achievement {
     width : 768px;
     padding-top : 194px;
     margin : 0 auto;
+    @include mq_sp{
+      width : size_sp(644);
+      padding-top : size_sp(192);
+    }
     &-list {
       margin-top : 70px;
+      @include mq_sp{
+        margin-top : size_sp(79);
+      }
     }
     &-item {
       &.selected {
@@ -173,6 +295,9 @@
       }
       &:not(:first-of-type) {
         margin-top : 30px;
+        @include mq_sp{
+          margin-top : size_sp(40);
+        }
       }
     }
     &-question {
@@ -183,6 +308,11 @@
       background: $blue05;
       padding : 26px 0px;
       position : relative;
+      @include mq_sp{
+        @include fz_vw(26);
+        line-height : (43/26);
+        padding : size_sp(17) 0;
+      }
       &:before {
         content : "";
         width : 20px;
@@ -191,6 +321,9 @@
         position :absolute;
         top : 0;
         left : 0;
+        @include mq_sp{
+          width : size_sp(20);
+        }
       }
       &:after {
         content : "";
@@ -202,14 +335,26 @@
         right : 40px;
         transform : translateY(-28%);
         transition : .6s;
+        @include mq_sp{
+          width : size_sp(38);
+          height : size_sp(24);
+          right : size_sp(24);
+          transform : translateY(-50%);
+        }
       }
     }
     &-answer {
       background-color : $blue11;
       padding : 25px 17px 23px;
       display: none;
+      @include mq_sp{
+        padding : size_sp(33) size_sp(19) size_sp(33) size_sp(20);
+      }
       &-list {
         @include flex(flex, wrap, flex-start, stretch, normal, row);
+        @include mq_sp{
+          flex-direction: column;
+        }
       }
       &-item {
         font-size :14px;
@@ -217,8 +362,17 @@
         width : 352px;
         padding-left : 17px;
         position : relative;
+        @include mq_sp{
+          @include fz_vw(24);
+          line-height : (50/24);
+          width : 100%;
+          padding-left : size_sp(31);
+        }
         &:nth-of-type(even) {
           margin-left : 30px;
+          @include mq_sp{
+            margin-left : 0;
+          }
         }
         &:before {
           content : "";
@@ -229,33 +383,59 @@
           top : 50%;
           left : 0;
           transform : translateY(-50%);
+          @include mq_sp{
+            width : size_sp(21);
+            height : size_sp(9);
+          }
         }
       }
     }
   }
   &__certification-support {
     padding-top : 201px;
+    @include mq_sp{
+      padding-top : size_sp(200);
+    }
     &-intro {
       font-size : 16px;
       line-height: (37/16);
       width : 768px;
       margin : 63px auto 0;
+      @include mq_sp{
+        @include fz_vw(28);
+        line-height : (58/28);
+        width :size_sp(644);
+        margin-top : size_sp(71);
+      }
     }
     &-group {
       background: url(./img/page/career/bg_certification.svg) no-repeat center/cover;
       padding : 70px 0px;
       margin-top : 63px;
+      @include mq_sp{
+        padding : size_sp(100) 0;
+        margin-top : size_sp(71);
+      }
     }
     &-list {
       width : 828px;
       margin : 0 auto;
+      @include mq_sp{
+        width : size_sp(698);
+      }
     }
     &-item {
       background-color : $blue11;
       padding: 36px 30px;
       position: relative;
+      @include mq_sp{
+        padding : size_sp(100) size_sp(27) size_sp(42);
+      }
       &:not(:first-of-type) {
         margin-top : 60px;
+        @include mq_sp{
+          margin-top : size_sp(83);
+        }
       }
     }
     &-num {
@@ -267,6 +447,12 @@
       position : absolute;
       top : -20px;
       left :  30px;
+      @include mq_sp{
+        width : size_sp(104);
+        height : size_sp(104);
+        top : size_sp(-24);
+        left : size_sp(27);
+      }
       & span {
         font-size : 62px;
         font-weight: 700;
@@ -276,6 +462,10 @@
         top : 50%;
         left : 50%;
         transform : translate(-50%, -55%);
+        @include mq_sp{
+          @include fz_vw(74);
+          line-height : (107/74);
+        }
       }
     }
     &-ttl {
@@ -284,32 +474,60 @@
       line-height: (35/24);
       text-align: center;
       color : $blue02;
+      @include mq_sp{
+        @include fz_vw(34);
+        line-height : (49/34);
+      }
     }
     &-inner {
       margin-top : 30px;
       @include flex(flex, wrap, flex-start, center, normal, row);
+      @include mq_sp{
+        margin-top : size_sp(30);
+        flex-direction: column-reverse;
+      }
     }
     &-left {
       font-size : 16px;
       line-height : (37/16);
       width : 400px;
       margin-right : 20px;
+      @include mq_sp{
+        @include fz_vw(28);
+        line-height : (58/28);
+        width : 100%;
+        margin-top : size_sp(21);
+        margin-right : 0;
+      }
     }
     &-right {
       width : 348px;
       height : 244px;
+      @include mq_sp{
+        width : 100%;
+        height : size_sp(429);
+      }
     }
   }
   &__certification {
     width : 768px;
     padding-top : 205px;
     margin : 0 auto;
+    @include mq_sp{
+      width : auto;
+      padding-top : size_sp(151);
+    }
     &-ttl {
       width : 381px;
       height : 80px;
       margin : 0 auto;
       @include flex(flex, nowrap, flex-start, center, normal, row);
       box-shadow: 0px 3px 6px rgba($black00, .1);
+      @include mq_sp{
+        width : size_sp(430);
+        height : size_sp(89);
+        box-shadow: 0px size_sp(3) size_sp(6) rgba($black00, .1);
+      }
       &-item {
         font-size : 56px;
         font-weight : 700;
@@ -317,15 +535,26 @@
         letter-spacing: .05em;
         color : $white00;
         height : 100%;
+        @include mq_sp{
+          @include fz_vw(63);
+        }
         &.blue {
           width : 246px;
           background-color : $blue02;
           padding: 9px 0px 15px 10px;
+          @include mq_sp{
+            width : size_sp(277);
+            padding: size_sp(9) 0px size_sp(9) size_sp(11);
+          }
         }
         &.yellow {
           width : 135px;
           background-color : $yellow01;
           padding: 9px 0px 15px 10px;
+          @include mq_sp{
+            width : size_sp(153);
+            padding: size_sp(9) 0px size_sp(9) size_sp(12);
+          }
         }
       }
     }
@@ -336,6 +565,11 @@
       text-align: center;
       position: relative;
       margin-top : 32px;
+      @include mq_sp{
+        @include fz_vw(34);
+        line-height : (75/34);
+        margin-top : size_sp(59);
+      }
       &:before {
         content : "";
         width : 480px;
@@ -344,7 +578,12 @@
         position: absolute;
         top : 46px;
         left : 50%;
-        transform : translateX(-50%); 
+        transform : translateX(-50%);
+        @include mq_sp{
+          width : size_sp(680);
+          height : size_sp(8);
+          top : size_sp(66);
+        }
       }
       &:after {
         content : "";
@@ -354,20 +593,39 @@
         position: absolute;
         top : 97px;
         left : 50%;
-        transform : translateX(-50%); 
+        transform : translateX(-50%);
+        @include mq_sp{
+          width : size_sp(396);
+          height : size_sp(8);
+          top : size_sp(142);
+        }
       }
     }
     &-intro {
       font-size : 16px;
       line-height : (37/16);
       margin : 45px auto 0;
+      @include mq_sp{
+        @include fz_vw(28);
+        line-height : (58/28);
+        width : size_sp(644);
+        margin-top : size_sp(71);
+      }
     }
     &-list {
       padding-top : 63px;
+      @include mq_sp{
+        width : size_sp(644);
+        padding-top : size_sp(71);
+        margin : 0 auto;
+      }
     }
     &-item {
       &:not(:first-of-type) {
         margin-top : 20px;
+        @include mq_sp{
+          margin-top : size_sp(40);
+        }
       }
     }
     &-name {
@@ -379,6 +637,11 @@
       background-color: $blue02;
       padding : 11px 0;
       position : relative;
+      @include mq_sp{
+        @include fz_vw(26);
+        line-height : (43/26);
+        padding: size_sp(17) 0 size_sp(18);
+      }
       &:before {
         content : "";
         width : 20px;
@@ -387,23 +650,41 @@
         position : absolute;
         top : 0;
         left : 0;
+        @include mq_sp{
+          width : size_sp(20);
+        }
       }
     }
     &-sub {
       &List {
         padding : 23px 17px;
         @include flex(flex, wrap, flex-start, stretch, normal, row);
+        @include mq_sp{
+          padding : size_sp(32) size_sp(19);
+          flex-direction: column;
+        }
       }
       &Item {
         font-size : 14px;
         line-height : (32/14);
         width : 352px;
+        @include mq_sp{
+          @include fz_vw(24);
+          line-height : (50/24);
+          width : size_sp(606);
+        }
         &:nth-of-type(even) {
           margin-left : 30px;
+          @include mq_sp{
+            margin-left : 0;
+          }
         }
         & span {
           color : $yellow01;
           padding-right : 3px;
+          @include mq_sp{
+            padding-right : size_sp(8);
+          }
         }
       }
     }
@@ -418,6 +699,10 @@
         background: url(./img/page/career/bg_banner02.jpg) no-repeat center/cover;
         padding: 49px 0 47px;
         margin-top : 50px;
+        @include mq_sp{
+          margin-top : size_sp(100);
+          padding : size_sp(100) 0;
+        }
       }
     }
   }

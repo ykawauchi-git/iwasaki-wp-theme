@@ -122,7 +122,7 @@
     <h2 class="<?php echo $pageName;?>__achievement-heading page-heading"><span>就職先実績</span></h2>
     <ul class="<?php echo $pageName;?>__achievement-list">
       <li class="<?php echo $pageName;?>__achievement-item">
-        <div class="<?php echo $pageName;?>__achievement-question">「情報科学専門学校」の就職先一覧を見る</div>
+        <div class="<?php echo $pageName;?>__achievement-question">「情報科学専門学校」<br class="sp-only">の就職先一覧を見る</div>
         <div class="<?php echo $pageName;?>__achievement-answer">
           <ul class="<?php echo $pageName;?>__achievement-answer-list">
             <li class="<?php echo $pageName;?>__achievement-answer-item">ＮＴＴ東日本グループ会社</li>
@@ -149,7 +149,7 @@
         </div>
       </li>
       <li class="<?php echo $pageName;?>__achievement-item">
-        <div class="<?php echo $pageName;?>__achievement-question">「横浜スポーツウェルネス専門学校」の就職先一覧を見る</div>
+        <div class="<?php echo $pageName;?>__achievement-question">「横浜スポーツウェルネス専門学校」<br class="sp-only">の就職先一覧を見る</div>
         <div class="<?php echo $pageName;?>__achievement-answer">
           <ul class="<?php echo $pageName;?>__achievement-answer-list">
             <li class="<?php echo $pageName;?>__achievement-answer-item">ＮＴＴ東日本グループ会社</li>
@@ -176,7 +176,7 @@
         </div>
       </li>
       <li class="<?php echo $pageName;?>__achievement-item">
-        <div class="<?php echo $pageName;?>__achievement-question">「横浜ｆカレッジ」の就職先一覧を見る</div>
+        <div class="<?php echo $pageName;?>__achievement-question">「横浜ｆカレッジ」<br class="sp-only">の就職先一覧を見る</div>
         <div class="<?php echo $pageName;?>__achievement-answer">
           <ul class="<?php echo $pageName;?>__achievement-answer-list">
             <li class="<?php echo $pageName;?>__achievement-answer-item">ＮＴＴ東日本グループ会社</li>
@@ -203,7 +203,7 @@
         </div>
       </li>
       <li class="<?php echo $pageName;?>__achievement-item">
-        <div class="<?php echo $pageName;?>__achievement-question">「横浜デジタルアーツ専門学校」の就職先一覧を見る</div>
+        <div class="<?php echo $pageName;?>__achievement-question">「横浜デジタルアーツ専門学校」<br class="sp-only">の就職先一覧を見る</div>
         <div class="<?php echo $pageName;?>__achievement-answer">
           <ul class="<?php echo $pageName;?>__achievement-answer-list">
             <li class="<?php echo $pageName;?>__achievement-answer-item">ＮＴＴ東日本グループ会社</li>
@@ -230,7 +230,7 @@
         </div>
       </li>
       <li class="<?php echo $pageName;?>__achievement-item">
-        <div class="<?php echo $pageName;?>__achievement-question">「横浜リハビリテーション専門学校」の就職先一覧を見る</div>
+        <div class="<?php echo $pageName;?>__achievement-question">「横浜リハビリテーション専門学校」<br class="sp-only">の就職先一覧を見る</div>
         <div class="<?php echo $pageName;?>__achievement-answer">
           <ul class="<?php echo $pageName;?>__achievement-answer-list">
             <li class="<?php echo $pageName;?>__achievement-answer-item">ＮＴＴ東日本グループ会社</li>
@@ -257,7 +257,7 @@
         </div>
       </li>
       <li class="<?php echo $pageName;?>__achievement-item">
-        <div class="<?php echo $pageName;?>__achievement-question">「横浜実践看護専門学校」の就職先一覧を見る</div>
+        <div class="<?php echo $pageName;?>__achievement-question">「横浜実践看護専門学校」<br class="sp-only">の就職先一覧を見る</div>
         <div class="<?php echo $pageName;?>__achievement-answer">
           <ul class="<?php echo $pageName;?>__achievement-answer-list">
             <li class="<?php echo $pageName;?>__achievement-answer-item">ＮＴＴ東日本グループ会社</li>
@@ -296,7 +296,7 @@
         <!-- 01 -->
         <li class="<?php echo $pageName;?>__certification-support-item">
           <div class="<?php echo $pageName;?>__certification-support-num"><span>1</span></div>
-          <div class="<?php echo $pageName;?>__certification-support-ttl">岩崎学園独自の国家試験合格プロジェクト</div>
+          <div class="<?php echo $pageName;?>__certification-support-ttl">岩崎学園独自の<br class="sp-only">国家試験合格プロジェクト</div>
           <div class="<?php echo $pageName;?>__certification-support-inner">
             <div class="<?php echo $pageName;?>__certification-support-left">
               各専任教員が最新の国家試験の傾向を分析し、国家試験合格に向けて徹底的に解説する特別講義や、模擬テスト、過去問題演習などを実施。また学習の進捗状況を確認する個別面談や学習支援で、一人ひとりに合ったオーダーメイドの対策で国家試験合格を目指します。
