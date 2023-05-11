@@ -127,3 +127,22 @@ $(function(){
 		$(this).next('.page-career__achievement-answer').slideToggle();
 	});
 });
+
+// 学生支援
+$(function () {
+  $(".page-support__dormitory-guide-left-sub-item img").on("click", function () {
+    // メイン画像に切り替えるimgのsrc取得
+    img = $(this).attr("src");
+    // currentクラス付け替え(枠線などを変えたい時に)
+    $(".page-support__dormitory-guide-left-sub-item").removeClass("current");
+    $(this).parent().addClass("current");
+    // fadeOutできたらsrc変更してfadeIn
+    $(".page-support__dormitory-guide-left-main img").fadeOut(250, function () {
+      $(".page-support__dormitory-guide-left-main img")
+        .attr("src", img)
+        .on("load", function () {
+          $(this).fadeIn(250);
+        });
+    });
+  });
+});
