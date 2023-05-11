@@ -211,10 +211,18 @@ h6 {
 	letter-spacing: 0.035em;
 	text-align: center;
 	width: 100%;
+	@include mq_sp{
+    font-size: 4.8vw;
+    line-height: 1.44444;
+    max-width: none;
+	}
 	& span {
 		display: inline-block;
     position: relative;
     padding: 12px calc(43px - 0.025em) 12px 43px;
+		@include mq_sp{
+			padding : 2vw calc(7.46667vw - 0.025em) 2vw 7.46667vw;
+		}
 		&:before {
 			content: "";
 			position: absolute;
@@ -223,6 +231,10 @@ h6 {
 			top: 0;
 			left: 0;
 			background: url(./img/page/icn_heading-group-l.svg) no-repeat center/cover;
+			@include mq_sp{
+				width: 5.86667vw;
+				height: 5.86667vw;
+			}
 		}
 		&:after {
 			content: "";
@@ -232,6 +244,10 @@ h6 {
 			bottom: 0;
 			right: 0;
 			background: url(./img/page/icn_heading-group-r.svg) no-repeat center/cover;
+			@include mq_sp{
+				width: 5.86667vw;
+				height: 5.86667vw;
+			}
 		}
 	}
 }

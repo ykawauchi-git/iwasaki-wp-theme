@@ -5,33 +5,65 @@
     width : 768px;
     padding-top : 74px;
     margin : 0 auto;
+    @include mq_sp{
+      @include fz_vw(28);
+      line-height : (58/28);
+      width : size_sp(644);
+      padding-top : size_sp(91);
+    }
   }
   &__anchor {
     width : 656px;
     @include flex(flex, wrap, flex-start, stretch, normal, row);
     padding-top : 63px;
     margin : 0 auto;
+    @include mq_sp{
+      width : size_sp(696);
+      padding-top : size_sp(91);
+    }
     & .btn__anchor {
       width : 308px;
       padding : 14px 0 13px 0.05em;
+      @include mq_sp{
+        @include fz_vw(26);
+        line-height : (37/26);
+        width : size_sp(338);
+        padding : size_sp(26) 0;
+      } 
       &:nth-of-type(even) {
         margin-left : 40px;
+        @include mq_sp{
+          margin-left : size_sp(20);
+        }
       }
       &:nth-of-type(n + 3) {
         margin-top : 54px;
+        @include mq_sp{
+          margin-top : size_sp(66);
+        }
       }
     }
   }
   &__foundation {
     padding-top : 114px;
+    @include mq_sp{
+      padding-top : size_sp(147);
+    }
     &-inner {
       width : 768px;
       padding-top : 61px;
       margin : 0 auto;
+      @include mq_sp{
+        width : size_sp(644);
+        padding-top : size_sp(70);
+      }
     }
     &-item {
       &:not(:first-of-type) {
         margin-top: 150px;
+        @include mq_sp{
+          margin-top : size_sp(140);
+        }
       }
     }
     &-ttl {
@@ -40,15 +72,28 @@
       line-height : (40/28);
       color : $blue02;
       text-align: center;
+      @include mq_sp{
+        @include fz_vw(32);
+        line-height : (66/32);
+      }
     }
     &-img {
       width : 532px;
       margin : 39px auto 0;
+      @include mq_sp{
+        width : 100%;
+        height : 429px;
+      }
     }
     &-txt {
       font-size : 16px;
       line-height : (37/16);
       margin-top : 34px;
+      @include mq_sp{
+        @include fz_vw(28);
+        line-height : (58/28);
+        margin-top : size_sp(41);
+      }
     }
     & .page-group__contBtn {
       font-size : 15px;
@@ -56,25 +101,57 @@
       width : 246px;
       padding : 12px 0px 11px;
       margin-top : 33px;
+      @include mq_sp{
+        @include fz_vw(24);
+        line-height : (44/24);
+        width : size_sp(414);
+        padding : size_sp(22) 0 size_sp(21);
+        margin-top : size_sp(41);
+      }
     }
   }
   &__plan {
     padding-top : 201px;
+    @include mq_sp{
+      padding-top : size_sp(201);
+    }
     &-list {
       width : 756px;
       padding-top : 100px;
       margin : 0 auto;
       @include flex(flex, wrap, flex-start, stretch, normal, row);
+      @include mq_sp{
+        width : size_sp(644);
+        padding-top : size_sp(79);
+        flex-direction: column;
+      }
     }
     &-item {
       width : 356px;
       padding : 33px 21px 20px;
       border : solid 3px $blue03;
+      @include mq_sp{
+        width : 100%;
+        padding: size_sp(45) size_sp(39) size_sp(37);
+        border : solid size_sp(5) $blue03;
+      }
       &:nth-of-type(even) {
         margin-left :44px;
+        @include mq_sp{
+          margin-left : 0;
+        }
       }
       &:nth-of-type(n + 3) {
         margin-top : 60px;
+        @include mq_sp{
+          margin-top : size_sp(50);
+        }
+      }
+      &:nth-of-type(n + 2) {
+        margin-top : 60px;
+        @include mq_sp{
+          margin-top : size_sp(50);
+        }
       }
     }
     &-ttl {
@@ -85,19 +162,35 @@
       color : $white00;
       background-color : $blue02;
       padding : 10px 0px;
+      @include mq_sp{
+        @include fz_vw(32);
+        line-height: (46/32);
+        padding : size_sp(18) 0;
+      }
     }
     &-txt {
       font-size : 14px;
       line-height: (32/14);
       margin-top : 9px;
+      @include mq_sp{
+        @include fz_vw(24);
+        line-height : (50/24);
+        margin-top : size_sp(33);
+      }
     }
     &-sub {
       &List {
         margin-top : 17px;
+        @include mq_sp{
+          margin-top : size_sp(42);
+        }
       }
       &Item {
         &:not(:first-of-type) {
           margin-top : 17px;
+          @include mq_sp{
+            margin-top : size_sp(42);
+          }
         }
       }
       &Ttl {
@@ -108,17 +201,32 @@
         background-color : $blue02;
         width : 64px;
         padding : 4px 0px;
+        @include mq_sp{
+          @include fz_vw(24);
+          line-height : (35/24);
+          width : size_sp(128);
+          padding : size_sp(7)0 size_sp(8);
+        }
       }
       &Txt {
         font-size : 14px;
         line-height : (32/14);
         margin-top : 5px;
+        @include mq_sp{
+          @include fz_vw(24);
+          line-height : (50/24);
+          margin-top : size_sp(13);
+        }
       }
     }
     &-system {
       background-color : $blue10;
       margin-top : 150px;
       padding : 62px 0px 60px;
+      @include mq_sp{
+        margin-top : size_sp(150);
+        padding : size_sp(101) 0 size_sp(100);
+      }
       &-heading {
         font-size : 36px;
         font-weight: 700;
@@ -126,26 +234,53 @@
         letter-spacing: .05em;
         text-align: center;
         color : $blue02;
+        @include mq_sp{
+          @include fz_vw(38);
+          line-height: (55/38);
+        }
       }
       &-intro {
         font-size : 16px;
         line-height : (37/16);
         width : 768px;
         margin : 33px auto 0;
+        @include mq_sp{
+          @include fz_vw(28);
+          line-height : (58/28);
+          width : size_sp(644);
+          margin-top : size_sp(40);
+        }
       }
       &-list {
         width : 765px;
         padding-top : 43px;
         margin : 0 auto;
         @include flex(flex, wrap, flex-start, stretch, normal, row);
+        @include mq_sp{
+          width : size_sp(644);
+          padding-top : size_sp(70);
+          flex-direction: column;
+        }
       }
       &-item {
         width : 361px;
         padding : 30px 25px 23px 28px;
         background-color : $white00;
         position : relative;
+        @include mq_sp{
+          width : 100%;
+          padding : size_sp(51) size_sp(44) size_sp(41);
+        }
         &:nth-of-type(even) {
           margin-left :43px;
+          @include mq_sp{
+            margin-left : 0;
+          }
+        }
+        &:nth-of-type(n+2) {
+          @include mq_sp{
+            margin-top : size_sp(50);
+          }
         }
         &:before {
           content : "";
@@ -155,6 +290,10 @@
           position : absolute;
           top : 0;
           left : 0;
+          @include mq_sp{
+            width : size_sp(120);
+            height : size_sp(120);
+          }
         }
       }
       &-num {
@@ -165,6 +304,12 @@
         position : absolute;
         top : 0;
         left : 9px;
+        @include mq_sp{
+          @include fz_vw(48);
+          line-height : (70/48);
+          top : size_sp(2);
+          left : size_sp(14);
+        }
       }
       &-ttl {
         font-size : 25px;
@@ -172,19 +317,35 @@
         line-height : (36/25);
         text-align: center;
         color : $blue02;
+        @include mq_sp{
+          @include fz_vw(40);
+          line-height: (58/40);
+        }
       }
       &-txt {
         font-size : 14px;
         line-height: (32/14);
         margin-top : 15px;
+        @include mq_sp{
+          @include fz_vw(24);
+          line-height: (50/24);
+          width : size_sp(540);
+          margin : size_sp(34) auto 0;
+        }
       }
       &-sub {
         &List {
           margin-top : 17px;
+          @include mq_sp{
+            margin-top : size_sp(41);
+          }
         }
         &Item {
           &:not(:first-of-type) {
             margin-top : 17px;
+            @include mq_sp{
+              margin-top : size_sp(43);
+            }
           }
         }
         &Ttl {
@@ -195,31 +356,60 @@
           background-color : $blue02;
           width : 64px;
           padding : 4px 0px;
+          @include mq_sp{
+            @include fz_vw(24);
+            line-height : (35/24);
+            width : size_sp(128);
+            padding : size_sp(7) 0 size_sp(8);
+          }
         }
         &Txt {
           font-size : 14px;
           line-height : (32/14);
           margin-top : 5px;
+          @include mq_sp{
+            @include fz_vw(24);
+            line-height : (50/24);
+            margin-top : size_sp(13);
+          }
         }
       }
     }
   }
   &__dormitory {
     padding-top : 150px;
+    @include mq_sp{
+      padding-top : size_sp(151);
+    }
     &-intro {
       font-size : 16px;
       line-height : (37/16);
       width : 768px;
       margin : 54px auto 0;
+      @include mq_sp{
+        @include fz_vw(28);
+        line-height: (58/28);
+        width : size_sp(644);
+        margin-top : size_sp(70);
+      }
     }
     &-guide {
       width : 768px;
       padding-top : 93px;
       margin : 0 auto;
+      @include mq_sp{
+        width : size_sp(644);
+        padding-top : size_sp(92);
+      }
       &-intro {
         font-size : 16px;
         line-height : (37/16);
         margin-top : 54px;
+        @include mq_sp{
+          @include fz_vw(28);
+          line-height: (58/28);
+          margin-top : size_sp(51);
+        }
       }
       &-group {
         margin-top : 53px;
@@ -227,6 +417,10 @@
         border : solid 3px $blue03;
         border-radius : 14px;
         overflow: hidden;
+        @include mq_sp{
+          border : solid size_sp(5) $blue03;
+          border-radius : size_sp(20);
+        }
       }
       &-name {
         font-size : 26px;
@@ -235,27 +429,52 @@
         text-align: center;
         color : $white00;
         padding : 12px 0px 15px;
+        @include mq_sp{
+          @include fz_vw(34);
+          line-height: (49/34);
+          padding : size_sp(23) 0px size_sp(25);
+        }
       }
       &-inner {
         background-color: $white00;
         padding : 24px 0px 27px;
         @include flex(flex, wrap, center, stretch, normal, row);
+        @include mq_sp{
+          padding : size_sp(53) 0 size_sp(37);
+          flex-direction: column;
+          align-items: center;
+        }
       }
       &-left {
         width : 346px;
         padding-top : 6px;
         margin-right : 20px;
+        @include mq_sp{
+          width : size_sp(556);
+          padding-top : 0;
+          margin-right : 0;
+        }
         &-main {
           height : 245px;
+          @include mq_sp{
+            height : size_sp(394);
+          }
         }
         &-sub {
           margin-top : 20px;
           @include flex(flex, wrap, flex-start, stretch, normal, row);
+          @include mq_sp{
+            margin-top : size_sp(30);
+          }
           &-item {
             width : 105px;
             height : 85px;
             position : relative;
             cursor : pointer;
+            @include mq_sp{
+              width : size_sp(170);
+              height : size_sp(136);
+            }
             &.current {
               &:before {
                 opacity: 0;
@@ -274,44 +493,80 @@
             }
             &:not(:first-of-type) {
               margin-left : 15px;
+              @include mq_sp{
+                margin-left : size_sp(23);
+              }
             }
           }
         }
       }
       &-right {
         width: 342px;
+        @include mq_sp{
+          width : size_sp(556);
+          padding-top : size_sp(40);
+        }
         &-item {
           &:not(:first-of-type) {
             margin-top : 12px;
+            @include mq_sp{
+              margin-top : size_sp(43);
+            }
           }
         }
         &-ttl {
           font-size : 16px;
           font-weight : 700;
           line-height : (37/16);
+          @include mq_sp{
+            @include fz_vw(26);
+            line-height: (37/26);
+          }
         }
         &-txt {
           font-size : 14px;
           line-height: (20/14);
           margin-top : 3px;
+          @include mq_sp{
+            @include fz_vw(24);
+            line-height: (50/24);
+            margin-top : size_sp(13);
+          }
         }
       }
     }
     &-point {
       padding-top : 141px;
+      @include mq_sp{
+        padding-top : size_sp(100);
+      }
       &-list {
         width : 768px;
         padding-top : 68px;
         margin : 0 auto;
+        @include mq_sp{
+          width : size_sp(644);
+          padding-top : size_sp(62);
+        }
       }
       &-item {
         padding-left : 26px;
         @include flex(flex, wrap, flex-start, center, normal, row);
+        @include mq_sp{
+          padding : 0;
+          flex-direction: column;
+        }
         &:not(:first-of-type) {
           margin-top : 59px;
+          @include mq_sp{
+            margin-top : size_sp(84);
+          }
         }
         &:nth-of-type(3) {
           margin-top : 53px;
+          @include mq_sp{
+            margin-top : size_sp(84);
+          }
         }
       }
       &-left {
@@ -319,6 +574,11 @@
         height : 173px;
         margin-right : 18px;
         position: relative;
+        @include mq_sp{
+          width : 100%;
+          height : size_sp(429);
+          margin-right : 0;
+        }
         & img {
           background-color : gray;
         }
@@ -331,6 +591,12 @@
         position: absolute;
         top : -23px;
         left : -26px;
+        @include mq_sp{
+          width : size_sp(104);
+          height : size_sp(104);
+          top : size_sp(-34);
+          left : size_sp(-26);
+        }
         & span {
           font-size : 39px;
           font-weight: 700;
@@ -340,51 +606,99 @@
           position: absolute;
           top : 50%;
           left : 50%;
-          transform : translate(-50%, -50%);
+          transform : translate(-50%, -56%);
+          @include mq_sp{
+            @include fz_vw(74);
+            line-height : (107/74);
+            -webkit-text-stroke: size_sp(2) $white00;
+          }
         }
       }
       &-right {
         width : 480px;
+        @include mq_sp{
+          width : 100%;
+          margin-top : size_sp(32);
+        }
       }
       &-ttl {
         font-size : 20px;
         font-weight : 700;
         line-height : (37/20);
         color : $blue02;
+        @include mq_sp{
+          @include fz_vw(34);
+          line-height : (49/34);
+          text-align: center;
+        }
       }
       &-txt {
         font-size : 16px;
         line-height: (37/16);
+        @include mq_sp{
+          @include fz_vw(28);
+          line-height: (58/28);
+          margin-top : 20px;
+        }
       }
     }
     &-guidance {
       width : 768px;
       padding-top : 138px;
       margin : 0 auto;
+      @include mq_sp{
+        width :size_sp(644);
+        padding-top : size_sp(141);
+      }
       &-item {
         @include flex(flex, wrap, space-between, center, normal, row);
+        @include mq_sp{
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+        }
         &:not(:first-of-type) {
           margin-top : 87px;
+          @include mq_sp{
+            margin-top : size_sp(141);
+          }
         }
       }
       &-left {
         width : 367px;
+        @include mq_sp{
+          width : 100%;
+        }
       }
       &-right {
         font-size : 16px;
         line-height : (37/16);
         width : 364px;
+        @include mq_sp{
+          @include fz_vw(28);
+          line-height: (58/28);
+          width : 100%;
+          margin-top : size_sp(41);
+        }
       }
     }
     &-cv {
       background-color: $blue10;
       padding : 52px 0 50px;
       margin-top : 91px;
+      @include mq_sp{
+        padding : size_sp(90) 0 size_sp(100);
+        margin-top : size_sp(91);
+      }
       &-txt {
         font-size : 18px;
         font-weight: 700;
         line-height: (26/18);
         text-align: center;
+        @include mq_sp{
+          @include fz_vw(34);
+          line-height : (70/34);
+        }
       }
       & .page-group__contBtn {
         font-size : 15px;
@@ -392,6 +706,13 @@
         width : 246px;
         padding : 12px 0px 11px;
         margin-top : 40px;
+        @include mq_sp{
+          @include fz_vw(24);
+          line-height: (44/24);
+          width : size_sp(414);
+          padding : size_sp(22) 0 size_sp(21);
+          margin-top : size_sp(50);
+        }
       }
     }
   }
@@ -399,8 +720,15 @@
     background-image : url(./img/page/support/bg_banner.jpg);
     padding : 128px 0px;
     margin-top : 150px;
+    @include mq_sp{
+      padding : size_sp(100) 0;
+      margin-top : size_sp(150);
+    }
     & .page-group__contBtn {
       margin-top : 40px;
+      @include mq_sp{
+        margin-top : size_sp(60);
+      }
     }
   }
 }

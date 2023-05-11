@@ -24,7 +24,7 @@
         <a href="<?php echo home_url('/about/history'); ?>" class="page-group__contBtn">詳しく見る</a>
       </div>
       <div class="<?php echo $pageName;?>__foundation-item">
-        <div class="<?php echo $pageName;?>__foundation-ttl">一般財団法人 岩崎幸雄IT教育・研究振興奨学財団</div>
+        <div class="<?php echo $pageName;?>__foundation-ttl">一般財団法人 岩崎幸雄IT教育・<br class="sp-only">研究振興奨学財団</div>
         <div class="<?php echo $pageName;?>__foundation-img">
           <img class="object_fit" src="<?php echo get_stylesheet_directory_uri();?>/img/page/support/img_foundation01.jpg">
         </div>
@@ -306,7 +306,7 @@
         </ul>
       </div>
       <div class="<?php echo $pageName;?>__dormitory-cv">
-        <div class="<?php echo $pageName;?>__dormitory-cv-txt">各種制度・学生寮については各校へお問い合わせください</div>
+        <div class="<?php echo $pageName;?>__dormitory-cv-txt">各種制度・学生寮については<br class="sp-only">各校へお問い合わせください</div>
         <a href="<?php echo home_url('/about/history'); ?>" class="page-group__contBtn">問い合わせる</a>
       </div>
   </div>

@@ -1,0 +1,91 @@
+.page-facility {
+  padding-top : 80px;
+  &__intro {
+    font-size : 16px;
+    line-height: (37/16);
+    width : 768px;
+    padding-top : 95px;
+    margin : 0 auto;
+    @include mq_sp{
+      @include fz_vw(28);
+      line-height : (58/28);
+      width : size_sp(644);
+      padding-top : size_sp(91);
+    }
+  }
+  &__anchor {
+    width : 656px;
+    @include flex(flex, wrap, flex-start, stretch, normal, row);
+    padding-top : 63px;
+    margin : 0 auto;
+    @include mq_sp{
+      width : size_sp(696);
+      padding-top : size_sp(91);
+    }
+    & .btn__anchor {
+      width : 308px;
+      padding : 14px 0 13px 0.05em;
+      @include mq_sp{
+        @include fz_vw(26);
+        line-height : (37/26);
+        width : size_sp(338);
+        padding : size_sp(26) 0;
+      } 
+      &:nth-of-type(even) {
+        margin-left : 40px;
+        @include mq_sp{
+          margin-left : size_sp(20);
+        }
+      }
+      &:nth-of-type(n + 3) {
+        margin-top : 54px;
+        @include mq_sp{
+          margin-top : size_sp(66);
+        }
+      }
+    }
+  }
+  &__list {
+    width : 768px;
+    padding-top : 114px;
+    margin : 0 auto;
+  }
+  &__item {
+    &:not(:first-of-type) {
+      margin-top : 143px;
+    }
+  }
+  &__sub {
+    &List {
+      width : 754px;
+      padding-top : 50px;
+      margin : 0 auto;
+      @include flex(flex, wrap, flex-start, stretch, normal, row);
+    }
+    &Item {
+      width : 352px;
+      &:nth-of-type(even) {
+        margin-left : 50px;
+      }
+      &:nth-of-type(n + 3) {
+        margin-top : 63px;
+      }
+    }
+  }
+  &__img {
+    height : 235px;
+    box-shadow: 0px 3px 6px rgba($black00, .1);
+  }
+  &__name {
+    font-size : 16px;
+    line-height: (37/16);
+    font-weight: 700;
+    text-align: center;
+    margin-top : 10px;
+  }
+  &__txt {
+    font-size : 16px;
+    line-height : (37/16);
+    padding-top : 37px;
+  }
+}
