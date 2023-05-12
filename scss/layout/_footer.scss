@@ -7,7 +7,7 @@
   background-color: $blue01;
   color: $white00;
   @include mq_sp{
-    padding: size_sp(100) 0 size_sp(50);
+    padding: size_sp(84) 0 size_sp(50);
   }
   &__pageTop{
     @include box-shadow();
@@ -73,7 +73,7 @@
       margin-top: 70px;
       @include mq_sp{
         padding: size_sp(80) 0 size_sp(100);
-        margin-top: size_sp(100);
+        margin-top: size_sp(105);
         border-bottom: none;
         &:after{
           @include abso-center-h();
@@ -119,14 +119,14 @@
             width: 184px;
             padding: 18px 0 17px 50px;
             text-align: center;
-            font-weight: 500;
+            font-weight: 700;
             line-height: (25/17);
             color: $blue02;
             background: $white00;
             @include mq_sp{
               @include fz_vw(27);
               width: size_sp(320);
-              padding: size_sp(32) 0 size_sp(33) size_sp(73);
+              padding: size_sp(32) 0 size_sp(32) size_sp(73);
             }
             &:before{
               @include abso-center-v();
@@ -196,7 +196,7 @@
             width: 121px;
             padding: 11px 0 11px;
             text-align: center;
-            font-weight: 500;
+            font-weight: 700;
             line-height: (19/13);
             color: $blue02;
             background: $white00;
@@ -211,7 +211,7 @@
       &.page{
         margin-top: 70px;
         @include mq_sp{
-          margin-top: size_sp(100)
+          margin-top: size_sp(107)
         }
         li{
           @include font-size(18);
@@ -223,6 +223,7 @@
           }
           @include mq_sp{
             @include fz_vw(32);
+            letter-spacing: 0em;
           }
           &:nth-of-type(n + 2){
             padding-left: 16px;
@@ -250,7 +251,7 @@
           }
           &:nth-of-type(n + 3){
             @include mq_sp{
-              margin-top: size_sp(70);
+              margin-top: size_sp(74);
             }
           }
           &:nth-last-of-type(n + 2){
@@ -261,7 +262,7 @@
           }
           &:nth-of-type(2n){
             @include mq_sp{
-              margin-left: size_sp(57);
+              margin-left: size_sp(42);
             }
           }
         }
@@ -310,7 +311,8 @@
             }
             @include mq_sp{
               width: size_sp(503);
-              padding-left: size_sp(81);
+              padding-left: size_sp(83);
+              margin-top : size_sp(27)
             }
             &:before{
               content: "";
@@ -343,6 +345,12 @@
               @include mq_sp{
                 margin-top: size_sp(80);
               }
+            }
+          }
+          & a {
+            @include mq_sp{
+              @include fz_vw(28);
+              line-height : (40/28);
             }
           }
         }

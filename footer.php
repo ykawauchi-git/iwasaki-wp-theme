@@ -6,7 +6,7 @@
 <footer class="common-footer" id="Footer">
   <span class="common-footer__pageTop" style="display:none"></span>
   <div class="common-footer__inner">
-    <figure class="common-footer__logo"><img src="<?php echo get_stylesheet_directory_uri();?>/img/common/logo_footer.svg" alt=""></figure>
+    <figure class="common-footer__logo"><img class="object_fit" src="<?php echo get_stylesheet_directory_uri();?>/img/common/logo_footer.svg" alt=""></figure>
     <nav class="common-footer__nav top">
       <ul class="common-footer__navMenu info">
         <li><a href="<?php echo home_url('/contact/');?>" class="contact">お問い合わせ</a></li>
