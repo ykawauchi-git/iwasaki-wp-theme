@@ -4,10 +4,10 @@
   「子どもの夢を叶えたい、可能性を広げてあげたい」「でも学費が心配・・」そういったご家庭は決して少なくありません。岩崎学園は独自の奨学生制度や分納制度、またモチベーションアップのためのほう賞制度があります。その他、実習室はもちろん、体育館やテニスコート、フットサルコートなど様々な施設・設備が充実しているのは本学園ならではです。
   </div>
   <div class="<?php echo $pageName;?>__anchor">
-    <a href="#headquarters" class="btn__anchor">学費サポート</a>
-    <a href="#vocational_school" class="btn__anchor">特待生制度</a>
-    <a href="#graduate_university" class="btn__anchor">学生寮</a>
-    <a href="#kindergarten" class="btn__anchor">充実の施設・設備</a>
+    <a href="#tuition_support" class="btn__anchor">学費サポート</a>
+    <a href="#scholarship_system" class="btn__anchor">特待生制度</a>
+    <a href="#student_dormitory" class="btn__anchor">学生寮</a>
+    <a href="#facility" class="btn__anchor">充実の施設・設備</a>
   </div>
   <!-- 岩崎学園独自の奨学財団 -->
   <div class="<?php echo $pageName;?>__foundation">
@@ -37,7 +37,7 @@
     </div>
   </div>
   <!-- 学費サポートPLAN -->
-  <div class="<?php echo $pageName;?>__plan">
+  <div class="<?php echo $pageName;?>__plan" id="tuition_support">
     <h2 class="<?php echo $pageName;?>__plan-heading page-heading"><span>学費サポートPLAN</span></h2>
     <ul class="<?php echo $pageName;?>__plan-list">
     <!-- 岩崎学園奨学生制度 -->
@@ -137,7 +137,7 @@
         </div>
       </li>
     </ul>
-    <div class="<?php echo $pageName;?>__plan-system">
+    <div class="<?php echo $pageName;?>__plan-system" id="scholarship_system">
       <div class="<?php echo $pageName;?>__plan-system-heading">２つの特待生制度</div>
       <div class="<?php echo $pageName;?>__plan-system-intro">
         特待生制度は、意欲的かつ将来の目的を明確にもって本学園に入学を希望する学生に対して、授業料を免除し学業を奨励する制度です。発想力を活かし、学園を盛り上げたいという積極的な学生を応援します。
@@ -186,7 +186,7 @@
     </div>
   </div>
   <!-- 学生寮 -->
-  <div class="<?php echo $pageName;?>__dormitory">
+  <div class="<?php echo $pageName;?>__dormitory" id="student_dormitory">
       <h2 class="<?php echo $pageName;?>__dormitory-heading page-heading"><span>学生寮</span></h2>
       <div class="<?php echo $pageName;?>__dormitory-intro">
         本学園に入学される方の中には、親元から離れてひとり暮らしをしながら通学している学生も多数在籍しています。横浜は、みなとみらい・中華街などの観光地も有名ですが、家賃・物価もお手ごろで、交通の便がよく、海や豊かな自然に恵まれた住みやすい街です。 遠方から入学をお考えの方に住まいのサポートを致します

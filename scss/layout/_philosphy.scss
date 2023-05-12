@@ -1,0 +1,356 @@
+.page-philosophy {
+  padding-top : 74px;
+  &__intro {
+    font-size : 16px;
+    line-height: (37/16);
+    width : 768px;
+    margin : 0 auto;
+  }
+  &__concept {
+    margin-top : 143px;
+    &-main {
+      background: url(./img/page/philosophy/bg_concept.jpg) no-repeat center/cover;
+      padding : 101px 0 100px;
+      position : relative;
+      z-index: 1;
+      &:before {
+        content : "";
+        width : 100%;
+        height : 100%;
+        background-color : rgba($blue02, .6);
+        position : absolute;
+        top : 0;
+        left : 0;
+        z-index: -1;
+      }
+      &-ttl {
+        font-size : 40px;
+        font-weight: 700;
+        line-height : (58/40);
+        letter-spacing: .05em;
+        color : $white00;
+        text-align: center;
+        & span {
+          font-size : 52px;
+          line-height : (75/52);
+        }
+      }
+      &-txt {
+        font-size : 25px;
+        font-weight : 700;
+        line-height : (50/20);
+        text-align: center;
+        color : $white00;
+        position : relative;
+        margin-top : 26px;
+        &:before {
+          content : "";
+          width : 624px;
+          height : 5px;
+          background-color : $yellow01;
+          position : absolute;
+          bottom : 5px;
+          left : 50%;
+          transform : translateX(-50%);
+        }
+      }
+      &-100th {
+        width : 768px;
+        margin : 163px auto 0;
+        position: relative;
+        &-ttl {
+          font-size : 36px;
+          font-weight : 700;
+          letter-spacing: .05em;
+          line-height : (52/36);
+          text-align: center;
+          color :$white00;
+          background-color : $blue02;
+          width : 562px;
+          padding : 8px 0px 7px;
+          position: absolute;
+          top : -68px;
+          left : 0;
+          box-shadow : 0px 3px 6px $blue02;
+          & span {
+            font-size : 67px;
+            line-height : (97/67);
+            color : $yellow01;
+            display: inline-block;
+            margin : 0 10px;
+          }
+        }
+        &-txt {
+          font-size : 16px;
+          line-height : (37/16);
+          background-color : rgba($white00, .8);
+          width : 716px;
+          padding: 67px 30px 23px;
+          margin-left : auto;
+        }
+      }
+    }
+    &-sub {
+      @include flex(flex, nowrap, flex-start, center, normal, row);
+      &-left {
+        width : 50%;
+      }
+      &-right {
+        width : 50%;
+        padding-top : 18px;
+        &-ttl {
+          width : (462/640)*100%;
+          margin : 0 auto;
+        }
+        &-txt {
+          font-size : 16px;
+          line-height : (37/16);
+          width : (539/640)*100%;
+          margin : 33px auto 0;
+        }
+      }
+    }
+  }
+  &__adviser {
+    width : 768px;
+    margin : 0 auto;
+    padding-top : 194px;
+    &-intro {
+      font-size : 16px;
+      line-height: (37/16);
+    }
+    &-group {
+      margin-top : 88px;
+      position : relative;
+    }
+    &-img {
+      width : 219px;
+      position: absolute;
+      top : -15px;
+      left : 35px;
+    }
+    &-role {
+      width : 483px;
+      margin-left : auto;
+    }
+    &-director {
+      font-size : 18px;
+      line-height : (37/18);
+    }
+    &-name {
+      font-size : 34px;
+      line-height: (37/34);
+      margin-top : 12px;
+    }
+    &-txt {
+      font-size : 16px;
+      line-height : (37/16);
+      background-color : $blue10;
+      padding : 30px 35px 27px 285px;
+      margin-top : 25px;
+    }
+  }
+  &__power {
+    &-heading {
+      width : 656px;
+      margin : 205px auto 0;
+      @include flex(flex, nowrap, space-between, center, normal, row);
+      position: relative;
+      &:before {
+        content : "";
+        width : 56px;
+        height : 56px;
+        background: url(./img/page/philosophy/icn_cross.svg) no-repeat center/cover;
+        position : absolute;
+        top : 50%;
+        left : 50%;
+        transform: translate(-50%, -54%);
+      }
+      &-item {
+        font-size : 76px;
+        font-weight: 700;
+        line-height : 1;
+        letter-spacing: .05em;
+        text-align: center;
+        color : $white00;
+        background-color: $blue02;
+        width : 276px;
+        padding : 13px 0px 20px;
+      }
+    }
+    &-intro {
+      font-size : 16px;
+      line-height : (37/16);
+      width : 768px;
+      margin : 64px auto 0;
+    }
+    &-list {
+      @include flex(flex, nowrap, space-between, center, normal, row);
+      margin-top : 63px;
+    }
+    &-item {
+      width : 50%;
+      padding : 40px 0px;
+      &:first-of-type {
+          background: url(./img/page/philosophy/img_power01.jpg) no-repeat center/cover;
+      }
+      &:nth-of-type(2) {
+        background: url(./img/page/philosophy/img_power02.jpg) no-repeat center/cover;
+      }
+    }
+    &-inner {
+      width : (560/640)*100%;
+      background-color : rgba($white00, .7);
+      padding : 49px 50px 45px;
+      margin : 0 auto;
+    }
+    &-concept {
+      font-size : 30px;
+      font-weight : 700;
+      line-height : (44/30);
+      letter-spacing: .05em;
+      text-align: center;
+    }
+    & .page-subHeading {
+      font-size : 54px;
+      line-height : (79/54);
+      &:before {
+        width : 70px;
+      }
+    }
+    &-txt {
+      font-size : 16px;
+      line-height : (37/16);
+      margin-top : 54px;
+    }
+    & .page-group__contBtn {
+      margin-top : 23px;
+    }
+  }
+  &__method {
+    padding : 60px 0px;
+    margin-top : 100px;
+    background: url(./img/page/philosophy/img_method.jpg) no-repeat center/cover;
+    &-inner {
+      width : 758px;
+      background-color: rgba($white00, .85);
+      padding : 29px 51px 31px;
+      margin : 0 auto;
+    }
+    &-ttl {
+      font-size : 44px;
+      font-weight: 700;
+      line-height : (64/44);
+      letter-spacing: .05em;
+      text-align: center;
+      color : $blue02;
+      & span {
+        font-size : 30px;
+        line-height : (45/30);
+        display: block;
+        margin-bottom : -2px;
+      }
+    }
+    &-txt {
+      font-size : 16px;
+      line-height : (37/16);
+      margin-top : 24px;
+    }
+    & .page-group__contBtn {
+      font-size : 15px;
+      line-height : (28/15);
+      width : 246px;
+      padding : 12px 0px 10px;
+      margin-top : 43px;
+    }
+  }
+  &__learning {
+    padding-top : 200px;
+    &-list {
+      margin-top : 70px;
+      @include flex(flex, nowrap, center, center, normal, row);
+    }
+    &-item {
+      width : (364/1280)*100%;
+      height : 28.438vw;
+      display: block;
+      position: relative;
+      &:first-of-type {
+        background: url(./img/page/philosophy/img_learning01.jpg) no-repeat center/cover;
+      }
+      &:nth-of-type(2) {
+        background: url(./img/page/philosophy/img_learning02.jpg) no-repeat center/cover;
+      }
+      &:last-of-type {
+        background: url(./img/page/philosophy/img_learning03.jpg) no-repeat center/cover;
+      }
+      &:not(:first-of-type) {
+        margin-left : (20/1280)*100%;
+      }
+    }
+    &-inner {
+      color : $white00;
+      width : (248/364)*100%;
+      height: 19.36vw;
+      position: absolute;
+      top : 50%;
+      left : 50%;
+      transform: translate(-50%, -50%);
+      &:before {
+        content : "";
+        width : 34px;
+        height : 34px;
+        background: url(./img/page/philosophy/icn_brackets.svg) no-repeat center/cover;
+        position: absolute;
+        top : -4px;
+        left : -4px;
+      }
+      &:after {
+        content : "";
+        width : 34px;
+        height : 34px;
+        background: url(./img/page/philosophy/icn_brackets.svg) no-repeat center/cover;
+        position: absolute;
+        bottom : -4px;
+        right : -4px;
+        transform : rotate(-180deg);
+      }
+      & span {
+        font-size : 13px;
+        font-weight: 700;
+        line-height : (28/13);
+        letter-spacing: .1em;
+        position: absolute;
+        right : 13px;
+        bottom : 9px;
+        z-index : 1;
+      }
+    }
+    &-bg {
+      width : (248/364)*100%;
+      height: 19.36vw;
+      background-color : rgba($blue04, .8);
+      mix-blend-mode: multiply;
+      position : absolute;
+      top : 50%;
+      left : 50%;
+      transform : translate(-50%, -50%);
+    }
+    &-center {
+      font-size : 26px;
+      font-weight: 700;
+      line-height : (37/26);
+      letter-spacing: .05em;
+      position: absolute;
+      top : 50%;
+      left : 50%;
+      transform : translate(-50%, -50%);
+      z-index : 2;
+      white-space: nowrap;
+    }
+  }
+  & .mod-banner {
+    background-image : url(./img/page/philosophy/bg_banner.jpg);
+    margin-top : 200px;
+  }
+}

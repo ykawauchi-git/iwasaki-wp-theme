@@ -214,6 +214,7 @@
       position : absolute;
       top : -41px;
       left : 0px;
+      z-index : 1;
       @include mq_sp{
         width : size_sp(104);
         height : size_sp(104);

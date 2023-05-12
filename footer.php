@@ -76,7 +76,7 @@
       <li><a href="<?php echo home_url('/privacy-policy/');?>">サイトポリシー</a></li>
       <li><a href="<?php echo home_url('/media-policy/');?>">メディアポリシー</a></li>
     </ul>
-    <small class="common-footer__copyright">COPYRIGHT &copy; IWASAKI GAKUEN. ALL RIGHTS RESERVED.</small>
+    <small class="common-footer__copyright">&copy; 2023 IWASAKI GAKUEN.</small>
   </div>
 </footer>
 <!-- ////フッター -->

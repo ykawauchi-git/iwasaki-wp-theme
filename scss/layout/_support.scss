@@ -148,7 +148,6 @@
         }
       }
       &:nth-of-type(n + 2) {
-        margin-top : 60px;
         @include mq_sp{
           margin-top : size_sp(50);
         }
@@ -304,6 +303,7 @@
         position : absolute;
         top : 0;
         left : 9px;
+        z-index: 1;
         @include mq_sp{
           @include fz_vw(48);
           line-height : (70/48);
@@ -591,6 +591,7 @@
         position: absolute;
         top : -23px;
         left : -26px;
+        z-index : 1;
         @include mq_sp{
           width : size_sp(104);
           height : size_sp(104);
