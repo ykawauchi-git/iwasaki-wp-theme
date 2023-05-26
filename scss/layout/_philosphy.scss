@@ -1,13 +1,24 @@
 .page-philosophy {
   padding-top : 74px;
+  @include mq_sp{
+    padding-top : size_sp(91);
+  }
   &__intro {
     font-size : 16px;
     line-height: (37/16);
     width : 768px;
     margin : 0 auto;
+    @include mq_sp{
+      @include fz_vw(28);
+      line-height : (58/28);
+      width : size_sp(644);
+    }
   }
   &__concept {
     margin-top : 143px;
+    @include mq_sp{
+      margin-top : size_sp(149);
+    }
     &-main {
       background: url(./img/page/philosophy/bg_concept.jpg) no-repeat center/cover;
       padding : 101px 0 100px;
@@ -30,9 +41,19 @@
         letter-spacing: .05em;
         color : $white00;
         text-align: center;
+        @include mq_sp{
+          @include fz_vw(46);
+          line-height : (66/46);
+        }
         & span {
           font-size : 52px;
           line-height : (75/52);
+          @include mq_sp{
+            @include fz_vw(60);
+            line-height : (87/60);
+            display: block;
+            padding : 4px 0px 3px;
+          }
         }
       }
       &-txt {
@@ -43,6 +64,11 @@
         color : $white00;
         position : relative;
         margin-top : 26px;
+        @include mq_sp{
+          @include fz_vw(36);
+          line-height: (79/36);
+          margin-top : size_sp(68);
+        }
         &:before {
           content : "";
           width : 624px;
@@ -52,12 +78,33 @@
           bottom : 5px;
           left : 50%;
           transform : translateX(-50%);
+          @include mq_sp{
+            width : size_sp(574);
+            height : size_sp(8);
+            bottom : size_sp(82);
+          }
+        }
+        &:after {
+          @include mq_sp{
+            content : "";
+            width : size_sp(324);
+            height : size_sp(8);
+            background-color : $yellow01;
+            position : absolute;
+            bottom : size_sp(2);
+            left : 50%;
+            transform : translateX(-50%);
+          }
         }
       }
       &-100th {
         width : 768px;
         margin : 163px auto 0;
         position: relative;
+        @include mq_sp{
+          width : size_sp(640);
+          margin-top : size_sp(209);
+        }
         &-ttl {
           font-size : 36px;
           font-weight : 700;
@@ -72,12 +119,24 @@
           top : -68px;
           left : 0;
           box-shadow : 0px 3px 6px $blue02;
+          @include mq_sp{
+            @include fz_vw(36);
+            line-height : (52/36);
+            width : size_sp(562);
+            padding : size_sp(8) 0px size_sp(7);
+            top : size_sp(-61);
+            box-shadow : 0px size_sp(3) size_sp(6) $blue02;
+          }
           & span {
             font-size : 67px;
             line-height : (97/67);
             color : $yellow01;
             display: inline-block;
-            margin : 0 10px;
+            margin : 0 15px;
+            @include mq_sp{
+              @include fz_vw(67);
+              margin : 0 size_sp(15);
+            }
           }
         }
         &-txt {
@@ -87,26 +146,57 @@
           width : 716px;
           padding: 67px 30px 23px;
           margin-left : auto;
+          @include mq_sp{
+            @include fz_vw(28);
+            line-height: (58/28);
+            background-color : rgba($white00, .9);
+            width : size_sp(579);
+            padding : size_sp(71) size_sp(40) size_sp(21);
+          }
         }
       }
     }
     &-sub {
       @include flex(flex, nowrap, flex-start, center, normal, row);
+      // padding-top : 150px;
+      @include mq_sp{
+        padding-top : size_sp(150);
+      }
+      @include mq_sp{
+        flex-direction: column;
+      }
       &-left {
         width : 50%;
+        @include mq_sp{
+          width : 100%;
+          height : size_sp(500);
+        }
       }
       &-right {
         width : 50%;
         padding-top : 18px;
+        @include mq_sp{
+          width : size_sp(644);
+          padding-top : size_sp(67);
+        }
         &-ttl {
           width : (462/640)*100%;
           margin : 0 auto;
+          @include mq_sp{
+            width : 100%;
+          }
         }
         &-txt {
           font-size : 16px;
           line-height : (37/16);
           width : (539/640)*100%;
           margin : 33px auto 0;
+          @include mq_sp{
+            @include fz_vw(28);
+            line-height : (58/28);
+            width : 100%;
+            margin-top : size_sp(51);
+          }
         }
       }
     }
@@ -115,32 +205,62 @@
     width : 768px;
     margin : 0 auto;
     padding-top : 194px;
+    @include mq_sp{
+      width : size_sp(670);
+      padding-top : size_sp(182);
+    }
     &-intro {
       font-size : 16px;
       line-height: (37/16);
+      @include mq_sp{
+        @include fz_vw(28);
+        line-height : (58/28);
+        width : size_sp(644);
+        margin : 0 auto;
+      }
     }
     &-group {
       margin-top : 88px;
       position : relative;
+      @include mq_sp{
+        margin-top : size_sp(86);
+      }
     }
     &-img {
       width : 219px;
       position: absolute;
       top : -15px;
       left : 35px;
+      @include mq_sp{
+        width : size_sp(280);
+        top : size_sp(5);
+        left : size_sp(33);
+      }
     }
     &-role {
       width : 483px;
       margin-left : auto;
+      @include mq_sp{
+        width : size_sp(335);
+      }
     }
     &-director {
       font-size : 18px;
       line-height : (37/18);
+      @include mq_sp{
+        @include fz_vw(22);
+        line-height : (43/22);
+      }
     }
     &-name {
       font-size : 34px;
       line-height: (37/34);
       margin-top : 12px;
+      @include mq_sp{
+        @include fz_vw(42);
+        line-height : 1;
+        margin-top : size_sp(34);
+      }
     }
     &-txt {
       font-size : 16px;
@@ -148,6 +268,12 @@
       background-color : $blue10;
       padding : 30px 35px 27px 285px;
       margin-top : 25px;
+      @include mq_sp{
+        @include fz_vw(28);
+        line-height : (58/28);
+        padding : size_sp(103) size_sp(33) size_sp(32);
+        margin-top : size_sp(60);
+      }
     }
   }
   &__power {
@@ -156,6 +282,10 @@
       margin : 205px auto 0;
       @include flex(flex, nowrap, space-between, center, normal, row);
       position: relative;
+      @include mq_sp{
+        width : size_sp(540);
+        margin-top : size_sp(205);
+      }
       &:before {
         content : "";
         width : 56px;
@@ -165,6 +295,10 @@
         top : 50%;
         left : 50%;
         transform: translate(-50%, -54%);
+        @include mq_sp{
+          width : size_sp(45);
+          height : size_sp(45);
+        }
       }
       &-item {
         font-size : 76px;
@@ -176,6 +310,11 @@
         background-color: $blue02;
         width : 276px;
         padding : 13px 0px 20px;
+        @include mq_sp{
+          @include fz_vw(60);
+          width : size_sp(226);
+          padding : size_sp(9) 0 size_sp(16);
+        }
       }
     }
     &-intro {
@@ -183,16 +322,30 @@
       line-height : (37/16);
       width : 768px;
       margin : 64px auto 0;
+      @include mq_sp{
+        @include fz_vw(28);
+        line-height : (58/28);
+        width : size_sp(644);
+        margin-top : size_sp(51);
+      }
     }
     &-list {
       @include flex(flex, nowrap, space-between, center, normal, row);
       margin-top : 63px;
+      @include mq_sp{
+        flex-direction: column;
+        margin-top : size_sp(60);
+      }
     }
     &-item {
       width : 50%;
       padding : 40px 0px;
+      @include mq_sp{
+        width : 100%;
+        padding : size_sp(30) 0;
+      }
       &:first-of-type {
-          background: url(./img/page/philosophy/img_power01.jpg) no-repeat center/cover;
+        background: url(./img/page/philosophy/img_power01.jpg) no-repeat center/cover;
       }
       &:nth-of-type(2) {
         background: url(./img/page/philosophy/img_power02.jpg) no-repeat center/cover;
@@ -203,6 +356,10 @@
       background-color : rgba($white00, .7);
       padding : 49px 50px 45px;
       margin : 0 auto;
+      @include mq_sp{
+        width : size_sp(690);
+        padding : size_sp(50) size_sp(53) size_sp(50);
+      } 
     }
     &-concept {
       font-size : 30px;
@@ -210,32 +367,62 @@
       line-height : (44/30);
       letter-spacing: .05em;
       text-align: center;
+      @include mq_sp{
+        @include fz_vw(36);
+        line-height : (52/36);
+      }
     }
     & .page-subHeading {
       font-size : 54px;
       line-height : (79/54);
+      @include mq_sp{
+        @include fz_vw(54);
+        line-height : (79/54);
+        margin-top : size_sp(10);
+      }
       &:before {
         width : 70px;
+        bottom : -36px;
+        @include mq_sp{
+          width : size_sp(122);
+          bottom : size_sp(-57);
+        }
       }
     }
     &-txt {
       font-size : 16px;
       line-height : (37/16);
       margin-top : 54px;
+      @include mq_sp{
+        @include fz_vw(28);
+        line-height: (58/28);
+        margin-top : size_sp(88);
+      }
     }
     & .page-group__contBtn {
       margin-top : 23px;
+      @include mq_sp{
+        margin-top : size_sp(61);
+      }
     }
   }
   &__method {
     padding : 60px 0px;
     margin-top : 100px;
     background: url(./img/page/philosophy/img_method.jpg) no-repeat center/cover;
+    @include mq_sp{
+      padding : size_sp(60) 0;
+      margin-top : size_sp(200);
+    }
     &-inner {
       width : 758px;
       background-color: rgba($white00, .85);
       padding : 29px 51px 31px;
       margin : 0 auto;
+      @include mq_sp{
+        width : size_sp(690);
+        padding : size_sp(50) size_sp(53);
+      }
     }
     &-ttl {
       font-size : 44px;
@@ -244,17 +431,31 @@
       letter-spacing: .05em;
       text-align: center;
       color : $blue02;
+      @include mq_sp{
+        @include fz_vw(54);
+        line-height: (79/54);
+      }
       & span {
         font-size : 30px;
         line-height : (45/30);
         display: block;
         margin-bottom : -2px;
+        @include mq_sp{
+          @include fz_vw(36);
+          line-height : (52/36);
+          margin-bottom : size_sp(10);
+        }
       }
     }
     &-txt {
       font-size : 16px;
       line-height : (37/16);
       margin-top : 24px;
+      @include mq_sp{
+        @include fz_vw(28);
+        line-height : (58/28);
+        margin-top : size_sp(31);
+      }
     }
     & .page-group__contBtn {
       font-size : 15px;
@@ -262,19 +463,36 @@
       width : 246px;
       padding : 12px 0px 10px;
       margin-top : 43px;
+      @include mq_sp{
+        @include fz_vw(22);
+        line-height: (44/22);
+        width : size_sp(238);
+        margin-top : size_sp(61);
+      }
     }
   }
   &__learning {
     padding-top : 200px;
+    @include mq_sp{
+      padding-top : size_sp(200);
+    }
     &-list {
       margin-top : 70px;
       @include flex(flex, nowrap, center, center, normal, row);
+      @include mq_sp{
+        margin-top : size_sp(80);
+        flex-direction: column;
+      }
     }
     &-item {
       width : (364/1280)*100%;
       height : 28.438vw;
       display: block;
       position: relative;
+      @include mq_sp{
+        width : size_sp(630);
+        height : size_sp(630);
+      }
       &:first-of-type {
         background: url(./img/page/philosophy/img_learning01.jpg) no-repeat center/cover;
       }
@@ -286,6 +504,10 @@
       }
       &:not(:first-of-type) {
         margin-left : (20/1280)*100%;
+        @include mq_sp{
+          margin-top :size_sp(40);
+          margin-left : 0;
+        }
       }
     }
     &-inner {
@@ -296,6 +518,10 @@
       top : 50%;
       left : 50%;
       transform: translate(-50%, -50%);
+      @include mq_sp{
+        width : size_sp(430);
+        height : size_sp(430);
+      }
       &:before {
         content : "";
         width : 34px;
@@ -304,6 +530,12 @@
         position: absolute;
         top : -4px;
         left : -4px;
+        @include mq_sp{
+          width : size_sp(59);
+          height : size_sp(59);
+          top : size_sp(-7);
+          left : size_sp(-7);
+        }
       }
       &:after {
         content : "";
@@ -314,6 +546,12 @@
         bottom : -4px;
         right : -4px;
         transform : rotate(-180deg);
+        @include mq_sp{
+          width : size_sp(59);
+          height : size_sp(59);
+          bottom :size_sp(-7);
+          right : size_sp(-7);
+        }
       }
       & span {
         font-size : 13px;
@@ -324,6 +562,12 @@
         right : 13px;
         bottom : 9px;
         z-index : 1;
+        @include mq_sp{
+          @include fz_vw(22);
+          line-height : (47/22);
+          right : size_sp(25);
+          bottom : size_sp(18);
+        }
       }
     }
     &-bg {
@@ -335,6 +579,10 @@
       top : 50%;
       left : 50%;
       transform : translate(-50%, -50%);
+      @include mq_sp{
+        width : size_sp(430);
+        height : size_sp(430);
+      }
     }
     &-center {
       font-size : 26px;
@@ -347,10 +595,32 @@
       transform : translate(-50%, -50%);
       z-index : 2;
       white-space: nowrap;
+      @include mq_sp{
+        @include fz_vw(44);
+        line-height : (54/44);
+        transform : translate(-50%, -46%);
+      }
     }
   }
   & .mod-banner {
     background-image : url(./img/page/philosophy/bg_banner.jpg);
+    padding : 76px 0px 75px;
     margin-top : 200px;
+    @include mq_sp{
+      padding : size_sp(100) size_sp(53);
+      margin-top : size_sp(200);
+    }
+    &__ttl {
+      & span {
+        font-size : 38px;
+        line-height : (55/38);
+        padding : 13px 58px 9px;
+        @include mq_sp{
+          @include fz_vw(44);
+          line-height: (64/44);
+          padding : size_sp(16) size_sp(38);
+        }
+      }
+    }
   }
 }

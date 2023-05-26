@@ -82,6 +82,7 @@
       </li>
     </ul>
   </div>
+  <!-- バナー -->
   <div class="mod-banner">
     <div class="mod-banner__ttl"><span>教職員採用のご案内</span></div>
     <div class="mod-banner__txt">

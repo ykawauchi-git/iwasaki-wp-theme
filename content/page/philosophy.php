@@ -6,7 +6,7 @@
   <div class="<?php echo $pageName;?>__concept">
     <div class="<?php echo $pageName;?>__concept-main">
       <div class="<?php echo $pageName;?>__concept-main-ttl">岩崎学園は<br><span>「楽しむこと」</span>を忘れない。</div>
-      <div class="<?php echo $pageName;?>__concept-main-txt">自分を磨き、世界の変化を作り出す一歩がここにある。</div>
+      <div class="<?php echo $pageName;?>__concept-main-txt">自分を磨き、世界の変化を作り出す<br class="sp-only">一歩がここにある。</div>
       <div class="<?php echo $pageName;?>__concept-main-100th">
         <div class="<?php echo $pageName;?>__concept-main-100th-ttl">人生<span>100年</span>時代を生きる</div>
         <div class="<?php echo $pageName;?>__concept-main-100th-txt">

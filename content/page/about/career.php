@@ -1,14 +1,5 @@
 <?php $pageName = "page-career";?>
 <section class="<?php echo $pageName;?>">
-  <div class="<?php echo $pageName;?>__fv">
-    <div class="<?php echo $pageName;?>__fv-inner">
-      <div class="<?php echo $pageName;?>__fv-ttl page-subHeading">就職・資格サポート</div>
-      <div class="<?php echo $pageName;?>__fv-txt">
-        文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。<br>
-        文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。
-      </div>
-    </div>
-  </div>
   <div class="<?php echo $pageName;?>__figure">
     <div class="<?php echo $pageName;?>__figure-item">
       <img class="object_fit" src="<?php //echo get_stylesheet_directory_uri();?>/img/page/about/img_message.jpg">
@@ -292,6 +283,7 @@
       知識や技術の証明となる資格。ISCでは、人気の国家資格をはじめ、さまざまな資格取得を強力に後押し。長年の実績から得たノウハウを活かし、初心者にも安心の資格対策をおこなっています。
     </div>
     <div class="<?php echo $pageName;?>__certification-support-group">
+      <div class="<?php echo $pageName;?>__certification-support-bg"></div>
       <ul class="<?php echo $pageName;?>__certification-support-list">
         <!-- 01 -->
         <li class="<?php echo $pageName;?>__certification-support-item">

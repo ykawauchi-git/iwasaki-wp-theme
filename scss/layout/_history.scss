@@ -35,7 +35,7 @@
       box-shadow : 0px 3px 6px rgba($black00, .1);
       position : absolute;
       opacity: 0;
-      transition-duration : .8s;
+      transition-duration : 1.2s;
       @include mq_sp{
         box-shadow : 0 size_sp(3) size_sp(6) rgba($black00, .1);
       }
@@ -46,7 +46,7 @@
         left: (21/1000)*100%;
         background :blue;
         z-index : 1;
-        transition-delay : 2s;
+        transition-delay : 1.4s;
         @include mq_sp{
           width : size_sp(355);
           height : size_sp(237);
@@ -62,7 +62,7 @@
         left: (313/1000)*100%;
         background :red;
         z-index : 4;
-        transition-delay : 2.4s;
+        transition-delay : 1.6s;
         @include mq_sp{
           width : size_sp(228);
           height : size_sp(152);
@@ -77,7 +77,7 @@
         left: (412/1000)*100%;
         background :yellow;
         z-index : 1;
-        transition-delay : 2.2s;
+        transition-delay : 1.8s;
         @include mq_sp{
           width : size_sp(351);
           height : size_sp(234);
@@ -93,7 +93,7 @@
         right: (75/1000)*100%;
         background :green;
         z-index : 2;
-        transition-delay : 2.2s;
+        transition-delay : 2s;
         @include mq_sp{
           width : size_sp(334);
           height : size_sp(222);
@@ -109,7 +109,7 @@
         right: 0;
         background :black;
         z-index : 5;
-        transition-delay : 2.1s;
+        transition-delay : 2.2s;
         @include mq_sp{
           width : size_sp(290);
           height : size_sp(193);
@@ -125,7 +125,7 @@
         left: (60/1000)*100%;
         background :blue;
         z-index : 1;
-        transition-delay : 2.5s;
+        transition-delay : 1.5s;
         @include mq_sp{
           width : size_sp(265);
           height : size_sp(176);
@@ -141,7 +141,7 @@
         left: (266/1000)*100%;
         background :red;
         z-index: 5;
-        transition-delay : 2.7s;
+        transition-delay : 1.7s;
         @include mq_sp{
           width : size_sp(331);
           height : size_sp(221);
@@ -157,7 +157,7 @@
         left: (541/1000)*100%;
         background :yellow;
         z-index: 4;
-        transition-delay : 2s;
+        transition-delay : 1.9s;
         @include mq_sp{
           width : size_sp(273);
           height : size_sp(181);
@@ -173,7 +173,7 @@
         right: (133/1000)*100%;
         background :green;
         z-index: 3;
-        transition-delay : 2.3s;
+        transition-delay : 2.1s;
         @include mq_sp{
           width : size_sp(327);
           height : size_sp(218);
@@ -235,7 +235,7 @@
       & img {
         opacity: 0;
         transform: translateX(-100%);
-        transition-duration : .5s;
+        transition-duration : 1.4s;
         transition-delay : 1.4s;
       }
     }

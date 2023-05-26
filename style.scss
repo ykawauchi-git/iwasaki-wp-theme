@@ -69,6 +69,11 @@ License: GNU General Public License v2 or later
 @import "scss/layout/_access.scss";
 @import "scss/layout/_document.scss";
 @import "scss/layout/_for.scss";
+@import "scss/layout/for-recruiters.scss";
+@import "scss/layout/for-students.scss";
+@import "scss/layout/for-graduates.scss";
+@import "scss/layout/for-teachers.scss";
+@import "scss/layout/for-parents.scss";
 
 @import "scss/layout/_contact.scss";
 @import "scss/layout/_policy.scss";
@@ -84,6 +89,7 @@ License: GNU General Public License v2 or later
 @import "scss/module/_breadcrumbs.scss";
 @import "scss/module/_pagenavi.scss";
 @import "scss/module/_scroll.scss";
+@import "scss/module/_page.scss";
 
 //top
 @import "scss/module/top/_kv.scss";

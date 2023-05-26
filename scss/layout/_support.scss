@@ -14,7 +14,7 @@
   }
   &__anchor {
     width : 656px;
-    @include flex(flex, wrap, flex-start, stretch, normal, row);
+    @include flex(flex, wrap, center, stretch, normal, row);
     padding-top : 63px;
     margin : 0 auto;
     @include mq_sp{

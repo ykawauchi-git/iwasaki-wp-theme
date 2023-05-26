@@ -7,7 +7,6 @@
     <a href="#tuition_support" class="btn__anchor">学費サポート</a>
     <a href="#scholarship_system" class="btn__anchor">特待生制度</a>
     <a href="#student_dormitory" class="btn__anchor">学生寮</a>
-    <a href="#facility" class="btn__anchor">充実の施設・設備</a>
   </div>
   <!-- 岩崎学園独自の奨学財団 -->
   <div class="<?php echo $pageName;?>__foundation">

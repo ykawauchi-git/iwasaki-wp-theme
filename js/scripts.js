@@ -146,3 +146,11 @@ $(function () {
     });
   });
 });
+
+// 企業の皆さまへ
+$(function(){
+	$('.page-recruiters__post-question').click(function(){
+		$(this).parent('.page-recruiters__post-item').toggleClass('selected');
+		$(this).next('.page-recruiters__post-answer').slideToggle();
+	});
+});

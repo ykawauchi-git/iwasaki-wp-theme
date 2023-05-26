@@ -13,9 +13,9 @@ body {
 	font-weight: $base-font-weight;
 	position: relative;
 	-webkit-print-color-adjust: exact;
-	overflow-x: hidden;
-	-ms-overflow-style: none;    /* IE, Edge 対応 */
-	scrollbar-width: none;       /* Firefox 対応 */
+	// overflow-x: hidden;
+	// -ms-overflow-style: none;    /* IE, Edge 対応 */
+	// scrollbar-width: none;       /* Firefox 対応 */
   @include mq_sp {
     @include fz_vw($base-font-size-sp);
     line-height: $base-line-height-sp;
@@ -72,7 +72,7 @@ a {
   min-height: 100vh;
   height: 100%;
   margin: 0 auto;
-  overflow: hidden;
+  // overflow: hidden;
   @include mq_sp {
     border: none;
   }

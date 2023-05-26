@@ -1,32 +1,4 @@
 .page-career {
-  &__fv {
-    background: url(./img/page/career/fv_career.jpg) no-repeat center/cover;
-    padding : 55px 0px 54px;
-    @include mq_sp{
-      background: url(./img/page/career/fv_career.jpg) no-repeat left/cover;
-      padding : size_sp(100) 0;
-    }
-    &-inner {
-      width : 704px;
-      padding : 32px 40px 28px;
-      margin : 0 auto;
-      background-color : rgba($white00, .8);
-      @include mq_sp{
-        width : size_sp(620);
-        padding : size_sp(50) size_sp(30) size_sp(61);
-      }
-    }
-    &-txt {
-      font-size : 16px;
-      line-height : (37/16);
-      margin-top : 56px;
-      @include mq_sp{
-        @include fz_vw(28);
-        line-height : (58/28);
-        margin-top : size_sp(92);
-      }
-    }
-  }
   &__figure {
     padding : 100px 0px 150px;
     @include mq_sp{
@@ -409,20 +381,44 @@
         margin-top : size_sp(71);
       }
     }
+
     &-group {
-      background: url(./img/page/career/bg_certification.svg) no-repeat center/cover;
-      padding : 70px 0px;
+      // background: url(./img/page/career/bg_certification.svg) no-repeat center/cover;
       margin-top : 63px;
+      position: relative;
+      z-index: 1;
       @include mq_sp{
-        padding : size_sp(100) 0;
         margin-top : size_sp(71);
+      }
+    }
+    &-bg {
+      width : 100vw;
+      height : calc(100vh - 128px);
+      background: url(./img/page/career/bg_certification.svg) no-repeat center/cover;
+      position: sticky;
+      top : 128px;
+      left : 0;
+      z-index : -1;
+      @media screen and (max-width: 1000px) {
+        top : 102px;
+        height : calc(100vh - 102px);
+      }
+      @include mq_sp{
+        top : size_sp(102);
+        height : calc(100vh - #{size_sp(102)});
       }
     }
     &-list {
       width : 828px;
-      margin : 0 auto;
+      padding : 70px 0px;
+      margin : calc(-100vh + 128px) auto 0;
+      @media screen and (max-width: 1000px) {
+        margin-top : calc(-100vh + 102px);
+      }
       @include mq_sp{
         width : size_sp(698);
+        padding : size_sp(100) 0;
+        margin-top : calc(-100vh + #{size_sp(102)});
       }
     }
     &-item {
