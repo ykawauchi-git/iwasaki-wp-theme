@@ -291,6 +291,14 @@
             right : size_sp(70);
           }
         }
+        & .page-group__contBtn {
+          @include mq_tab{
+            margin: 51px 143px 0 auto;
+          }
+          @include mq_sp{
+            margin: size_sp(51) size_sp(143) 0 auto;
+          }
+        }
       }
       &:before {
         content : "";

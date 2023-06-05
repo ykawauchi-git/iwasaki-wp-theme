@@ -24,20 +24,29 @@
     &-list {
       margin-top : 70px;
       @include flex(flex, wrap, flex-start, stretch, normal, row);
+      @include mq_tab{
+        flex-direction: column;
+      }
       @include mq_sp{
         margin-top : 50px;
-        flex-direction: column;
       } 
     }
     &-item {
       width : 33.333%;
       padding : 20px;
+      @include mq_tab{
+        width: 644px;
+        padding: 30px;
+        margin: 0 auto;
+      }
       @include mq_sp{
         width : size_sp(644);
         padding : size_sp(30);
-        margin : 0 auto;
       }
       &:not(:first-of-type) {
+        @include mq_tab{
+          margin-top: 40px;
+        }
         @include mq_sp{
           margin-top: size_sp(40);
         }
@@ -72,6 +81,11 @@
       padding : 22px 0px 47px;
       margin : 0 auto;
       background-color : rgba($white00, .7);
+
+      @include mq_tab{
+        width: 584px;
+        padding: 42px 0 67px;
+      }
       @include mq_sp{
         width : size_sp(584);
         padding : size_sp(42) 0 size_sp(67);
@@ -82,9 +96,12 @@
       font-weight: 700;
       line-height : (90/62);
       text-align: center;
+      @include mq_tab{
+        font-size: 92px;
+        line-height : (133/92);
+      }
       @include mq_sp{
         @include fz_vw(92);
-        line-height : (133/92);
       }
     }
     &-ttl {
@@ -96,9 +113,14 @@
       height : 88px;
       margin-top : 21px;
       @include flex(flex, wrap, center, center, normal, row);
+      @include mq_tab{
+        font-size: 45px;
+        line-height : (65/45);
+        height: 130px;
+        margin-top: 27px;
+      }
       @include mq_sp{
         @include fz_vw(45);
-        line-height : (65/45);
         height : size_sp(130);
         margin-top : size_sp(27);
       }
@@ -109,7 +131,17 @@
       padding : 8px 0px;
       margin-top : 47px;
       border : solid 2px $black01;
+      @include mq_tab{
+        font-size: 22px;
+        line-height: (32/22);
+        width: 238px;
+        padding: 16px 0;
+        margin-top: 67px;
+        border: solid 2px $black01;
+      }
       @include mq_sp{
+        @include fz_vw(22);
+        width: size_sp(238);
         padding : size_sp(16) 0;
         margin-top : size_sp(67);
         border : solid size_sp(2) $black01;

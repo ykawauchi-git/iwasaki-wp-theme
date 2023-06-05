@@ -85,6 +85,9 @@
 }
 
 .page-sec02 {
+  &__list {
+      overflow: hidden
+  }
   &__item {
     @include flex(flex, wrap, flex-start, stretch, normal, row);
     position: relative;

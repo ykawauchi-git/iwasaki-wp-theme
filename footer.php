@@ -35,7 +35,7 @@
           <span>専門学校</span>
           <ul>
             <li><a href="https://isc.iwasaki.ac.jp/" target="_blank">情報科学専門学校</a></li>
-            <li><a href="https://iscs.iwasaki.ac.jp/" target="_blank">横浜スポーツウェルネス専門学校</a></li>
+            <li><a href="https://iscs.iwasaki.ac.jp/" target="_blank">横浜スポーツウェルネス専門学校<span>(2024年4月 横浜医療情報専門学校より校名変更予定)</span></a></li>
             <li><a href="https://yfc.iwasaki.ac.jp/" target="_blank">横浜ｆカレッジ</a></li>
             <li><a href="https://ycr.iwasaki.ac.jp/" target="_blank">横浜リハビリテーション専門学校</a></li>
             <li><a href="https://yda.iwasaki.ac.jp/index.html" target="_blank">横浜デジタルアーツ専門学校</a></li>

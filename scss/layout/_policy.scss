@@ -42,12 +42,12 @@
   &__main{
     max-width: 670px;
     width: 100%;
-    margin: 104px auto 0;
+    margin: 93px auto 0;
     @include mq_sp{
-      margin-top: size_sp(121);
+      margin-top: size_sp(112);
     }
-    &.privacy,&:nth-of-type(n + 2){
-      margin-top: 144px;
+    &.privacy,&:nth-of-type(n + 3){
+      margin-top: 142px;
       @include mq_sp{
         margin-top: size_sp(141);
       }
@@ -76,12 +76,12 @@
       @include mq_sp{
         @include fz_vw(30);
         line-height: (58/30);
-        margin-top: size_sp(91);
+        margin-top: size_sp(85);
       }
       &:nth-of-type(n + 2){
-        margin-top: 64px;
+        margin-top: 63px;
         @include mq_sp{
-          margin-top: size_sp(61);
+          margin-top: size_sp(55);
         }
       }
       &:before{
@@ -101,6 +101,8 @@
       }
     }
     p{
+      font-size: 16px;
+      line-height: (37/16);
       max-width: 530px;
       width: 100%;
       margin: 24px auto 0;
@@ -113,7 +115,7 @@
       &:nth-of-type(n + 2){
         margin-top: 28px;
         @include mq_sp{
-          margin-top: size_sp(53);
+          margin-top: size_sp(43);
         }
       }
     }
@@ -142,6 +144,16 @@
       @include mq_sp{
         @include fz_vw(30);
         line-height: (44/30);
+      }
+      & > span {
+        font-size: 10px;
+        line-height: 1;
+        display: block;
+        margin-top: 8px;
+        @include mq_sp{
+          @include fz_vw(20);
+          margin-top: size_sp(15);
+        }
       }
     }
     p{

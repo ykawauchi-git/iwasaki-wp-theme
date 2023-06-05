@@ -17,7 +17,7 @@
     </div>
     <div class="<?php echo $pageName;?>__support-list">
       <!-- 01 -->
-      <div class="<?php echo $pageName;?>__support-item">
+      <div id="alumni-association" class="<?php echo $pageName;?>__support-item">
         <h3 class="page-bracketsTtl"><span>校友会</span></h3>
         <div class="<?php echo $pageName;?>__support-inner">
           <div class="<?php echo $pageName;?>__support-left">
@@ -30,7 +30,7 @@
         <a href="<?php echo home_url('/about/history'); ?>" class="page-group__contBtn">詳しく見る</a>
       </div>
       <!-- 02 -->
-      <div class="<?php echo $pageName;?>__support-item">
+      <div id="graduation-certificate" class="<?php echo $pageName;?>__support-item">
         <h3 class="page-bracketsTtl"><span>卒業証明書発行</span></h3>
         <div class="<?php echo $pageName;?>__support-inner">
           <div class="<?php echo $pageName;?>__support-left">
@@ -43,7 +43,7 @@
         <a href="<?php echo home_url('/about/history'); ?>" class="page-group__contBtn">詳しく見る</a>
       </div>
       <!-- 03 -->
-      <div class="<?php echo $pageName;?>__support-item">
+      <div id="student-recruitment" class="<?php echo $pageName;?>__support-item">
         <h3 class="page-bracketsTtl"><span>学生の採用</span></h3>
         <div class="<?php echo $pageName;?>__support-inner">
           <div class="<?php echo $pageName;?>__support-left">
@@ -56,7 +56,7 @@
         <a href="<?php echo home_url('/about/history'); ?>" class="page-group__contBtn">詳しく見る</a>
       </div>
       <!-- 04 -->
-      <div class="<?php echo $pageName;?>__support-item">
+      <div id="school-facilities" class="<?php echo $pageName;?>__support-item">
         <h3 class="page-bracketsTtl"><span>学生施設の利用</span></h3>
         <div class="<?php echo $pageName;?>__support-inner">
           <div class="<?php echo $pageName;?>__support-left">
@@ -220,7 +220,7 @@
       </div>
     </div>
   </div>
-  <div class="<?php echo $pageName;?>__contact">
+  <div id="graduates-contact" class="<?php echo $pageName;?>__contact">
     <h2 class="<?php echo $pageName;?>__contact-heading page-heading"><span>お問い合わせ</span></h2>
     <div class="<?php echo $pageName;?>__contact-intro">お問い合わせについては、各校にご連絡をお願い申し上げます。</div>
     <ul class="<?php echo $pageName;?>__contact-list">

@@ -12,6 +12,7 @@
     font-weight: 700;
     letter-spacing: 0.05em;
     position: relative;
+    overflow: hidden;
     @include mq_sp{
       @include fz_vw(49);
       line-height: (69/49);
@@ -236,12 +237,12 @@
     position: relative;
     padding: 34px 100px;
     @include mq_sp{
-      padding: size_sp(40) size_sp(30) size_sp(26);
+      padding: size_sp(40) size_sp(30) size_sp(40);
     }
     &:nth-of-type(n + 2){
       margin-top: 30px;
       @include mq_sp{
-        margin-top: size_sp(50);
+        margin-top: size_sp(40);
       }
     }
     &:before{
@@ -369,7 +370,7 @@
           z-index: 1;
           width: 40px;
           height: 12px;
-          background: url(./img/top/icn_pages.svg) no-repeat center/100% 100%;
+          background: url(./img/top/icn_pages-sp.svg) no-repeat center/100% 100%;
           @include mq_sp{
             $vw_20: size_sp(20);
             top: calc(100% + #{$vw_20});
@@ -381,7 +382,7 @@
       p{
         line-height: (37/16);
         font-weight: 500;
-        margin-top: 36px;
+        margin-top: 37px;
         @include mq_sp{
           @include fz_vw(26);
           line-height: (54/26);
@@ -393,8 +394,8 @@
       @include font-size(13);
       display: block;
       width: 146px;
-      padding: 10px 0;
-      margin: 12px auto 0;
+      padding: 8px 0;
+      margin: 13px auto 0;
       border: 2px solid $white00;
       color: $white00;
       line-height: (19/13);
@@ -402,10 +403,10 @@
       font-weight: 500;
       text-align: center;
       @include mq_sp{
-        @include fz_vw(26);
-        width: size_sp(230);
-        padding: size_sp(12) 0;
-        margin-top: size_sp(20);
+        @include fz_vw(22);
+        width: size_sp(238);
+        padding: size_sp(17) 0 size_sp(14);
+        margin-top: size_sp(21);
       }
       &:hover{
         background: $white00;

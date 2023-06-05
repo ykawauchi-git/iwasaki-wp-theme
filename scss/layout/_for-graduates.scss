@@ -132,6 +132,9 @@
       }
       &:nth-of-type(n+ 2) {
         margin-top: 50px;
+        @include mq_sp{
+          margin-top: size_sp(60);
+        }
       }
     }
     &-name {
@@ -178,7 +181,7 @@
         &:nth-of-type(n + 2) {
           margin-top: 12px;
           @include mq_sp{
-            margin-top: size_sp(60);
+            margin-top: size_sp(42);
           }
         }
       }
@@ -204,9 +207,9 @@
     }
   }
   &__contact {
-    padding-top: 200px;
+    margin-top: 200px;
     @include mq_sp{
-      padding-top : size_sp(200);
+      margin-top : size_sp(200);
     }
     &-intro {
       font-size: 16px;

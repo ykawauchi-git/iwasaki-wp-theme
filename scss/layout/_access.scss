@@ -71,7 +71,7 @@ $page-access: ".page-access";
       width: 100%;
       margin: size_sp(126) auto 0;
     }
-    &:nth-of-type(n + 2){
+    &:nth-of-type(n + 3){
       margin-top: 150px;
       @include mq_sp{
         margin-top: size_sp(150);
@@ -83,7 +83,7 @@ $page-access: ".page-access";
     margin-top: 60px;
     @include mq_sp{
       max-width: size_sp(660);
-      margin: size_sp(70) auto 0;
+      margin: size_sp(61) auto 0;
     }
   }
   &__item{
@@ -93,13 +93,25 @@ $page-access: ".page-access";
     border: 3px solid $blue04;
     @include mq_sp{
       width: 100%;
-      padding: size_sp(40) size_sp(32);
+      padding: size_sp(35) size_sp(32) size_sp(41);
       border-width: size_sp(4);
     }
     &:nth-of-type(n + 2){
       margin-top: 50px;
       @include mq_sp{
         margin-top: size_sp(60);
+      }
+    }
+    & > span {
+      font-size: 10px;
+      font-weight: 500;
+      line-height: 1;
+      display: block;
+      margin-top: 9px;
+      @include mq_sp{
+        @include fz_vw(20);
+        text-align: center;
+        margin: size_sp(9) 0 size_sp(38);
       }
     }
     &Ttl{
@@ -121,8 +133,8 @@ $page-access: ".page-access";
         @include mq_sp{
           @include fz_vw(24);
           line-height: (35/24);
-          width: 100%;
-          margin-top: size_sp(16);
+          width:size_sp(480) ;
+          margin: size_sp(14) auto 0;
         }
       }
     }
@@ -186,6 +198,7 @@ $page-access: ".page-access";
             @include mq_sp{
               @include fz_vw(28);
               line-height: (40/28);
+              margin-top: size_sp(18);
             }
           }
         }
@@ -212,9 +225,11 @@ $page-access: ".page-access";
         color: $white00;
         border-color: $blue02;
         @include mq_sp{
+          @include fz_vw(22);
+          line-height: (44/22);
           width: size_sp(238);
-          padding: size_sp(16) 0 size_sp(16) 0.05em;
-          border-width: 2px;
+          padding: size_sp(10) 0 size_sp(10) 0.05em;
+          border-width: size_sp(2);
         }
         &:hover{
           opacity: 1;

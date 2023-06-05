@@ -67,7 +67,7 @@
           <div class="<?php echo $pageName;?>__power-txt">
             文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。
           </div>
-          <a href="<?php echo home_url('/about/history'); ?>" class="page-group__contBtn">詳しく見る</a>
+          <a href="<?php echo home_url('/philosophy/speciality'); ?>" class="page-group__contBtn">詳しく見る</a>
         </div>
       </div>
       <div class="<?php echo $pageName;?>__power-item">
@@ -77,7 +77,7 @@
           <div class="<?php echo $pageName;?>__power-txt">
             文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。
           </div>
-          <a href="<?php echo home_url('/about/history'); ?>" class="page-group__contBtn">詳しく見る</a>
+          <a href="<?php echo home_url('/philosophy/pioneer'); ?>" class="page-group__contBtn">詳しく見る</a>
         </div>
       </div>
     </div>
@@ -90,7 +90,7 @@
       文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります.
       文章が入ります。文章が入ります、文章が入ります。
     </div>
-    <a href="<?php echo home_url('/about/history'); ?>" class="page-group__contBtn">詳しく見る</a>
+    <a href="<?php echo home_url('/philosophy/pioneer/method'); ?>" class="page-group__contBtn">詳しく見る</a>
     </div>
   </div>
   <!-- 岩崎学園の多様な学び -->
@@ -98,7 +98,7 @@
     <h2 class="<?php echo $pageName;?>__learning-ttl page-heading"><span>岩崎学園の多様な学び</span></h2>
     <ul class="<?php echo $pageName;?>__learning-list">
       <!-- 幼児教育 -->
-      <a href="" class="<?php echo $pageName;?>__learning-item">
+      <a href="<?php echo home_url('/philosophy/pioneer/'); ?>" class="<?php echo $pageName;?>__learning-item">
         <div class="<?php echo $pageName;?>__learning-bg"></div>
         <div class="<?php echo $pageName;?>__learning-inner">
           <div class="<?php echo $pageName;?>__learning-center">幼児教育</div>
@@ -106,7 +106,7 @@
         </div>
       </a>
       <!-- 大学院教育 -->
-      <a href="" class="<?php echo $pageName;?>__learning-item">
+      <a href="<?php echo home_url('/philosophy/pioneer/'); ?>" class="<?php echo $pageName;?>__learning-item">
         <div class="<?php echo $pageName;?>__learning-bg"></div>
         <div class="<?php echo $pageName;?>__learning-inner">
           <div class="<?php echo $pageName;?>__learning-center">大学院教育</div>
@@ -114,7 +114,7 @@
         </div>
       </a>
       <!-- 産学連携 -->
-      <a href="" class="<?php echo $pageName;?>__learning-item">
+      <a href="<?php echo home_url('/philosophy/pioneer/'); ?>" class="<?php echo $pageName;?>__learning-item">
         <div class="<?php echo $pageName;?>__learning-bg"></div>
         <div class="<?php echo $pageName;?>__learning-inner">
           <div class="<?php echo $pageName;?>__learning-center">産学連携</div>
@@ -129,6 +129,6 @@
       文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります.
       文章が入ります。文章が入ります、文章が入ります。
     </div>
-    <a href="" target="_blank" class="page-group__contBtn">詳しく見る</a>
+    <a href="<?php echo home_url('/about/career'); ?>" target="_blank" class="page-group__contBtn">詳しく見る</a>
   </div>
 </div>

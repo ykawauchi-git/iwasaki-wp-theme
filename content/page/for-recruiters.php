@@ -6,15 +6,15 @@
     単なる知識習得に偏らず、その能力を豊かな発想をもって社会に役立てていく感性や、大切に育む”心”を持った「人材」に。​教職員全員が思いをひとつにし、巣立つ学生たちが幅広く実社会で貢献できるよう、全力でサポートしています。
   </div>
   <div class="<?php echo $pageName;?>__anchor">
-    <a href="#friend-group" class="btn__anchor">各校の目指す職種</a>
+    <a href="#aim-occupation" class="btn__anchor">各校の目指す職種</a>
     <a href="#recruitment-flow" class="btn__anchor">採用までの流れ</a>
     <a href="#main-employer" class="btn__anchor">主な就職先</a>
     <a href="#internship" class="btn__anchor">インターンシップ募集</a>
-    <a href="#recruit" class="btn__anchor">アルバイト求人</a>
+    <a href="#recruit-part-time" class="btn__anchor">アルバイト求人</a>
     <a href="#recruiters-contact" class="btn__anchor">お問い合わせ先</a>
   </div>
   <!-- 多様な職種 -->
-  <div class="<?php echo $pageName;?>__occupation">
+  <div id="aim-occupation" class="<?php echo $pageName;?>__occupation">
     <h2 class="<?php echo $pageName;?>__occupation-heading page-heading"><span>多様な職種</span></h2>
     <div class="<?php echo $pageName;?>__occupation-intro">
       学校法人岩崎学園の専門学校７校は、15万人以上の人材育成の実績により、幅広い職種の人材を育成してまいりました。蓄積された学習指導システムで、学生の夢の実現をサポートしています。
@@ -189,7 +189,7 @@
     </ul>
   </div>
   <!-- 求人情報 -->
-  <div class="<?php echo $pageName;?>__recruit">
+  <div id="recruitment-flow" class="<?php echo $pageName;?>__recruit">
     <h2 class="<?php echo $pageName;?>__recruit-heading page-heading"><span>求人情報</span></h2>
     <div class="<?php echo $pageName;?>__recruit-intro">
       岩崎学園は創立90有余年の長きにわたり社会の皆さまに支えられ、多くの卒業生を様々な専門分野に送り出して参りました。貴社・貴施設におかれまして、求人のご計画がございましたら、本学園へ情報のご提供をお願いいたします。<br>
@@ -224,7 +224,7 @@
     </ul>
   </div>
   <!-- 主な就職先 -->
-  <div class="<?php echo $pageName;?>__post">
+  <div id="main-employer" class="<?php echo $pageName;?>__post">
     <h2 class="<?php echo $pageName;?>__post-heading page-heading"><span>主な就職先</span></h2>
     <ul class="<?php echo $pageName;?>__post-list">
       <!-- 情報科学専門学校 -->
@@ -518,7 +518,7 @@
     </ul>
   </div>
   <!-- インターンシップについて -->
-  <div class="<?php echo $pageName;?>__internship">
+  <div id="internship" class="<?php echo $pageName;?>__internship">
     <h2 class="<?php echo $pageName;?>__internship-heading page-heading"><span>インターンシップについて</span></h2>
     <div class="<?php echo $pageName;?>__internship-intro">
       一般に行われている、現場でなければ学べないことをリアルに実体験できる「職場実践型インターンシップ」に加え、若者らしい斬新なアイデアを課題解決に生かす「請負型インターンシップ」が、岩崎学園のインターンシップの特徴です。まず人間性を育てることを大切にし、プロとしての高い職業意識も備える取り組みです。
@@ -557,14 +557,14 @@
     </ul>
   </div>
   <!-- アルバイト求人 -->
-  <div class="<?php echo $pageName;?>__part-time-job">
+  <div id="recruit-part-time" class="<?php echo $pageName;?>__part-time-job">
     <h2 class="<?php echo $pageName;?>__part-time-job-heading page-heading"><span>アルバイト求人</span></h2>
     <div class="<?php echo $pageName;?>__part-time-job-intro">
       岩崎学園では、在校生のアルバイト採用も承っています。専門的スキルの必要なもの、学生向けアルバイトのものなど、幅広い内容のアルバイトをお求めいただけます。どうぞご検討ください。
     </div>
   </div>
   <!-- お問い合わせ -->
-  <div class="<?php echo $pageName;?>__contact">
+  <div id="recruiters-contact" class="<?php echo $pageName;?>__contact">
     <h2 class="<?php echo $pageName;?>__contact-heading page-heading"><span>お問い合わせ</span></h2>
     <ul class="<?php echo $pageName;?>__contact-list">
       <li>
@@ -604,7 +604,7 @@
       <figcaption class="<?php echo $pageName;?>__itemBox right">
         <h3>資格取得</h3>
         <p>文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。</p>
-        <a href="<?php echo home_url('/philosphy/');?>" class="page-group__contBtn">詳しく見る</a>
+        <a href="<?php echo home_url('/about/career');?>" class="page-group__contBtn">詳しく見る</a>
       </figcaption>
     </li>
   </ul>

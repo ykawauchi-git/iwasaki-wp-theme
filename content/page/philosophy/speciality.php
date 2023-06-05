@@ -16,7 +16,7 @@
         <div class="<?php echo $pageName;?>__feature-inner">
           <div class="<?php echo $pageName;?>__feature-num">1</div>
           <div class="<?php echo $pageName;?>__feature-ttl">質の高い授業と<br>効果的な資格取得</div>
-          <a href="<?php echo home_url('/about/history'); ?>" class="page-group__contBtn">詳しく見る</a>
+          <a href="#speciality01" class="page-group__contBtn">詳しく見る</a>
         </div>
       </li>
       <!-- 02 -->
@@ -24,7 +24,7 @@
         <div class="<?php echo $pageName;?>__feature-inner">
           <div class="<?php echo $pageName;?>__feature-num">2</div>
           <div class="<?php echo $pageName;?>__feature-ttl">実践的な技術・<br>スキルが身につく</div>
-          <a href="<?php echo home_url('/about/history'); ?>" class="page-group__contBtn">詳しく見る</a>
+          <a href="#speciality02" class="page-group__contBtn">詳しく見る</a>
         </div>
       </li>
       <!-- 03 -->
@@ -32,7 +32,7 @@
         <div class="<?php echo $pageName;?>__feature-inner">
           <div class="<?php echo $pageName;?>__feature-num">3</div>
           <div class="<?php echo $pageName;?>__feature-ttl">基礎学力が身につく</div>
-          <a href="<?php echo home_url('/about/history'); ?>" class="page-group__contBtn">詳しく見る</a>
+          <a href="#speciality03" class="page-group__contBtn">詳しく見る</a>
         </div>
       </li>
     </ul>
@@ -41,7 +41,7 @@
   <div class="<?php echo $pageName;?>__step">
     <ul class="<?php echo $pageName;?>__step-list">
       <!-- 01 -->
-      <li class="<?php echo $pageName;?>__step-item">
+      <li id="speciality01" class="<?php echo $pageName;?>__step-item">
         <div class="<?php echo $pageName;?>__step-bg"></div>
         <div class="<?php echo $pageName;?>__step-inner">
           <div class="<?php echo $pageName;?>__step-heading">
@@ -89,7 +89,7 @@
         </div>
       </li>
       <!-- 02 -->
-      <li class="<?php echo $pageName;?>__step-item">
+      <li id="speciality02" class="<?php echo $pageName;?>__step-item">
         <div class="<?php echo $pageName;?>__step-bg"></div>
         <div class="<?php echo $pageName;?>__step-inner">
           <div class="<?php echo $pageName;?>__step-heading">
@@ -125,7 +125,7 @@
         </div>
       </li>
       <!-- 03 -->
-      <li class="<?php echo $pageName;?>__step-item">
+      <li id="speciality03" class="<?php echo $pageName;?>__step-item">
         <div class="<?php echo $pageName;?>__step-bg"></div>
         <div class="<?php echo $pageName;?>__step-inner">
           <div class="<?php echo $pageName;?>__step-heading">
@@ -147,6 +147,6 @@
   </div>
   <div class="mod-banner">
     <div class="mod-banner__ttl"><span>未来を生き抜く力を育む<br>開拓力を磨く</span></div>
-    <a href="" target="_blank" class="page-group__contBtn">詳しく見る</a>
+    <a href="<?php echo home_url('/philosophy/pioneer'); ?>" class="page-group__contBtn">詳しく見る</a>
   </div>
 </section>

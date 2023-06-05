@@ -42,10 +42,25 @@ $page-movie: ".page-movie";
         height: 24px;
         margin-right: 18px;
         background: url(./img/page/arw_movie.svg) no-repeat center right/cover;
+        position : relative;
         @include mq_sp{
           width: size_sp(24);
           height: size_sp(30);
           margin-right: size_sp(15);
+        }
+      }
+      & > small {
+        font-size: 10px;
+        line-height: 1;
+        letter-spacing: 0em;
+        text-align: center;
+        display : block;
+        margin-top: 3px;
+        padding-left: 38px;
+        @include mq_sp{
+          @include fz_vw(20);
+          padding-left : size_sp(45);
+          margin-top: size_sp(8);
         }
       }
     }
@@ -93,6 +108,33 @@ $page-movie: ".page-movie";
         margin-top: size_sp(150);
       }
     }
+    &.ysw {
+      & .page-movie {
+        &__sub {
+          &Ttl {
+            & span {
+              padding: 3px 0 4px;
+              @include mq_sp{
+                @include fz_vw(26);
+                padding : size_sp(7) size_sp(23) size_sp(8);
+                line-height: 1;
+                justify-content: flex-start;
+              }
+              @include mq_sp{
+                width: size_sp(565);
+              }
+              &:before {
+                top: 8px;
+                @include mq_sp{
+                  margin-right: size_sp(20);
+                  top: size_sp(14);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
   &__list{
     @include flex(flex, wrap, space-between, normal, normal, row);
@@ -114,13 +156,13 @@ $page-movie: ".page-movie";
     }
     &:nth-of-type(n + 2){
       @include mq_sp{
-        margin-top: size_sp(70)
+        margin-top: size_sp(70);
       }
     }
     &:nth-of-type(n + 3){
       margin-top: 63px;
       @include mq_sp{
-        margin-top: size_sp(70)
+        margin-top: size_sp(72);
       }
     }
   }
@@ -163,15 +205,16 @@ $page-movie: ".page-movie";
     text-align: center;
     display: block;
     width: 246px;
-    padding: 14px 0 14px 0.05em;
-    border: 1px solid $blue02;
-    margin: 53px auto 0;
+    padding: 13px 0 13px 0.05em;
+    border: 2px solid $blue02;
+    margin: 43px auto 0;
     @include mq_sp{
       @include fz_vw(24);
       line-height: (35/24);
       width: size_sp(414);
-      padding: size_sp(25) 0 size_sp(25) 0.05em;
+      padding: size_sp(23) 0 size_sp(23) 0.05em;
       margin-top: size_sp(60);
+      border: size_sp(3) solid $blue02;
     }
     &:hover{
       color: $white00;

@@ -172,14 +172,14 @@
               width : 660px;
               white-space: nowrap;
               @include mq_sp{
-                @include fz_vw(47);
+                // @include fz_vw(47);
                 width : size_sp(520);
               }
             }
           }
-          &-inner {
-            padding-top : 72px;
-          }
+          // &-inner {
+          //   padding-top : 72px;
+          // }
           &-right {
             &:before {
               background-color: $blue03;
@@ -373,12 +373,25 @@
         width : (1220/1280)*100%;
         margin : 70px auto 0;
         @include flex(flex, nowrap, space-between, center, normal, row);
+        @include mq_sp{
+          width: size_sp(644);
+          flex-direction: column;
+          margin-top: size_sp(34);
+        }
       }
       &Item {
         width : (386/1220)*100%;
         height : 254px;
+        @include mq_sp{
+          width: 100%;
+          height: size_sp(424);
+        }
         &:not(:first-of-type) {
           margin-left : (31/1220)*100%;
+          @include mq_sp{
+            margin-top: size_sp(51);
+            margin-left: 0;
+          }
 
         }
       }

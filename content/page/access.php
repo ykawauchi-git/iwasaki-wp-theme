@@ -36,7 +36,7 @@
             </figcaption>
           </div>
           <div class="page-access__itemBtn">
-            <a href="" class="btn home_page" target="_blank">学校HP</a>
+            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="btn home_page">学校HP</a>
             <a href="" class="btn access" target="_blank">地図を見る</a>
           </div>
         </li>
@@ -67,12 +67,13 @@
             </figcaption>
           </div>
           <div class="page-access__itemBtn">
-            <a href="" class="btn home_page" target="_blank">学校HP</a>
+            <a href="https://isc.iwasaki.ac.jp/" class="btn home_page" target="_blank">学校HP</a>
             <a href="" class="btn access" target="_blank">地図を見る</a>
           </div>
         </li>
         <li class="page-access__item">
           <h3 class="page-access__itemTtl">横浜スポーツウェルネス専門学校</h3>
+          <span>(2024年4月 横浜医療情報専門学校より校名変更予定)</span>
           <div class="page-access__itemRow">
             <figure class="page-access__itemImg"><img src="<?php echo get_stylesheet_directory_uri();?>/img/page/dummy.png" alt="" class="object_fit"></figure>
             <figcaption class="page-access__itemInfo">
@@ -93,7 +94,7 @@
             </figcaption>
           </div>
           <div class="page-access__itemBtn">
-            <a href="" class="btn home_page" target="_blank">学校HP</a>
+            <a href="https://iscs.iwasaki.ac.jp/" class="btn home_page" target="_blank">学校HP</a>
             <a href="" class="btn access" target="_blank">地図を見る</a>
           </div>
         </li>
@@ -119,7 +120,7 @@
             </figcaption>
           </div>
           <div class="page-access__itemBtn">
-            <a href="" class="btn home_page" target="_blank">学校HP</a>
+            <a href="https://yfc.iwasaki.ac.jp/" class="btn home_page" target="_blank">学校HP</a>
             <a href="" class="btn access" target="_blank">地図を見る</a>
           </div>
         </li>
@@ -145,7 +146,7 @@
             </figcaption>
           </div>
           <div class="page-access__itemBtn">
-            <a href="" class="btn home_page" target="_blank">学校HP</a>
+            <a href="https://yda.iwasaki.ac.jp/index.html" class="btn home_page" target="_blank">学校HP</a>
             <a href="" class="btn access" target="_blank">地図を見る</a>
           </div>
         </li>
@@ -171,7 +172,7 @@
             </figcaption>
           </div>
           <div class="page-access__itemBtn">
-            <a href="" class="btn home_page" target="_blank">学校HP</a>
+            <a href="https://ycr.iwasaki.ac.jp/" class="btn home_page" target="_blank">学校HP</a>
             <a href="" class="btn access" target="_blank">地図を見る</a>
           </div>
         </li>
@@ -197,7 +198,7 @@
             </figcaption>
           </div>
           <div class="page-access__itemBtn">
-            <a href="" class="btn home_page" target="_blank">学校HP</a>
+            <a href="https://hoiku.iwasaki.ac.jp/" class="btn home_page" target="_blank">学校HP</a>
             <a href="" class="btn access" target="_blank">地図を見る</a>
           </div>
         </li>
@@ -223,7 +224,7 @@
             </figcaption>
           </div>
           <div class="page-access__itemBtn">
-            <a href="" class="btn home_page" target="_blank">学校HP</a>
+            <a href="https://jkango.iwasaki.ac.jp/index.html" class="btn home_page" target="_blank">学校HP</a>
             <a href="" class="btn access" target="_blank">地図を見る</a>
           </div>
         </li>
@@ -254,7 +255,7 @@
             </figcaption>
           </div>
           <div class="page-access__itemBtn">
-            <a href="" class="btn home_page" target="_blank">学校HP</a>
+            <a href="https://www.iisec.ac.jp/" class="btn home_page" target="_blank">学校HP</a>
             <a href="" class="btn access" target="_blank">地図を見る</a>
           </div>
         </li>
@@ -285,7 +286,7 @@
             </figcaption>
           </div>
           <div class="page-access__itemBtn">
-            <a href="" class="btn home_page" target="_blank">学校HP</a>
+            <a href="https://www.iwasaki.ac.jp/hodogaya/index.html" class="btn home_page" target="_blank">学校HP</a>
             <a href="" class="btn access" target="_blank">地図を見る</a>
           </div>
         </li>
@@ -311,7 +312,7 @@
             </figcaption>
           </div>
           <div class="page-access__itemBtn">
-            <a href="" class="btn home_page" target="_blank">学校HP</a>
+            <a href="https://www.iwasaki.ac.jp/isogo/index.htm" class="btn home_page" target="_blank">学校HP</a>
             <a href="" class="btn access" target="_blank">地図を見る</a>
           </div>
         </li>
@@ -343,7 +344,7 @@
             </figcaption>
           </div>
           <div class="page-access__itemBtn">
-            <a href="" class="btn home_page" target="_blank">学校HP</a>
+            <a href="https://hoiku.iwasaki.ac.jp/nursery/" class="btn home_page" target="_blank">学校HP</a>
             <a href="" class="btn access" target="_blank">地図を見る</a>
           </div>
         </li>
@@ -370,7 +371,7 @@
             </figcaption>
           </div>
           <div class="page-access__itemBtn">
-            <a href="" class="btn home_page" target="_blank">学校HP</a>
+            <a href="https://hoiku.iwasaki.ac.jp/kosodate/isyh/index.html" class="btn home_page" target="_blank">学校HP</a>
             <a href="" class="btn access" target="_blank">地図を見る</a>
           </div>
         </li>
@@ -397,7 +398,7 @@
             </figcaption>
           </div>
           <div class="page-access__itemBtn">
-            <a href="" class="btn home_page" target="_blank">学校HP</a>
+            <a href="https://hoiku.iwasaki.ac.jp/kosodate/isyh2/index.html" class="btn home_page" target="_blank">学校HP</a>
             <a href="" class="btn access" target="_blank">地図を見る</a>
           </div>
         </li>
@@ -428,7 +429,7 @@
             </figcaption>
           </div>
           <div class="page-access__itemBtn">
-            <a href="" class="btn home_page" target="_blank">学校HP</a>
+            <a href="https://hoiku.iwasaki.ac.jp/gakudou/s_index.html" class="btn home_page" target="_blank">学校HP</a>
             <a href="" class="btn access" target="_blank">地図を見る</a>
           </div>
         </li>
@@ -454,7 +455,7 @@
             </figcaption>
           </div>
           <div class="page-access__itemBtn">
-            <a href="" class="btn home_page" target="_blank">学校HP</a>
+            <a href="https://hoiku.iwasaki.ac.jp/gakudou" class="btn home_page" target="_blank">学校HP</a>
             <a href="" class="btn access" target="_blank">地図を見る</a>
           </div>
         </li>
@@ -485,7 +486,7 @@
             </figcaption>
           </div>
           <div class="page-access__itemBtn">
-            <a href="" class="btn home_page" target="_blank">学校HP</a>
+            <a href="https://www.iwasaki.ac.jp/museum/index.html" class="btn home_page" target="_blank">学校HP</a>
             <a href="" class="btn access" target="_blank">地図を見る</a>
           </div>
         </li>

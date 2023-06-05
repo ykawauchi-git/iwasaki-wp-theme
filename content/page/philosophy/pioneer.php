@@ -2,16 +2,16 @@
 <section class="<?php echo $pageName;?>">
   <h2 class="page-philosophy__learning-ttl page-heading"><span>開拓力を磨く４つの学び</span></h2>
   <div class="<?php echo $pageName;?>__anchor">
-    <a href="#career＿education" class="btn__anchor">キャリア教育</a>
+    <a href="#career_education" class="btn__anchor">キャリア教育</a>
     <a href="#iwasaki_method" class="btn__anchor">IWASAKI METHOD</a>
-    <a href="#industry_academia " class="btn__anchor">産学連携</a>
+    <a href="#industry_academia" class="btn__anchor">産学連携</a>
     <a href="#global_education" class="btn__anchor">グローバル教育</a>
   </div>
   <!-- 3STEP -->
   <div class="<?php echo $pageName;?>__step">
     <ul class="<?php echo $pageName;?>__step-list">
       <!-- 01 -->
-      <li class="<?php echo $pageName;?>__step-item">
+      <li id="career_education" class="<?php echo $pageName;?>__step-item">
         <div class="<?php echo $pageName;?>__step-bg"></div>
         <div class="<?php echo $pageName;?>__step-inner">
           <div class="<?php echo $pageName;?>__step-heading">
@@ -63,7 +63,7 @@
         </div>
       </li>
       <!-- 02 -->
-      <li class="<?php echo $pageName;?>__step-item">
+      <li id="iwasaki-method" class="<?php echo $pageName;?>__step-item">
         <div class="<?php echo $pageName;?>__step-bg"></div>
         <div class="<?php echo $pageName;?>__step-inner">
           <div class="<?php echo $pageName;?>__step-heading">
@@ -88,7 +88,7 @@
         </div>
       </li>
       <!-- 03 -->
-      <li class="<?php echo $pageName;?>__step-item">
+      <li id="industry_academia" class="<?php echo $pageName;?>__step-item">
         <div class="<?php echo $pageName;?>__step-bg"></div>
         <div class="<?php echo $pageName;?>__step-inner">
           <div class="<?php echo $pageName;?>__step-heading">
@@ -126,16 +126,16 @@
               </div>
             </li>
           </ul>
-          <a href="" target="_blank" class="page-group__contBtn">詳しく見る</a>
+          <a href="<?php echo home_url('/philosophy/pioneer/method');?>" target="_blank" class="page-group__contBtn">詳しく見る</a>
         </div>
       </li>
       <!-- 04 -->
-      <li class="<?php echo $pageName;?>__step-item">
+      <li id="global_education" class="<?php echo $pageName;?>__step-item">
         <div class="<?php echo $pageName;?>__step-bg"></div>
         <div class="<?php echo $pageName;?>__step-inner">
           <div class="<?php echo $pageName;?>__step-heading">
             <div class="<?php echo $pageName;?>__step-heading-num">4</div>
-            <div class="<?php echo $pageName;?>__step-heading-ttl">独自のグローバル教育で<br>学生のキャリア形成を<br class="sp-only">サポート</div>
+            <div class="<?php echo $pageName;?>__step-heading-ttl">独自の<br class="sp-only">グローバル教育で<br>学生のキャリア形成を<br class="sp-only">サポート</div>
           </div>
           <div class="<?php echo $pageName;?>__step-intro">
           文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文
@@ -192,6 +192,6 @@
   </div>
   <div class="mod-banner">
     <div class="mod-banner__ttl"><span>専門知識・技術を学ぶ<br>専門力</span></div>
-    <a href="" target="_blank" class="page-group__contBtn">詳しく見る</a>
+    <a href="<?php echo home_url('/philosophy/speciality');?>" class="page-group__contBtn">詳しく見る</a>
   </div>
 </section>

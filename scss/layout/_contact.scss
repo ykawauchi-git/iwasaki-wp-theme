@@ -5,7 +5,6 @@ $page-contact: ".page-contact";
 
 .page-contact{
   padding-top: 100px;
-  padding-bottom: 50px;
   @include mq_sp{
     padding-top: size_sp(100);
     padding-bottom: 0;
@@ -64,19 +63,34 @@ $page-contact: ".page-contact";
     @include mq_sp{
       max-width: size_sp(680);
       width: 100%;
-      margin: size_sp(126) auto 0;
+      margin: size_sp(146) auto 0;
     }
-    &:nth-of-type(n + 2){
+    &:nth-of-type( n + 3){
       margin-top: 150px;
       @include mq_sp{
         margin-top: size_sp(150);
       }
     }
+    &:nth-of-type(3) {
+      & .page-contact {
+        &__item {
+          &:nth-of-type(2) {
+            & .page-contact {
+              &__info {
+                @include mq_sp{
+                  margin-top: size_sp(67);
+                } 
+              }
+            }
+          }
+        }
+      }
+    }
     &:last-of-type{
       #{$page-contact}__item{
-        padding-bottom: 37px;
+        padding-bottom: 34px;
         @include mq_sp{
-          padding-bottom: size_sp(50)
+          padding-bottom: size_sp(41)
         }
       }
     }
@@ -94,12 +108,12 @@ $page-contact: ".page-contact";
     @include box-shadow();
     position: relative;
     width: 374px;
-    padding: 18px 14px;
+    padding: 24px 14px 21px;
     margin-right: 20px;
     border: 3px solid $blue04;
     @include mq_sp{
       width: 100%;
-      padding: size_sp(40) size_sp(32);
+      padding: size_sp(36) size_sp(32) size_sp(40);
       margin-right: 0;
       border-width: size_sp(4);
     }
@@ -142,10 +156,10 @@ $page-contact: ".page-contact";
     &.wide{
       @include flex(flex, wrap, space-between, center, normal, row);
       width: 100%;
-      padding: 22px 32px;
+      padding: 12px 35px 25px;
       margin-right: 0;
       @include mq_sp{
-        padding: size_sp(40) size_sp(32);
+        padding: size_sp(36) size_sp(32) size_sp(41);
       }
       &:nth-of-type(n + 2){
         margin-top: 40px;
@@ -172,12 +186,12 @@ $page-contact: ".page-contact";
       #{$page-contact}__info{
         @include flex(flex, wrap, flex-start, normal, normal, row);
         line-height: (20/14);
-        padding-top: 14px;
-        margin-top: 14px;
+        padding-top: 13px;
+        margin-top: -1px;
         @include mq_sp{
           line-height: (58/28);
-          padding-top: size_sp(25);
-          margin-top: size_sp(29);
+          padding-top: size_sp(23);
+          margin-top: size_sp(27);
         }
         span{
           display: block;
@@ -197,7 +211,7 @@ $page-contact: ".page-contact";
         }
       }
       #{$page-contact}__btn{
-        margin: 0;
+        margin: 14px 0 0;
         @include mq_sp{
           margin: size_sp(31) auto 0;
         }
@@ -213,24 +227,39 @@ $page-contact: ".page-contact";
     text-align: center;
     line-height: (28/20);
     height: (28/20) * 2em;
+    position : relative;
     @include mq_sp{
       @include fz_vw(32);
       line-height: (57/32);
       height: auto;
     }
+    & > span {
+      font-size: 10px;
+      font-weight: 500;
+      line-height: 1;
+      width: 100%;
+      position : absolute;
+      left : 50%;
+      bottom : -1px;
+      transform : translateX(-50%);
+      @include mq_sp{
+        @include fz_vw(20);
+        bottom : -30px;
+      }
+    }
   }
   &__info{
     @include font-size(14);
     line-height: (25/14);
-    padding-top: 24px;
+    padding-top: 21px;
     border-top: 2px solid $gray03;
-    margin-top: 13px;
+    margin-top: 9px;
     @include mq_sp{
       @include fz_vw(28);
       line-height: (58/28);
       border-top-width: size_sp(3);
-      padding-top: size_sp(25);
-      margin-top: size_sp(29);
+      padding-top: size_sp(23);
+      margin-top: size_sp(27);
     }
     span{
       display: block;
@@ -248,7 +277,7 @@ $page-contact: ".page-contact";
     display: block;
     width: 146px;
     padding: 8px 0 8px 0.05em;
-    margin: 22px auto 0;
+    margin: 21px auto 0;
     background: $blue02;
     border: 2px solid $blue02;
     @include mq_sp{

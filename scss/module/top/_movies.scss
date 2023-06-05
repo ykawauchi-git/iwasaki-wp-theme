@@ -4,9 +4,11 @@
 .top-movies{
   margin-top: 200px;
   @include mq_sp{
-    margin-top: size_sp(240);
+    margin-top: size_sp(211);
   }
-  &__heading{}
+  &__heading{
+    color : $black01;
+  }
   &__inner{
     max-width: 583px;
     width: 100%;

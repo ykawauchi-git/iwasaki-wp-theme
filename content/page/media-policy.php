@@ -38,18 +38,18 @@
           </p>
         </div>
         <div class="page-policy__snsBox">
-          <h5>横浜スポーツウェルネス専門学校【公式】</h5>
+          <h5>横浜スポーツウェルネス専門学校【公式】<span>(2024年4月 横浜医療情報専門学校より校名変更予定)</span></h5>
           <p>
             <span>運営組織</span>
             <span>学校法人横浜スポーツウェルネス専門学校（仮）</span>
           </p>
           <p>
             <span>ID</span>
-            <span>@iscs_iwasaki（仮）</span>
+            <span>@ysw_iwasaki</span>
           </p>
           <p>
             <span>URL</span>
-            <span><a href="https://twitter.com/iscs_iwasaki（仮）" target="_blank" rel="noreferrer noopener">https://twitter.com/iscs_iwasaki（仮）</a></span>
+            <span><a href="https://twitter.com/ysw_iwasaki" target="_blank" rel="noreferrer noopener">https://twitter.com/ysw_iwasaki</a></span>
           </p>
         </div>
       </div>

@@ -306,11 +306,11 @@
       </div>
       <div class="<?php echo $pageName;?>__dormitory-cv">
         <div class="<?php echo $pageName;?>__dormitory-cv-txt">各種制度・学生寮については<br class="sp-only">各校へお問い合わせください</div>
-        <a href="<?php echo home_url('/about/history'); ?>" class="page-group__contBtn">問い合わせる</a>
+        <a href="<?php echo home_url('/sitemap/'); ?>" class="page-group__contBtn">問い合わせる</a>
       </div>
   </div>
   <div class="mod-banner">
     <div class="mod-banner__ttl"><span>充実の設備・施設</span></div>
-    <a href="" target="_blank" class="page-group__contBtn">詳しく見る</a>
+    <a href="<?php echo home_url('/support/facility'); ?>" class="page-group__contBtn">詳しく見る</a>
   </div>
 </section>

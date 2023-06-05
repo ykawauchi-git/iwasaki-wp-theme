@@ -354,6 +354,24 @@
         </div>
       </div>
     </li>
+    <!-- 2012-->
+    <li class="<?php echo $pageName;?>__item">
+      <div class="<?php echo $pageName;?>__line"></div>
+      <div class="<?php echo $pageName;?>__ttl">情報科学専門学校新横浜校より横浜医療情報専門学校に改称</div>
+      <div class="<?php echo $pageName;?>__inner">
+        <div class="<?php echo $pageName;?>__left">
+          2011年東日本大震災が発生。津波による大きな被害とともに、病院の電子カルテといった医療情報の被災が問題となる。何よりも大切な命のデータを守るIT技術者が必要―。県内で最も古くから医療事務のスペシャリストを養成してきた情報科学専門学校新横浜校は、4年制の医療IT科を新設、横浜医療情報専門学校として新たな歩みを始める。
+        </div>
+        <div class="<?php echo $pageName;?>__right">
+          <div class="<?php echo $pageName;?>__right-img">
+            <img class="object_fit" src="<?php echo get_stylesheet_directory_uri();?>/img/page/history/img_history2012.jpg">
+          </div>
+          <div class="<?php echo $pageName;?>__right-txt">
+            医療業界のIT化に呼応すべく、県下初の医療IT科を設置。
+          </div>
+        </div>
+      </div>
+    </li>
     <!-- 2014 -->
     <li class="<?php echo $pageName;?>__item">
       <div class="<?php echo $pageName;?>__line"></div>

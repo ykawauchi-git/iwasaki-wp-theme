@@ -81,20 +81,22 @@ $page-group: ".page-group";
       //font-feature-settings: "palt";
       text-decoration: underline solid $yellow01 4px;
       text-underline-offset: 8px;
-      margin-top: 40px;
+      margin-top: 33px;
       @include mq_sp{
         @include fz_vw(36);
         line-height: (79/36);
         margin-top: size_sp(47);
+        text-decoration: underline solid $yellow01 size_sp(8);
       }
     }
     &Txt{
       font-weight: 400;
       line-height: (37/16);
-      margin-top: 50px;
+      margin-top: 45px;
       @include mq_sp{
         @include fz_vw(28);
-        margin-top: size_sp(55);
+        line-height: (58/28);
+        margin-top: size_sp(61);
       }
     }
   }
@@ -112,6 +114,10 @@ $page-group: ".page-group";
         max-width: size_sp(696);
       }
       .btn__anchor{
+        padding: 13px 0 14px;
+        @include mq_sp{
+          padding: size_sp(26) 0;
+        }
         &:nth-of-type(n + 2){
           margin-left: 40px;
           @include mq_sp{
@@ -149,7 +155,7 @@ $page-group: ".page-group";
       margin-top: size_sp(150);
     }
     &#vocational_school{
-      margin-top: 120px;
+      margin-top: 114px;
       @include mq_sp{
         margin-top: size_sp(146);
       }
@@ -164,7 +170,9 @@ $page-group: ".page-group";
           }
           &Btn{
             width:206px;
-            @include mq_sp{}
+            @include mq_sp{
+              width: size_sp(358);
+            }
           }
         }
       }
@@ -180,19 +188,21 @@ $page-group: ".page-group";
         max-width: 95%;
       }
       @include mq_sp{
+        @include fz_vw(28);
+        line-height: (58/28);
         max-width: size_sp(644);
-        margin-top: size_sp(65);
+        margin-top: size_sp(71);
       }
     }
     &Inner{
       //max-width: 1280px;
       width: 100%;
       background: $blue09;
-      margin: 60px auto 0;
+      margin: 63px auto 0;
       @include mq_sp{
         @include fz_vw(28);
         line-height: (58/28);
-        margin-top: size_sp(65);
+        margin-top: size_sp(71);
       }
     }
     &Slide{
@@ -225,7 +235,7 @@ $page-group: ".page-group";
       position: relative;
       left: -30px;
       width: calc(100% + 30px);
-      padding: 5px 0 5px 30px;
+      padding: 6px 0 6px 30px;
       background: $white00;
       @include mq_sp{
         @include fz_vw(27);
@@ -254,13 +264,17 @@ $page-group: ".page-group";
       line-height: (20/14);
       font-weight: 500;
       margin-top: 24px;
-      margin-bottom: -14px;
+      // margin-bottom: -14px;
+      padding-bottom: 9px;
+      border-bottom: 2px solid $blue07;
       @include mq_sp{
         @include fz_vw(24);
         line-height: (35/24);
         justify-content: center;
         margin-top: size_sp(30);
-        margin-bottom: size_sp(-24);
+        // margin-bottom: size_sp(-24);
+        padding-bottom: size_sp(5);
+        border-bottom: size_sp(4) solid $blue07;
       }
       li{
         position: relative;
@@ -301,21 +315,18 @@ $page-group: ".page-group";
     &Txt{
       @include font-size(14);
       line-height: (32/14);
-      padding-top: 15px;
-      border-top: 2px solid $blue07;
-      margin-top: 24px;
+      padding-top: 20px;
       @include mq_sp{
         @include fz_vw(26);
         line-height: (54/26);
         padding-top: size_sp(20);
-        margin-top: size_sp(30);
       }
     }
     &Sns{
       @include flex(flex, wrap, center, center, normal, row);
-      margin-top: 21px;
+      margin-top: 23px;
       @include mq_sp{
-        margin-top: size_sp(50);
+        margin-top: size_sp(41);
       }
       li{
         width: 33px;
@@ -323,7 +334,7 @@ $page-group: ".page-group";
           width: size_sp(68);
         }
         &:nth-of-type(n + 2){
-          margin-left: 10px;
+          margin-left: 20px;
           @include mq_sp{
             margin-left: size_sp(30);
           }
@@ -354,7 +365,7 @@ $page-group: ".page-group";
         line-height: (32/22);
         width: size_sp(238);
         padding: size_sp(18) 0 size_sp(18) 0.05em;
-        margin-top: size_sp(60);
+        margin-top: size_sp(50);
       }
     }
     &Img{
@@ -384,7 +395,7 @@ $page-group: ".page-group";
     }
   }
   &__about{
-    margin-top: 200px;
+    margin-top: 192px;
     @include mq_sp{
       margin-top: size_sp(150);
     }
@@ -410,9 +421,9 @@ $page-group: ".page-group";
         }
       }
       &:nth-of-type(n + 2){
-        margin-top: 100px;
+        margin-top: 94px;
         @include mq_sp{
-          margin-top: size_sp(110);
+          margin-top: size_sp(120);
         }
       }
     }
@@ -464,7 +475,7 @@ $page-group: ".page-group";
       text-align: center;
       @include mq_sp{
         max-width: 100%;
-        margin-top: size_sp(60);
+        margin-top: size_sp(67);
       }
       p{
         line-height: (37/16);
@@ -510,20 +521,26 @@ $page-group: ".page-group";
         text-align: right;
         line-height: (24/16);
         padding-right: 64px;
-        margin-top: 20px;
+        margin-top: 11px;
         @include mq_sp{
           @include fz_vw(26);
           line-height: (37/26);
           padding-right: size_sp(91);
-          margin-top: size_sp(25);
+          margin-top: size_sp(12);
         }
       }
     }
     &Situation{
       li{
         border-top: 1px solid $blue04;
+        @include mq_sp{
+          border-top: size_sp(1) solid $blue04;
+        }
         &:last-of-type{
           border-bottom: 1px solid $blue04;
+          @include mq_sp{
+            border-bottom: size_sp(1) solid $blue04;
+          }
         }
         a{
           @include font-size(18);
@@ -533,7 +550,7 @@ $page-group: ".page-group";
           position: relative;
           display: block;
           width: 100%;
-          padding: 20px 0;
+          padding: 19px 0 size_sp(18);
           @include mq_sp{
             @include fz_vw(29);
             line-height: (42/29);

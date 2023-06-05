@@ -11,7 +11,7 @@
   </section>
   <section class="page-group__anchor">
     <div class="page-group__anchorInner">
-      <a href="#vocational_school" class="btnhor">専門学校</a>
+      <a href="#vocational_school" class="btn__anchor">専門学校</a>
       <a href="#graduate_university" class="btn__anchor">大学院大学</a>
       <a href="#child_care_support" class="btn__anchor">子育て支援・幼児教育</a>
       <a href="#lifelong_education" class="btn__anchor">生涯教育・NPO支援事業</a>
@@ -371,7 +371,7 @@
               <li><a href="" target="_blank"><img src="<?php echo get_stylesheet_directory_uri();?>/img/page/icn_youtube.svg" alt="Youtube"></a></li>
               <li><a href="" target="_blank"><img src="<?php echo get_stylesheet_directory_uri();?>/img/page/icn_tiktok.svg" alt="TikTok"></a></li>
             </ul>
-            <a href="" target="_blank" class="page-group__contBtn">詳しく見る</a>
+            <a href="https://www.isef.or.jp/" target="_blank" class="page-group__contBtn">詳しく見る</a>
           </figcaption>
           <figure class="page-group__contImg">
             <img src="<?php echo get_stylesheet_directory_uri();?>/img/page/img_group04-1.jpg" alt="" class="object_fit">
@@ -397,7 +397,7 @@
               <li><a href="" target="_blank"><img src="<?php echo get_stylesheet_directory_uri();?>/img/page/icn_youtube.svg" alt="Youtube"></a></li>
               <li><a href="" target="_blank"><img src="<?php echo get_stylesheet_directory_uri();?>/img/page/icn_tiktok.svg" alt="TikTok"></a></li>
             </ul>
-            <a href="" target="_blank" class="page-group__contBtn">詳しく見る</a>
+            <a href="https://www.isef.or.jp/" target="_blank" class="page-group__contBtn">詳しく見る</a>
           </figcaption>
           <figure class="page-group__contImg">
             <img src="<?php echo get_stylesheet_directory_uri();?>/img/page/img_group04-2.jpg" alt="" class="object_fit">

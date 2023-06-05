@@ -65,15 +65,15 @@
     }
     &.bottom{
       position: relative;
-      padding: 50px 0 70px;
+      padding: 50px 0 71px;
       border: {
         top: 1px solid $white00;
         bottom: 1px solid $white00;
       };
-      margin-top: 70px;
+      margin-top: 73px;
       @include mq_sp{
         padding: size_sp(80) 0 size_sp(100);
-        margin-top: size_sp(105);
+        margin-top: size_sp(107);
         border-bottom: none;
         &:after{
           @include abso-center-h();
@@ -101,7 +101,7 @@
       &.info{
         li{
           &:nth-of-type(n + 2){
-            margin-left: 20px;
+            margin-left: 30px;
             @include mq_sp{
               margin-left: size_sp(42)
             }
@@ -209,7 +209,7 @@
         }
       }
       &.page{
-        margin-top: 70px;
+        margin-top: 74px;
         @include mq_sp{
           margin-top: size_sp(107)
         }
@@ -239,10 +239,11 @@
             &:before{
               content: "";
               position: absolute;
-              top: 0;
+              top: 50%;
               left: 0;
+              transform : translateY(-50%);
               width: 1px;
-              height: 100%;
+              height: 24px;
               background: $white00;
               @include mq_sp{
                 content: none;
@@ -289,6 +290,12 @@
               margin-top: size_sp(80);
             }
           }
+          &:first-of-type {
+            margin-right : 17px;
+            @include mq_sp{
+              margin-right: 0;
+            }
+          }
           & span{
             @include font-size(17);
             line-height: (25/17);
@@ -304,7 +311,7 @@
             @include font-size(15);
             line-height: (21/15);
             position: relative;
-            padding-left: 34px;
+            padding-left: 36px;
             margin-top: 12px;
             @media screen and (max-width: 882px) {
               @include font-size(13);
@@ -351,6 +358,18 @@
             @include mq_sp{
               @include fz_vw(28);
               line-height : (40/28);
+            }
+            & > span {
+              font-size: 10px;
+              font-weight: 300;
+              line-height: 1;
+              display: block;
+              margin-top: 9px;
+              @include mq_sp{
+                @include fz_vw(20);
+                white-space: nowrap;
+                margin-top: size_sp(18);
+              }
             }
           }
         }

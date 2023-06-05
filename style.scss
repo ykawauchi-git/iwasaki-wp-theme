@@ -50,13 +50,13 @@ License: GNU General Public License v2 or later
 @import "scss/layout/_footer.scss";
 @import "scss/layout/_top.scss";
 @import "scss/layout/_archive.scss";
+@import "scss/layout/_post.scss";
 @import "scss/layout/_single.scss";
 @import "scss/layout/_container.scss";
 @import "scss/layout/_keyvisual.scss";
 @import "scss/layout/_about.scss";
 @import "scss/layout/_history.scss";
 @import "scss/layout/_career.scss";
-
 @import "scss/layout/_group.scss";
 @import "scss/layout/_philosphy.scss";
 @import "scss/layout/_speciality.scss";
@@ -89,6 +89,7 @@ License: GNU General Public License v2 or later
 @import "scss/module/_breadcrumbs.scss";
 @import "scss/module/_pagenavi.scss";
 @import "scss/module/_scroll.scss";
+@import "scss/module/_infinite-scroll.scss";
 @import "scss/module/_page.scss";
 
 //top

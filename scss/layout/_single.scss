@@ -1,0 +1,189 @@
+.common-single {
+  padding-top: 100px;
+  @include mq_sp{
+    padding-top: size_sp(100);
+  } 
+  &__heading {
+    font-weight: 700;
+  }
+  &__inner {
+    width: 768px;
+    margin: 0 auto;
+    @include mq_sp{
+      width: size_sp(702);
+      padding: 0px size_sp(16);
+    }
+  }
+  &__ttl {
+    font-size: 32px;
+    line-height : (64/32);
+    letter-spacing: .1em;
+    margin-top: 61px;
+    @include mq_sp{
+      @include fz_vw(36);
+      line-height: (74/36);
+      margin-top: size_sp(69);
+    }
+  }
+  &__info {
+    margin-top: 17px;
+    @include flex(flex, nowrap, space-between, stretch, normal, row);
+    @include mq_sp{
+      margin-top: size_sp(19);
+      flex-direction: column;
+    }
+  }
+  &__date {
+    font-size: 16px;
+    line-height: (24/16);
+  }
+  &__thumb {
+    width: 100%;
+    margin-top: 25px;
+    @include mq_sp{
+      margin-top: size_sp(50);
+    }
+    & img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  &__sns {
+    margin-top: 100px;
+    @include flex(flex, nowrap, center, center, normal, row);
+    @include mq_sp{
+      margin-top: size_sp(100);
+    }
+    & > a {
+      width: 40px;
+      display: block;
+      @include mq_sp{
+        width: size_sp(68);
+      }
+      &:not(:first-of-type) {
+        margin-left : 40px;
+        @include mq_sp{
+          margin-left: size_sp(50);
+        }
+      }
+    }
+  }
+  & .editor-content {
+    padding-bottom: 80px;
+    border-bottom : solid 1px $blue03;
+    @include mq_sp{
+      padding-bottom: size_sp(100);
+      border-bottom : solid size_sp(2) $blue03;
+    }
+    & h2 {
+      font-size: 20px;
+      line-height: 2.3;
+      letter-spacing: .1em;
+      @include mq_sp{
+        @include fz_vw(32);
+        line-height : (66/32);
+      }
+    }
+    & h3 {
+      font-size: 20px;
+      line-height : 2;
+      letter-spacing: .1em;
+      color : $white00;
+      background-color: $blue03;
+      padding: 0 7px;
+      @include mq_sp{
+        @include fz_vw(32);
+        line-height : (46/32);
+        padding: size_sp(6) size_sp(10) size_sp(4);
+      }
+    }
+    & h4 {
+      font-size: 18px;
+      line-height : 2.22222;
+      letter-spacing: .1em;
+      border-bottom: 1px solid $blue03;
+      padding: 2px 7px;
+      @include mq_sp{
+        @include fz_vw(32);
+        line-height : (46/32);
+        padding: size_sp(10);
+        border-bottom: size_sp(1) solid $blue03;
+      }
+    }
+    & h5 {
+      font-size: 18px;
+      line-height: 2.22222;
+      letter-spacing: .1em;
+      border-bottom: 1px dashed $blue03;
+      padding: 2px 7px;
+      @include mq_sp{
+        @include fz_vw(32);
+        line-height : (46/32);
+        border-bottom: size_sp(1) dashed $blue03;
+        padding: size_sp(10);
+      }
+    }
+    & p {
+      font-size: 16px;
+      line-height : 2.3125;
+      @include mq_sp{
+        @include fz_vw(28);
+        line-height: (58/28);
+      }
+    }
+    & q {
+      font-size: 16px;
+      line-height: (2.3125);
+      width: 700px;
+      padding: 23px 29px 22px;
+      margin: 0 auto;
+      display: block;
+      border : solid 1px $blue03;
+      @include mq_sp{
+        @include fz_vw(28);
+        line-height: (58/28);
+        width: size_sp(630);
+        padding: size_sp(30) size_sp(39);
+        border : solid size_sp(1) $blue03;
+      }
+      &:before {
+        display: none;
+      }
+      &:after {
+        display: none;
+      }
+    }
+  }
+  &__new {
+    padding-top: 79px;
+    @include mq_sp{
+      padding-top: size_sp(78);
+    }
+    &-article {
+      max-width: 1162px;
+      padding-top: 70px;
+      margin: 0 auto;
+      @include flex(flex, wrap, flex-start, stretch, normal, row);
+      @media screen and (max-width: 1200px){
+        max-width: 95%;
+      }
+      @include mq_sp{
+        max-width: size_sp(670);
+        padding-top: size_sp(50);
+      }
+    }
+    & .page-group__contBtn {
+      font-size: 15px;
+      line-height: (28/15);
+      width: 246px;
+      padding: 12px 0 11px;
+      margin-top: 100px;
+      @include mq_sp{
+        @include fz_vw(24);
+        line-height: (44/24);
+        width: size_sp(414);
+        padding: size_sp(22) 0 size_sp(21);
+      }
+    }
+  }
+}

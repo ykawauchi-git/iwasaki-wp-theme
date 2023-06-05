@@ -5,14 +5,14 @@
     文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。
   </div>
   <div class="<?php echo $pageName;?>__anchor">
-    <a href="#headquarters" class="btn__anchor">専門学校7校共通</a>
-    <a href="#vocational_school" class="btn__anchor">情報科学専門学校</a>
-    <a href="#graduate_university" class="btn__anchor">〇〇学校</a>
-    <a href="#kindergarten" class="btn__anchor">〇〇学校</a>
+    <a href="#7school" class="btn__anchor">専門学校7校共通</a>
+    <a href="#school01" class="btn__anchor">情報科学専門学校</a>
+    <a href="#school02" class="btn__anchor">〇〇学校</a>
+    <a href="#school03" class="btn__anchor">〇〇学校</a>
   </div>
   <ul class="<?php echo $pageName;?>__list">
     <!-- 専門学校7校共通 -->
-    <li class="<?php echo $pageName;?>__item">
+    <li id="7school" class="<?php echo $pageName;?>__item">
       <h3 class="page-bracketsTtl"><span>専門学校7校共通</span></h3>
       <ul class="<?php echo $pageName;?>__subList">
         <li class="<?php echo $pageName;?>__subItem">
@@ -33,7 +33,7 @@
       </div>
     </li>
     <!-- 情報科学専門学校 -->
-    <li class="<?php echo $pageName;?>__item">
+    <li id="school01" class="<?php echo $pageName;?>__item">
       <h3 class="page-bracketsTtl"><span>情報科学専門学校</span></h3>
       <ul class="<?php echo $pageName;?>__subList">
         <li class="<?php echo $pageName;?>__subItem">
@@ -75,7 +75,7 @@
       </ul>
     </li>
     <!-- 情報科学専門学校 -->
-    <li class="<?php echo $pageName;?>__item">
+    <li id="school02" class="<?php echo $pageName;?>__item">
       <h3 class="page-bracketsTtl"><span>情報科学専門学校</span></h3>
       <ul class="<?php echo $pageName;?>__subList">
       <li class="<?php echo $pageName;?>__subItem">

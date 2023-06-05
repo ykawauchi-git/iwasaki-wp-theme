@@ -127,6 +127,9 @@
         padding : size_sp(23) 0 size_sp(20);
         margin-top : size_sp(100);
       }
+      &:hover {
+        opacity: 1;
+      }
     }
   }
   &__work-support {
@@ -281,6 +284,7 @@
       background: $blue05;
       padding : 26px 0px;
       position : relative;
+      cursor: pointer;
       @include mq_sp{
         @include fz_vw(26);
         line-height : (43/26);

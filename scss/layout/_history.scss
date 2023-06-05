@@ -258,6 +258,7 @@
     position: relative;
     @include mq_sp{
       width : size_sp(644);
+      margin-top: size_sp(80);
     }
     // &:before {
     //   content : "";

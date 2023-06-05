@@ -10,14 +10,15 @@ $document_pink01: #EC6D81;
 $document_pink02: #EC6D6D;
 $document_red01: #E60244;
 $document_yellow01: #F39800;
+$document_yellow02: #F4CD40;
 
 .page-document{
-  padding: 100px 0 50px;
+  padding: 100px 0 0;
   @include mq_sp{
     padding: size_sp(100) 0 0;
   }
   &__inner{
-    max-width: 768px;
+    max-width: 762px;
     width: 100%;
     margin: 0 auto;
     @include mq_sp{
@@ -47,21 +48,22 @@ $document_yellow01: #F39800;
       line-height: (58/28);
       text-align: left;
       display: inline-block;
-      margin-top: size_sp(61);
+      width: size_sp(644);
+      margin: size_sp(61) auto 0;
     }
   }
   &__list{
     @include flex(flex, wrap, flex-start, normal, normal, row);
     margin-top: 40px;
     @include mq_sp{
-      margin-top: size_sp(51);
+      margin-top: size_sp(49);
     }
   }
   &__item{
     @include box-shadow();
     font-size: 0;
-    width: 234px;
-    margin-right: 26px;
+    width: 242px;
+    margin-right: 18px;
     @include mq_sp{
       width: size_sp(326);
       margin-right: size_sp(28);
@@ -165,12 +167,45 @@ $document_yellow01: #F39800;
         color: $document_yellow01;
       }
     }
+    &.yellow02{
+      & .page-document {
+        &__item {
+          &Info {
+            padding-top: 10px;
+            @include mq_sp{
+              padding-top: size_sp(10);
+            }
+          }
+          &Name {
+            @include mq_sp{
+              @include fz_vw(20);
+              line-height: (24/20)
+            }
+          }
+          &Btn {
+            margin-top: 12px;
+            @include mq_sp{
+              margin-top: size_sp(5);
+            }
+          }
+        }
+      }
+      #{$page-document}__itemEn{
+        -webkit-text-stroke-color: $document_yellow02;
+      }
+      #{$page-document}__itemInfo{
+        background: $document_yellow02;
+      }
+      #{$page-document}__itemBtn{
+        color: $document_yellow02;
+      }
+    }
     &Bg{
       position: relative;
       width: 100%;
       height: 311px;
       @include mq_sp{
-        height: size_sp(425);
+        height: size_sp(422);
       }
     }
     &En{
@@ -197,7 +232,7 @@ $document_yellow01: #F39800;
     &Info{
       padding: 20px 0;
       @include mq_sp{
-        padding: size_sp(24) 0 size_sp(30);
+        padding: size_sp(30) 0 size_sp(30);
       }
     }
     &Name{
@@ -209,6 +244,20 @@ $document_yellow01: #F39800;
       @include mq_sp{
         @include fz_vw(20);
         line-height: (29/20);
+        width: size_sp(300);
+        margin: 0 auto;
+      }
+      & > span {
+        font-size: 10px;
+        line-height: 1;
+        text-align: center;
+        display: block;
+        margin-top: 8px;
+        @include mq_sp{
+          @include fz_vw(20);
+          line-height: (24/20);
+          margin-top: 0;
+        }
       }
     }
     &Btn{
@@ -227,7 +276,7 @@ $document_yellow01: #F39800;
         line-height: (36/25);
         width: size_sp(246);
         padding: size_sp(14) 0 size_sp(14) 0.05em;
-        margin-top: size_sp(24);
+        margin-top: size_sp(28);
       }
     }
   }
@@ -235,7 +284,7 @@ $document_yellow01: #F39800;
     @include flex(flex, wrap, center, normal, normal, row);
     margin-top: 40px;
     @include mq_sp{
-      margin-top: size_sp(51);
+      margin-top: size_sp(49);
     }
     .btn{
       @include box-shadow();
@@ -253,7 +302,7 @@ $document_yellow01: #F39800;
         @include fz_vw(26);
         line-height: (37/26);
         width: size_sp(478);
-        padding: size_sp(30) 0;
+        padding: size_sp(28) 0;
       }
       &.multiple{
         padding: 8px 0;

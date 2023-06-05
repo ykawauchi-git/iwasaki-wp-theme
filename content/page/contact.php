@@ -79,17 +79,17 @@
               <span>Tel : <a href="tel:045-311-5562">045-311-5562（代）</a></span>
             </p>
           </div>
-          <a href="" class="page-contact__btn">詳細はこちら</a>
+          <a href="https://isc.iwasaki.ac.jp/" target="_blank" class="page-contact__btn">詳細はこちら</a>
         </li>
         <li class="page-contact__item">
           <div class="page-contact__col">
-            <h3 class="page-contact__ttl">横浜スポーツウェルネス専門学校</h3>
+            <h3 class="page-contact__ttl">横浜スポーツウェルネス専門学校<span>(2024年4月 横浜医療情報専門学校より校名変更予定)</span></h3>
             <p class="page-contact__info">
               <span>Tel : <a href="tel:0120-423-114">0120-423-114<br class="sp-only">（入学情報専用フリーダイヤル）</a></span>
               <span>Tel : <a href="tel:045-474-2311">045-474-2311（代）</a></span>
             </p>
           </div>
-          <a href="" class="page-contact__btn">詳細はこちら</a>
+          <a href="https://iscs.iwasaki.ac.jp/" target="_blank" class="page-contact__btn">詳細はこちら</a>
         </li>
         <li class="page-contact__item">
           <div class="page-contact__col">
@@ -99,7 +99,7 @@
               <span>Tel : <a href="tel:045-311-5562">045-311-5562（代）</a></span>
             </p>
           </div>
-          <a href="" class="page-contact__btn">詳細はこちら</a>
+          <a href="https://yfc.iwasaki.ac.jp/" target="_blank" class="page-contact__btn">詳細はこちら</a>
         </li>
         <li class="page-contact__item">
           <div class="page-contact__col">
@@ -109,7 +109,7 @@
               <span>Tel : <a href="tel:045-311-5562">Tel:045-311-5562（代）</a></span>
             </p>
           </div>
-          <a href="" class="page-contact__btn">詳細はこちら</a>
+          <a href="https://yda.iwasaki.ac.jp/index.html" target="_blank" class="page-contact__btn">詳細はこちら</a>
         </li>
         <li class="page-contact__item">
           <div class="page-contact__col">
@@ -119,7 +119,7 @@
               <span>Tel : <a href="tel:045-311-5562">Tel:045-311-5562（代）</a></span>
             </p>
           </div>
-          <a href="" class="page-contact__btn">詳細はこちら</a>
+          <a href="https://ycr.iwasaki.ac.jp/" target="_blank" class="page-contact__btn">詳細はこちら</a>
         </li>
         <li class="page-contact__item">
           <div class="page-contact__col">
@@ -129,7 +129,7 @@
               <span>Tel : <a href="tel:045-311-5562">Tel:045-311-5562（代）</a></span>
             </p>
           </div>
-          <a href="" class="page-contact__btn">詳細はこちら</a>
+          <a href="https://hoiku.iwasaki.ac.jp/" target="_blank" class="page-contact__btn">詳細はこちら</a>
         </li>
         <li class="page-contact__item">
           <div class="page-contact__col">
@@ -139,7 +139,7 @@
               <span>Tel : <a href="tel:045-311-5562">Tel:045-311-5562（代）</a></span>
             </p>
           </div>
-          <a href="" class="page-contact__btn">詳細はこちら</a>
+          <a href="https://jkango.iwasaki.ac.jp/index.html" target="_blank" class="page-contact__btn">詳細はこちら</a>
         </li>
       </ul>
     </section>
@@ -154,7 +154,7 @@
               <span>Tel : <a href="tel:045-311-5562">Tel:045-311-5562（代）</a></span>
             </p>
           </div>
-          <a href="" class="page-contact__btn">詳細はこちら</a>
+          <a href="https://www.iisec.ac.jp/" target="_blank" class="page-contact__btn">詳細はこちら</a>
         </li>
       </ul>
     </section>
@@ -169,7 +169,7 @@
               <span>Tel : <a href="tel:045-311-5562">Tel:045-311-5562（代）</a></span>
             </p>
           </div>
-          <a href="" class="page-contact__btn">詳細はこちら</a>
+          <a href="https://www.iwasaki.ac.jp/hodogaya/index.html" target="_blank" class="page-contact__btn">詳細はこちら</a>
         </li>
         <li class="page-contact__item">
           <div class="page-contact__col">
@@ -179,7 +179,7 @@
               <span>Tel : <a href="tel:045-311-5562">Tel:045-311-5562（代）</a></span>
             </p>
           </div>
-          <a href="" class="page-contact__btn">詳細はこちら</a>
+          <a href="https://www.iwasaki.ac.jp/isogo/index.htm" target="_blank" class="page-contact__btn">詳細はこちら</a>
         </li>
       </ul>
     </section>
@@ -194,7 +194,7 @@
               <span>Tel : <a href="tel:045-311-5562">Tel:045-311-5562（代）</a></span>
             </p>
           </div>
-          <a href="" class="page-contact__btn">詳細はこちら</a>
+          <a href="https://hoiku.iwasaki.ac.jp/nursery/" target="_blank" class="page-contact__btn">詳細はこちら</a>
         </li>
         <li class="page-contact__item">
           <div class="page-contact__col">
@@ -204,7 +204,7 @@
               <span>Tel : <a href="tel:045-311-5562">Tel:045-311-5562（代）</a></span>
             </p>
           </div>
-          <a href="" class="page-contact__btn">詳細はこちら</a>
+          <a href="https://hoiku.iwasaki.ac.jp/kosodate/isyh/index.html" target="_blank" class="page-contact__btn">詳細はこちら</a>
         </li>
         <li class="page-contact__item">
           <div class="page-contact__col">
@@ -214,7 +214,7 @@
               <span>Tel : <a href="tel:045-311-5562">Tel:045-311-5562（代）</a></span>
             </p>
           </div>
-          <a href="" class="page-contact__btn">詳細はこちら</a>
+          <a href="https://hoiku.iwasaki.ac.jp/kosodate/isyh2/index.html" target="_blank" class="page-contact__btn">詳細はこちら</a>
         </li>
       </ul>
     </section>
@@ -229,7 +229,7 @@
               <span>Tel : <a href="tel:045-311-5562">Tel:045-311-5562（代）</a></span>
             </p>
           </div>
-          <a href="" class="page-contact__btn">詳細はこちら</a>
+          <a href="https://hoiku.iwasaki.ac.jp/gakudou" target="_blank" class="page-contact__btn">詳細はこちら</a>
         </li>
         <li class="page-contact__item">
           <div class="page-contact__col">
@@ -239,7 +239,7 @@
               <span>Tel : <a href="tel:045-311-5562">Tel:045-311-5562（代）</a></span>
             </p>
           </div>
-          <a href="" class="page-contact__btn">詳細はこちら</a>
+          <a href="https://hoiku.iwasaki.ac.jp/gakudou/s_index.html" target="_blank" class="page-contact__btn">詳細はこちら</a>
         </li>
       </ul>
     </section>
