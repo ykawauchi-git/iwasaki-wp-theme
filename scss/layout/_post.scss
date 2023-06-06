@@ -1,0 +1,109 @@
+/*  layout > policy
+============================================================================================================ */
+
+.mod-post {
+  max-width: 364px;
+  width: (364/1162) * 100%;
+  border : solid 1px $blue03;
+  box-shadow : 0px 3px 6px rgba($black00, .1);
+  @include mq_sp{
+    width: 100%;
+    border : solid size_sp(2) $blue03;
+  }
+  &:not(:nth-of-type(3n)) {
+    margin-right : (35/1162) * 100%;
+    @include mq_sp{
+      margin-right: 0;
+    }
+  }
+  &:nth-of-type(n + 4) {
+    margin-top: 50px;
+    @include mq_sp{
+      margin-top: size_sp(50);
+    }
+  }
+  &:nth-of-type(n + 2) {
+    @include mq_sp{
+      margin-top: size_sp(50);
+    }
+  }
+  &:nth-of-type(2n) {
+    @include mq_sp{
+      margin-top: size_sp(50);
+    }
+  }
+  & > a {
+    padding: (29/362) * 100%;
+    display: block;
+    @include mq_sp{
+      padding: size_sp(30) size_sp(28);
+    }
+  }
+  &__high {
+    @include mq_sp{
+      @include flex(flex, wrap, flex-start, flex-start, normal, row);
+    }
+  }
+  &__left {
+    @include mq_sp{
+      width: size_sp(244);
+      margin-top: size_sp(8);
+      margin-right: size_sp(30);
+      @include flex(flex, wrap, flex-start, stretch, normal, column-reverse);
+    }
+  }
+  &__thumb {
+    height: 203px;
+    @include mq_sp{
+      height : size_sp(164);
+      margin-top: size_sp(13);
+    }
+  }
+  &__date {
+    font-size: 16px;
+    line-height : (37/16);
+    margin-top: 6px;
+    display: block;
+    @include mq_sp{
+      @include fz_vw(26);
+      line-height: (37/26);
+      margin-top: 0;
+    }
+  }
+  &__ttl {
+    font-size: 16px;
+    font-weight: 700;
+    line-height : (37/16);
+    margin-top: -1px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3; /* 制限したい行数が3の場合 */
+    overflow: hidden;
+    @include mq_sp{
+      @include fz_vw(28);
+      line-height: (58/28);
+      width : size_sp(336);
+      -webkit-line-clamp: 4; /* 制限したい行数が3の場合 */
+    }
+  }
+  &__txt {
+    font-size: 12px;
+    line-height: (28/12);
+    margin-top: 8px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3; /* 制限したい行数が3の場合 */
+    overflow: hidden;
+    @include mq_sp{
+      @include fz_vw(24);
+      line-height: (50/24);
+      margin-top: size_sp(24);
+    }
+  }
+  &__tag {
+    @include flex(flex, wrap, flex-start, stretch, normal, row);
+    & > li {
+      border : solid 1px $blue03;
+    }
+  }
+}
