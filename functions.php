@@ -72,6 +72,7 @@ require get_template_directory().'/inc/device_if.php';
 require get_template_directory().'/inc/body_class.php';
 require get_template_directory().'/inc/hide_author.php';
 require get_template_directory().'/inc/get_form_id.php';
+require get_template_directory().'/inc/acf_add_options_page.php';
 require get_template_directory().'/inc/change_posts_archive.php';
 require get_template_directory().'/inc/default_post.php';
 require get_template_directory().'/inc/excerpt.php';

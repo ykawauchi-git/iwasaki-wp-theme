@@ -85,7 +85,7 @@
 						<li><a href="<?php echo home_url('/for-teachers/');?>">高校の先生方</a></li>
 						<li><a href="<?php echo home_url('/for-recruiters/'); ?>">企業の方</a></li>
 						<li><a href="<?php echo home_url('/for-graduates/');?>">卒業生の方</a></li>
-						<li><a href="<?php echo home_url( '/' ); ?>" target="_blank">教職員採用</a></li>
+						<li><a href="https://recruit.iwasaki.ac.jp/" target="_blank">教職員採用</a></li>
 					</ul>
 					<ul class="common-header__menu info">
 						<li><a href="<?php echo home_url('/contact/'); ?>" class="contact">お問い合わせ</a></li>

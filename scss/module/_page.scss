@@ -86,7 +86,11 @@
 
 .page-sec02 {
   &__list {
-      overflow: hidden
+      overflow: hidden;
+      padding-bottom: 40px;
+      @include mq_sp{
+        padding-bottom:size_sp(50) ;
+      }
   }
   &__item {
     @include flex(flex, wrap, flex-start, stretch, normal, row);

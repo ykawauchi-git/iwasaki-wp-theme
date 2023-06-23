@@ -57,9 +57,9 @@
     }
   }
   &__detail {
-    padding-top: 240px;
+    padding-top: 200px;
     @include mq_sp{
-      padding-top: size_sp(250);
+      padding-top: size_sp(200);
     }
     & .page-document {
       &__list {

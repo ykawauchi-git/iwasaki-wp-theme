@@ -120,62 +120,40 @@
     </div>
   </div>
   <!-- 学生体験談 -->
+  <?php if(have_rows('acf_method_student_group')): ?>
   <div class="<?php echo $pageName;?>__student">
     <h2 class="page-group__contHeading page-heading"><span>学生体験談</span></h2>
     <ul class="<?php echo $pageName;?>__student-list">
+      <?php while(have_rows('acf_method_student_group')): the_row(); ?>
       <li>
         <div class="<?php echo $pageName;?>__student-left">
-          <img class="object_fit" src="<?php echo get_stylesheet_directory_uri();?>/img/page/pioneer/iwasaki-method/img_student01.jpg" alt="">
+          <img class="object_fit" src="<?php the_sub_field('acf_method_student_img');?>" alt="">
         </div>
         <div class="<?php echo $pageName;?>__student-right">
-          <div class="<?php echo $pageName;?>__student-ttl">文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります。</div>
-          <div class="<?php echo $pageName;?>__student-txt">
-            文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります。
-          </div>
+          <div class="<?php echo $pageName;?>__student-ttl"><?php the_sub_field('acf_method_student_ttl');?></div>
+          <div class="<?php echo $pageName;?>__student-txt"><?php the_sub_field('acf_method_student_txt');?></div>
         </div>
       </li>
-      <li>
-        <div class="<?php echo $pageName;?>__student-left">
-          <img class="object_fit" src="<?php echo get_stylesheet_directory_uri();?>/img/page/pioneer/iwasaki-method/img_student01.jpg" alt="">
-        </div>
-        <div class="<?php echo $pageName;?>__student-right">
-          <div class="<?php echo $pageName;?>__student-ttl">文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります。</div>
-          <div class="<?php echo $pageName;?>__student-txt">
-            文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります。
-          </div>
-        </div>
-      </li>
-      <li>
-        <div class="<?php echo $pageName;?>__student-left">
-          <img class="object_fit" src="<?php echo get_stylesheet_directory_uri();?>/img/page/pioneer/iwasaki-method/img_student01.jpg" alt="">
-        </div>
-        <div class="<?php echo $pageName;?>__student-right">
-          <div class="<?php echo $pageName;?>__student-ttl">文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります。</div>
-          <div class="<?php echo $pageName;?>__student-txt">
-            文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります。
-          </div>
-        </div>
-      </li>
+      <?php endwhile;?>
     </ul>
   </div>
+  <?php endif;?>
   <!-- 専門家の声 -->
+  <?php if(have_rows('acf_professor_group','option')): ?>
   <div class="<?php echo $pageName;?>__expert">
     <h2 class="page-group__contHeading page-heading"><span>専門家の声</span></h2>
+    <?php while(have_rows('acf_professor_group','option')): the_row(); ?>
     <div class="<?php echo $pageName;?>__expert-group">
       <div class="<?php echo $pageName;?>__expert-img">
-        <img class="object_fit" src="<?php echo get_stylesheet_directory_uri();?>/img/page/pioneer/iwasaki-method/img_expert.jpg" alt="">
+        <img class="object_fit" src="<?php the_sub_field('acf_professor_img');?>" alt="">
       </div>
       <div class="<?php echo $pageName;?>__expert-role">
-        <div class="<?php echo $pageName;?>__expert-director">
-          東京大学薬学部教授<br>
-          ​学校法人岩崎学園総合教育アドバイザー
-        </div>
-        <div class="<?php echo $pageName;?>__expert-name">池谷 裕二 氏</div>
+        <div class="<?php echo $pageName;?>__expert-director"><?php the_sub_field('acf_professor_position');?></div>
+        <div class="<?php echo $pageName;?>__expert-name"><?php the_sub_field('acf_professor_name');?> 氏</div>
       </div>
-      <div class="<?php echo $pageName;?>__expert-txt">
-        「楽しく学ぶ」という岩崎学園の教育精神は、脳の原理から見ても「ドパミン報酬系が、高度な可塑性を誘導する」という科学的な事実に合致しますし、なにより私自身のモットーである「楽しんで生きる」に沿っています。
-        文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります。
-      </div>
+      <div class="<?php echo $pageName;?>__expert-txt"><?php the_sub_field('acf_professor_txt');?></div>
     </div>
+    <?php endwhile;?>
   </div>
+  <?php endif;?>
 </section>

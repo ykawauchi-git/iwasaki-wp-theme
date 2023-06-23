@@ -187,6 +187,9 @@
   <!-- 学生寮 -->
   <div class="<?php echo $pageName;?>__dormitory" id="student_dormitory">
       <h2 class="<?php echo $pageName;?>__dormitory-heading page-heading"><span>学生寮</span></h2>
+      <div class="<?php echo $pageName;?>__dormitory-img">
+        <img class="object_fit" src="<?php echo get_stylesheet_directory_uri();?>/img/page/support/img_dormitory.jpg">
+      </div>
       <div class="<?php echo $pageName;?>__dormitory-intro">
         本学園に入学される方の中には、親元から離れてひとり暮らしをしながら通学している学生も多数在籍しています。横浜は、みなとみらい・中華街などの観光地も有名ですが、家賃・物価もお手ごろで、交通の便がよく、海や豊かな自然に恵まれた住みやすい街です。 遠方から入学をお考えの方に住まいのサポートを致します
       </div>
@@ -245,7 +248,7 @@
           <li class="<?php echo $pageName;?>__dormitory-point-item">
             <div class="<?php echo $pageName;?>__dormitory-point-left">
               <div class="<?php echo $pageName;?>__dormitory-point-num"><span>1</span></div>
-              <img class="object_fit" src="<?php //echo get_stylesheet_directory_uri();?>/img/page/support/img_guide01.jpg">
+              <img class="object_fit" src="<?php echo get_stylesheet_directory_uri();?>/img/page/support/img_point01.jpg">
             </div>
             <div class="<?php echo $pageName;?>__dormitory-point-right">
               <div class="<?php echo $pageName;?>__dormitory-point-ttl">管理人さんと友達との生活</div>
@@ -258,7 +261,7 @@
           <li class="<?php echo $pageName;?>__dormitory-point-item">
             <div class="<?php echo $pageName;?>__dormitory-point-left">
               <div class="<?php echo $pageName;?>__dormitory-point-num"><span>2</span></div>
-              <img class="object_fit" src="<?php //echo get_stylesheet_directory_uri();?>/img/page/support/img_guide01.jpg">
+              <img class="object_fit" src="<?php echo get_stylesheet_directory_uri();?>/img/page/support/img_point02.jpg">
             </div>
             <div class="<?php echo $pageName;?>__dormitory-point-right">
               <div class="<?php echo $pageName;?>__dormitory-point-ttl">駅徒歩３分、便利で安心</div>
@@ -271,7 +274,7 @@
           <li class="<?php echo $pageName;?>__dormitory-point-item">
             <div class="<?php echo $pageName;?>__dormitory-point-left">
               <div class="<?php echo $pageName;?>__dormitory-point-num"><span>3</span></div>
-              <img class="object_fit" src="<?php //echo get_stylesheet_directory_uri();?>/img/page/support/img_guide01.jpg">
+              <img class="object_fit" src="<?php echo get_stylesheet_directory_uri();?>/img/page/support/img_point03.jpg">
             </div>
             <div class="<?php echo $pageName;?>__dormitory-point-right">
               <div class="<?php echo $pageName;?>__dormitory-point-ttl">便利な共用設備と快適な居室</div>

@@ -15,22 +15,15 @@ function my_acf_options_page_settings( $settings )
 add_filter('acf/options_page/settings', 'my_acf_options_page_settings');
 
 //追加オプションページカスタマイズ
-/* if( function_exists('acf_add_options_page') ) {
+ if( function_exists('acf_add_options_page') ) {
   acf_add_options_page(array(
-    'page_title' => 'ページタイトル',
-    'menu_title' => 'メニュータイトル',
+    'page_title' => '情報設定',
+    'menu_title' => '情報設定',
     'menu_slug' => 'acf-custom-options',
     'capability' => 'read',
     'redirect' => true
   ));
-  acf_add_options_page(array(
-    'page_title' => 'ページタイトル2',
-    'menu_title' => 'メニュータイトル2',
-    'menu_slug' => 'acf-custom-options2',
-    'capability' => 'read',
-    'redirect' => true
-  ));
-} */
+}
 
 //----------------------------------------------------------
 //【管理画面】ページの属性で非公開などを親に選択できるようにする

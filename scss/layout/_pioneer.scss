@@ -71,6 +71,9 @@
       }
       &:first-of-type {
         & .page-pioneer__step {
+          &-bg {
+            background: url(./img/page/pioneer/bg_step01.jpg) no-repeat center/cover;
+          }
           &-heading {
             &-num {
               color : $green01;
@@ -85,6 +88,9 @@
       }
       &:nth-of-type(2) {
         & .page-pioneer__step {
+          &-bg {
+            background: url(./img/page/pioneer/bg_step02.jpg) no-repeat center/cover;
+          }
           &-heading {
             &-num {
               color : $yellow01;
@@ -99,6 +105,9 @@
       }
       &:nth-of-type(3) {
         & .page-pioneer__step {
+          &-bg {
+            background: url(./img/page/pioneer/bg_step03.jpg) no-repeat center/cover;
+          }
           &-heading {
             &-num {
               color : $pink02;
@@ -164,6 +173,9 @@
       }
       &:nth-of-type(4) {
         & .page-pioneer__step {
+          &-bg {
+            background: url(./img/page/pioneer/bg_step04.jpg) no-repeat center/cover;
+          }
           &-heading {
             &-num {
               color : $blue07;
@@ -207,7 +219,6 @@
     &-bg {
       width : 100vw;
       height : calc(100vh - 128px);
-      background: url(./img/page/speciality/img_feature02.jpg) no-repeat center/cover;
       position: sticky;
       top : 128px;
       left : 0;

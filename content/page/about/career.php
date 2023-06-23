@@ -1,11 +1,33 @@
 <?php $pageName = "page-career";?>
 <section class="<?php echo $pageName;?>">
-  <div class="<?php echo $pageName;?>__figure">
-    <div class="<?php echo $pageName;?>__figure-item">
-      <img class="object_fit" src="<?php //echo get_stylesheet_directory_uri();?>/img/page/about/img_message.jpg">
+  <div class="<?php echo $pageName;?>__value">
+    <!-- 01 -->
+    <div class="<?php echo $pageName;?>__value-item">
+      <div class="<?php echo $pageName;?>__value-left">・</div>
+      <div class="<?php echo $pageName;?>__value-right">
+        内定率98.1％（R５年）
+      </div>
     </div>
-    <div class="<?php echo $pageName;?>__figure-item">
-      <img class="object_fit" src="<?php //echo get_stylesheet_directory_uri();?>/img/page/about/img_message.jpg">
+    <!-- 02 -->
+    <div class="<?php echo $pageName;?>__value-item">
+      <div class="<?php echo $pageName;?>__value-left">・</div>
+      <div class="<?php echo $pageName;?>__value-right">
+        神奈川県内就職率47.6％（R５年）神奈川県と「連携と協力に関する包括協定」を締結し、多様な産官学連携プロジェクトやインターンシップを実施するなどの地域連携を通し47.6％の神奈川県内の就職実績に繋がっています。
+      </div>
+    </div>
+    <!-- 03 -->
+    <div class="<?php echo $pageName;?>__value-item">
+      <div class="<?php echo $pageName;?>__value-left">・</div>
+      <div class="<?php echo $pageName;?>__value-right">
+        求人件数　6457件（R５年）業界に指示をされている岩崎学園だからこその求人件数。また、年間400社以上企業が、岩崎学園だけのために会社説明会にいらっしゃいます。
+      </div>
+    </div>
+    <!-- 04 -->
+    <div class="<?php echo $pageName;?>__value-item">
+      <div class="<?php echo $pageName;?>__value-left">・</div>
+      <div class="<?php echo $pageName;?>__value-right">
+        異分野への就職率15.7％（R５年）7分野を擁する本学園だからこそ、所属している学校の専門領域以外のサポートも受けられ。“好き”は一つではなく、複数の選択肢を持てます。
+      </div>
     </div>
   </div>
   <!-- 制度 -->
@@ -307,7 +329,7 @@
               国家試験対策問題分析のエキスパートである講師陣が国家試験過去問題・オリジナル問題を通じて、学生の到達度と課題を確認していきます。
             </div>
             <div class="<?php echo $pageName;?>__certification-support-right">
-              <img class="object_fit" src="<?php echo get_stylesheet_directory_uri();?>/img/page/career/img_certification-support01.jpg">
+              <img class="object_fit" src="<?php echo get_stylesheet_directory_uri();?>/img/page/career/img_certification-support02.jpg">
             </div>
           </div>
         </li>
@@ -320,7 +342,7 @@
               入学時にパソコンを無償貸与するので、WordやExcelなど、どんな現場でも役立つパソコンスキルが普段の授業で身につきます。就職に直結するパソコン系の資格取得も目指せます。授業以外にも就職活動や自宅でも活用可能です。
             </div>
             <div class="<?php echo $pageName;?>__certification-support-right">
-              <img class="object_fit" src="<?php echo get_stylesheet_directory_uri();?>/img/page/career/img_certification-support01.jpg">
+              <img class="object_fit" src="<?php echo get_stylesheet_directory_uri();?>/img/page/career/img_certification-support03.jpg">
             </div>
           </div>
         </li>

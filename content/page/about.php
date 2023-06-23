@@ -63,7 +63,7 @@
             文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。<br>
             文章が入ります、文章が入ります。
           </div>
-          <a href="<?php echo home_url('/about/career'); ?>" class="page-group__contBtn">詳しく見る</a>
+          <a href="<?php echo home_url('/philosophy/'); ?>" class="page-group__contBtn">詳しく見る</a>
         </div>
       </li>
       <li class="<?php echo $pageName;?>__philosophy-item">
@@ -89,6 +89,6 @@
       岩崎学園では、共に変化を楽しみ<br>
       教育サービスを提供しつづけることができる​方を募集しています。
     </div>
-    <a href="" target="_blank" class="page-group__contBtn">詳しく見る</a>
+    <a href="https://recruit.iwasaki.ac.jp/" target="_blank" class="page-group__contBtn">詳しく見る</a>
   </div>
 </section>

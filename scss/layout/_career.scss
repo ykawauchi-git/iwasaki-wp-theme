@@ -1,23 +1,41 @@
 .page-career {
-  &__figure {
-    padding : 100px 0px 150px;
+  &__value {
+    width: 768px;
+    background-color: $blue10;
+    padding: 34px 40px 32px;
+    margin: 100px auto 150px;
     @include mq_sp{
-      padding : size_sp(100) 0 size_sp(150);
+      width: size_sp(644);
+      padding: size_sp(32) size_sp(40) size_sp(33);
+      margin: size_sp(100) auto size_sp(150);
     }
     &-item {
-      width : 768px;
-      height : 470px;
-      margin : 0 auto;
-      background-color: gray;
+      font-size: 16px;
+      line-height: (37/16);
+      @include flex(flex, wrap, flex-start, stretch, normal, row);
       @include mq_sp{
-        width : size_sp(644);
-        height : size_sp(429);
+        @include fz_vw(28);
+        line-height: (58/28);
       }
-      &:nth-of-type(2) {
-        margin-top : 50px;
+      &:nth-of-type(n + 2) {
+        margin-top: 18px;
         @include mq_sp{
-          margin-top : size_sp(50);
+          margin-top: size_sp(22);
         }
+      }
+    }
+    &-left {
+      width: 16px;
+      margin-right: 14px;
+      @include mq_sp{
+        width: size_sp(28);
+        margin-right: size_sp(10);
+      }
+    }
+    &-right {
+      width: 658px;
+      @include mq_sp{
+        width: size_sp(526);
       }
     }
   }
@@ -387,7 +405,7 @@
     }
 
     &-group {
-      // background: url(./img/page/career/bg_certification.svg) no-repeat center/cover;
+      // background: url(./img/page/career/bg_certification.jpg) no-repeat center/cover;
       margin-top : 63px;
       position: relative;
       z-index: 1;
@@ -398,7 +416,7 @@
     &-bg {
       width : 100vw;
       height : calc(100vh - 128px);
-      background: url(./img/page/career/bg_certification.svg) no-repeat center/cover;
+      background: url(./img/page/career/bg_certification.jpg) no-repeat center/cover;
       position: sticky;
       top : 128px;
       left : 0;

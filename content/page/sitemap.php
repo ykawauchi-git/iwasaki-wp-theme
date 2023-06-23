@@ -25,7 +25,7 @@
         <li>
           <a href="<?php echo home_url('/support/');?>" class="page">学生支援</a>
           <ul class="page-sitemap__subList">
-            <li><a href="<?php echo home_url('/facility/');?>">充実の施設・設備</a></li>
+            <li><a href="<?php echo home_url('/support/facility/');?>">充実の施設・設備</a></li>
           </ul>
         </li>
         <li><a href="<?php echo home_url('/movie/');?>" class="page">動画で見る岩崎学園</a></li>
@@ -39,7 +39,7 @@
         <li><a href="<?php echo home_url('/for-teachers/');?>" class="for">高校の先生方</a></li>
         <li><a href="<?php echo home_url('/for-recruiters/');?>" class="for">企業の方</a></li>
         <li><a href="<?php echo home_url('/for-graduates/');?>" class="for">卒業生の方</a></li>
-        <li><a href="<?php echo home_url('/');?>" class="for">教職員採用</a></li>
+        <li><a href="https://recruit.iwasaki.ac.jp/" target="_blank" class="for">教職員採用</a></li>
       </ul>
     </div>
   </div>

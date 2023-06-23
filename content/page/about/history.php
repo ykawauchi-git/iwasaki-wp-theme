@@ -4,34 +4,34 @@
     <div class="<?php echo $pageName;?>__fv-inner">
       <ul class="<?php echo $pageName;?>__fv-list">
         <li class="<?php echo $pageName;?>__fv-item">
-          <img class="object_fit" src="<?php //echo get_stylesheet_directory_uri();?>/img/page/history/img_history1927.jpg">
+          <img class="object_fit" src="<?php echo get_stylesheet_directory_uri();?>/img/page/history/fv_history01.jpg">
         </li>
         <li class="<?php echo $pageName;?>__fv-item">
-          <img class="object_fit" src="<?php //echo get_stylesheet_directory_uri();?>/img/page/history/img_history1927.jpg">
+          <img class="object_fit" src="<?php echo get_stylesheet_directory_uri();?>/img/page/history/fv_history02.jpg">
         </li>
         <li class="<?php echo $pageName;?>__fv-item">
-          <img class="object_fit" src="<?php //echo get_stylesheet_directory_uri();?>/img/page/history/img_history1927.jpg">
+          <img class="object_fit" src="<?php echo get_stylesheet_directory_uri();?>/img/page/history/fv_history03.jpg">
         </li>
         <li class="<?php echo $pageName;?>__fv-item">
-          <img class="object_fit" src="<?php //echo get_stylesheet_directory_uri();?>/img/page/history/img_history1927.jpg">
+          <img class="object_fit" src="<?php echo get_stylesheet_directory_uri();?>/img/page/history/fv_history04.jpg">
         </li>
         <li class="<?php echo $pageName;?>__fv-item">
-          <img class="object_fit" src="<?php //echo get_stylesheet_directory_uri();?>/img/page/history/img_history1927.jpg">
+          <img class="object_fit" src="<?php echo get_stylesheet_directory_uri();?>/img/page/history/fv_history05.jpg">
         </li>
         <li class="<?php echo $pageName;?>__fv-item">
-          <img class="object_fit" src="<?php //echo get_stylesheet_directory_uri();?>/img/page/history/img_history1927.jpg">
+          <img class="object_fit" src="<?php echo get_stylesheet_directory_uri();?>/img/page/history/fv_history06.jpg">
         </li>
         <li class="<?php echo $pageName;?>__fv-item">
-          <img class="object_fit" src="<?php //echo get_stylesheet_directory_uri();?>/img/page/history/img_history1927.jpg">
+          <img class="object_fit" src="<?php echo get_stylesheet_directory_uri();?>/img/page/history/fv_history07.jpg">
         </li>
         <li class="<?php echo $pageName;?>__fv-item">
-          <img class="object_fit" src="<?php //echo get_stylesheet_directory_uri();?>/img/page/history/img_history1927.jpg">
+          <img class="object_fit" src="<?php echo get_stylesheet_directory_uri();?>/img/page/history/fv_history08.jpg">
         </li>
         <li class="<?php echo $pageName;?>__fv-item">
-          <img class="object_fit" src="<?php //echo get_stylesheet_directory_uri();?>/img/page/history/img_history1927.jpg">
+          <img class="object_fit" src="<?php echo get_stylesheet_directory_uri();?>/img/page/history/fv_history09.jpg">
         </li>
         <li class="<?php echo $pageName;?>__fv-item">
-          <img class="object_fit" src="<?php //echo get_stylesheet_directory_uri();?>/img/page/history/img_history1927.jpg">
+          <img class="object_fit" src="<?php echo get_stylesheet_directory_uri();?>/img/page/history/fv_history10.jpg">
         </li>
       </ul>
       <div class="<?php echo $pageName;?>__fv-img">

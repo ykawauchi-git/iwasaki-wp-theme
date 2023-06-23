@@ -82,7 +82,6 @@
       margin : 39px auto 0;
       @include mq_sp{
         width : 100%;
-        height : 429px;
       }
     }
     &-txt {
@@ -381,16 +380,24 @@
     @include mq_sp{
       margin-top : size_sp(151);
     }
+    &-img {
+      width: 532px;
+      margin: 60px auto 0;
+      @include mq_sp{
+        width: size_sp(644);
+        margin-top: size_sp(80);
+      }
+    }
     &-intro {
       font-size : 16px;
       line-height : (37/16);
       width : 768px;
-      margin : 54px auto 0;
+      margin : 34px auto 0;
       @include mq_sp{
         @include fz_vw(28);
         line-height: (58/28);
         width : size_sp(644);
-        margin-top : size_sp(70);
+        margin-top : size_sp(40);
       }
     }
     &-guide {
@@ -491,6 +498,8 @@
               left : 0;
               pointer-events: none;
               transition : .5s;
+              z-index: 1;
+              pointer-events: none;
             }
             &:not(:first-of-type) {
               margin-left : 15px;

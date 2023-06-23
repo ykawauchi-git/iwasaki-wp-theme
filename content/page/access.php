@@ -17,7 +17,7 @@
         <li class="page-access__item">
           <h3 class="page-access__itemTtl">学園本部<span>経営企画部・キャリア開発部・施設管理部・経理財務部・総務部</span></h3>
           <div class="page-access__itemRow">
-            <figure class="page-access__itemImg"><img src="<?php echo get_stylesheet_directory_uri();?>/img/page/dummy.png" alt="" class="object_fit"></figure>
+            <figure class="page-access__itemImg"><img src="<?php echo get_stylesheet_directory_uri();?>/img/page/access/img_isc.jpg" alt="" class="object_fit"></figure>
             <figcaption class="page-access__itemInfo">
               <ul>
                 <li>
@@ -48,7 +48,7 @@
         <li class="page-access__item">
           <h3 class="page-access__itemTtl">情報科学専門学校</h3>
           <div class="page-access__itemRow">
-            <figure class="page-access__itemImg"><img src="<?php echo get_stylesheet_directory_uri();?>/img/page/dummy.png" alt="" class="object_fit"></figure>
+            <figure class="page-access__itemImg"><img src="<?php echo get_stylesheet_directory_uri();?>/img/page/access/img_isc.jpg" alt="" class="object_fit"></figure>
             <figcaption class="page-access__itemInfo">
               <ul>
                 <li>
@@ -75,7 +75,7 @@
           <h3 class="page-access__itemTtl">横浜スポーツウェルネス専門学校</h3>
           <span>(2024年4月 横浜医療情報専門学校より校名変更予定)</span>
           <div class="page-access__itemRow">
-            <figure class="page-access__itemImg"><img src="<?php echo get_stylesheet_directory_uri();?>/img/page/dummy.png" alt="" class="object_fit"></figure>
+            <figure class="page-access__itemImg"><img src="<?php echo get_stylesheet_directory_uri();?>/img/page/access/img_ysw.jpg" alt="" class="object_fit"></figure>
             <figcaption class="page-access__itemInfo">
               <ul>
                 <li>
@@ -101,7 +101,7 @@
         <li class="page-access__item">
           <h3 class="page-access__itemTtl">横浜ｆカレッジ</h3>
           <div class="page-access__itemRow">
-            <figure class="page-access__itemImg"><img src="<?php echo get_stylesheet_directory_uri();?>/img/page/dummy.png" alt="" class="object_fit"></figure>
+            <figure class="page-access__itemImg"><img src="<?php echo get_stylesheet_directory_uri();?>/img/page/access/img_yfc.jpg" alt="" class="object_fit"></figure>
             <figcaption class="page-access__itemInfo">
               <ul>
                 <li>
@@ -127,7 +127,7 @@
         <li class="page-access__item">
           <h3 class="page-access__itemTtl">横浜デジタルアーツ専門学校</h3>
           <div class="page-access__itemRow">
-            <figure class="page-access__itemImg"><img src="<?php echo get_stylesheet_directory_uri();?>/img/page/dummy.png" alt="" class="object_fit"></figure>
+            <figure class="page-access__itemImg"><img src="<?php echo get_stylesheet_directory_uri();?>/img/page/access/img_yda.jpg" alt="" class="object_fit"></figure>
             <figcaption class="page-access__itemInfo">
               <ul>
                 <li>
@@ -153,7 +153,7 @@
         <li class="page-access__item">
           <h3 class="page-access__itemTtl">横浜リハビリテーション専門学校</h3>
           <div class="page-access__itemRow">
-            <figure class="page-access__itemImg"><img src="<?php echo get_stylesheet_directory_uri();?>/img/page/dummy.png" alt="" class="object_fit"></figure>
+            <figure class="page-access__itemImg"><img src="<?php echo get_stylesheet_directory_uri();?>/img/page/access/img_ycr.jpg" alt="" class="object_fit"></figure>
             <figcaption class="page-access__itemInfo">
               <ul>
                 <li>
@@ -179,7 +179,7 @@
         <li class="page-access__item">
           <h3 class="page-access__itemTtl">横浜保育福祉専門学校</h3>
           <div class="page-access__itemRow">
-            <figure class="page-access__itemImg"><img src="<?php echo get_stylesheet_directory_uri();?>/img/page/dummy.png" alt="" class="object_fit"></figure>
+            <figure class="page-access__itemImg"><img src="<?php echo get_stylesheet_directory_uri();?>/img/page/access/img_hoiku.jpg" alt="" class="object_fit"></figure>
             <figcaption class="page-access__itemInfo">
               <ul>
                 <li>
@@ -205,7 +205,7 @@
         <li class="page-access__item">
           <h3 class="page-access__itemTtl">横浜実践看護専門学校</h3>
           <div class="page-access__itemRow">
-            <figure class="page-access__itemImg"><img src="<?php echo get_stylesheet_directory_uri();?>/img/page/dummy.png" alt="" class="object_fit"></figure>
+            <figure class="page-access__itemImg"><img src="<?php echo get_stylesheet_directory_uri();?>/img/page/access/img_jkango.jpg" alt="" class="object_fit"></figure>
             <figcaption class="page-access__itemInfo">
               <ul>
                 <li>
@@ -236,7 +236,7 @@
         <li class="page-access__item">
           <h3 class="page-access__itemTtl">情報セキュリティ大学院大学</h3>
           <div class="page-access__itemRow">
-            <figure class="page-access__itemImg"><img src="<?php echo get_stylesheet_directory_uri();?>/img/page/dummy.png" alt="" class="object_fit"></figure>
+            <figure class="page-access__itemImg"><img src="<?php echo get_stylesheet_directory_uri();?>/img/page/access/img_iisec.jpg" alt="" class="object_fit"></figure>
             <figcaption class="page-access__itemInfo">
               <ul>
                 <li>

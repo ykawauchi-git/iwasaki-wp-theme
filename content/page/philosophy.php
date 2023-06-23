@@ -33,22 +33,18 @@
     <div class="<?php echo $pageName;?>__adviser-intro">
       文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。
     </div>
+    <?php if(have_rows('acf_professor_group','option')): while(have_rows('acf_professor_group','option')): the_row(); ?>
     <div class="<?php echo $pageName;?>__adviser-group">
       <div class="<?php echo $pageName;?>__adviser-img">
-        <img class="object_fit" src="<?php echo get_stylesheet_directory_uri();?>/img/page/philosophy/img_adviser.jpg">
+        <img class="object_fit" src="<?php the_sub_field('acf_professor_img');?>">
       </div>
       <div class="<?php echo $pageName;?>__adviser-role">
-        <div class="<?php echo $pageName;?>__adviser-director">
-          東京大学薬学部教授<br>
-          ​学校法人岩崎学園総合教育アドバイザー
-        </div>
-        <div class="<?php echo $pageName;?>__adviser-name">池谷 裕二 氏</div>
+        <div class="<?php echo $pageName;?>__adviser-director"><?php the_sub_field('acf_professor_position');?></div>
+        <div class="<?php echo $pageName;?>__adviser-name"><?php the_sub_field('acf_professor_name');?> 氏</div>
       </div>
-      <div class="<?php echo $pageName;?>__adviser-txt">
-        「楽しく学ぶ」という岩崎学園の教育精神は、脳の原理から見ても「ドパミン報酬系が、高度な可塑性を誘導する」という科学的な事実に合致しますし、なにより私自身のモットーである「楽しんで生きる」に沿っています。
-        文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります。
-      </div>
+      <div class="<?php echo $pageName;?>__adviser-txt"><?php the_sub_field('acf_professor_txt');?></div>
     </div>
+    <?php endwhile; endif;?>
   </div>
   <!-- 専門力 × 開拓力 -->
   <div class="<?php echo $pageName;?>__power">
@@ -114,7 +110,7 @@
         </div>
       </a>
       <!-- 産学連携 -->
-      <a href="<?php echo home_url('/philosophy/pioneer/'); ?>" class="<?php echo $pageName;?>__learning-item">
+      <a href="<?php echo home_url('/academic-industrial-collaboration/'); ?>" class="<?php echo $pageName;?>__learning-item">
         <div class="<?php echo $pageName;?>__learning-bg"></div>
         <div class="<?php echo $pageName;?>__learning-inner">
           <div class="<?php echo $pageName;?>__learning-center">産学連携</div>

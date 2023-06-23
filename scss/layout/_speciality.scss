@@ -174,6 +174,9 @@
               background-color: $blue12;
             }
           }
+          &-bg {
+            background: url(./img/page/speciality/bg_step01.jpg) no-repeat center/cover;
+          }
         }
       }
       &:nth-of-type(2) {
@@ -182,6 +185,9 @@
             &-num {
               color : $yellow02;
             }
+          }
+          &-bg {
+            background: url(./img/page/speciality/bg_step02.jpg) no-repeat center/cover;
           }
           &-ttl {
             &:before {
@@ -194,6 +200,7 @@
         & .page-speciality__step {
           &-bg {
             height : 655px;
+            background: url(./img/page/speciality/bg_step03.jpg) no-repeat center/cover;
             position: absolute;
             top : 0;
             @include mq_sp{
@@ -222,7 +229,6 @@
     &-bg {
       width : 100vw;
       height : calc(100vh - 128px);
-      background: url(./img/page/speciality/img_feature02.jpg) no-repeat center/cover;
       position: sticky;
       top : 128px;
       left : 0;
@@ -341,12 +347,12 @@
       }
     }
     &-left {
-      width : 250px;
+      min-width : 250px;
       height : 250px;
       margin-top : 6px;
       margin-right : 26px;
       @include mq_sp{
-        width : size_sp(500);
+        min-width : size_sp(500);
         height : size_sp(500);
         margin : 0 auto;
       }
@@ -355,11 +361,10 @@
       font-size : 16px;
       line-height : (37/16);
       color : $white00;
-      width : 444px;
+      width : 100%;
       @include mq_sp{
         @include fz_vw(28);
         line-height : (58/28);
-        width : 100%;
         margin-top : size_sp(31);
       }
     }

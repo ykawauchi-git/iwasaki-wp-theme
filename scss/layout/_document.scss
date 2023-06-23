@@ -242,10 +242,11 @@ $document_yellow02: #F4CD40;
       font-weight: 500;
       color: $white00;
       @include mq_sp{
-        @include fz_vw(20);
-        line-height: (29/20);
+        @include fz_vw(19);
+        line-height: (29/19);
         width: size_sp(300);
         margin: 0 auto;
+        white-space: nowrap;
       }
       & > span {
         font-size: 10px;

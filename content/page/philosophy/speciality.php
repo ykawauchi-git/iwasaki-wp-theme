@@ -48,44 +48,24 @@
             <div class="<?php echo $pageName;?>__step-heading-num">1</div>
             <div class="<?php echo $pageName;?>__step-heading-ttl">質の高い授業と<br>効果的な資格取得</div>
           </div>
+          <?php if(have_rows('acf_speciality01_group')):?>
           <ul class="<?php echo $pageName;?>__step-subList">
           <!-- 001 -->
+            <?php while(have_rows('acf_speciality01_group')): the_row(); ?>
             <li class="<?php echo $pageName;?>__step-subItem">
-              <div class="<?php echo $pageName;?>__step-ttl">ブレンディッドラーニング</div>
+              <div class="<?php echo $pageName;?>__step-ttl"><?php the_sub_field('acf_speciality01_ttl');?></div>
               <div class="<?php echo $pageName;?>__step-container">
+                <?php if(get_sub_field('acf_speciality01_img')):?>
                 <div class="<?php echo $pageName;?>__step-left">
-                  <img class="object_fit" src="<?php //echo get_stylesheet_directory_uri();?>/img/page/career/img_support01.jpg">
+                  <img class="object_fit" src="<?php the_sub_field('acf_speciality01_img');?>">
                 </div>
-                <div class="<?php echo $pageName;?>__step-right">
-                  文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。
-                </div>
+                <?php endif;?>
+                <div class="<?php echo $pageName;?>__step-right"><?php the_sub_field('acf_speciality01_txt');?></div>
               </div>
             </li>
-            <!-- 002 -->
-            <li class="<?php echo $pageName;?>__step-subItem">
-              <div class="<?php echo $pageName;?>__step-ttl">学習効果を最大化する授業設計</div>
-              <div class="<?php echo $pageName;?>__step-container">
-                <div class="<?php echo $pageName;?>__step-left">
-                  <img class="object_fit" src="<?php //echo get_stylesheet_directory_uri();?>/img/page/career/img_support01.jpg">
-                </div>
-                <div class="<?php echo $pageName;?>__step-right">
-                  文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。
-                </div>
-              </div>
-            </li>
-            <!-- 003 -->
-            <li class="<?php echo $pageName;?>__step-subItem">
-              <div class="<?php echo $pageName;?>__step-ttl">ラーニングマネジメントシステム</div>
-              <div class="<?php echo $pageName;?>__step-container">
-                <div class="<?php echo $pageName;?>__step-left">
-                  <img class="object_fit" src="<?php //echo get_stylesheet_directory_uri();?>/img/page/career/img_support01.jpg">
-                </div>
-                <div class="<?php echo $pageName;?>__step-right">
-                  文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。
-                </div>
-              </div>
-            </li>
+            <?php endwhile;?>
           </ul>
+          <?php endif;?>
         </div>
       </li>
       <!-- 02 -->
@@ -96,32 +76,24 @@
             <div class="<?php echo $pageName;?>__step-heading-num">2</div>
             <div class="<?php echo $pageName;?>__step-heading-ttl">実践的な技術・<br>スキルが身につく</div>
           </div>
+          <?php if(have_rows('acf_speciality02_group')):?>
           <ul class="<?php echo $pageName;?>__step-subList">
+            <?php while(have_rows('acf_speciality02_group')): the_row(); ?>
           <!-- 001 -->
             <li class="<?php echo $pageName;?>__step-subItem">
-              <div class="<?php echo $pageName;?>__step-ttl">資格対策</div>
+              <div class="<?php echo $pageName;?>__step-ttl"><?php the_sub_field('acf_speciality02_ttl');?></div>
               <div class="<?php echo $pageName;?>__step-container">
+                <?php if(get_sub_field('acf_speciality02_img')):?>
                 <div class="<?php echo $pageName;?>__step-left">
-                  <img class="object_fit" src="<?php //echo get_stylesheet_directory_uri();?>/img/page/career/img_support01.jpg">
+                  <img class="object_fit" src="<?php the_sub_field('acf_speciality02_img');?>">
                 </div>
-                <div class="<?php echo $pageName;?>__step-right">
-                  文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。
-                </div>
+                <?php endif;?>
+                <div class="<?php echo $pageName;?>__step-right"><?php the_sub_field('acf_speciality02_txt');?></div>
               </div>
             </li>
-            <!-- 002 -->
-            <li class="<?php echo $pageName;?>__step-subItem">
-              <div class="<?php echo $pageName;?>__step-ttl">充実の設備</div>
-              <div class="<?php echo $pageName;?>__step-container">
-                <div class="<?php echo $pageName;?>__step-left">
-                  <img class="object_fit" src="<?php //echo get_stylesheet_directory_uri();?>/img/page/career/img_support01.jpg">
-                </div>
-                <div class="<?php echo $pageName;?>__step-right">
-                  文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。
-                </div>
-              </div>
-            </li>
+            <?php endwhile;?>
           </ul>
+          <?php endif;?>
         </div>
       </li>
       <!-- 03 -->
@@ -132,15 +104,24 @@
             <div class="<?php echo $pageName;?>__step-heading-num">3</div>
             <div class="<?php echo $pageName;?>__step-heading-ttl">基礎学力が<br>身につく</div>
           </div>
+          <?php if(have_rows('acf_speciality03_group')):?>
           <ul class="<?php echo $pageName;?>__step-subList">
-          <!-- 001 -->
+            <?php while(have_rows('acf_speciality03_group')): the_row(); ?>
+            <!-- 001 -->
             <li class="<?php echo $pageName;?>__step-subItem">
-              <div class="<?php echo $pageName;?>__step-ttl">入学初年次の基盤教育</div>
+              <div class="<?php echo $pageName;?>__step-ttl"><?php the_sub_field('acf_speciality03_ttl');?></div>
               <div class="<?php echo $pageName;?>__step-container">
-                文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。
+                <?php if(get_sub_field('acf_speciality03_img')):?>
+                <div class="<?php echo $pageName;?>__step-left">
+                  <img class="object_fit" src="<?php the_sub_field('acf_speciality03_img');?>">
+                </div>
+                <?php endif;?>
+                <div class="<?php echo $pageName;?>__step-right"><?php the_sub_field('acf_speciality03_txt');?></div>
               </div>
             </li>
+            <?php endwhile;?>
           </ul>
+          <?php endif;?>
         </div>
       </li>
     </ul>
