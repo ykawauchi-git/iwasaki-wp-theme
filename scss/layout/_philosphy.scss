@@ -122,14 +122,14 @@
           position: absolute;
           top : -68px;
           left : 0;
-          box-shadow : 0px 3px 6px $blue02;
+          box-shadow : 0px 3px 6px rgba($black00, .1);
           @include mq_sp{
             @include fz_vw(36);
             line-height : (52/36);
             width : size_sp(562);
             padding : size_sp(8) 0px size_sp(7);
             top : size_sp(-61);
-            box-shadow : 0px size_sp(3) size_sp(6) $blue02;
+            box-shadow : 0px size_sp(3) size_sp(6) rgba($black00, .1);
           }
           & span {
             font-size : 67px;

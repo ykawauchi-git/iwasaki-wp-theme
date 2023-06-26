@@ -3,7 +3,7 @@
   <h2 class="page-philosophy__learning-ttl page-heading"><span>開拓力を磨く４つの学び</span></h2>
   <div class="<?php echo $pageName;?>__anchor">
     <a href="#career_education" class="btn__anchor">キャリア教育</a>
-    <a href="#iwasaki_method" class="btn__anchor">IWASAKI METHOD</a>
+    <a href="#iwasaki_method_pioneer" class="btn__anchor">IWASAKI METHOD</a>
     <a href="#industry_academia" class="btn__anchor">産学連携</a>
     <a href="#global_education" class="btn__anchor">グローバル教育</a>
   </div>
@@ -63,7 +63,7 @@
         </div>
       </li>
       <!-- 02 -->
-      <li id="iwasaki-method" class="<?php echo $pageName;?>__step-item">
+      <li id="iwasaki_method_pioneer" class="<?php echo $pageName;?>__step-item">
         <div class="<?php echo $pageName;?>__step-bg"></div>
         <div class="<?php echo $pageName;?>__step-inner">
           <div class="<?php echo $pageName;?>__step-heading">
@@ -77,14 +77,14 @@
           <!-- 001 -->
             <li class="<?php echo $pageName;?>__step-subItem">
               <div class="<?php echo $pageName;?>__step-container">
-                <div class="<?php echo $pageName;?>__step-left">IWASAKI<br>METHOD</div>
+                <div class="<?php echo $pageName;?>__step-left">IWASAKI<br class="pctab-only"> METHOD</div>
                 <div class="<?php echo $pageName;?>__step-right">
                   文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります。
                 </div>
               </div>
             </li>
           </ul>
-          <a href="" target="_blank" class="page-group__contBtn">詳しく見る</a>
+          <a href="<?php echo home_url('/philosophy/pioneer/method');?>" class="page-group__contBtn">詳しく見る</a>
         </div>
       </li>
       <!-- 03 -->
@@ -126,7 +126,7 @@
               </div>
             </li>
           </ul>
-          <a href="<?php echo home_url('/philosophy/pioneer/method');?>" target="_blank" class="page-group__contBtn">詳しく見る</a>
+          <a href="<?php echo home_url('/academic-industrial-collaboration/');?>" class="page-group__contBtn">詳しく見る</a>
         </div>
       </li>
       <!-- 04 -->

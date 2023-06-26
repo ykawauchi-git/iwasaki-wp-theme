@@ -467,7 +467,7 @@
         <li class="page-access__item">
           <h3 class="page-access__itemTtl">岩崎博物館（ゲーテ座記念）</h3>
           <div class="page-access__itemRow">
-            <figure class="page-access__itemImg"><img src="<?php echo get_stylesheet_directory_uri();?>/img/page/dummy.png" alt="" class="object_fit"></figure>
+            <figure class="page-access__itemImg"><img src="<?php echo get_stylesheet_directory_uri();?>/img/page/access/img_museum.jpg" alt="" class="object_fit"></figure>
             <figcaption class="page-access__itemInfo">
               <ul>
                 <li>

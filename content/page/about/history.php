@@ -72,13 +72,13 @@
     </li>
     <!-- 1949 -->
     <li class="<?php echo $pageName;?>__item">
-      <div class="<?php echo $pageName;?>__line"></div>
+      <div class="<?php echo $pageName;?>__line s"></div>
       <div class="<?php echo $pageName;?>__num font-en">1949</div>
       <div class="<?php echo $pageName;?>__ttl">横浜西口の振興をめざしファッションショー開催</div>
     </li>
     <!-- 1950 -->
     <li class="<?php echo $pageName;?>__item">
-      <div class="<?php echo $pageName;?>__line"></div>
+      <div class="<?php echo $pageName;?>__line s"></div>
       <div class="<?php echo $pageName;?>__num font-en">1950</div>
       <div class="<?php echo $pageName;?>__ttl">神奈川県下唯一の服飾専門誌「モード」創刊</div>
     </li>
@@ -103,7 +103,7 @@
     </li>
     <!-- 1975 -->
     <li class="<?php echo $pageName;?>__item">
-      <div class="<?php echo $pageName;?>__line"></div>
+      <div class="<?php echo $pageName;?>__line s"></div>
       <div class="<?php echo $pageName;?>__num font-en">1975</div>
       <div class="<?php echo $pageName;?>__ttl">横浜西口の振興をめざしファッションショー開催</div>
     </li>
@@ -163,7 +163,7 @@
     </li>
     <!-- 1982 -->
     <li class="<?php echo $pageName;?>__item">
-      <div class="<?php echo $pageName;?>__line"></div>
+      <div class="<?php echo $pageName;?>__line s"></div>
       <div class="<?php echo $pageName;?>__num font-en">1982</div>
       <div class="<?php echo $pageName;?>__ttl">岩崎ともみ 理事長就任</div>
     </li>
@@ -202,7 +202,7 @@
     </li>
     <!-- 1994 -->
     <li class="<?php echo $pageName;?>__item">
-      <div class="<?php echo $pageName;?>__line"></div>
+      <div class="<?php echo $pageName;?>__line s"></div>
       <div class="<?php echo $pageName;?>__num font-en">1994</div>
       <div class="<?php echo $pageName;?>__ttl">神奈川ニューライフカレッジ （社団法人神奈川県専修学校各種学校協会主催）開始</div>
     </li>
@@ -227,7 +227,7 @@
     </li>
     <!-- 岩崎ともみ　学園長就任 -->
     <li class="<?php echo $pageName;?>__item">
-      <div class="<?php echo $pageName;?>__line"></div>
+      <div class="<?php echo $pageName;?>__line s"></div>
       <div class="<?php echo $pageName;?>__ttl">岩崎ともみ 学園長就任</div>
     </li>
     <!-- 1998 -->
@@ -251,7 +251,7 @@
     </li>
     <!-- 再就職支援訓練開始 -->
     <li class="<?php echo $pageName;?>__item">
-      <div class="<?php echo $pageName;?>__line"></div>
+      <div class="<?php echo $pageName;?>__line s"></div>
       <div class="<?php echo $pageName;?>__ttl">再就職支援訓練開始</div>
       <div class="<?php echo $pageName;?>__inner">
         <div class="<?php echo $pageName;?>__left">
@@ -280,7 +280,7 @@
     </li>
     <!-- 2003 -->
     <li class="<?php echo $pageName;?>__item">
-      <div class="<?php echo $pageName;?>__line"></div>
+      <div class="<?php echo $pageName;?>__line s"></div>
       <div class="<?php echo $pageName;?>__num font-en">2003</div>
       <div class="<?php echo $pageName;?>__ttl">NPO情報セキュリティフォーラム設立</div>
     </li>
@@ -339,7 +339,7 @@
     </li>
     <!-- 2010 -->
     <li class="<?php echo $pageName;?>__item">
-      <div class="<?php echo $pageName;?>__line"></div>
+      <div class="<?php echo $pageName;?>__line s"></div>
       <div class="<?php echo $pageName;?>__num font-en">2010</div>
       <div class="<?php echo $pageName;?>__ttl">岩崎学園新横浜保育園、岩崎学園新横浜放課後児童クラブ開設</div>
     </li>
@@ -394,7 +394,7 @@
     </li>
     <!-- 2017 -->
     <li class="<?php echo $pageName;?>__item">
-      <div class="<?php echo $pageName;?>__line"></div>
+      <div class="<?php echo $pageName;?>__line s"></div>
       <div class="<?php echo $pageName;?>__num font-en">2017</div>
       <div class="<?php echo $pageName;?>__ttl">学園創立90周年</div>
     </li>

@@ -240,10 +240,16 @@
             }
             & .page-method {
               &__program02 {
+                &-high {
+                  margin-left: auto;
+                }
                 &-ttl {
                   & span {
                     color : $blue03;
                   }
+                }
+                &-txt {
+                  margin-left: auto;
                 }
               }
             }
@@ -262,7 +268,7 @@
         }
       }
       &-img {
-        width : calc(100% - 640px);
+        width : 50%;
         height : 422px;
         @include mq_tab{
           width :  100%;
@@ -272,7 +278,7 @@
         }
       }
       &-container {
-        width : 640px;
+        width : 50%;
         min-width: 640px;
         padding: 0 50px;
         margin: 0 auto;
@@ -294,8 +300,10 @@
         }
       }
       &-high {
+        width: 540px;
         @include flex(flex, nowrap, space-between, center, normal, row);
         @include mq_tab{
+          width: 100%;
           margin-top : size_sp(20);
         }
         @include mq_sp{
@@ -333,7 +341,11 @@
       &-txt {
         font-size : 16px;
         line-height : (37/16);
+        width: 540px;
         margin-top : 20px;
+        @include mq_tab{
+          width: 100%;
+        }
         @include mq_sp{
           @include fz_vw(28);
           line-height : (58/28);

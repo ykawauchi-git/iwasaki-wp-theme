@@ -119,6 +119,16 @@ $(function(){
     });
   });
 });
+// 学び
+$(function(){
+  $('.page-speciality__step-item').each(function(){
+    specialityHeight = $(this).find('.page-speciality__step-inner').outerHeight();
+    $('.page-speciality__step-bg').css('height', specialityHeight);
+    $(this).find('.page-speciality__step-bg').css('height', specialityHeight);
+    $('.page-speciality__step-item:nth-of-type(3)').find('.page-speciality__step-bg').css('min-height', specialityHeight);
+
+  });
+});
 
 // 就職・資格サポート
 $(function(){

@@ -233,8 +233,11 @@
     }
     &-list {
       margin-top : 200px;
+      padding-bottom : 40px;
+      overflow: hidden;
       @include mq_sp{
         margin-top : size_sp(151);
+        padding-bottom: size_sp(50);
       }
     }
     &-item {
@@ -341,6 +344,7 @@
     }
     &-right {
       width : 50%;
+      max-width: 640px;
       padding : 1px 63px 0px;
       @include mq_tab{
         width : 630px;
@@ -408,9 +412,9 @@
     }
   }
   & .mod-banner {
-    margin-top : 240px;
+    margin-top : 200px;
     @include mq_sp{
-      margin-top : size_sp(250);
+      margin-top : size_sp(200);
     }
   }
 }

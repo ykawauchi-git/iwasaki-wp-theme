@@ -291,8 +291,8 @@
     }
     &-item {
       &.selected {
-        & .page-career {
-          &__achievement {
+        & .page-recruiters {
+          &__post {
             &-question {
               &:after {
                 transform : rotate(180deg) translateY(35%);

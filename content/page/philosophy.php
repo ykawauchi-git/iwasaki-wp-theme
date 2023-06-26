@@ -125,6 +125,6 @@
       文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります.
       文章が入ります。文章が入ります、文章が入ります。
     </div>
-    <a href="<?php echo home_url('/about/career'); ?>" target="_blank" class="page-group__contBtn">詳しく見る</a>
+    <a href="<?php echo home_url('/about/career'); ?>" class="page-group__contBtn">詳しく見る</a>
   </div>
 </div>

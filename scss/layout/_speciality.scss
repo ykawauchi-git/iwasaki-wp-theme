@@ -146,6 +146,15 @@
         margin-top : size_sp(67);
         border : solid size_sp(2) $black01;
       }
+      &:hover {
+        color : $white00;
+        background-color: $blue02;
+        border : solid size_sp(2) $blue02;
+        opacity: 1;
+        @include mq_sp{
+          border : solid size_sp(2) $blue02;
+        }
+      }
     }
   }
   &__step {
@@ -228,18 +237,18 @@
     }
     &-bg {
       width : 100vw;
-      height : calc(100vh - 128px);
+      min-height : calc(100vh - 128px);
       position: sticky;
       top : 128px;
       left : 0;
       z-index : -1;
       @media screen and (max-width: 1000px) {
         top : 102px;
-        height : calc(100vh - 102px);
+        min-height : calc(100vh - 102px);
       }
       @include mq_sp{
         top : size_sp(102);
-        height : calc(100vh - #{size_sp(102)});
+        min-height : calc(100vh - #{size_sp(102)});
       }
       &:before {
         content : "";

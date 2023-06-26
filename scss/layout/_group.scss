@@ -288,8 +288,8 @@ $page-group: ".page-group";
           padding-left: 12px;
           margin-left: 12px;
           @include mq_sp{
-            padding-left: size_sp(16);
-            margin-left: size_sp(16);
+            padding-left: 0;
+            margin-left: 0;
           }
           &:before{
             @include abso-center-v();
@@ -298,6 +298,11 @@ $page-group: ".page-group";
             width: 2px;
             height: 18px;
             background: $blue07;
+            @include mq_sp{
+              // display: none;
+              // width: size_sp(3);
+              // height: size_sp(28);
+            }
           }
         }
         &:nth-of-type(4),&:nth-of-type(6){
@@ -305,6 +310,22 @@ $page-group: ".page-group";
           margin-left: 0;
           &:before{
             content: none;
+          }
+        }
+        &:nth-of-type(even){
+          @include mq_sp{
+            padding-left: size_sp(16);
+            margin-left: size_sp(16);
+          }
+          &:before{
+            @include mq_sp{
+              content: "";
+              @include abso-center-v();
+              left: 0;
+              background: $blue07;
+              width: size_sp(3);
+              height: size_sp(28);
+            }
           }
         }
         &.is-active{

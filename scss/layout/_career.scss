@@ -45,6 +45,7 @@
     position: relative;
     z-index: 1;
     @include mq_sp{
+      background: url(./img/page/career/fv_career-sp.jpg) no-repeat center/cover;
       padding : size_sp(89) 0 size_sp(100);
     }
     &::before {
@@ -713,12 +714,16 @@
     & .mod-banner {
       &:first-of-type {
         background: url(./img/page/career/bg_banner01.jpg) no-repeat center/cover;
+        @include mq_sp{
+          background: url(./img/page/career/bg_banner01-sp.jpg) no-repeat center/cover;
+        }
       }
       &:nth-of-type(2) {
         background: url(./img/page/career/bg_banner02.jpg) no-repeat center/cover;
         padding: 49px 0 47px;
         margin-top : 50px;
         @include mq_sp{
+          background: url(./img/page/career/bg_banner02-sp.jpg) no-repeat center/cover;
           margin-top : size_sp(100);
           padding : size_sp(100) 0;
         }

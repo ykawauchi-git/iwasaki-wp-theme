@@ -33,6 +33,9 @@
   // プロスポーツチームとの産学連携
   &__pro {
     margin-top: 193px;
+    @include mq_sp{
+      margin-top: size_sp(193);
+    }
     & .page-heading  {
       & span {
         &:after {
