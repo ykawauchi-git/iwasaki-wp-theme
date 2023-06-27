@@ -45,120 +45,12 @@
         }
       }
     }
-    &-list {
-      padding-top: 70px;
-      @include mq_sp{
-        padding-top: size_sp(79);
-      }
-      & li {
-        @include flex(flex, nowrap, center, stretch, normal, row);
-        position: relative;
-        z-index : 1;
-        &:not(:first-of-type) {
-          margin-top: 100px;
-          @include mq_sp{
-            margin-top: size_sp(150);
-          }
+    & .page-sec03 {
+      &__list {
+        padding-top: 70px;
+        @include mq_sp{
+          padding-top: size_sp(79);
         }
-        &:nth-of-type(even) {
-          flex-direction: row-reverse;
-          & .page-academic-industrial-collaboration {
-            &__pro {
-              &-left {
-                left : auto;
-                right : 0;
-              }
-              &-ttl {
-                text-align: right;
-              }
-              &-txt {
-                margin-left: 0;
-                margin-right: auto;
-              }
-            }
-          }
-        }
-        // &:before {
-        //   content : "";
-        //   width : 100vw;
-        //   height : 326px;
-        //   background-color: $blue10;
-        //   position: absolute;
-        //   top : 50%;
-        //   right : 0;
-        //   transform : translateY(-50%);
-        //   z-index : -1;
-        //   @include mq_sp{
-        //     display: none;
-        //   }
-        // }
-      }
-    }
-    &-left {
-      width: (640/1280)*100%;
-      @include mq_tab{
-        width: 70%;
-        height: 451px;
-        position : absolute;
-        top : 80px;
-        left : 0;
-      }
-      @include mq_sp{
-        width: size_sp(616);
-        height: size_sp(451);
-        position : absolute;
-        top : size_sp(89);
-        left: 0;
-      }
-    }
-    &-right {
-      width: 640px;
-      @include mq_tab{
-        width: 100%;
-      }
-      @include mq_sp{
-        width: 100%;
-      }
-    }
-    &-ttl {
-      font-size: 32px;
-      font-weight: 700;
-      line-height: (46/32);
-      color : $blue02;
-      width: 100%;
-      padding: 0px 64px;
-      @include mq_tab{
-        width: 640px;
-        padding : 0;
-        margin : 0 auto;
-      }
-      @include mq_sp{
-        @include fz_vw(40);
-        line-height : (58/40);
-        width: size_sp(630);
-        padding: 0;
-        margin: 0 auto;
-      }
-    }
-    &-txt {
-      font-size: 16px;
-      line-height: (37/16);
-      margin-top: 26px;
-      padding: 34px 64px;
-      background-color: $blue10;
-      @include mq_tab{
-        width: 640px;
-        padding : 272px 60px 40px;
-        margin-top: 251px;
-        margin-left: auto;
-      }
-      @include mq_sp{
-        @include fz_vw(28);
-        line-height : (58/28);
-        width: size_sp(680);
-        margin-top: size_sp(251);
-        margin-left: auto;
-        padding: size_sp(272) size_sp(60) size_sp(40);
       }
     }
   }

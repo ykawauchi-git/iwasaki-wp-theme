@@ -80,6 +80,7 @@ $page-group: ".page-group";
       //letter-spacing: 0.1em;
       //font-feature-settings: "palt";
       text-decoration: underline solid $yellow01 4px;
+      -webkit-text-decoration: underline solid $yellow01 4px;
       text-underline-offset: 8px;
       margin-top: 33px;
       @include mq_sp{
@@ -87,6 +88,11 @@ $page-group: ".page-group";
         line-height: (79/36);
         margin-top: size_sp(47);
         text-decoration: underline solid $yellow01 size_sp(8);
+        text-decoration-color: $yellow01;
+        text-decoration-line: underline;
+        text-decoration-thickness: size_sp(8);
+        text-underline-offset: size_sp(16);
+        -webkit-text-decoration: underline solid $yellow01 size_sp(8);
       }
     }
     &Txt{
@@ -159,6 +165,49 @@ $page-group: ".page-group";
       @include mq_sp{
         margin-top: size_sp(146);
       }
+      & .page-group__contToggle {
+        & > li {
+          &:nth-of-type(3) {
+            &::before {
+              @include mq_sp{
+                display: none;
+              }
+            }
+          }
+          &:nth-of-type(5) {
+            &::before {
+              @include mq_sp{
+                display: none;
+              }
+            }
+          }
+          &:nth-of-type(7) {
+            &::before {
+              @include mq_sp{
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+    &#child_care_support {
+      & .page-group__contToggle {
+        & > li {
+          &:nth-of-type(3) {
+            @include mq_sp{
+              padding-left : size_sp(16);
+              margin-left: size_sp(16);
+            }
+            &:before {
+              @include mq_sp{
+                width: 0.4vw;
+                height: 3.73333vw;
+              }
+            }
+          }
+        }
+      }
     }
     &#cultural_revitalization{
       #{$page-group}{
@@ -172,6 +221,21 @@ $page-group: ".page-group";
             width:206px;
             @include mq_sp{
               width: size_sp(358);
+            }
+          }
+        }
+      }
+    }
+    &#lifelong_education {
+      & .page-group__contToggle {
+        & > li {
+          @include mq_sp{
+            padding-left: 0;
+            margin-left: 0;
+          }
+          &:before {
+            @include mq_sp{
+              display: none;
             }
           }
         }

@@ -25,7 +25,7 @@
       <div class="<?php echo $pageName;?>__foundation-item">
         <div class="<?php echo $pageName;?>__foundation-ttl">一般財団法人 岩崎幸雄IT教育・<br class="sp-only">研究振興奨学財団</div>
         <div class="<?php echo $pageName;?>__foundation-img">
-          <img class="object_fit" src="<?php echo get_stylesheet_directory_uri();?>/img/page/support/img_foundation01.jpg">
+          <img class="object_fit" src="<?php echo get_stylesheet_directory_uri();?>/img/page/dummy.png">
         </div>
         <div class="<?php echo $pageName;?>__foundation-txt">
           一般財団法人 岩崎幸雄IT教育・研究振興奨学財団は、これからの高度情報社会を牽引する青少年をはじめ若い人材の育成に資するため、児童・生徒の情報活用能力の育成を図る教育の推進、学生・社会人に対する教育支援等を目的に平成30年12月に設立されました。<br>

@@ -118,7 +118,7 @@
               <div class="<?php echo $pageName;?>__step-ttl">地域社会との産学連携</div>
               <div class="<?php echo $pageName;?>__step-container">
                 <div class="<?php echo $pageName;?>__step-left">
-                  <img class="object_fit" src="<?php echo get_stylesheet_directory_uri();?>/img/page/pioneer/img_step03-2.jpg">
+                  <img class="object_fit" src="<?php echo get_stylesheet_directory_uri();?>/img/page/dummy.png">
                 </div>
                 <div class="<?php echo $pageName;?>__step-right">
                   地域社会と岩崎学園の産学連携により、さまざまな課題解決推進や、産業発展が促進されます。学生が学んでいる多様な専門的な知識や技術、新たな発想力を産業界が活用することで、地域の社会的な課題やニーズに対する解決策が生まれる可能性が高まります。また、産学連携を通じて学生は産業界での雇用に適したスキルや知識を身につけることができます。
@@ -183,7 +183,7 @@
             </li>
             <!-- 003 -->
             <li class="<?php echo $pageName;?>__step-imgItem">
-              <img class="object_fit" src="<?php echo get_stylesheet_directory_uri();?>/img/page/pioneer/img_step04-3.jpg">
+              <img class="object_fit" src="<?php echo get_stylesheet_directory_uri();?>/img/page/dummy.png">
             </li>
           </ul>
         </div>

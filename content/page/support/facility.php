@@ -17,13 +17,13 @@
       <ul class="<?php echo $pageName;?>__subList">
         <li class="<?php echo $pageName;?>__subItem">
           <div class="<?php echo $pageName;?>__img">
-            <img class="object_fit" src="<?php //echo get_stylesheet_directory_uri();?>/img/page/support/img_guide01.jpg">
+            <img class="object_fit" src="<?php echo get_stylesheet_directory_uri();?>/img/page/dummy.png">
           </div>
           <div class="<?php echo $pageName;?>__name">オープンラボ</div>
         </li>
         <li class="<?php echo $pageName;?>__subItem">
           <div class="<?php echo $pageName;?>__img">
-            <img class="object_fit" src="<?php //echo get_stylesheet_directory_uri();?>/img/page/support/img_guide01.jpg">
+            <img class="object_fit" src="<?php echo get_stylesheet_directory_uri();?>/img/page/dummy.png">
           </div>
           <div class="<?php echo $pageName;?>__name">ラーニングコモンズ</div>
         </li>
@@ -38,37 +38,37 @@
       <ul class="<?php echo $pageName;?>__subList">
         <li class="<?php echo $pageName;?>__subItem">
           <div class="<?php echo $pageName;?>__img">
-            <img class="object_fit" src="<?php //echo get_stylesheet_directory_uri();?>/img/page/support/img_guide01.jpg">
+            <img class="object_fit" src="<?php echo get_stylesheet_directory_uri();?>/img/page/dummy.png">
           </div>
           <div class="<?php echo $pageName;?>__name">オープンラボ</div>
         </li>
         <li class="<?php echo $pageName;?>__subItem">
           <div class="<?php echo $pageName;?>__img">
-            <img class="object_fit" src="<?php //echo get_stylesheet_directory_uri();?>/img/page/support/img_guide01.jpg">
+            <img class="object_fit" src="<?php echo get_stylesheet_directory_uri();?>/img/page/dummy.png">
           </div>
           <div class="<?php echo $pageName;?>__name">ラーニングコモンズ</div>
         </li>
         <li class="<?php echo $pageName;?>__subItem">
           <div class="<?php echo $pageName;?>__img">
-            <img class="object_fit" src="<?php //echo get_stylesheet_directory_uri();?>/img/page/support/img_guide01.jpg">
+            <img class="object_fit" src="<?php echo get_stylesheet_directory_uri();?>/img/page/dummy.png">
           </div>
           <div class="<?php echo $pageName;?>__name">セミナー室</div>
         </li>
         <li class="<?php echo $pageName;?>__subItem">
           <div class="<?php echo $pageName;?>__img">
-            <img class="object_fit" src="<?php //echo get_stylesheet_directory_uri();?>/img/page/support/img_guide01.jpg">
+            <img class="object_fit" src="<?php echo get_stylesheet_directory_uri();?>/img/page/dummy.png">
           </div>
           <div class="<?php echo $pageName;?>__name">岩﨑スタジオ</div>
         </li>
         <li class="<?php echo $pageName;?>__subItem">
           <div class="<?php echo $pageName;?>__img">
-            <img class="object_fit" src="<?php //echo get_stylesheet_directory_uri();?>/img/page/support/img_guide01.jpg">
+            <img class="object_fit" src="<?php echo get_stylesheet_directory_uri();?>/img/page/dummy.png">
           </div>
           <div class="<?php echo $pageName;?>__name">ネットワーク・サーバ実習室</div>
         </li>
         <li class="<?php echo $pageName;?>__subItem">
           <div class="<?php echo $pageName;?>__img">
-            <img class="object_fit" src="<?php //echo get_stylesheet_directory_uri();?>/img/page/support/img_guide01.jpg">
+            <img class="object_fit" src="<?php echo get_stylesheet_directory_uri();?>/img/page/dummy.png">
           </div>
           <div class="<?php echo $pageName;?>__name">エントランス</div>
         </li>
@@ -80,37 +80,37 @@
       <ul class="<?php echo $pageName;?>__subList">
       <li class="<?php echo $pageName;?>__subItem">
           <div class="<?php echo $pageName;?>__img">
-            <img class="object_fit" src="<?php //echo get_stylesheet_directory_uri();?>/img/page/support/img_guide01.jpg">
+            <img class="object_fit" src="<?php echo get_stylesheet_directory_uri();?>/img/page/dummy.png">
           </div>
           <div class="<?php echo $pageName;?>__name">オープンラボ</div>
         </li>
         <li class="<?php echo $pageName;?>__subItem">
           <div class="<?php echo $pageName;?>__img">
-            <img class="object_fit" src="<?php //echo get_stylesheet_directory_uri();?>/img/page/support/img_guide01.jpg">
+            <img class="object_fit" src="<?php echo get_stylesheet_directory_uri();?>/img/page/dummy.png">
           </div>
           <div class="<?php echo $pageName;?>__name">ラーニングコモンズ</div>
         </li>
         <li class="<?php echo $pageName;?>__subItem">
           <div class="<?php echo $pageName;?>__img">
-            <img class="object_fit" src="<?php //echo get_stylesheet_directory_uri();?>/img/page/support/img_guide01.jpg">
+            <img class="object_fit" src="<?php echo get_stylesheet_directory_uri();?>/img/page/dummy.png">
           </div>
           <div class="<?php echo $pageName;?>__name">セミナー室</div>
         </li>
         <li class="<?php echo $pageName;?>__subItem">
           <div class="<?php echo $pageName;?>__img">
-            <img class="object_fit" src="<?php //echo get_stylesheet_directory_uri();?>/img/page/support/img_guide01.jpg">
+            <img class="object_fit" src="<?php echo get_stylesheet_directory_uri();?>/img/page/dummy.png">
           </div>
           <div class="<?php echo $pageName;?>__name">岩﨑スタジオ</div>
         </li>
         <li class="<?php echo $pageName;?>__subItem">
           <div class="<?php echo $pageName;?>__img">
-            <img class="object_fit" src="<?php //echo get_stylesheet_directory_uri();?>/img/page/support/img_guide01.jpg">
+            <img class="object_fit" src="<?php echo get_stylesheet_directory_uri();?>/img/page/dummy.png">
           </div>
           <div class="<?php echo $pageName;?>__name">ネットワーク・サーバ実習室</div>
         </li>
         <li class="<?php echo $pageName;?>__subItem">
           <div class="<?php echo $pageName;?>__img">
-            <img class="object_fit" src="<?php //echo get_stylesheet_directory_uri();?>/img/page/support/img_guide01.jpg">
+            <img class="object_fit" src="<?php echo get_stylesheet_directory_uri();?>/img/page/dummy.png">
           </div>
           <div class="<?php echo $pageName;?>__name">エントランス</div>
         </li>

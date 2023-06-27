@@ -86,11 +86,11 @@
 
 .page-sec02 {
   &__list {
-      overflow: hidden;
-      padding-bottom: 40px;
-      @include mq_sp{
-        padding-bottom:size_sp(50) ;
-      }
+    overflow: hidden;
+    padding-bottom: 40px;
+    @include mq_sp{
+      padding-bottom:size_sp(50) ;
+    }
   }
   &__item {
     @include flex(flex, wrap, flex-start, stretch, normal, row);
@@ -155,7 +155,7 @@
     &:before {
       content : "";
       width : 100vw;
-      height : 491px;
+      height : 94%;
       background-color: $blue10;
       position: absolute;
       top : 73px;
@@ -253,6 +253,185 @@
         margin: size_sp(51) 0 0 size_sp(133);
         padding: size_sp(22) 0;
       }
+    }
+  }
+}
+
+.page-sec03 {
+  &__list {
+    & li {
+      @include flex(flex, nowrap, center, stretch, normal, row);
+      position: relative;
+      z-index : 1;
+      &:not(:first-of-type) {
+        margin-top: 100px;
+        @include mq_sp{
+          margin-top: size_sp(150);
+        }
+      }
+      &:nth-of-type(even) {
+        flex-direction: row-reverse;
+        & .page-sec03 {
+          &__left {
+            left : auto;
+            right : 0;
+          }
+          &__high {
+            text-align: right;
+          }
+          &__low {
+            padding: 34px 64px 64px 0;
+            margin-left: 0;
+            margin-right: auto;
+            @media screen and (max-width: 1280px) {
+              padding: 34px 63px 64px;
+            }
+            @include mq_tab{
+              padding : 272px 63px 40px;
+            }
+            @include mq_sp{
+              padding: size_sp(272) 0 size_sp(40);
+            }
+            & .page-group__contBtn {
+              margin: 34px 111px 0 auto;
+              @include mq_tab{
+                margin: 51px 143px 0 auto;
+              }
+              @include mq_sp{
+                margin: size_sp(51) size_sp(143) 0 auto;
+              }
+            }
+          }
+          &__txt {
+            margin-left: auto;
+            @media screen and (max-width: 1280px) {
+              width: 100%;
+            }
+            @include mq_sp{
+              width: size_sp(560);
+              margin: 0 auto;
+            }
+          }
+        }
+      }
+      // &:before {
+      //   content : "";
+      //   width : 100vw;
+      //   height : 326px;
+      //   background-color: $blue10;
+      //   position: absolute;
+      //   top : 50%;
+      //   right : 0;
+      //   transform : translateY(-50%);
+      //   z-index : -1;
+      //   @include mq_sp{
+      //     display: none;
+      //   }
+      // }
+    }
+  }
+  &__left {
+    width: (640/1280)*100%;
+    height: 451px;
+    @include mq_tab{
+      width: 70%;
+      position : absolute;
+      top : 80px;
+      left : 0;
+    }
+    @include mq_sp{
+      width: size_sp(616);
+      height: size_sp(451);
+      position : absolute;
+      top : size_sp(89);
+      left: 0;
+    }
+  }
+  &__right {
+    width: 50%;
+    @media screen and (max-width: 1280px) {
+      width: 640px;
+    }
+    @include mq_tab{
+      width: 100%;
+    }
+    @include mq_sp{
+      width: 100%;
+    }
+  }
+  &__high {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: (46/32);
+    color : $blue02;
+    width: 100%;
+    padding: 0px 64px;
+    @include mq_tab{
+      width: 640px;
+      padding : 0;
+      margin : 0 auto;
+    }
+    @include mq_sp{
+      @include fz_vw(40);
+      line-height : (58/40);
+      width: size_sp(630);
+      padding: 0;
+      margin: 0 auto;
+    }
+  }
+  &__low {
+    margin-top: 26px;
+    padding: 34px 0 64px 64px;
+    background-color: $blue10;
+    @media screen and (max-width: 1280px) {
+      padding: 34px 63px 64px;
+    }
+    @include mq_tab{
+      width: 640px;
+      padding : 272px 63px 40px;
+      margin-top: 251px;
+      margin-left: auto;
+    }
+    @include mq_sp{
+      width: size_sp(680);
+      margin-top: size_sp(251);
+      margin-left: auto;
+      padding: size_sp(272) 0 size_sp(40);
+    }
+    & .page-group__contBtn {
+      font-size : 15px;
+      line-height : (28/15);
+      width : 246px;
+      margin: 34px auto 0 111px;
+      padding : 11px 0;
+      @include mq_tab{
+        font-size : 24px;
+        line-height: (44/24);
+        width : 414px;
+        margin : 51px auto 0 143px;
+        padding : 22px 0px;
+      }
+      @include mq_sp{
+        @include fz_vw(24);
+        line-height: (44/24);
+        width : size_sp(414);
+        margin: size_sp(51) auto 0 size_sp(143);
+        padding: size_sp(22) 0;
+      }
+    }
+  }
+  &__txt {
+    font-size: 16px;
+    line-height: (37/16);
+    width: 513px;
+    @media screen and (max-width: 1280px) {
+      width: 100%;
+    }
+    @include mq_sp{
+      @include fz_vw(28);
+      line-height : (58/28);
+      width: size_sp(560);
+      margin: 0 auto;
     }
   }
 }

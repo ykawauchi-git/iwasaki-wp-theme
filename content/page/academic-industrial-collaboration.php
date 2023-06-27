@@ -13,40 +13,46 @@
   <!-- プロスポーツチームとの産学連携 -->
   <div class="<?php echo $pageName;?>__pro">
     <h2 class="<?php echo $pageName;?>__pro-heading page-heading"><span>プロスポーツチームとの<br class="sp-only">産学連携</span></h2>
-    <ul class="<?php echo $pageName;?>__pro-list">
+    <ul class="page-sec03__list">
       <!-- 01 -->
       <li>
-        <div class="<?php echo $pageName;?>__pro-left">
+        <div class="page-sec03__left">
           <img class="object_fit" src="<?php echo get_stylesheet_directory_uri();?>/img/page/academic-industrial-collaboration/img_pro01.jpg" alt="">
         </div>
-        <div class="<?php echo $pageName;?>__pro-right">
-          <div class="<?php echo $pageName;?>__pro-ttl">横浜ビー・コルセアーズ</div>
-          <div class="<?php echo $pageName;?>__pro-txt">
-            プロバスケB1リーグの横浜ビー・コルセアーズとの産学連携を行っています。ボランティアスタッフユニフォームやアパレルグッズ、試合会場設置自販機のデザインなどを行ってきました ホーム試合開催日には、プログラミングやSDGs体験などのブース運営、会場周辺の清掃活動などにも学生が参加しています。また、チーム関係者による特別授業や、保育園向けバスケ教室、学生による体操教室のサポート活動なども実施しています。
+        <div class="page-sec03__right">
+          <div class="page-sec03__high">横浜ビー・コルセアーズ</div>
+          <div class="page-sec03__low">
+            <div class="page-sec03__txt">
+              プロバスケB1リーグの横浜ビー・コルセアーズとの産学連携を行っています。ボランティアスタッフユニフォームやアパレルグッズ、試合会場設置自販機のデザインなどを行ってきました ホーム試合開催日には、プログラミングやSDGs体験などのブース運営、会場周辺の清掃活動などにも学生が参加しています。また、チーム関係者による特別授業や、保育園向けバスケ教室、学生による体操教室のサポート活動なども実施しています。
+            </div>
           </div>
         </div>
       </li>
       <!-- 02 -->
       <li>
-        <div class="<?php echo $pageName;?>__pro-left">
+        <div class="page-sec03__left">
           <img class="object_fit" src="<?php echo get_stylesheet_directory_uri();?>/img/page/academic-industrial-collaboration/img_pro02.jpg" alt="">
         </div>
-        <div class="<?php echo $pageName;?>__pro-right">
-          <div class="<?php echo $pageName;?>__pro-ttl">三菱重工相模原ダイナボアーズ</div>
-          <div class="<?php echo $pageName;?>__pro-txt">
-            ラグビー国内トップリーグに所属する三菱重工相模原ダイナボアーズとの産学連携を行っています。ポスター制作、アパレルグッズや練習用ジャージのデザイン、応援webサイトの作成、試合会場でのペイントサービスなどに参加しています。 またトレーニング施設での実習体験や関係者を招いた特別授業なども数多く実施しています。専門学校との連携だけでなく、本学園の保育園や学童クラブでのラグビー教室なども共催しています。
+        <div class="page-sec03__right">
+          <div class="page-sec03__high">三菱重工相模原ダイナボアーズ</div>
+          <div class="page-sec03__low">
+            <div class="page-sec03__txt">
+              ラグビー国内トップリーグに所属する三菱重工相模原ダイナボアーズとの産学連携を行っています。ポスター制作、アパレルグッズや練習用ジャージのデザイン、応援webサイトの作成、試合会場でのペイントサービスなどに参加しています。 またトレーニング施設での実習体験や関係者を招いた特別授業なども数多く実施しています。専門学校との連携だけでなく、本学園の保育園や学童クラブでのラグビー教室なども共催しています。
+            </div>
           </div>
         </div>
       </li>
       <!-- 03 -->
       <li>
-        <div class="<?php echo $pageName;?>__pro-left">
+        <div class="page-sec03__left">
           <img class="object_fit" src="<?php echo get_stylesheet_directory_uri();?>/img/page/academic-industrial-collaboration/img_pro03.jpg" alt="">
         </div>
-        <div class="<?php echo $pageName;?>__pro-right">
-          <div class="<?php echo $pageName;?>__pro-ttl">横浜GRITS</div>
-          <div class="<?php echo $pageName;?>__pro-txt">
-            アジアリーグアイスホッケーに所属しているプロチーム、横浜GRITSとの産学連携を行っています。ポスターや試合会場で販売されているTシャツのデザイン、会場でのファンサービスなどに学生が参加しています。プロからデザインを学ぶ特別授業や、ファン層拡大のための企画を考えるアイデアソンなどでも連携を行っています。試合会場では、本学園の保育園に通う子供たちと保護者のための親子ホッケー教室なども共催しています。
+        <div class="page-sec03__right">
+          <div class="page-sec03__high">横浜GRITS</div>
+          <div class="page-sec03__low">
+            <div class="page-sec03__txt">
+              アジアリーグアイスホッケーに所属しているプロチーム、横浜GRITSとの産学連携を行っています。ポスターや試合会場で販売されているTシャツのデザイン、会場でのファンサービスなどに学生が参加しています。プロからデザインを学ぶ特別授業や、ファン層拡大のための企画を考えるアイデアソンなどでも連携を行っています。試合会場では、本学園の保育園に通う子供たちと保護者のための親子ホッケー教室なども共催しています。
+            </div>
           </div>
         </div>
       </li>

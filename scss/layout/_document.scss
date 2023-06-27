@@ -185,7 +185,7 @@ $document_yellow02: #F4CD40;
           &Btn {
             margin-top: 12px;
             @include mq_sp{
-              margin-top: size_sp(5);
+              margin-top: size_sp(1);
             }
           }
         }
@@ -222,11 +222,11 @@ $document_yellow02: #F4CD40;
       transform-origin: left bottom;
       -webkit-text-stroke-width: 2px;
       @include mq_sp{
-        @include fz_vw(39);
+        @include fz_vw(36);
         line-height: (56/39);
         top: size_sp(-44);
         left: size_sp(6);
-        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-width: size_sp(1.5);
       }
     }
     &Info{
@@ -243,7 +243,7 @@ $document_yellow02: #F4CD40;
       color: $white00;
       @include mq_sp{
         @include fz_vw(20);
-        line-height: (30/20);
+        line-height: (24/20);
         width: size_sp(320);
         margin: 0 auto;
       }
