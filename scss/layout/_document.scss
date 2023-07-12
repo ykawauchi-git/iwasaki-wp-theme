@@ -209,18 +209,17 @@ $document_yellow02: #F4CD40;
       }
     }
     &En{
-      @include font-size(29);
+      font-size: 26px;
       line-height: (42/29);
       font-weight: 700;
       color: transparent;
-      white-space: nowrap;
       position: absolute;
       top: -32px;
       left: 4px;
       z-index: 1;
       transform: rotate(90deg);
       transform-origin: left bottom;
-      -webkit-text-stroke-width: 2px;
+      -webkit-text-stroke-width: 1.5px;
       @include mq_sp{
         @include fz_vw(36);
         line-height: (56/39);
@@ -253,6 +252,9 @@ $document_yellow02: #F4CD40;
         text-align: center;
         display: block;
         margin-top: 8px;
+        white-space: nowrap;
+        // 追加↓
+        transform : scale(.9);
         @include mq_sp{
           @include fz_vw(20);
           line-height: (24/20);
@@ -323,5 +325,19 @@ $document_yellow02: #F4CD40;
         }
       }
     }
+  }
+}
+
+::-webkit-full-page-media, :future, :root .page-document__itemName > span {
+  font-size : 9px;
+  margin-top: 9px;
+  @include mq_sp{
+    font-size :2.66667vw;
+    margin-top: 0;
+  }
+}
+::-webkit-full-page-media, :future, :root .page-document__item.yellow02 .page-document__itemBtn {
+  @include mq_sp{
+    margin-top: 0;
   }
 }

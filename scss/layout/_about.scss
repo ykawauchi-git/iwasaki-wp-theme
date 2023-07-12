@@ -17,7 +17,7 @@
       @include mq_sp{
         @include fz_vw(42);
         line-height : (61/42);
-        width : size_sp(424);
+        width : size_sp(430);
         padding-left : size_sp(116);
       }
       &:before {

@@ -236,8 +236,7 @@
       }
       & > li {
         width: 374px;
-        height : 252px;
-        padding: 38px 16px 4px;
+        padding: 38px 8px 35px;
         border : solid 3px $blue03;
         position : relative;
         @include mq_sp{

@@ -347,6 +347,7 @@
         @include mq_sp{
           width : size_sp(38);
           height : size_sp(24);
+          background: url(./img/page/career/icn_arrow-sp.svg) no-repeat center/cover;
           right : size_sp(24);
           transform : translateY(-50%);
         }

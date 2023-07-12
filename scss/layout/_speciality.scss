@@ -149,7 +149,7 @@
       &:hover {
         color : $white00;
         background-color: $blue02;
-        border : solid size_sp(2) $blue02;
+        border : solid 2px $blue02;
         opacity: 1;
         @include mq_sp{
           border : solid size_sp(2) $blue02;

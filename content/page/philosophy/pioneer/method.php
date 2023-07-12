@@ -140,7 +140,7 @@
   <?php endif;?>
   <!-- 専門家の声 -->
   <?php if(have_rows('acf_professor_group','option')): ?>
-  <div class="<?php echo $pageName;?>__expert">
+  <!-- <div class="<?php echo $pageName;?>__expert">
     <h2 class="page-group__contHeading page-heading"><span>専門家の声</span></h2>
     <?php while(have_rows('acf_professor_group','option')): the_row(); ?>
     <div class="<?php echo $pageName;?>__expert-group">
@@ -154,6 +154,6 @@
       <div class="<?php echo $pageName;?>__expert-txt"><?php the_sub_field('acf_professor_txt');?></div>
     </div>
     <?php endwhile;?>
-  </div>
+  </div> -->
   <?php endif;?>
 </section>

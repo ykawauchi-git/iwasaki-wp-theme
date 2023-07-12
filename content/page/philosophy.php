@@ -29,7 +29,7 @@
       </div>
     </div>
   </div>
-  <div class="<?php echo $pageName;?>__adviser">
+  <!-- <div class="<?php echo $pageName;?>__adviser">
     <div class="<?php echo $pageName;?>__adviser-intro">
       文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。
     </div>
@@ -45,7 +45,7 @@
       <div class="<?php echo $pageName;?>__adviser-txt"><?php the_sub_field('acf_professor_txt');?></div>
     </div>
     <?php endwhile; endif;?>
-  </div>
+  </div> -->
   <!-- 専門力 × 開拓力 -->
   <div class="<?php echo $pageName;?>__power">
     <div class="<?php echo $pageName;?>__power-heading">

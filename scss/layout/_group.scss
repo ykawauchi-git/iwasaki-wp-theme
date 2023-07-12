@@ -594,7 +594,7 @@ $page-group: ".page-group";
         }
       }
       &-r{
-        width: 195px;
+        width: 202px;
         @include mq_sp{
           width: size_sp(291);
         }
@@ -635,7 +635,7 @@ $page-group: ".page-group";
           position: relative;
           display: block;
           width: 100%;
-          padding: 19px 0 size_sp(18);
+          padding: 19px 0 18px;
           @include mq_sp{
             @include fz_vw(29);
             line-height: (42/29);
