@@ -35,7 +35,7 @@ objectFitImages('img.object_fit');
 $(function(){
   let common_header = $(".common-header");
   let header_toggle = $(".common-header__toggle");
-  let header_nav = $(".common-header__nav.sp");
+  let header_nav = $(".common-header__menu");
   function checkMediaQuery(){
     header_toggle.off();
     if(window.matchMedia('(max-width: 1000px)').matches){

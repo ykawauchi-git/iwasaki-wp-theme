@@ -33,7 +33,7 @@
 	<!-- End Google Tag Manager (noscript) -->
 
 	<div id="Wrapper">
-
+		<?php /*
 		<!-- ヘッダー -->
 		<header class="common-header" id="Header">
 			<div class="common-header__inner">
@@ -102,6 +102,43 @@
 						<li><a href="<?php echo home_url( '/movie/' ); ?>" class="<?php if(is_page('movie')){echo "is-current";}?>">動画で見る岩崎学園</a></li>
 					</ul>
 				</nav>
+			</div>
+		</header>
+		*/?>
+		<header class="common-header">
+			<div class="common-header__inner">
+				<!-- *** logo *** -->
+				<?php if(is_front_page()): ?>
+				<h1 class="common-header__logo">
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php get_template_part('template-parts/svg/logo');?></a>
+				</h1>
+				<?php else: ?>
+				<div class="common-header__logo">
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php get_template_part('template-parts/svg/logo');?></a>
+				</div>
+				<?php endif; ?>
+				<div class="common-header__toggle">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+				<nav class="common-header__menu">
+					<ul class="common-header__menuList">
+						<li><a href="<?php echo home_url('/about/'); ?>">岩崎学園について</a></li>
+						<li><a href="<?php echo home_url('/facilities/'); ?>">教育事業</a></li>
+						<li><a href="<?php echo home_url('/philosophy/'); ?>">産学・地域連携</a></li>
+						<li><a href="<?php echo home_url('/career/'); ?>">卒業生の活躍</a></li>
+						<li><a href="<?php echo home_url('/about/'); ?>">学生支援</a></li>
+					</ul>
+					<ul class="common-header__btn sp-only--flex">
+						<li><a href="<?php echo home_url('/contact/'); ?>" class="contact">お問い合わせ</a></li>
+						<li><a href="<?php echo home_url('/access/'); ?>" class="access">アクセス</a></li>
+					</ul>
+				</nav>
+				<ul class="common-header__btn pctab-only--flex">
+					<li><a href="<?php echo home_url('/contact/'); ?>" class="contact">お問い合わせ</a></li>
+					<li><a href="<?php echo home_url('/access/'); ?>" class="access">アクセス</a></li>
+				</ul>
 			</div>
 		</header>
 		<!-- ////ヘッダー -->

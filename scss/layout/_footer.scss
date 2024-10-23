@@ -4,7 +4,7 @@
 .common-footer{
   position: relative;
   padding: 60px 0 30px;
-  background-color: $blue01;
+  background-color: $black02;
   color: $white00;
   @include mq_sp{
     padding: size_sp(84) 0 size_sp(50);
@@ -55,6 +55,14 @@
     @include mq_sp{
       width: size_sp(352);
     }
+    & svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+      & path {
+        fill : $white00;
+      }
+    }
   }
   &__nav{
     &.top{
@@ -65,12 +73,12 @@
     }
     &.bottom{
       position: relative;
-      padding: 50px 0 71px;
+      padding: 50px 0 69px;
+      margin-top: 70px;
       border: {
         top: 1px solid $white00;
         bottom: 1px solid $white00;
       };
-      margin-top: 73px;
       @include mq_sp{
         padding: size_sp(80) 0 size_sp(100);
         margin-top: size_sp(107);
@@ -99,6 +107,7 @@
       @include flex(flex, wrap, center, normal, normal, row);
       line-height: 1;
       &.info{
+        margin-top: 73px;
         li{
           &:nth-of-type(n + 2){
             margin-left: 30px;
@@ -117,53 +126,16 @@
             position: relative;
             display: block;
             width: 184px;
-            padding: 18px 0 17px 50px;
+            padding: 18px 0 17px;
             text-align: center;
             font-weight: 700;
             line-height: (25/17);
-            color: $blue02;
+            color: $black02;
             background: $white00;
             @include mq_sp{
               @include fz_vw(27);
               width: size_sp(320);
-              padding: size_sp(32) 0 size_sp(32) size_sp(73);
-            }
-            &:before{
-              @include abso-center-v();
-              content: "";
-              width: 36px;
-              height: 36px;
-              @include mq_sp{
-                width: size_sp(63);
-                height: size_sp(64);
-              }
-            }
-            &.contact{
-              &:before{
-                left: 18px;
-                background: url(./img/common/icn_mail-footer.svg) no-repeat center/100% 100%;
-                @include mq_sp{
-                  left: size_sp(32);
-                }
-              }
-            }
-            &.document{
-              &:before{
-                left: 35px;
-                background: url(./img/common/icn_document-footer.svg) no-repeat center/100% 100%;
-                @include mq_sp{
-                  left: size_sp(60);
-                }
-              }
-            }
-            &.access{
-              &:before{
-                left: 35px;
-                background: url(./img/common/icn_access-footer.svg) no-repeat center/100% 100%;
-                @include mq_sp{
-                  left: size_sp(60);
-                }
-              }
+              padding: size_sp(32) 0 size_sp(32);
             }
           }
         }
@@ -198,7 +170,7 @@
             text-align: center;
             font-weight: 700;
             line-height: (19/13);
-            color: $blue02;
+            color: $black02;
             background: $white00;
             @include mq_sp{
               @include fz_vw(22);
@@ -270,12 +242,12 @@
       }
       &.institution{
         font-weight: 300;
-        margin-top: 40px;
+        margin-top: 30px;
         @include mq_sp{
           margin-top: size_sp(50);
         }
         & > li{
-          margin-right: 30px;
+          margin-right: 8px;
           @media screen and (max-width: 882px) {
             margin-right: 20px;
           }
@@ -291,7 +263,7 @@
             }
           }
           &:first-of-type {
-            margin-right : 17px;
+            margin-right : 7px;
             @include mq_sp{
               margin-right: 0;
             }
@@ -311,7 +283,7 @@
             @include font-size(15);
             line-height: (21/15);
             position: relative;
-            padding-left: 36px;
+            padding-left: 34px;
             margin-top: 12px;
             @media screen and (max-width: 882px) {
               @include font-size(13);
@@ -325,7 +297,7 @@
               content: "";
               position: absolute;
               top: -4px;
-              left: 17px;
+              left: 16px;
               z-index: 1;
               width: 2px;
               height: calc(100% + 4px);
