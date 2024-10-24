@@ -252,7 +252,6 @@ $page-contact: ".page-contact";
     @include font-size(14);
     line-height: (25/14);
     padding-top: 21px;
-    border-top: 2px solid $gray03;
     margin-top: 9px;
     @include mq_sp{
       @include fz_vw(28);

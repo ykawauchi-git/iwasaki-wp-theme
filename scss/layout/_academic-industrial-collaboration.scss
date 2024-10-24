@@ -437,13 +437,11 @@
     &-txt {
       font-size: 14px;
       line-height : (25/14);
-      border-top : solid 2px $gray03;
       padding-top: 12px;
       margin-top: 13px;
       @include mq_sp{
         @include fz_vw(28);
         line-height : (58/28);
-        border-top : solid size_sp(3) $gray03;
         text-align: center;
         padding-top: size_sp(23);
         margin-top:size_sp(27) ;

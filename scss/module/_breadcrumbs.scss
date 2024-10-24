@@ -1,5 +1,26 @@
 /*  module > breadcrumbs
 ============================================================================================================ */
 
-.modules__breadcrumbs{}
+.mod-breadcrumbs{
+  font-size: 13px;
+  line-height: (19/13);
+  width: 100%;
+  padding: 0 20px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  @include mq_sp{
+    @include fz_vw(22);
+    line-height: (32/22);
+    padding: 0 size_sp(12);
+  }
+  &__list {
+    & > span {
+      &:last-of-type {
+        font-weight: 700;
+      }
+    }
+  }
+}
 

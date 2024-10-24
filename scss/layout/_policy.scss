@@ -7,8 +7,18 @@
   padding-top: 100px;
   margin: 0 auto;
   @include mq_sp{
-    max-width: size_sp(650);
+    max-width: size_sp(670);
     padding-top: size_sp(100);
+  }
+  &__inner {
+    & > h1 {
+      font-size: 26px;
+      line-height: (37/26);
+      @include mq_sp{
+        @include fz_vw(40);
+        line-height: (58/40);
+      }
+    }
   }
   &__intro{
     margin-top: 70px;
@@ -16,7 +26,6 @@
       margin-top: size_sp(80);
     }
     h2{
-      @include font-size(30);
       line-height: (44/30);
       letter-spacing: 0.05em;
       font-weight: 700;
@@ -25,8 +34,8 @@
       position: relative;
       left: 0.025em;
       @include mq_sp{
-        @include fz_vw(32);
-        line-height: (46/32);
+        @include fz_vw(38);
+        line-height: (58/38);
       }
     }
     p{
@@ -42,80 +51,67 @@
   &__main{
     max-width: 670px;
     width: 100%;
-    margin: 93px auto 0;
+    margin: 41px auto 0;
     @include mq_sp{
-      margin-top: size_sp(112);
+      max-width: size_sp(650);
+      margin-top: size_sp(51);
     }
     &.privacy,&:nth-of-type(n + 3){
-      margin-top: 142px;
+      margin-top: 91px;
       @include mq_sp{
-        margin-top: size_sp(141);
+        margin-top: size_sp(103);
       }
     }
     h3{
-      @include font-size(32);
-      line-height: (46/32);
+      font-size: 28px;
+      line-height: 1.8;
       letter-spacing: 0.1em;
       position: relative;
-      padding-bottom: 4px;
-      border-bottom: 4px solid $blue02;
+      border-bottom: 4px solid $black02;
       @include mq_sp{
-        @include fz_vw(44);
-        line-height: (64/44);
-        padding-bottom: size_sp(10);
+        @include fz_vw(38);
+        line-height: 1.95;
         border-bottom-width: size_sp(4);
       }
     }
     h4{
-      @include font-size(27);
-      line-height: (39/27);
-      letter-spacing: 0.15em;
-      color: $blue03;
+      @include font-size(20);
+      font-weight: 500;
+      line-height: 1.6;
+      letter-spacing: 0.1em;
+      color: $black01;
       position: relative;
       margin-top: 94px;
+      border-bottom: 4px solid $gray01;
       @include mq_sp{
         @include fz_vw(30);
         line-height: (58/30);
         margin-top: size_sp(85);
+        border-bottom: size_sp(4) solid $gray01;
       }
       &:nth-of-type(n + 2){
-        margin-top: 63px;
+        margin-top: 65px;
         @include mq_sp{
           margin-top: size_sp(55);
         }
       }
-      &:before{
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: -6px;
-        z-index: 0;
-        width: 100%;
-        height: 4px;
-        background: $blue07;
-        border-radius: 2px;
-        @include mq_sp{
-          height: size_sp(4);
-          bottom: size_sp(-4);
-        }
-      }
     }
     p{
-      font-size: 16px;
-      line-height: (37/16);
+      font-size: 18px;
+      line-height: (34/18);
       max-width: 530px;
       width: 100%;
-      margin: 24px auto 0;
+      margin: 25px auto 0;
       @include mq_sp{
-        @include fz_vw(28);
-        line-height: (58/28);
+        @include fz_vw(30);
+        line-height: (60/30);
         max-width: size_sp(582);
-        margin-top: size_sp(41);
+        margin-top: size_sp(42);
       }
       &:nth-of-type(n + 2){
-        margin-top: 28px;
+        margin-top: 24px;
         @include mq_sp{
-          margin-top: size_sp(43);
+          margin-top: size_sp(42);
         }
       }
     }

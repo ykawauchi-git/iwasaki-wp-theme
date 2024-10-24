@@ -73,7 +73,6 @@ $page-sitemap :".page-sitemap";
         z-index: 1;
         display: block;
         padding: 6px 0 6px 32px;
-        background: $gray02;
         @include mq_sp{
           @include fz_vw(28);
           line-height: (40/28);

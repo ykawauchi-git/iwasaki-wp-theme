@@ -311,7 +311,6 @@
     &-txt {
       font-size: 14px;
       line-height: (25/14);
-      border-top: 2px solid $gray03;
       padding : 21px 6px 0px;
       margin-top: 23px;
       @include mq_sp{
@@ -319,7 +318,6 @@
         line-height: (58/28);
         padding : size_sp(24) 0 0;
         margin-top: size_sp(26);
-        border-top: size_sp(3) solid $gray03;
       }
     }
   }

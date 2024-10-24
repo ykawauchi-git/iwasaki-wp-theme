@@ -254,7 +254,6 @@
     //   content : "";
     //   width : 2px;
     //   height :100%;
-    //   background-color : $gray05;
     //   position: absolute;
     //   top : 0;
     //   left : 14px;
@@ -290,7 +289,6 @@
   &__line {
     width : 2px;
     height : 0;
-    background-color : $gray05;
     position: absolute;
     top : 0;
     left : 14px;
@@ -309,7 +307,6 @@
     font-weight: 900;
     line-height: 1;
     color : $gold01;
-    background-color: $gray06;
     padding-top : 13px;
     @include mq_sp{
       @include fz_vw(70);
@@ -370,7 +367,6 @@
     &-txt {
       font-size : 12px;
       line-height : (28/12);
-      color : $gray04;
       margin-top : 5px;
       @include mq_sp{
         @include fz_vw(22);

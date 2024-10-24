@@ -34,11 +34,10 @@ body{
     pointer-events: auto;
     transition: opacity 1s;
   }
-  &.history {
-    & .common-main {
-      background-color: $gray06;
-    }
-  }
+  // &.history {
+  //   & .common-main {
+  //   }
+  // }
 }
 
 // =============================================================
