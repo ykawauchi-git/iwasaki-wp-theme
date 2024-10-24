@@ -1,7 +1,7 @@
 /* layout > common
 ============================================================================================================ */
 
-$header_height_pc: 128px;
+$header_height_pc: 76px;
 $header_height_sp: size_sp(102);
 
 //Basic 基本
@@ -54,6 +54,16 @@ $header_height_sp: size_sp(102);
 .single{
   .common-main{
     @include mq_sp {
+    }
+  }
+}
+
+// 404ページ
+.error404 {
+  & .common-main {
+    padding-bottom : 148px;
+    @include mq_sp{
+      padding-bottom: size_sp(143);
     }
   }
 }

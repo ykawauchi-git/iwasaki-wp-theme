@@ -1,9 +1,9 @@
 <?php
   $page = get_post( get_the_ID() );
-  $page_parent = get_post( $post ->post_parent );
-  $slug = $page->post_name;
+  // $page_parent = get_post( $post ->post_parent );
+  // $slug = $page->post_name;
   $page_id = get_option( 'page_on_front' );
-  $slug_parent = $page_parent->post_name;
+  // $slug_parent = $page_parent->post_name;
   $ttl = get_the_title();
   $thumb = get_the_post_thumbnail_url('','full');
   $thumb_sp = get_field('thumb_sp');

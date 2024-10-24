@@ -7,7 +7,7 @@
   background-color: $black02;
   color: $white00;
   @include mq_sp{
-    padding: size_sp(84) 0 size_sp(50);
+    padding: size_sp(100) 0 size_sp(50);
   }
   &__pageTop{
     @include box-shadow();
@@ -68,7 +68,7 @@
     &.top{
       margin-top: 70px;
       @include mq_sp{
-        margin-top: size_sp(100);
+        margin-top: size_sp(88);
       }
     }
     &.bottom{
@@ -80,8 +80,9 @@
         bottom: 1px solid $white00;
       };
       @include mq_sp{
-        padding: size_sp(80) 0 size_sp(100);
-        margin-top: size_sp(107);
+        padding: size_sp(79) 0 size_sp(100);
+        margin-top: size_sp(99);
+        border-top : solid size_sp(2) $white00;
         border-bottom: none;
         &:after{
           @include abso-center-h();
@@ -95,7 +96,6 @@
       h3{
         @include font-size(18);
         line-height: (26/18);
-        letter-spacing: 0.05em;
         font-weight: 500;
         text-align: center;
         @include mq_sp{
@@ -108,17 +108,14 @@
       line-height: 1;
       &.info{
         margin-top: 73px;
+        @include mq_sp{
+          margin-top: size_sp(106);
+        }
         li{
           &:nth-of-type(n + 2){
             margin-left: 30px;
             @include mq_sp{
-              margin-left: size_sp(42)
-            }
-          }
-          &:last-of-type{
-            @include mq_sp{
-              margin-left: 0;
-              margin-top: size_sp(42);
+              margin-left: size_sp(50)
             }
           }
           a{
@@ -134,8 +131,8 @@
             background: $white00;
             @include mq_sp{
               @include fz_vw(27);
-              width: size_sp(320);
-              padding: size_sp(32) 0 size_sp(32);
+              width: size_sp(280);
+              padding: size_sp(26) 0 size_sp(25);
             }
           }
         }
@@ -183,7 +180,7 @@
       &.page{
         margin-top: 74px;
         @include mq_sp{
-          margin-top: size_sp(107)
+          margin-top: 0;
         }
         li{
           @include font-size(18);

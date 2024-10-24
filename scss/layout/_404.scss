@@ -1,17 +1,18 @@
 .page-404{
-  padding: 92px 0 0;
+  padding: 108px 0 0;
   @include mq_sp{
-    padding: size_sp(132) 0 0;
+    padding: size_sp(80) 0 0;
   }
   h2{
     @include font-size(30);
     text-align: center;
     line-height: 1;
     color: $black00;
-    margin-bottom: 24px;
+    margin-bottom: 31px;
     @include mq_sp{
-      @include fz_vw(44);
-      margin-bottom: size_sp(47);
+      @include fz_vw(40);
+      line-height: (58/40);
+      margin-bottom: size_sp(20);
     }
   }
   h3{
@@ -19,28 +20,32 @@
     text-align: center;
     color: $black00;
     line-height: 1;
-    margin-bottom: 61px;
+    margin-bottom: 65px;
     @include mq_sp{
-      @include fz_vw(38);
-      line-height: (65/38);
-      margin-bottom: size_sp(70);
+      @include fz_vw(28);
+      line-height: (40/28);
+      margin-bottom: size_sp(80);
     }
   }
   &__icn{
-    max-width: 300px;
-    margin: 0 auto 41px;
+    max-width: 313px;
+    width: 100%;
+    margin: 0 auto 59px;
     @include mq_sp{
-      max-width: size_sp(408);
-      margin-bottom: size_sp(84);
+      max-width: size_sp(353);
+      margin-bottom: size_sp(74);
+    }
+    & svg {
+      width: 100%;
+      height: 100%;
+      display: block;
     }
   }
   &__info{
-    @include font-size(14);
-    max-width: 489px;
+    max-width: 496px;
     margin: 0 auto;
     @include mq_sp{
-      @include fz_vw(30);
-      max-width: size_sp(629);
+      max-width: size_sp(544);
     }
     a{
       text-decoration: underline;

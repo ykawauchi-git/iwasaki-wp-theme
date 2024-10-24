@@ -4,17 +4,6 @@
 $header_height_pc: 76px;
 $header_height_sp: size_sp(102);
 
-.home{
-  .common-header{
-    position: absolute;
-    &__nav{
-      &.sp{
-        position: absolute;
-      }
-    }
-  }
-}
-
 .common-header{
   width: 100%;
   height: $header_height_pc;
@@ -26,7 +15,7 @@ $header_height_sp: size_sp(102);
   z-index: 100;
   transition: 0.5s;
   box-shadow: 0 3px 6px rgba($black00,0.12);
-  @media screen and (max-width: 1000px) {
+  @include mq_tab{
     height: 102px;
   }
   @include mq_sp{
@@ -42,7 +31,7 @@ $header_height_sp: size_sp(102);
     height: 100%;
     padding: 0 18px;
     margin: 0 auto;
-    @media screen and (max-width: 1000px) {
+    @include mq_tab{
     }
     @include mq_sp{}
   }
@@ -50,7 +39,7 @@ $header_height_sp: size_sp(102);
     position: relative;
     font-size: 0;
     width: 164px;
-    @media screen and (max-width: 1000px) {
+    @include mq_tab{
       @include abso-center();
       width: 270px;
       margin-left: 0;
@@ -71,7 +60,7 @@ $header_height_sp: size_sp(102);
   }
   &__toggle{
     display: none;
-    @media screen and (max-width: 1000px) {
+    @include mq_tab{
       @include abso-center-v();
       display: block;
       width: 57px;
@@ -127,28 +116,33 @@ $header_height_sp: size_sp(102);
   }
   &__menu {
     margin-left: 58px;
-    @include mq_sp{
+    @include mq_tab{
       color : $white00;
       background : rgba($black02,0.9);
-      width: size_sp(408);
-      height: calc(100vh - #{size_sp(102)});
-      padding: size_sp(53) size_sp(60) size_sp(58);
+      width: 408px;
+      height: calc(100vh - 76px);
+      padding: 53px 60px 58px;
       margin-left: 0;
-      @include flex(flex, nowrap, space-between, center, normal, column);
+      @include flex(flex, nowrap, space-between, flex-end, normal, column);
       position: absolute;
       top: 100%;
       right: 0;
       transform: translateX(100%);
       transition : .6s;
     }
+    @include mq_sp{
+      width: size_sp(408);
+      height: calc(100vh - #{size_sp(102)});
+      padding: size_sp(53) size_sp(60) size_sp(58);
+    }
     &.is-open {
-      @include mq_sp{
+      @include mq_tab{
         transform : translateX(0);
       }
     }
     &List {
       @include flex(flex, nowrap, center, center, normal, row);
-      @include mq_sp{
+      @include mq_tab{
         align-items: flex-end;
         flex-direction: column;
       }
@@ -159,6 +153,10 @@ $header_height_sp: size_sp(102);
         }
         &:nth-of-type(n + 2) {
           margin-left: 40px;
+          @include mq_tab{
+            margin-top: 35px;
+            margin-left: 0;
+          }
           @include mq_sp{
             margin-top: size_sp(35);
             margin-left: 0;
@@ -172,7 +170,7 @@ $header_height_sp: size_sp(102);
   }
   &__btn {
     @include flex(flex, nowrap, flex-end, center, normal, row);
-    @include mq_sp{
+    @include mq_tab{
       flex-direction: column;
     } 
     & > li {
@@ -182,9 +180,12 @@ $header_height_sp: size_sp(102);
       }
       &:nth-of-type(n + 2) {
         margin-left: 10px;
+        @include mq_tab{
+          margin-top: 24px;
+          margin-left: 0;
+        }
         @include mq_sp{
           margin-top: size_sp(50);
-          margin-left: 0;
         }
       }
       & a {
@@ -197,11 +198,13 @@ $header_height_sp: size_sp(102);
         padding: 2px 0 1px;
         display: block;
         border : solid 1px $black01;
+        @include mq_tab{
+          border : none;
+        }
         @include mq_sp{
           @include fz_vw(27);
           line-height: (39/27);
           padding: size_sp(27) 0 size_sp(26);
-          border : none;
         }
         &:hover {
           color : $white00;
@@ -214,7 +217,7 @@ $header_height_sp: size_sp(102);
   // &__nav{
   //   &.upper{
   //     @include flex(flex, nowrap, flex-end, center, normal, row);
-  //     @media screen and (max-width: 1000px) {
+  //     @include mq_tab{
   //       display: none;
   //     }
   //   }
@@ -222,13 +225,13 @@ $header_height_sp: size_sp(102);
   //     width: 100%;
   //     padding: 16px 0 17px;
   //     background: $blue06;
-  //     @media screen and (max-width: 1000px) {
+  //     @include mq_tab{
   //       display: none;
   //     }
   //   }
   //   &.sp{
   //     display: none;
-  //     @media screen and (max-width: 1000px) {
+  //     @include mq_tab{
   //       display: block;
   //       position: fixed;
   //       top: 102px;
@@ -256,7 +259,7 @@ $header_height_sp: size_sp(102);
   //   width: 100%;
   //   &.contact{
   //     @include flex(flex, nowrap, flex-end, center, normal, row);
-  //     @media screen and (max-width: 1000px) {
+  //     @include mq_tab{
   //       display: block;
   //       position: relative;
   //       padding-top: 40px;
@@ -267,7 +270,7 @@ $header_height_sp: size_sp(102);
   //       margin-top: size_sp(50);
   //     }
   //     &:before{
-  //       @media screen and (max-width: 1000px) {
+  //       @include mq_tab{
   //         content: "";
   //         position: absolute;
   //         top: 0;
@@ -285,7 +288,7 @@ $header_height_sp: size_sp(102);
   //     li{
   //       &:nth-of-type(n + 2){
   //         margin-left: 12px;
-  //         @media screen and (max-width: 1000px) {
+  //         @include mq_tab{
   //           margin-top: 30px;
   //           margin-left: 0;
   //         }
@@ -308,7 +311,7 @@ $header_height_sp: size_sp(102);
   //           @include font-size(13);
   //           width: 100px;
   //         }
-  //         @media screen and (max-width: 1000px) {
+  //         @include mq_tab{
   //           @include font-size(26);
   //           width: auto;
   //           padding: 0;
@@ -323,7 +326,7 @@ $header_height_sp: size_sp(102);
   //         }
   //         &.is-current{
   //           &:after{
-  //             @media screen and (max-width: 1000px) {
+  //             @include mq_tab{
   //               @include abso-center-v();
   //               right: calc(100% + 16px);
   //               content: "";
@@ -346,7 +349,7 @@ $header_height_sp: size_sp(102);
   //   &.info{
   //     @include flex(flex, nowrap, flex-end, center, normal, row);
   //     margin-left: 20px;
-  //     @media screen and (max-width: 1000px) {
+  //     @include mq_tab{
   //       display: block;
   //       margin-left: 0;
   //       margin-top: 60px;
@@ -356,11 +359,11 @@ $header_height_sp: size_sp(102);
   //     }
   //     li{
   //       border-right: 1px solid $gray01;
-  //       @media screen and (max-width: 1000px) {
+  //       @include mq_tab{
   //         border-radius: none;
   //       }
   //       &:nth-of-type(n + 2){
-  //         @media screen and (max-width: 1000px) {
+  //         @include mq_tab{
   //           margin-top: 30px;
   //         }
   //         @include mq_sp{
@@ -382,7 +385,7 @@ $header_height_sp: size_sp(102);
   //         font-weight: 500;
   //         color: $black01;
   //         text-align: center;
-  //         @media screen and (max-width: 1000px) {
+  //         @include mq_tab{
   //           @include font-size(27);
   //           width: 294px;
   //           height: auto;
@@ -400,7 +403,7 @@ $header_height_sp: size_sp(102);
   //           content: "";
   //           width: 36px;
   //           height: 36px;
-  //           @media screen and (max-width: 1000px) {
+  //           @include mq_tab{
   //             @include abso-center-v();
   //             width: 64px;
   //             height: 64px;
@@ -413,7 +416,7 @@ $header_height_sp: size_sp(102);
   //         &.contact{
   //           &:before{
   //             background: url(./img/common/icn_mail.svg) no-repeat center/cover;
-  //             @media screen and (max-width: 1000px) {
+  //             @include mq_tab{
   //               left: 27px;
   //             }
   //             @include mq_sp{
@@ -424,7 +427,7 @@ $header_height_sp: size_sp(102);
   //         &.document{
   //           &:before{
   //             background: url(./img/common/icn_document.svg) no-repeat center/cover;
-  //             @media screen and (max-width: 1000px) {
+  //             @include mq_tab{
   //               left: 53px;
   //             }
   //             @include mq_sp{
@@ -435,7 +438,7 @@ $header_height_sp: size_sp(102);
   //         &.access{
   //           &:before{
   //             background: url(./img/common/icn_access.svg) no-repeat center/cover;
-  //             @media screen and (max-width: 1000px) {
+  //             @include mq_tab{
   //               left: 53px;
   //             }
   //             @include mq_sp{
@@ -448,12 +451,12 @@ $header_height_sp: size_sp(102);
   //   }
   //   &.page{
   //     @include flex(flex, nowrap, center, center, normal, row);
-  //     @media screen and (max-width: 1000px) {
+  //     @include mq_tab{
   //       display: block;
   //     }
   //     li{
   //       &:nth-of-type(n + 2){
-  //         @media screen and (max-width: 1000px) {
+  //         @include mq_tab{
   //           margin-top: 40px;
   //         }
   //         @include mq_sp{
@@ -468,7 +471,7 @@ $header_height_sp: size_sp(102);
   //         letter-spacing: 0.05em;
   //         font-weight: 500;
   //         padding: 0 18px;
-  //         @media screen and (max-width: 1000px) {
+  //         @include mq_tab{
   //           @include font-size(30);
   //           line-height: (44/30);
   //           letter-spacing: 0.1em;
@@ -486,7 +489,7 @@ $header_height_sp: size_sp(102);
   //           width: 1px;
   //           height: 100%;
   //           background: $white00;
-  //           @media screen and (max-width: 1000px) {
+  //           @include mq_tab{
   //             content: none;
   //           }
   //         }
@@ -499,7 +502,7 @@ $header_height_sp: size_sp(102);
   //             height: 7px;
   //             background: $yellow01;
   //             border-radius: 50%;
-  //             @media screen and (max-width: 1000px) {
+  //             @include mq_tab{
   //               @include abso-center-v();
   //               left: auto;
   //               bottom: auto;

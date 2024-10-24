@@ -38,7 +38,7 @@ $(function(){
   let header_nav = $(".common-header__menu");
   function checkMediaQuery(){
     header_toggle.off();
-    if(window.matchMedia('(max-width: 1000px)').matches){
+    if(window.matchMedia('(max-width: 1024px)').matches){
       header_nav.hide();
       header_toggle.on("click",function(){
         $(this).add(common_header).toggleClass("is-open");
