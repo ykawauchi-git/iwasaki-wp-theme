@@ -1,6 +1,6 @@
 <div class="page-policy">
   <div class="page-policy__inner">
-    <h1 class="page-access__heading page-heading"><span>ソーシャルメディアポリシー</span></h1>
+    <h1>ソーシャルメディアポリシー</h1>
     <div class="page-policy__intro">
       <p>学校法人岩崎学園 （以下、本学園）は、ソーシャルメディア公式アカウントを利用し、情報を発信する際の方針を下記の通り定め、これを遵守します。<br>本メディアポリシーは、本学園が公式に運営している、各ソーシャルメディアアカウントに適用されます。</p>
     </div>
@@ -20,7 +20,7 @@
     <div class="page-policy__main">
       <h3>2.SNS一覧</h3>
       <p>岩崎学園が運営しているソーシャルメディアの公式アカウント一覧です。</p>
-      <h4>Twitterアカウント</h4>
+      <h4>Xアカウント</h4>
       <div class="page-policy__sns">
         <div class="page-policy__snsBox">
           <h5>情報科学専門学校【公式】</h5>

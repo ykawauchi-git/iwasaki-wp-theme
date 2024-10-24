@@ -21,7 +21,7 @@
     }
   }
   &__intro{
-    margin-top: 70px;
+    margin-top: 46px;
     @include mq_sp{
       margin-top: size_sp(80);
     }
@@ -39,7 +39,8 @@
       }
     }
     p{
-      line-height: (37/16);
+      font-size: 18px;
+      line-height: (34/18);
       margin-top: 34px;
       @include mq_sp{
         @include fz_vw(28);
@@ -170,7 +171,7 @@
           width: 64px;
           padding: 4px 0;
           margin-right: 10px;
-          background: $blue03;
+          background: $black02;
           @include mq_sp{
             @include fz_vw(26);
             line-height: (37/26);
