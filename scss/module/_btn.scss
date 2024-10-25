@@ -2,49 +2,45 @@
 ============================================================================ */
 
 .btn__more{
-  @include font-size(18);
+  font-size: 20px;
+  font-weight: 300;
   position: relative;
-  left: 0.05em;
   display: block;
-  width: 208px;
-  padding-bottom: 2px;
+  width: 220px;
+  height: 61px;
+  padding-top: 2px;
   margin-left: auto;
   margin-right: auto;
-  font-weight: 500;
-  line-height: (28/18);
-  letter-spacing: 0.1em;
-  color: $blue02;
   text-align: center;
+  @include flex(flex, wrap, center, center, normal, row);
   cursor: pointer;
+  border-radius: 47px;
+  box-shadow : 0px 3px 6px rgba($black00, .1);
   @include mq_sp{
-    @include fz_vw(30);
-    width: size_sp(346);
+    @include fz_vw(32);
+    width: size_sp(320);
+    height: size_sp(94);
     padding-bottom: size_sp(3);
+    border-radius: size_sp(47);
+    box-shadow : 0px size_sp(3) size_sp(6) rgba($black00, .1);
   }
-  &:before,&:after{
-    @include abso-center-v();
-    content: "";
-    width: 30px;
-    height: 20px;
-    background: url(./img/common/icn_btn-more.png) no-repeat center/100% 100%;
-    @include mq_sp{
-      width: size_sp(52);
-      height: size_sp(34);
+  &.w {
+    color : $black01;
+    background : $white00;
+    &:hover {
+      color : $white00;
+      background : $black01;
+      opacity: 1;
     }
   }
-  &.yellow{
-    &:before,&:after{
-      background: url(./img/common/icn_btn-more-yellow.png) no-repeat center/100% 100%;
+  &.b {
+    color : $white00;
+    background : $black02;
+    &:hover {
+      color : $black02;
+      background : $white00;
+      opacity: 1;
     }
-  }
-  &:before{
-    left: 0;
-  }
-  &:after{
-    right: 0;
-  }
-  &:hover{
-    opacity: 1;
   }
 }
 

@@ -109,8 +109,11 @@ img.object_fit{
 //囲う要素
 .youtube-wrap{
 	position: relative; width: 100%; padding-top: 56.25%; height: 0;
+  & iframe {
+    position: absolute; top: 0; right: 0; width: 100% !important; height: 100% !important;
+  }
 }
 //iframe
-.youtube-item{
-	position: absolute; top: 0; right: 0; width: 100% !important; height: 100% !important;
-}
+// .youtube-item{
+// 	position: absolute; top: 0; right: 0; width: 100% !important; height: 100% !important;
+// }

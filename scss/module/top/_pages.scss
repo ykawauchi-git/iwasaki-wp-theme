@@ -2,422 +2,131 @@
 ============================================================================ */
 
 .top-pages{
-  margin-top: 135px;
+  margin: 100px 0;
   @include mq_sp{
-    margin-top: size_sp(120);
+    margin-top: size_sp(120) 0 size_sp(130);
   }
-  &__heading{
-    @include font-size(56);
-    line-height: (79/56);
-    font-weight: 700;
-    letter-spacing: 0.05em;
-    position: relative;
-    overflow: hidden;
-    @include mq_sp{
-      @include fz_vw(49);
-      line-height: (69/49);
-    }
-    &.is-default{
-      .upper{
-        &:before{
-          width: 0;
-        }
-        .inner{
-          &:after{
-            width: 0;
-          }
-        }
-        .blue{
-          &:before{
-            width: 0;
-          }
-          &-inner{
-            &:after{
-              width: 0;
-              animation: none;
-            }
-          }
-        }
-        .white{
-          &:before{
-            width: 100%;
-          }
-        }
-      }
-      .lower{
-        .inner{
-          &:before{
-            width: 0;
-          }
-        }
-        .blue{
-          &:before{
-            width: 0;
-          }
-          &-inner{
-            &:after{
-              width: 0;
-              animation: none;
-            }
-          }
-        }
-        .white{
-          &:before{
-            width: 100%;
-          }
-        }
-      }
-    }
-    .upper,.lower{
-      position: relative;
-    }
-    .upper{
-      &:before{
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: calc((100% - 982px) / 2);
-        height: 100%;
-        background: $blue04;
-        transition: 0.2s linear;
-        @include mq_sp{
-          width: size_sp(37);
-        }
-      }
-      .inner{
-        padding-left: 45px;
-        @include mq_sp{
-          padding-left: size_sp(74);
-        }
-        &:after{
-          content: "";
-          position: absolute;
-          top: 0;
-          left: -107px;
-          width: 152px;
-          height: 100%;
-          background: $blue03;
-          transition: 0.2s 0.2s linear;
-          @include mq_sp{
-            left: size_sp(37);
-            width: size_sp(37);
-          }
-        }
-      }
-      .blue{
-        margin-right: 7px;
-        @include mq_sp{
-          margin-right: size_sp(6);
-        }
-        &:before{
-          transition: 0.2s 0.4s ease-in;
-        }
-        &-inner{
-          padding: 0 calc(4px - 0.025em) 3px 10px;
-          @include mq_sp{
-            $vw_6: size_sp(6);
-            padding: 0 calc(#{$vw_6} - 0.025em) size_sp(3) size_sp(10);
-          }
-        }
-      }
-      .white{
-        &:before{
-          transition: 0.2s 0.6s ease-out;
-        }
-      }
-    }
-    .lower{
-      .inner{
-        padding-left: 293px;
-        @include mq_sp{
-          padding-left: size_sp(293);
-        }
-        &:before{
-          position: absolute;
-          top: calc(50% + 2px);
-          left: 741px;
-          transform: translateY(-50%);
-          content: "";
-          width: 50vw;
-          height: 48px;
-          background: url(./img/top/bd_pages.png) no-repeat center/100% 100%;
-          transition: 0.4s 1.4s ease-out;
-          @include mq_sp{
-            top: 50%;
-            left: size_sp(693);
-            width: size_sp(57);
-            height: size_sp(43);
-          }
-        }
-      }
-      .blue{
-        margin-right: 7px;
-        @include mq_sp{
-          margin-right: size_sp(7);
-        }
-        &:before{
-          transition: 0.2s 0.8s ease-in;
-        }
-        &-inner{
-          padding: 0 calc(10px - 0.025em) 3px 10px;
-          @include mq_sp{
-            $vw_10: size_sp(10);
-            padding: 0 calc(#{$vw_10} - 0.025em) size_sp(3) size_sp(10);
-          }
-        }
-      }
-      .white{
-        &:before{
-          transition: 0.2s 1.2s ease-in;
-        }
-      }
-    }
-    .inner{
-      @include flex(flex, wrap, flex-start, normal, normal, row);
-      position: relative;
-      max-width: 768px;
-      width: 100%;
-      margin: 0 auto;
-      @include mq_sp{
-        max-width: 100%;
-      }
-    }
-    .blue{
-      position: relative;
-      z-index: 1;
-      display: inline-block;
-      color: $white00;
-      &:before{
-        @include box-shadow();
-        content: "";
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -1;
-        background: $blue02;
-      }
-      &-inner{
-        display: block;
-        position: relative;
-        overflow: hidden;
-      }
-    }
-    .white{
-      position: relative;
-      z-index: 1;
-      display: inline-block;
-      &:before{
-        content: "";
-        position: absolute;
-        top: 0;
-        right: 0;
-        z-index: 1;
-        width: 0;
-        height: 100%;
-        background: $white00;
-      }
-    }
-  }
-  &__inner{
-    max-width: 1280px;
+  &__list{
+    max-width: 948px;
     width: 100%;
-    padding: 0 20px;
-    margin: 130px auto 0;
+    margin: 0 auto;
+    @media screen and (max-width:1280px) {
+      max-width: (948/1280)*100%;
+    }
     @include mq_sp{
       max-width: size_sp(710);
       padding: 0;
-      margin-top: size_sp(120);
     }
   }
   &__item{
+    height: 371px;
+    @include flex(flex, nowrap, flex-start, normal, normal, row);
     @include box-shadow();
     position: relative;
-    padding: 34px 100px;
-    @include mq_sp{
-      padding: size_sp(40) size_sp(30) size_sp(40);
-    }
     &:nth-of-type(n + 2){
-      margin-top: 30px;
+      margin-top: 60px;
       @include mq_sp{
-        margin-top: size_sp(40);
+        margin-top: size_sp(50);
       }
     }
-    &:before{
-      content: "";
-      position: absolute;
-      top: 0;
-      z-index: 1;
-      width: 620px;
-      height: 100%;
-      @include mq_sp{
-        width: size_sp(666);
+    &:first-of-type,&:nth-of-type(3n + 1) {
+      & .top-pages {
+        &__item {
+          &Box {
+            color : $white00;
+            background : $black02;
+            & a {
+              color : $white00;
+              border-color : $white00;
+            }
+          }
+        }
       }
     }
-    &.left{
-      &:before{
-        background: transparent linear-gradient(90deg, rgba($black01,0.4) 0%, rgba($black01,0.4) 33%, rgba($blue02,0) 100%) 0% 0% no-repeat padding-box;
-        left: 0;
+    &:nth-of-type(2),&:nth-of-type(3n + 2) {
+      & .top-pages {
+        &__item {
+          &Box {
+            background : $gray01;
+          }
+        }
       }
     }
-    &.right{
-      &:before{
-        background: transparent linear-gradient(90deg, rgba($blue02,0) 0%, rgba($black01,0.4) 33%, rgba($black01,0.4) 100%) 0% 0% no-repeat padding-box;
-        right: 0;
-      }
-    }
-    &En{
-      @include font-size(19);
-      position: absolute;
-      top: 0;
-      z-index: 1;
-      width: 44px;
-      height: 100%;
-      text-align: center;
-      line-height: (27/19);
-      background: $blue02;
-      color: $white00;
-      @include mq_sp{
-        @include fz_vw(22);
-        line-height: (32/22);
-        width: size_sp(44);
-      }
-      &:before{
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 1;
-        width: 100%;
-        height: 22px;
-        @include mq_sp{
-          height: size_sp(22);
-        }
-      }
-      &.yellow{
-        &:before{
-          background: $yellow01;
-        }
-      }
-      &.green{
-        &:before{
-          background: $green01;
-        }
-      }
-      &.pink{
-        &:before{
-          background: $pink01;
-        }
-      }
-      span{
-        position: absolute;
-        top: calc(50%);
-        display: block;
-        white-space: nowrap;
-        font-weight: 700;
-        letter-spacing: 0.05em;
-      }
-      &.left{
-        left: 0;
-        span{
-          left: calc(50% + 0.025em - 2px);
-          transform: translate(-50%,-50%) rotate(-90deg);
-        }
-      }
-      &.right{
-        right: 0;
-        span{
-          left: calc(50% + 0.025em + 2px);
-          transform: translate(-50%,-50%) rotate(90deg);
+    &:nth-of-type(3),&:nth-of-type(3n + 3) {
+      & .top-pages {
+        &__item {
+          &Box {
+            background : $white00;
+          }
         }
       }
     }
     &Thumb{
-      @include abso-center();
-      z-index: 0;
+      max-width: 526px;
       width: 100%;
       height: 100%;
+      position: relative;
+      @media screen and (max-width:1280px) {
+        max-width: (526/948)*100%;
+      }
+      & span {
+        font-size: 21px;
+        line-height: (30/21);
+        letter-spacing: .05em;
+        color : $white00;
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+      }
     }
     &Box{
+      color : $black01;
+      max-width: 422px;
+      width: 100%;
+      padding: 30px;
       position: relative;
       z-index: 2;
-      width: 304px;
-      color: $white00;
+      @media screen and (max-width:1280px) {
+        max-width: (422/948)*100%;
+      }
       @include mq_sp{
         width: size_sp(390);
       }
-      &.left{
-        margin-right: auto;
-      }
-      &.right{
-        margin-left: auto;
-      }
       h3{
-        @include font-size(26);
+        font-size: 26px;
         line-height: (37/26);
-        text-align: center;
+        letter-spacing: .05em;
         position: relative;
         @include mq_sp{
           @include fz_vw(32);
           line-height: (46/32);
         }
-        &:before{
-          @include abso-center-h();
-          content: "";
-          top: calc(100% + 16px);
-          z-index: 1;
-          width: 40px;
-          height: 12px;
-          background: url(./img/top/icn_pages-sp.svg) no-repeat center/100% 100%;
-          @include mq_sp{
-            $vw_20: size_sp(20);
-            top: calc(100% + #{$vw_20});
-            width: size_sp(50);
-            height: size_sp(28);
-          }
-        }
       }
-      p{
-        line-height: (37/16);
+      & p{
+        line-height: (27/16);
         font-weight: 500;
-        margin-top: 37px;
+        margin-top: 23px;
         @include mq_sp{
           @include fz_vw(26);
           line-height: (54/26);
           margin-top: size_sp(60);
         }
       }
-    }
-    &Btn{
-      @include font-size(13);
-      display: block;
-      width: 146px;
-      padding: 8px 0;
-      margin: 13px auto 0;
-      border: 2px solid $white00;
-      color: $white00;
-      line-height: (19/13);
-      letter-spacing: 0.1em;
-      font-weight: 500;
-      text-align: center;
-      @include mq_sp{
-        @include fz_vw(22);
-        width: size_sp(238);
-        padding: size_sp(17) 0 size_sp(14);
-        margin-top: size_sp(21);
-      }
-      &:hover{
-        background: $white00;
-        color: $blue02;
-        opacity: 1;
+      & a {
+        font-size: 16px;
+        line-height: (26/16);
+        text-align: center;
+        color : $black01;
+        width: 148px;
+        padding: 6px 0;
+        margin-top: 38px;
+        display: block;
+        border : solid 1px $black01;
+        &:hover {
+          background : $black01;
+          opacity: 1;
+        }
       }
     }
   }
-}
-
-@keyframes delay_x{
-  0%{transform: translateX(0);}
-  100%{transform: translateX(100%);}
 }

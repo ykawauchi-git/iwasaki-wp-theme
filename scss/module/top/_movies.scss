@@ -2,26 +2,43 @@
 ============================================================================ */
 
 .top-movies{
-  margin-top: 200px;
-  @include mq_sp{
-    margin-top: size_sp(211);
-  }
-  &__heading{
-    color : $black01;
-  }
+  background : rgba($gray01, .7);
+  padding: 37px 0 60px;
   &__inner{
-    max-width: 583px;
+    max-width: 950px;
     width: 100%;
-    margin: 70px auto 0;
+    margin: 0 auto;
     @include mq_sp{
       max-width: 100%;
       margin-top: size_sp(100);
     }
+    & h2 {
+      font-size: 26px;
+      font-weight: 700;
+      line-height: (37/26);
+    }
+    & .btn__more {
+      margin-top: 50px;
+      @include mq_sp{
+        margin-top: size_sp(70);
+      }
+    }
   }
-  .btn__more{
-    margin-top: 50px;
+  &__list {
+    @include flex(flex, wrap, center, center, normal, row);
+    margin-top: 30px;
     @include mq_sp{
-      margin-top: size_sp(80);
+      flex-direction: column;
+    }
+    & li {
+      width: 460px;
+      &:nth-of-type(n + 2) {
+        margin-left: 30px;
+        @include mq_sp{
+          margin-top: size_sp(70);
+          margin-left: 0;
+        }
+      }
     }
   }
 }

@@ -133,6 +133,50 @@
           margin-top: size_sp(80);
         }
       }
+      p{
+        @include flex(flex, wrap, flex-start, center, normal, row);
+        margin-top: 20px;
+        &:nth-of-type(n + 2){
+          margin-top: 14px;
+          @include mq_sp{
+            margin-top: size_sp(30);
+          }
+        }
+        & span{
+          &:first-of-type{
+            @include font-size(12);
+            line-height: (17/12);
+            text-align: center;
+            color: $white00;
+            display: block;
+            width: 64px;
+            padding: 4px 0;
+            margin-right: 10px;
+            background: $black02;
+            @include mq_sp{
+              @include fz_vw(26);
+              line-height: (37/26);
+              width: size_sp(146);
+              padding: size_sp(9) 0 size_sp(7);
+              margin: 0;
+            }
+          }
+          &:last-of-type{
+            @include font-size(14);
+            line-height: (20/14);
+            @include mq_sp{
+              @include fz_vw(28);
+              line-height: (40/28);
+              display: block;
+              width: 100%;
+              margin-top: size_sp(12);
+            }
+          }
+          a{
+            color: $base-font-color;
+          }
+        }
+      }
     }
     h5{
       @include font-size(16);
@@ -150,49 +194,6 @@
         @include mq_sp{
           @include fz_vw(20);
           margin-top: size_sp(15);
-        }
-      }
-    }
-    p{
-      @include flex(flex, wrap, flex-start, center, normal, row);
-      &:nth-of-type(n + 2){
-        margin-top: 14px;
-        @include mq_sp{
-          margin-top: size_sp(30);
-        }
-      }
-      span{
-        &:first-of-type{
-          @include font-size(12);
-          line-height: (17/12);
-          text-align: center;
-          color: $white00;
-          display: block;
-          width: 64px;
-          padding: 4px 0;
-          margin-right: 10px;
-          background: $black02;
-          @include mq_sp{
-            @include fz_vw(26);
-            line-height: (37/26);
-            width: size_sp(146);
-            padding: size_sp(9) 0 size_sp(7);
-            margin: 0;
-          }
-        }
-        &:last-of-type{
-          @include font-size(14);
-          line-height: (20/14);
-          @include mq_sp{
-            @include fz_vw(28);
-            line-height: (40/28);
-            display: block;
-            width: 100%;
-            margin-top: size_sp(12);
-          }
-        }
-        a{
-          color: $base-font-color;
         }
       }
     }
