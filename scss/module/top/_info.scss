@@ -4,7 +4,7 @@
 .top-info{
   margin-top: 40px;
   @include mq_sp{
-    margin-top: size_sp(70);
+    margin-top: size_sp(149);
   }
   &__inner{
     max-width: 980px;
@@ -15,7 +15,8 @@
       max-width: 95%;
     }
     @include mq_sp{
-      max-width: size_sp(638);
+      max-width: size_sp(630);
+      padding-left: 0;
     }
   }
   &__heading{
@@ -24,10 +25,9 @@
     line-height: (37/26);
     color: $black01;
     @include mq_sp{
-      @include fz_vw(46);
-      line-height: (66/46);
+      @include fz_vw(40);
+      line-height: (58/40);
       padding-left: 0;
-      margin-left: size_sp(-16);
     }
   }
   &__box{
@@ -36,9 +36,10 @@
     padding: 28px 52px;
     margin-top: 12px;
     @include mq_sp{
-      border-width: size_sp(5);
-      padding: size_sp(42) size_sp(29);
-      margin-top: size_sp(56);
+      border-width: size_sp(4);
+      padding: size_sp(27) size_sp(30) size_sp(22);
+      margin-top: size_sp(40);
+      box-shadow: 0px size_sp(3) size_sp(6) 0px rgba($black00, 0.16);
     }
   }
   &__post{
@@ -47,7 +48,7 @@
     &:nth-of-type(n + 2){
       margin-top: 34px;
       @include mq_sp{
-        margin-top: size_sp(100);
+        margin-top: size_sp(35);
       }
     }
   }
@@ -62,13 +63,14 @@
     font-weight: 500;
     color: $white00;
     @include mq_sp{
-      $vw_19: size_sp(19);
-      @include fz_vw(30);
-      line-height: (44/30);
-      padding: size_sp(4) size_sp(16);
+      @include fz_vw(28);
+      line-height: (37/28);
+      padding: size_sp(8) size_sp(19) size_sp(7);
+      display: inline-block;
+      position: relative;
       top: auto;
       left: size_sp(-50);
-      bottom: calc(100% + #{$vw_19});
+      bottom:auto;
     }
   }
   &__ttl{
@@ -77,16 +79,10 @@
     font-weight: 400;
     padding-left: 71px;
     @include mq_sp{
-      @include fz_vw(28);
-      line-height: (58/28);
+      @include fz_vw(22);
+      line-height: (42/22);
       padding-left: 0;
-    }
-    a{
-      text-underline-offset: 3px;
-      &:hover{
-        opacity: 1;
-        text-decoration: underline;
-      }
+      margin-top: size_sp(10);
     }
   }
 }

@@ -7,4 +7,7 @@ get_header(); ?>
   <?php get_template_part('template-parts/top/news');?>
   <?php get_template_part('template-parts/top/pages');?>
   <?php get_template_part('template-parts/top/movies');?>
+  <?php get_template_part('template-parts/top/others');?>
+  <?php get_template_part('template-parts/top/team');?>
+
 <?php get_footer();

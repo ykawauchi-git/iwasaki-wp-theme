@@ -4,7 +4,7 @@
 .top-pages{
   margin: 100px 0;
   @include mq_sp{
-    margin-top: size_sp(120) 0 size_sp(130);
+    margin: size_sp(150) 0;
   }
   &__list{
     max-width: 948px;
@@ -14,7 +14,7 @@
       max-width: (948/1280)*100%;
     }
     @include mq_sp{
-      max-width: size_sp(710);
+      max-width: size_sp(642);
       padding: 0;
     }
   }
@@ -23,10 +23,14 @@
     @include flex(flex, nowrap, flex-start, normal, normal, row);
     @include box-shadow();
     position: relative;
+    @include mq_sp{
+      height: auto;
+      flex-direction : column-reverse;
+    }
     &:nth-of-type(n + 2){
       margin-top: 60px;
       @include mq_sp{
-        margin-top: size_sp(50);
+        margin-top: size_sp(70);
       }
     }
     &:first-of-type,&:nth-of-type(3n + 1) {
@@ -38,6 +42,10 @@
             & a {
               color : $white00;
               border-color : $white00;
+              &:hover {
+                color : $black02;
+                background : $white00;
+              }
             }
           }
         }
@@ -69,6 +77,10 @@
       @media screen and (max-width:1280px) {
         max-width: (526/948)*100%;
       }
+      @include mq_sp{
+        max-width: 100%;
+        height: size_sp(386);
+      }
       & span {
         font-size: 21px;
         line-height: (30/21);
@@ -77,6 +89,12 @@
         position: absolute;
         right: 10px;
         bottom: 10px;
+        @include mq_sp{
+          @include fz_vw(26);
+          line-height: (37/26);
+          right: size_sp(20);
+          bottom: size_sp(20);
+        }
       }
     }
     &Box{
@@ -90,7 +108,8 @@
         max-width: (422/948)*100%;
       }
       @include mq_sp{
-        width: size_sp(390);
+        max-width: 100%;
+        padding: size_sp(50);
       }
       h3{
         font-size: 26px;
@@ -98,18 +117,20 @@
         letter-spacing: .05em;
         position: relative;
         @include mq_sp{
-          @include fz_vw(32);
-          line-height: (46/32);
+          @include fz_vw(40);
+          line-height: (58/40);
+          letter-spacing: 0em;
+          text-align: center;
         }
       }
       & p{
         line-height: (27/16);
-        font-weight: 500;
+        font-weight: 400;
         margin-top: 23px;
         @include mq_sp{
           @include fz_vw(26);
-          line-height: (54/26);
-          margin-top: size_sp(60);
+          line-height: (50/26);
+          margin-top: size_sp(20);
         }
       }
       & a {
@@ -122,7 +143,16 @@
         margin-top: 38px;
         display: block;
         border : solid 1px $black01;
+        @include mq_sp{
+          @include fz_vw(22);
+          line-height: (44/22);
+          width: size_sp(262);
+          padding: size_sp(14) 0;
+          margin: size_sp(43) auto 0;
+          border : solid size_sp(2) $black01;
+        }
         &:hover {
+          color : $white00;
           background : $black01;
           opacity: 1;
         }

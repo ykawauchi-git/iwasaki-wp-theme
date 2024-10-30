@@ -4,18 +4,24 @@
 .top-movies{
   background : rgba($gray01, .7);
   padding: 37px 0 60px;
+  @include mq_sp{
+    padding: size_sp(59) 0 size_sp(80);
+  }
   &__inner{
     max-width: 950px;
     width: 100%;
     margin: 0 auto;
     @include mq_sp{
-      max-width: 100%;
-      margin-top: size_sp(100);
+      max-width: size_sp(630);
     }
     & h2 {
       font-size: 26px;
       font-weight: 700;
       line-height: (37/26);
+      @include mq_sp{
+        @include fz_vw(40);
+        line-height: (58/40);
+      }
     }
     & .btn__more {
       margin-top: 50px;
@@ -32,10 +38,13 @@
     }
     & li {
       width: 460px;
+      @include mq_sp{
+        width: 100%;
+      }
       &:nth-of-type(n + 2) {
         margin-left: 30px;
         @include mq_sp{
-          margin-top: size_sp(70);
+          margin-top: size_sp(60);
           margin-left: 0;
         }
       }

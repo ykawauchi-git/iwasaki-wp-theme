@@ -3,34 +3,15 @@
 
 .top-news{
   position: relative;
-  padding: 128px 0 60px;
+  padding: 60px 0 60px;
   background: $blue05;
-  margin-top: 177px;
+  margin-top: 100px;
   @include mq_sp{
-    padding: size_sp(126) 0 size_sp(100);
-    margin-top: size_sp(200);
+    padding: size_sp(60) 0 size_sp(80);
+    margin-top: size_sp(150);
   }
-  &__heading{
-    position: absolute;
-    top: -97px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1;
-    @include mq_sp{
-      top: size_sp(-100);
-      left: 0;
-      transform: none;
-    }
-    .en{
-      margin-left: 7px;
-      @include mq_sp{
-        margin-left: size_sp(7);
-      }
-    }
-  }
-  &__inner{
-    @include flex(flex, wrap, flex-start, normal, normal, row);
-    max-width: 1162px;
+  &__inner {
+    max-width: 1011px;
     width: 100%;
     margin: 0 auto;
     @media screen and (max-width: 1200px) {
@@ -39,94 +20,101 @@
     @include mq_sp{
       max-width: size_sp(670);
     }
+    & h2 {
+      font-size: 26px;
+      font-weight: 700;
+      line-height: (37/26);
+      padding: 0 31px;
+      @include mq_sp{
+        @include fz_vw(40);
+        line-height: (58/40);
+        padding: 0 size_sp(20);
+      }
+    }
+  }
+  &__list{
+    padding-top: 30px;
+    @include flex(flex, wrap, flex-start, normal, normal, row);
+    @include mq_sp{
+      padding-top: size_sp(50);
+    }
   }
   &__post{
-    @include flex(flex, wrap, flex-start, normal, normal, column);
     @include box-shadow();
     max-width: 364px;
-    width: (364/1162) * 100%;
-    padding: (30/1162) * 100%;
+    width: (317/1011) * 100%;
     background: $white00;
-    margin-right: (35/1162) * 100%;
+    margin-right: (30/1011) * 100%;
     @include mq_sp{
-      justify-content: space-between;
-      flex-direction: row;
       max-width: 100%;
       width: 100%;
-      padding: size_sp(30);
       margin-right: 0;
     }
     &:nth-of-type(n + 2){
       @include mq_sp{
-        margin-top: size_sp(50);
+        margin-top: size_sp(30);
       }
     }
     &:last-of-type{
       margin-right: 0;
     }
+    a{
+      width: 100%;
+      padding: size_sp(24) size_sp(24) size_sp(31);
+      @include flex(flex, wrap, flex-start, normal, normal, column);
+      @include mq_sp{
+        justify-content: space-between;
+        flex-direction: row;
+      }
+    }
     &Thumb{
       width: 100%;
+      height: 211px;
       @include mq_sp{
-        max-width: size_sp(244);
-      }
-      a{
-        display: block;
-        width: 100%;
-        height: 203px;
-        @include mq_sp{
-          height: size_sp(164);
-          margin-top: size_sp(13);
-        }
+        max-width: size_sp(218);
+        height: size_sp(145);
+        margin-top: size_sp(12);
       }
     }
     &Info{
-      margin-top: 10px;
-      margin-bottom: 15px;
+      padding: 16px 20px 29px;
       @include mq_sp{
-        max-width: size_sp(336);
-        margin-top: 0;
-        margin-bottom: 0;
+        max-width: size_sp(382);
+        padding: 0;
       }
     }
     &Date{
+      font-weight: 400;
       line-height: (24/16);
+      margin-bottom: size_sp(5);
       @include mq_sp{
-        @include fz_vw(26);
-        line-height: (37/26);
+        @include fz_vw(22);
+        line-height: (37/22);
       }
     }
     &Ttl{
-      @include font-size(16);
-      line-height: (37/16);
-      font-weight: 500;
-      margin-top: 5px;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: (27/16);
+      margin-top: 9px;
       @include mq_sp{
-        @include fz_vw(28);
-        line-height: (58/28);
+        @include fz_vw(24);
+        line-height: (40/24);
         margin-top: 0;
-        margin-top: (58/28) * -0.12em;
-        margin-bottom: (58/28) * -0.5em;
-      }
-      a{
-        text-underline-offset: 3px;
-        &:hover{
-          opacity: 1;
-          text-decoration: underline;
-        }
       }
     }
     &Tag{
       @include flex(flex, wrap, flex-start, normal, normal, row);
-      margin-top: auto;
+      margin-top: 22px;
       margin-bottom: -12px;
       @include mq_sp{
         margin-top: size_sp(40);
         margin-bottom: size_sp(-20);
       }
       li{
-        @include font-size(12);
+        font-size: 12px;
         display: inline-block;
-        padding: 4px 8px;
+        padding: 3px 7px;
         line-height: (17/12);
         color: $blue03;
         border: 1px solid $blue03;
@@ -145,7 +133,7 @@
   .btn__more{
     margin-top: 50px;
     @include mq_sp{
-      margin-top: size_sp(80);
+      margin-top: size_sp(70);
     }
   }
 }

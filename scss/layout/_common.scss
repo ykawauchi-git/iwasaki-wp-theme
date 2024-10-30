@@ -22,10 +22,9 @@ $header_height_sp: size_sp(102);
 
 //TOP トップページ
 .home .common-main{
-  margin-top: 0;
-  padding-bottom: 150px;;
+  padding-bottom: 148px;
 	@include mq_sp {
-    padding-bottom : size_sp(200);
+    padding-bottom : size_sp(147);
 	}
 }
 

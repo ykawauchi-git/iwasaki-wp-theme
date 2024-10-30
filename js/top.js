@@ -25,4 +25,13 @@ $(document).ready(function() {
       prevEl: '.swiper-button-prev',
     },
   });
+  var bannerSwiper = new Swiper('.top-kv__slider', {
+    slidesPerView: "auto", //variablewidthにするため､autoを指定
+    centeredSlides: true, //スライドを中央に寄せる
+    loop: true,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+  });
 });

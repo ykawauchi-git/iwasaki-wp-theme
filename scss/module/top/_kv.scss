@@ -4,83 +4,93 @@
 .top-kv{
   position: relative;
   width: 100%;
-  height: 100vh;
-  &__catch{
-    @include font-size(80);
-    position: absolute;
-    top: 58%;
-    left: calc(50% + 0.025em + 25px);
-    z-index: 2;
-    transform: translate(-50%,-50%);
-    color: $white00;
-    white-space: nowrap;
-    font-weight: 500;
-    line-height: (116/80);
-    letter-spacing: 0.05em;
-    text-align: center;
-    @include mq_sp{
-      @include fz_vw(80);
-      top: 55%;
-      left: calc(50% + 0.025em);
-    }
+  // height: 100vh;
+  height: 547px;
+  @include mq_sp{
+    height: size_sp(989);
   }
-  &__scroll{
-    position: absolute;
-    left: 31px;
-    bottom: 0;
-    z-index: 1;
-    width: 2px;
-    height: 177px;
-    @include mq_sp{
-      left: size_sp(53);
-      width: size_sp(3);
-      height: size_sp(120);
-    }
-    &:before{
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: 0;
+  &__slider {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    &List {
       width: 100%;
       height: 100%;
-      background: $blue02;
-      animation: sdl 2s cubic-bezier(1, 0, 0, 1) infinite;
     }
-    &:after{
-      @include font-size(20);
-      content: "Scroll";
-      color: $blue02;
-      line-height: (29/20);
-      letter-spacing: 0.2em;
-      font-weight: 500;
-      position: absolute;
+    & .swiper-pagination {
+      line-height: 1;
+      height: 12px;
+      @include flex(flex, wrap, center, center, normal, row);
+      bottom: 23px;
       left: 50%;
-      bottom: calc(100% + 34px);
-      transform: translateX(-50%) rotate(90deg);
+      transform : translateX(-50%);
       @include mq_sp{
-        @include fz_vw(28);
-        $vw_50: size_sp(50);
-        bottom: calc(100% + #{$vw_50});
+        height: size_sp(16);
+        bottom: size_sp(20);
+      }
+      & span {
+        background : $gray01;
+        width: 12px;
+        height: 100%;
+        margin: 0 7px !important;
+        opacity: 1;
+        @include mq_sp{
+          width: size_sp(16);
+          margin : 0 size_sp(10) !important;
+        }
+        &.swiper-pagination-bullet-active {
+          background : $pink01;
+        }
       }
     }
   }
-}
-
-@keyframes sdl {
-  0% {
-    transform: scale(1, 0);
-    transform-origin: 0 0;
+  &__catch{
+    width: 458px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    transform : translate(-109%, -41%);
+    color: $white00;
+    @include mq_sp{
+      width: size_sp(458);
+      transform : translate(-50%, -50%);
+    }
   }
-  50% {
-    transform: scale(1, 1);
-    transform-origin: 0 0;
-  }
-  50.1% {
-    transform: scale(1, 1);
-    transform-origin: 0 100%;
-  }
-  100% {
-    transform: scale(1, 0);
-    transform-origin: 0 100%;
+  &__scroll{
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: .2em;
+    line-height: (29/20);
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    padding-bottom: 161px;
+    position: absolute;
+    left: 10px;
+    bottom: 18px;
+    z-index: 1;
+    @include mq_sp{
+      @include fz_vw(22);
+      line-height: (32/22);
+      padding-bottom: size_sp(187);
+      left: size_sp(20);
+      bottom: size_sp(17);
+    }
+    &:before{
+      content: "";
+      width: 15px;
+      height: 157px;
+      background-image : url(./img/top/arw_scroll.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      position: absolute;
+      right: 4px;
+      bottom: 0;
+      @include mq_sp{
+        width: size_sp(17);
+        height: size_sp(177);
+        right: size_sp(5);
+      }
+    }
   }
 }

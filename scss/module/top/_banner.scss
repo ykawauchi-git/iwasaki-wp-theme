@@ -20,12 +20,19 @@
       bottom: 0;
       left: 50%;
       transform : translateX(-50%);
+      @include mq_sp{
+        height: size_sp(16);
+      }
       & span {
         background : $gray01;
         width: 12px;
         height: 100%;
-        margin: 0 7px;
+        margin: 0 7px !important;
         opacity: 1;
+        @include mq_sp{
+          width: size_sp(16);
+          margin : 0 size_sp(10) !important;
+        }
         &.swiper-pagination-bullet-active {
           background : $pink01;
         }
