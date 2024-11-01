@@ -4,18 +4,18 @@
 $page-sitemap :".page-sitemap";
 
 .page-sitemap{
-  padding-top: 100px;
+  padding-top: 30px;
   @include mq_sp{
-    padding-top: size_sp(100);
+    padding-top: size_sp(59);
   }
   &__heading{}
   &__inner{
     max-width: 676px;
     width: 100%;
-    margin: 70px auto 0;
+    margin: 50px auto 0;
     @include mq_sp{
       max-width: size_sp(690);
-      margin-top: size_sp(80);
+      margin-top: size_sp(50);
     }
   }
   &__row{
@@ -28,16 +28,13 @@ $page-sitemap :".page-sitemap";
       margin-top: size_sp(60);
     }
     #{$page-sitemap}__list{
-      width: (302/676) * 100%;
-      @include mq_sp{
-        width: size_sp(312);
-      }
+      width: (302/664) * 100%;
       &:first-of-type{
         > li{
           &:nth-of-type(n + 2){
-            margin-top: 40px;
+            margin-top: 30px;
             @include mq_sp{
-              margin-top: size_sp(60);
+              margin-top: size_sp(40);
             }
           }
         }
@@ -47,13 +44,7 @@ $page-sitemap :".page-sitemap";
           &:nth-of-type(n + 2){
             margin-top: 30px;
             @include mq_sp{
-              margin-top: size_sp(50);
-            }
-          }
-          &.for{
-            margin-top: 50px;
-            @include mq_sp{
-              margin-top: size_sp(70);
+              margin-top: size_sp(40);
             }
           }
         }
@@ -62,21 +53,49 @@ $page-sitemap :".page-sitemap";
   }
   &__list{
     @include flex(flex, wrap, flex-start, flex-start, normal, column);
+    &.left {
+      @include mq_tab{
+        width: size_sp(322);
+      }
+      & > li {
+        & > a {
+          &:before {
+            background : $black01;
+          }
+        }
+      }
+    }
+    &.right {
+      @include mq_tab{
+        width: size_sp(319);
+      }
+      & > li {
+        & > a {
+          &:before {
+            background : $gray01;
+          }
+        }
+      }
+    }
     > li{
       font-size: 0;
       width: 100%;
+      box-shadow: 0px 0px 10px rgba($black00, .1);
+      @include mq_sp{
+        box-shadow: 0px 0px size_sp(10) rgba($black00, .1);
+      }
       > a{
         @include font-size(16);
-        line-height: (24/16);
-        font-weight: 700;
+        line-height: (27/16);
+        font-weight: 400;
         position: relative;
         z-index: 1;
         display: block;
-        padding: 6px 0 6px 32px;
+        padding: 4px 0 5px 32px;
         @include mq_sp{
-          @include fz_vw(28);
-          line-height: (40/28);
-          padding: size_sp(18) 0 size_sp(18) size_sp(40);
+          @include fz_vw(26);
+          line-height: (50/26);
+          padding: size_sp(14) 0 size_sp(12) size_sp(40);
         }
         &:before{
           content: "";
@@ -93,22 +112,7 @@ $page-sitemap :".page-sitemap";
         }
         &.top{
           &:before{
-            background: $blue01;
-          }
-        }
-        &.page{
-          &:before{
-            background: $blue03;
-          }
-        }
-        &.other{
-          &:before{
-            background: $blue04;
-          }
-        }
-        &.for{
-          &:before{
-            background: $yellow01;
+            background: $black01;
           }
         }
         &:hover{

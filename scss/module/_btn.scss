@@ -55,7 +55,7 @@
   display: block;
   width: 228px;
   padding: 17px 0 17px 0.05em;
-  background: $blue03;
+  background: $black02;
   @include mq_sp{
     @include fz_vw(26);
     line-height: (37/26);

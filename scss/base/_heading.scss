@@ -92,45 +92,55 @@ h6 {
 }
 
 .page-heading{
-	@include font-size(40);
-	line-height: (58/40);
-	letter-spacing: 0.05em;
-	text-align: center;
+	font-size: 26px;
+	line-height: (37/26);
+	max-width: 768px;
+	width: 100%;
+	margin: 0 auto;
 	@include mq_sp{
-		@include fz_vw(42);
-		line-height: (61/42);
+		@include fz_vw(40);
+		line-height: (58/40);
+		max-width: size_sp(630);
 	}
-	span{
-		position: relative;
-		left: 0.025em;
-		&:before,&:after{
-			@include abso-center-v();
-			content: "";
-			width: 30px;
-			height: 46px;
-			@include mq_sp{
-				width: size_sp(30);
-				height: size_sp(50);
-			}
-		}
-		&:before{
-			right: calc(100% + 20px);
-			background: url(./img/page/icn_heading-l.svg) no-repeat center/cover;
-			@include mq_sp{
-				$vw_24: size_sp(24);
-				right: calc(100% + #{$vw_24});
-			}
-		}
-		&:after{
-			filter: drop-shadow(0 3px 6px rgba($black00,0.08));
-			left: calc(100% + 20px);
-			background: url(./img/page/icn_heading-r.svg) no-repeat center/cover;
-			@include mq_sp{
-				$vw_24: size_sp(24);
-				left: calc(100% + #{$vw_24});
-			}
-		}
-	}
+	// @include font-size(40);
+	// line-height: (58/40);
+	// letter-spacing: 0.05em;
+	// text-align: center;
+	// @include mq_sp{
+	// 	@include fz_vw(42);
+	// 	line-height: (61/42);
+	// }
+	// span{
+	// 	position: relative;
+	// 	left: 0.025em;
+	// 	&:before,&:after{
+	// 		@include abso-center-v();
+	// 		content: "";
+	// 		width: 30px;
+	// 		height: 46px;
+	// 		@include mq_sp{
+	// 			width: size_sp(30);
+	// 			height: size_sp(50);
+	// 		}
+	// 	}
+	// 	&:before{
+	// 		right: calc(100% + 20px);
+	// 		background: url(./img/page/icn_heading-l.svg) no-repeat center/cover;
+	// 		@include mq_sp{
+	// 			$vw_24: size_sp(24);
+	// 			right: calc(100% + #{$vw_24});
+	// 		}
+	// 	}
+	// 	&:after{
+	// 		filter: drop-shadow(0 3px 6px rgba($black00,0.08));
+	// 		left: calc(100% + 20px);
+	// 		background: url(./img/page/icn_heading-r.svg) no-repeat center/cover;
+	// 		@include mq_sp{
+	// 			$vw_24: size_sp(24);
+	// 			left: calc(100% + #{$vw_24});
+	// 		}
+	// 	}
+	// }
 }
 
 .page-subHeading {
@@ -181,7 +191,7 @@ h6 {
 		position: relative;
 		width: 452px;
 		padding: 10px 0;
-		background: $blue02;
+		background: $black02;
 		margin: 0 auto;
 		border-radius: 7px;
 		@include mq_sp{
@@ -195,7 +205,7 @@ h6 {
 		content: "";
 		width: 768px;
 		height: 2px;
-		background: $blue02;
+		background: $black02;
 		z-index: -1;
 		@include mq_sp{
 			width: size_sp(680);

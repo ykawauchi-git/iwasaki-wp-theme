@@ -148,6 +148,10 @@
       <?php get_template_part('template-parts/common/page-title'); ?>
       <?php
 			//パンくず
+			if(!is_front_page() && !is_page(array('sitemap'))){
+				echo '<section class="pageSec"><span class="pageSec__bg"></span>';
+			}
 			if(!is_front_page()){
 				get_template_part('template-parts/common/breadcrumbs');
-			}?>
+			}
+			?>

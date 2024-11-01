@@ -87,10 +87,9 @@ $page-access: ".page-access";
     }
   }
   &__item{
-    @include box-shadow();
     position: relative;
     padding: 27px 37px;
-    border: 3px solid $blue04;
+    border: 2px solid $gray01;
     @include mq_sp{
       width: 100%;
       padding: size_sp(35) size_sp(32) size_sp(41);
@@ -183,7 +182,7 @@ $page-access: ".page-access";
             display: inline-block;
             width: 64px;
             padding: 4px 0;
-            background: $blue04;
+            background: $black02;
             @include mq_sp{
               @include fz_vw(26);
               line-height: (37/26);
@@ -214,27 +213,27 @@ $page-access: ".page-access";
         @include font-size(13);
         line-height: (19/13);
         letter-spacing: 0.1em;
-        font-weight: 500;
+        font-weight: 400;
         text-align: center;
         display: block;
         width: 138px;
         padding: 8px 0 8px 0.05em;
-        border-width: 2px;
+        border-width: 1px;
         border-style: solid;
-        background: $blue02;
-        color: $white00;
-        border-color: $blue02;
+        background: $white00;
+        color: $black01;
+        border-color: $black01;
         @include mq_sp{
           @include fz_vw(22);
           line-height: (44/22);
           width: size_sp(238);
           padding: size_sp(10) 0 size_sp(10) 0.05em;
-          border-width: size_sp(2);
+          border-width: size_sp(1);
         }
         &:hover{
           opacity: 1;
-          background: $white00;
-          color: $blue02;
+          background: $black01;
+          color: $white00;
         }
         &:nth-of-type(2){
           margin-left: 30px;

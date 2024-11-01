@@ -1,4 +1,7 @@
-
+ <?php if(!is_front_page() && !is_page(array('sitemap'))) {
+  echo '</section>';
+ }
+ ?>
 </main>
 <!-- ////コンテンツ -->
 

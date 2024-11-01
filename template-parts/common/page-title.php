@@ -17,7 +17,7 @@
     if(!is_page(array('sitemap','contact','access','document','media-policy','privacy-policy','history','career','facility','pioneer','speciality','method','academic-industrial-collaboration'))){
       echo '<section class="page-kv common-kv">';
       echo '<figure class="common-kv__bg"><img src="'.$thumb.'" alt="'.$ttl.'" class="pctab-only object_fit"><img src="'.$thumb_sp.'" alt="'.$ttl.'" class="sp-only object_fit"></figure>';
-      echo '<h1 class="common-kv__ttl">'.$ttl.'</h1>';
+      // echo '<h1 class="common-kv__ttl">'.$ttl.'</h1>';
       echo '</section>';
     }
     // 就職・資格サポート

@@ -1,8 +1,14 @@
-<div class="page-access">
-  <h1 class="page-access__heading page-heading"><span>アクセス一覧</span></h1>
-  <figure class="page-access__thumb"><img src="<?php echo get_stylesheet_directory_uri();?>/img/page/thumb_access.jpg" alt="アクセス一覧"></figure>
-  <div class="page-access__inner">
-    <section class="page-access__anchor">
+<?php
+$pageName = "page-access";
+$accessMap = get_field('access_map_thumb');
+?>
+<div class="<?php echo $pageName;?>">
+  <h1 class="<?php echo $pageName;?>__heading page-heading"><span>アクセス一覧</span></h1>
+  <?php if($accessMap):?>
+  <figure class="<?php echo $pageName;?>__thumb"><img class="object_fit" src="<?php echo $accessMap;?>" alt="アクセス一覧"></figure>
+  <?php endif;?>
+  <div class="<?php echo $pageName;?>__inner">
+    <section class="<?php echo $pageName;?>__anchor">
       <a href="#headquarters" class="btn__anchor">学園本部</a>
       <a href="#vocational_school" class="btn__anchor">専門学校</a>
       <a href="#graduate_university" class="btn__anchor">大学院大学</a>
@@ -11,14 +17,14 @@
       <a href="#children_club" class="btn__anchor">児童クラブ</a>
       <a href="#museum" class="btn__anchor">岩崎博物館</a>
     </section>
-    <section id="headquarters" class="page-access__cont">
-      <h2 class="page-access__contHeading page-ttl"><span>学園本部</span></h2>
-      <ul class="page-access__list">
-        <li class="page-access__item">
-          <h3 class="page-access__itemTtl">学園本部<span>経営企画部・キャリア開発部・施設管理部・経理財務部・総務部</span></h3>
-          <div class="page-access__itemRow">
-            <figure class="page-access__itemImg"><img src="<?php echo get_stylesheet_directory_uri();?>/img/page/access/img_isc.jpg" alt="" class="object_fit"></figure>
-            <figcaption class="page-access__itemInfo">
+    <section id="headquarters" class="<?php echo $pageName;?>__cont">
+      <h2 class="<?php echo $pageName;?>__contHeading page-ttl"><span>学園本部</span></h2>
+      <ul class="<?php echo $pageName;?>__list">
+        <li class="<?php echo $pageName;?>__item">
+          <h3 class="<?php echo $pageName;?>__itemTtl">学園本部<span>経営企画部・キャリア開発部・施設管理部・経理財務部・総務部</span></h3>
+          <div class="<?php echo $pageName;?>__itemRow">
+            <figure class="<?php echo $pageName;?>__itemImg"><img src="<?php echo get_stylesheet_directory_uri();?>/img/page/access/img_isc.jpg" alt="" class="object_fit"></figure>
+            <figcaption class="<?php echo $pageName;?>__itemInfo">
               <ul>
                 <li>
                   <h4>所在地</h4>
@@ -35,21 +41,21 @@
               </ul>
             </figcaption>
           </div>
-          <div class="page-access__itemBtn">
+          <div class="<?php echo $pageName;?>__itemBtn">
             <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="btn home_page">学校HP</a>
             <a href="" class="btn access" target="_blank">地図を見る</a>
           </div>
         </li>
       </ul>
     </section>
-    <section id="vocational_school" class="page-access__cont">
-      <h2 class="page-access__contHeading page-ttl"><span>専門学校</span></h2>
-      <ul class="page-access__list">
-        <li class="page-access__item">
-          <h3 class="page-access__itemTtl">情報科学専門学校</h3>
-          <div class="page-access__itemRow">
-            <figure class="page-access__itemImg"><img src="<?php echo get_stylesheet_directory_uri();?>/img/page/access/img_isc.jpg" alt="" class="object_fit"></figure>
-            <figcaption class="page-access__itemInfo">
+    <section id="vocational_school" class="<?php echo $pageName;?>__cont">
+      <h2 class="<?php echo $pageName;?>__contHeading page-ttl"><span>専門学校</span></h2>
+      <ul class="<?php echo $pageName;?>__list">
+        <li class="<?php echo $pageName;?>__item">
+          <h3 class="<?php echo $pageName;?>__itemTtl">情報科学専門学校</h3>
+          <div class="<?php echo $pageName;?>__itemRow">
+            <figure class="<?php echo $pageName;?>__itemImg"><img src="<?php echo get_stylesheet_directory_uri();?>/img/page/access/img_isc.jpg" alt="" class="object_fit"></figure>
+            <figcaption class="<?php echo $pageName;?>__itemInfo">
               <ul>
                 <li>
                   <h4>所在地</h4>
@@ -66,17 +72,17 @@
               </ul>
             </figcaption>
           </div>
-          <div class="page-access__itemBtn">
+          <div class="<?php echo $pageName;?>__itemBtn">
             <a href="https://isc.iwasaki.ac.jp/" class="btn home_page" target="_blank">学校HP</a>
             <a href="" class="btn access" target="_blank">地図を見る</a>
           </div>
         </li>
-        <li class="page-access__item">
-          <h3 class="page-access__itemTtl">横浜スポーツウェルネス専門学校</h3>
+        <li class="<?php echo $pageName;?>__item">
+          <h3 class="<?php echo $pageName;?>__itemTtl">横浜スポーツウェルネス専門学校</h3>
           <span>(2024年4月 横浜医療情報専門学校より校名変更予定)</span>
-          <div class="page-access__itemRow">
-            <figure class="page-access__itemImg"><img src="<?php echo get_stylesheet_directory_uri();?>/img/page/access/img_ysw.jpg" alt="" class="object_fit"></figure>
-            <figcaption class="page-access__itemInfo">
+          <div class="<?php echo $pageName;?>__itemRow">
+            <figure class="<?php echo $pageName;?>__itemImg"><img src="<?php echo get_stylesheet_directory_uri();?>/img/page/access/img_ysw.jpg" alt="" class="object_fit"></figure>
+            <figcaption class="<?php echo $pageName;?>__itemInfo">
               <ul>
                 <li>
                   <h4>所在地</h4>
@@ -93,16 +99,16 @@
               </ul>
             </figcaption>
           </div>
-          <div class="page-access__itemBtn">
+          <div class="<?php echo $pageName;?>__itemBtn">
             <a href="https://iscs.iwasaki.ac.jp/" class="btn home_page" target="_blank">学校HP</a>
             <a href="" class="btn access" target="_blank">地図を見る</a>
           </div>
         </li>
-        <li class="page-access__item">
-          <h3 class="page-access__itemTtl">横浜ｆカレッジ</h3>
-          <div class="page-access__itemRow">
-            <figure class="page-access__itemImg"><img src="<?php echo get_stylesheet_directory_uri();?>/img/page/access/img_yfc.jpg" alt="" class="object_fit"></figure>
-            <figcaption class="page-access__itemInfo">
+        <li class="<?php echo $pageName;?>__item">
+          <h3 class="<?php echo $pageName;?>__itemTtl">横浜ｆカレッジ</h3>
+          <div class="<?php echo $pageName;?>__itemRow">
+            <figure class="<?php echo $pageName;?>__itemImg"><img src="<?php echo get_stylesheet_directory_uri();?>/img/page/access/img_yfc.jpg" alt="" class="object_fit"></figure>
+            <figcaption class="<?php echo $pageName;?>__itemInfo">
               <ul>
                 <li>
                   <h4>所在地</h4>
@@ -119,16 +125,16 @@
               </ul>
             </figcaption>
           </div>
-          <div class="page-access__itemBtn">
+          <div class="<?php echo $pageName;?>__itemBtn">
             <a href="https://yfc.iwasaki.ac.jp/" class="btn home_page" target="_blank">学校HP</a>
             <a href="" class="btn access" target="_blank">地図を見る</a>
           </div>
         </li>
-        <li class="page-access__item">
-          <h3 class="page-access__itemTtl">横浜デジタルアーツ専門学校</h3>
-          <div class="page-access__itemRow">
-            <figure class="page-access__itemImg"><img src="<?php echo get_stylesheet_directory_uri();?>/img/page/access/img_yda.jpg" alt="" class="object_fit"></figure>
-            <figcaption class="page-access__itemInfo">
+        <li class="<?php echo $pageName;?>__item">
+          <h3 class="<?php echo $pageName;?>__itemTtl">横浜デジタルアーツ専門学校</h3>
+          <div class="<?php echo $pageName;?>__itemRow">
+            <figure class="<?php echo $pageName;?>__itemImg"><img src="<?php echo get_stylesheet_directory_uri();?>/img/page/access/img_yda.jpg" alt="" class="object_fit"></figure>
+            <figcaption class="<?php echo $pageName;?>__itemInfo">
               <ul>
                 <li>
                   <h4>所在地</h4>
@@ -145,16 +151,16 @@
               </ul>
             </figcaption>
           </div>
-          <div class="page-access__itemBtn">
+          <div class="<?php echo $pageName;?>__itemBtn">
             <a href="https://yda.iwasaki.ac.jp/index.html" class="btn home_page" target="_blank">学校HP</a>
             <a href="" class="btn access" target="_blank">地図を見る</a>
           </div>
         </li>
-        <li class="page-access__item">
-          <h3 class="page-access__itemTtl">横浜リハビリテーション専門学校</h3>
-          <div class="page-access__itemRow">
-            <figure class="page-access__itemImg"><img src="<?php echo get_stylesheet_directory_uri();?>/img/page/access/img_ycr.jpg" alt="" class="object_fit"></figure>
-            <figcaption class="page-access__itemInfo">
+        <li class="<?php echo $pageName;?>__item">
+          <h3 class="<?php echo $pageName;?>__itemTtl">横浜リハビリテーション専門学校</h3>
+          <div class="<?php echo $pageName;?>__itemRow">
+            <figure class="<?php echo $pageName;?>__itemImg"><img src="<?php echo get_stylesheet_directory_uri();?>/img/page/access/img_ycr.jpg" alt="" class="object_fit"></figure>
+            <figcaption class="<?php echo $pageName;?>__itemInfo">
               <ul>
                 <li>
                   <h4>所在地</h4>
@@ -171,16 +177,16 @@
               </ul>
             </figcaption>
           </div>
-          <div class="page-access__itemBtn">
+          <div class="<?php echo $pageName;?>__itemBtn">
             <a href="https://ycr.iwasaki.ac.jp/" class="btn home_page" target="_blank">学校HP</a>
             <a href="" class="btn access" target="_blank">地図を見る</a>
           </div>
         </li>
-        <li class="page-access__item">
-          <h3 class="page-access__itemTtl">横浜保育福祉専門学校</h3>
-          <div class="page-access__itemRow">
-            <figure class="page-access__itemImg"><img src="<?php echo get_stylesheet_directory_uri();?>/img/page/access/img_hoiku.jpg" alt="" class="object_fit"></figure>
-            <figcaption class="page-access__itemInfo">
+        <li class="<?php echo $pageName;?>__item">
+          <h3 class="<?php echo $pageName;?>__itemTtl">横浜保育福祉専門学校</h3>
+          <div class="<?php echo $pageName;?>__itemRow">
+            <figure class="<?php echo $pageName;?>__itemImg"><img src="<?php echo get_stylesheet_directory_uri();?>/img/page/access/img_hoiku.jpg" alt="" class="object_fit"></figure>
+            <figcaption class="<?php echo $pageName;?>__itemInfo">
               <ul>
                 <li>
                   <h4>所在地</h4>
@@ -197,16 +203,16 @@
               </ul>
             </figcaption>
           </div>
-          <div class="page-access__itemBtn">
+          <div class="<?php echo $pageName;?>__itemBtn">
             <a href="https://hoiku.iwasaki.ac.jp/" class="btn home_page" target="_blank">学校HP</a>
             <a href="" class="btn access" target="_blank">地図を見る</a>
           </div>
         </li>
-        <li class="page-access__item">
-          <h3 class="page-access__itemTtl">横浜実践看護専門学校</h3>
-          <div class="page-access__itemRow">
-            <figure class="page-access__itemImg"><img src="<?php echo get_stylesheet_directory_uri();?>/img/page/access/img_jkango.jpg" alt="" class="object_fit"></figure>
-            <figcaption class="page-access__itemInfo">
+        <li class="<?php echo $pageName;?>__item">
+          <h3 class="<?php echo $pageName;?>__itemTtl">横浜実践看護専門学校</h3>
+          <div class="<?php echo $pageName;?>__itemRow">
+            <figure class="<?php echo $pageName;?>__itemImg"><img src="<?php echo get_stylesheet_directory_uri();?>/img/page/access/img_jkango.jpg" alt="" class="object_fit"></figure>
+            <figcaption class="<?php echo $pageName;?>__itemInfo">
               <ul>
                 <li>
                   <h4>所在地</h4>
@@ -223,21 +229,21 @@
               </ul>
             </figcaption>
           </div>
-          <div class="page-access__itemBtn">
+          <div class="<?php echo $pageName;?>__itemBtn">
             <a href="https://jkango.iwasaki.ac.jp/index.html" class="btn home_page" target="_blank">学校HP</a>
             <a href="" class="btn access" target="_blank">地図を見る</a>
           </div>
         </li>
       </ul>
     </section>
-    <section id="graduate_university" class="page-access__cont">
-      <h2 class="page-access__contHeading page-ttl"><span>大学院大学</span></h2>
-      <ul class="page-access__list">
-        <li class="page-access__item">
-          <h3 class="page-access__itemTtl">情報セキュリティ大学院大学</h3>
-          <div class="page-access__itemRow">
-            <figure class="page-access__itemImg"><img src="<?php echo get_stylesheet_directory_uri();?>/img/page/access/img_iisec.jpg" alt="" class="object_fit"></figure>
-            <figcaption class="page-access__itemInfo">
+    <section id="graduate_university" class="<?php echo $pageName;?>__cont">
+      <h2 class="<?php echo $pageName;?>__contHeading page-ttl"><span>大学院大学</span></h2>
+      <ul class="<?php echo $pageName;?>__list">
+        <li class="<?php echo $pageName;?>__item">
+          <h3 class="<?php echo $pageName;?>__itemTtl">情報セキュリティ大学院大学</h3>
+          <div class="<?php echo $pageName;?>__itemRow">
+            <figure class="<?php echo $pageName;?>__itemImg"><img src="<?php echo get_stylesheet_directory_uri();?>/img/page/access/img_iisec.jpg" alt="" class="object_fit"></figure>
+            <figcaption class="<?php echo $pageName;?>__itemInfo">
               <ul>
                 <li>
                   <h4>所在地</h4>
@@ -254,21 +260,21 @@
               </ul>
             </figcaption>
           </div>
-          <div class="page-access__itemBtn">
+          <div class="<?php echo $pageName;?>__itemBtn">
             <a href="https://www.iisec.ac.jp/" class="btn home_page" target="_blank">学校HP</a>
             <a href="" class="btn access" target="_blank">地図を見る</a>
           </div>
         </li>
       </ul>
     </section>
-    <section id="kindergarten" class="page-access__cont">
-      <h2 class="page-access__contHeading page-ttl"><span>幼稚園</span></h2>
-      <ul class="page-access__list">
-        <li class="page-access__item">
-          <h3 class="page-access__itemTtl">岩崎学園付属幼稚園</h3>
-          <div class="page-access__itemRow">
-            <figure class="page-access__itemImg"><img src="<?php echo get_stylesheet_directory_uri();?>/img/page/dummy.png" alt="" class="object_fit"></figure>
-            <figcaption class="page-access__itemInfo">
+    <section id="kindergarten" class="<?php echo $pageName;?>__cont">
+      <h2 class="<?php echo $pageName;?>__contHeading page-ttl"><span>幼稚園</span></h2>
+      <ul class="<?php echo $pageName;?>__list">
+        <li class="<?php echo $pageName;?>__item">
+          <h3 class="<?php echo $pageName;?>__itemTtl">岩崎学園付属幼稚園</h3>
+          <div class="<?php echo $pageName;?>__itemRow">
+            <figure class="<?php echo $pageName;?>__itemImg"><img src="<?php echo get_stylesheet_directory_uri();?>/img/page/dummy.png" alt="" class="object_fit"></figure>
+            <figcaption class="<?php echo $pageName;?>__itemInfo">
               <ul>
                 <li>
                   <h4>所在地</h4>
@@ -285,16 +291,16 @@
               </ul>
             </figcaption>
           </div>
-          <div class="page-access__itemBtn">
+          <div class="<?php echo $pageName;?>__itemBtn">
             <a href="https://www.iwasaki.ac.jp/hodogaya/index.html" class="btn home_page" target="_blank">学校HP</a>
             <a href="" class="btn access" target="_blank">地図を見る</a>
           </div>
         </li>
-        <li class="page-access__item">
-          <h3 class="page-access__itemTtl">岩崎学園付属磯子幼稚園</h3>
-          <div class="page-access__itemRow">
-            <figure class="page-access__itemImg"><img src="<?php echo get_stylesheet_directory_uri();?>/img/page/dummy.png" alt="" class="object_fit"></figure>
-            <figcaption class="page-access__itemInfo">
+        <li class="<?php echo $pageName;?>__item">
+          <h3 class="<?php echo $pageName;?>__itemTtl">岩崎学園付属磯子幼稚園</h3>
+          <div class="<?php echo $pageName;?>__itemRow">
+            <figure class="<?php echo $pageName;?>__itemImg"><img src="<?php echo get_stylesheet_directory_uri();?>/img/page/dummy.png" alt="" class="object_fit"></figure>
+            <figcaption class="<?php echo $pageName;?>__itemInfo">
               <ul>
                 <li>
                   <h4>所在地</h4>
@@ -311,21 +317,21 @@
               </ul>
             </figcaption>
           </div>
-          <div class="page-access__itemBtn">
+          <div class="<?php echo $pageName;?>__itemBtn">
             <a href="https://www.iwasaki.ac.jp/isogo/index.htm" class="btn home_page" target="_blank">学校HP</a>
             <a href="" class="btn access" target="_blank">地図を見る</a>
           </div>
         </li>
       </ul>
     </section>
-    <section id="nursery_school" class="page-access__cont">
-      <h2 class="page-access__contHeading page-ttl"><span>保育園</span></h2>
-      <ul class="page-access__list">
-        <li class="page-access__item">
-          <h3 class="page-access__itemTtl">岩崎学園東戸塚保育園</h3>
-          <div class="page-access__itemRow">
-            <figure class="page-access__itemImg"><img src="<?php echo get_stylesheet_directory_uri();?>/img/page/dummy.png" alt="" class="object_fit"></figure>
-            <figcaption class="page-access__itemInfo">
+    <section id="nursery_school" class="<?php echo $pageName;?>__cont">
+      <h2 class="<?php echo $pageName;?>__contHeading page-ttl"><span>保育園</span></h2>
+      <ul class="<?php echo $pageName;?>__list">
+        <li class="<?php echo $pageName;?>__item">
+          <h3 class="<?php echo $pageName;?>__itemTtl">岩崎学園東戸塚保育園</h3>
+          <div class="<?php echo $pageName;?>__itemRow">
+            <figure class="<?php echo $pageName;?>__itemImg"><img src="<?php echo get_stylesheet_directory_uri();?>/img/page/dummy.png" alt="" class="object_fit"></figure>
+            <figcaption class="<?php echo $pageName;?>__itemInfo">
               <ul>
                 <li>
                   <h4>所在地</h4>
@@ -343,16 +349,16 @@
               </ul>
             </figcaption>
           </div>
-          <div class="page-access__itemBtn">
+          <div class="<?php echo $pageName;?>__itemBtn">
             <a href="https://hoiku.iwasaki.ac.jp/nursery/" class="btn home_page" target="_blank">学校HP</a>
             <a href="" class="btn access" target="_blank">地図を見る</a>
           </div>
         </li>
-        <li class="page-access__item">
-          <h3 class="page-access__itemTtl">岩崎学園新横浜保育園</h3>
-          <div class="page-access__itemRow">
-            <figure class="page-access__itemImg"><img src="<?php echo get_stylesheet_directory_uri();?>/img/page/dummy.png" alt="" class="object_fit"></figure>
-            <figcaption class="page-access__itemInfo">
+        <li class="<?php echo $pageName;?>__item">
+          <h3 class="<?php echo $pageName;?>__itemTtl">岩崎学園新横浜保育園</h3>
+          <div class="<?php echo $pageName;?>__itemRow">
+            <figure class="<?php echo $pageName;?>__itemImg"><img src="<?php echo get_stylesheet_directory_uri();?>/img/page/dummy.png" alt="" class="object_fit"></figure>
+            <figcaption class="<?php echo $pageName;?>__itemInfo">
               <ul>
                 <li>
                   <h4>所在地</h4>
@@ -370,16 +376,16 @@
               </ul>
             </figcaption>
           </div>
-          <div class="page-access__itemBtn">
+          <div class="<?php echo $pageName;?>__itemBtn">
             <a href="https://hoiku.iwasaki.ac.jp/kosodate/isyh/index.html" class="btn home_page" target="_blank">学校HP</a>
             <a href="" class="btn access" target="_blank">地図を見る</a>
           </div>
         </li>
-        <li class="page-access__item">
-          <h3 class="page-access__itemTtl">岩崎学園新横浜第二保育園</h3>
-          <div class="page-access__itemRow">
-            <figure class="page-access__itemImg"><img src="<?php echo get_stylesheet_directory_uri();?>/img/page/dummy.png" alt="" class="object_fit"></figure>
-            <figcaption class="page-access__itemInfo">
+        <li class="<?php echo $pageName;?>__item">
+          <h3 class="<?php echo $pageName;?>__itemTtl">岩崎学園新横浜第二保育園</h3>
+          <div class="<?php echo $pageName;?>__itemRow">
+            <figure class="<?php echo $pageName;?>__itemImg"><img src="<?php echo get_stylesheet_directory_uri();?>/img/page/dummy.png" alt="" class="object_fit"></figure>
+            <figcaption class="<?php echo $pageName;?>__itemInfo">
               <ul>
                 <li>
                   <h4>所在地</h4>
@@ -397,21 +403,21 @@
               </ul>
             </figcaption>
           </div>
-          <div class="page-access__itemBtn">
+          <div class="<?php echo $pageName;?>__itemBtn">
             <a href="https://hoiku.iwasaki.ac.jp/kosodate/isyh2/index.html" class="btn home_page" target="_blank">学校HP</a>
             <a href="" class="btn access" target="_blank">地図を見る</a>
           </div>
         </li>
       </ul>
     </section>
-    <section id="children_club" class="page-access__cont">
-      <h2 class="page-access__contHeading page-ttl"><span>児童クラブ</span></h2>
-      <ul class="page-access__list">
-        <li class="page-access__item">
-          <h3 class="page-access__itemTtl">岩崎学園新横浜放課後児童クラブ</h3>
-          <div class="page-access__itemRow">
-            <figure class="page-access__itemImg"><img src="<?php echo get_stylesheet_directory_uri();?>/img/page/dummy.png" alt="" class="object_fit"></figure>
-            <figcaption class="page-access__itemInfo">
+    <section id="children_club" class="<?php echo $pageName;?>__cont">
+      <h2 class="<?php echo $pageName;?>__contHeading page-ttl"><span>児童クラブ</span></h2>
+      <ul class="<?php echo $pageName;?>__list">
+        <li class="<?php echo $pageName;?>__item">
+          <h3 class="<?php echo $pageName;?>__itemTtl">岩崎学園新横浜放課後児童クラブ</h3>
+          <div class="<?php echo $pageName;?>__itemRow">
+            <figure class="<?php echo $pageName;?>__itemImg"><img src="<?php echo get_stylesheet_directory_uri();?>/img/page/dummy.png" alt="" class="object_fit"></figure>
+            <figcaption class="<?php echo $pageName;?>__itemInfo">
               <ul>
                 <li>
                   <h4>所在地</h4>
@@ -428,16 +434,16 @@
               </ul>
             </figcaption>
           </div>
-          <div class="page-access__itemBtn">
+          <div class="<?php echo $pageName;?>__itemBtn">
             <a href="https://hoiku.iwasaki.ac.jp/gakudou/s_index.html" class="btn home_page" target="_blank">学校HP</a>
             <a href="" class="btn access" target="_blank">地図を見る</a>
           </div>
         </li>
-        <li class="page-access__item">
-          <h3 class="page-access__itemTtl">岩崎学園品濃町放課後児童クラブ［大地］［大空］</h3>
-          <div class="page-access__itemRow">
-            <figure class="page-access__itemImg"><img src="<?php echo get_stylesheet_directory_uri();?>/img/page/dummy.png" alt="" class="object_fit"></figure>
-            <figcaption class="page-access__itemInfo">
+        <li class="<?php echo $pageName;?>__item">
+          <h3 class="<?php echo $pageName;?>__itemTtl">岩崎学園品濃町放課後児童クラブ［大地］［大空］</h3>
+          <div class="<?php echo $pageName;?>__itemRow">
+            <figure class="<?php echo $pageName;?>__itemImg"><img src="<?php echo get_stylesheet_directory_uri();?>/img/page/dummy.png" alt="" class="object_fit"></figure>
+            <figcaption class="<?php echo $pageName;?>__itemInfo">
               <ul>
                 <li>
                   <h4>所在地</h4>
@@ -454,21 +460,21 @@
               </ul>
             </figcaption>
           </div>
-          <div class="page-access__itemBtn">
+          <div class="<?php echo $pageName;?>__itemBtn">
             <a href="https://hoiku.iwasaki.ac.jp/gakudou" class="btn home_page" target="_blank">学校HP</a>
             <a href="" class="btn access" target="_blank">地図を見る</a>
           </div>
         </li>
       </ul>
     </section>
-    <section id="museum" class="page-access__cont">
-      <h2 class="page-access__contHeading page-ttl "><span>岩崎博物館</span></h2>
-      <ul class="page-access__list">
-        <li class="page-access__item">
-          <h3 class="page-access__itemTtl">岩崎博物館（ゲーテ座記念）</h3>
-          <div class="page-access__itemRow">
-            <figure class="page-access__itemImg"><img src="<?php echo get_stylesheet_directory_uri();?>/img/page/access/img_museum.jpg" alt="" class="object_fit"></figure>
-            <figcaption class="page-access__itemInfo">
+    <section id="museum" class="<?php echo $pageName;?>__cont">
+      <h2 class="<?php echo $pageName;?>__contHeading page-ttl "><span>岩崎博物館</span></h2>
+      <ul class="<?php echo $pageName;?>__list">
+        <li class="<?php echo $pageName;?>__item">
+          <h3 class="<?php echo $pageName;?>__itemTtl">岩崎博物館（ゲーテ座記念）</h3>
+          <div class="<?php echo $pageName;?>__itemRow">
+            <figure class="<?php echo $pageName;?>__itemImg"><img src="<?php echo get_stylesheet_directory_uri();?>/img/page/access/img_museum.jpg" alt="" class="object_fit"></figure>
+            <figcaption class="<?php echo $pageName;?>__itemInfo">
               <ul>
                 <li>
                   <h4>所在地</h4>
@@ -485,7 +491,7 @@
               </ul>
             </figcaption>
           </div>
-          <div class="page-access__itemBtn">
+          <div class="<?php echo $pageName;?>__itemBtn">
             <a href="https://www.iwasaki.ac.jp/museum/index.html" class="btn home_page" target="_blank">学校HP</a>
             <a href="" class="btn access" target="_blank">地図を見る</a>
           </div>
