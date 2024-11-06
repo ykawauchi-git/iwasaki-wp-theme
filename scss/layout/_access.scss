@@ -4,16 +4,16 @@
 $page-access: ".page-access";
 
 .page-access{
-  padding: 100px 0 50px;
+  padding-top: 30px;
   @include mq_sp{
-    padding: size_sp(100) 0 0;
+    padding: size_sp(60) 0 0;
   }
   &__thumb{
     max-width: 1000px;
     width: 100%;
-    margin: 70px auto 0;
+    margin: 50px auto 0;
     @include mq_sp{
-      margin-top: size_sp(80);
+      margin-top: size_sp(51);
     }
   }
   &__inner{
@@ -22,7 +22,7 @@ $page-access: ".page-access";
     margin: 50px auto 0;
     @include mq_sp{
       max-width: size_sp(696);
-      margin-top: size_sp(80);
+      margin-top: size_sp(100);
     }
   }
   &__anchor{
@@ -67,9 +67,9 @@ $page-access: ".page-access";
   &__cont{
     margin-top: 114px;
     @include mq_sp{
-      max-width: size_sp(680);
+      max-width: size_sp(630);
       width: 100%;
-      margin: size_sp(126) auto 0;
+      margin: size_sp(146) auto 0;
     }
     &:nth-of-type(n + 3){
       margin-top: 150px;
@@ -82,23 +82,23 @@ $page-access: ".page-access";
   &__list{
     margin-top: 60px;
     @include mq_sp{
-      max-width: size_sp(660);
-      margin: size_sp(61) auto 0;
+      max-width: size_sp(596);
+      margin: size_sp(70) auto 0;
     }
   }
   &__item{
     position: relative;
-    padding: 27px 37px;
+    padding: 28px;
     border: 2px solid $gray01;
     @include mq_sp{
       width: 100%;
-      padding: size_sp(35) size_sp(32) size_sp(41);
+      padding: size_sp(35) size_sp(17) size_sp(40);
       border-width: size_sp(4);
     }
     &:nth-of-type(n + 2){
       margin-top: 50px;
       @include mq_sp{
-        margin-top: size_sp(60);
+        margin-top: size_sp(50);
       }
     }
     & > span {
@@ -120,6 +120,9 @@ $page-access: ".page-access";
       @include mq_sp{
         @include fz_vw(32);
         line-height: (57/32);
+        max-width: size_sp(500);
+        width: 100%;
+        margin: 0 auto;
         justify-content: center;
         text-align: center;
       }
@@ -141,7 +144,7 @@ $page-access: ".page-access";
       @include flex(flex, wrap, space-between, normal, normal, row);
       margin-top: 30px;
       @include mq_sp{
-        margin-top: size_sp(34);
+        margin-top: size_sp(28);
       }
     }
     &Img{
@@ -209,33 +212,8 @@ $page-access: ".page-access";
       @include mq_sp{
         margin-top: size_sp(60);
       }
-      .btn{
-        @include font-size(13);
-        line-height: (19/13);
-        letter-spacing: 0.1em;
-        font-weight: 400;
-        text-align: center;
-        display: block;
-        width: 138px;
-        padding: 8px 0 8px 0.05em;
-        border-width: 1px;
-        border-style: solid;
-        background: $white00;
-        color: $black01;
-        border-color: $black01;
-        @include mq_sp{
-          @include fz_vw(22);
-          line-height: (44/22);
-          width: size_sp(238);
-          padding: size_sp(10) 0 size_sp(10) 0.05em;
-          border-width: size_sp(1);
-        }
-        &:hover{
-          opacity: 1;
-          background: $black01;
-          color: $white00;
-        }
-        &:nth-of-type(2){
+      & .mod-btn {
+        &:nth-of-type(n + 2) {
           margin-left: 30px;
           @include mq_sp{
             margin-left: size_sp(30);

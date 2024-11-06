@@ -78,3 +78,47 @@
     }
   }
 }
+
+.mod-btn {
+  max-width: 148px;
+  width: 100%;
+  text-align: center;
+  color : $black01;
+  padding: 6px 6px 5px;
+  display: block;
+  border : solid 1px $black01;
+  @include mq_sp{
+    @include fz_vw(22);
+    line-height: (44/22);
+    max-width: size_sp(262);
+    padding: size_sp(14);
+    border-width: size_sp(2);
+  }
+  &:hover {
+    opacity: 1;
+  }
+  &.w {
+    color : $black01;
+    background : $white00;
+    border : solid 1px $black01;
+    @include mq_sp{
+      border-width : size_sp(2);
+    }
+    &:hover {
+      color : $white00;
+      background : $black01;
+    }
+  }
+  &.b {
+    color : $white00;
+    background : $black02;
+    border : solid 1px $black02;
+    @include mq_sp{
+      border-width : size_sp(2);
+    }
+    &:hover {
+      color : $black02;
+      background : $white00;
+    }
+  }
+}

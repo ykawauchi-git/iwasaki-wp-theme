@@ -143,35 +143,35 @@ h6 {
 	// }
 }
 
-.page-subHeading {
-	font-size : 30px;
-	font-weight : 700;
-	line-height : (44/30);
-	letter-spacing: .05em;
-	text-align: center;
-	position: relative;
-	@include mq_sp{
-		@include fz_vw(36);
-		line-height: (52/36);
-	}
-	&:before {
-		content : "";
-		width : 100px;
-		height : 15px;
-		background: url(./img/common/icn_subHeading.svg) no-repeat center/cover;
-		position : absolute;
-		bottom : -31px;
-		left : 50%;
-		transform: translateX(-50%);
-		@include mq_sp{
-			width : size_sp(122);
-			height : size_sp(27);
-			background: url(./img/common/icn_subHeading-sp.svg) no-repeat center/cover;
-			bottom : size_sp(-51);
+// .page-subHeading {
+// 	font-size : 30px;
+// 	font-weight : 700;
+// 	line-height : (44/30);
+// 	letter-spacing: .05em;
+// 	text-align: center;
+// 	position: relative;
+// 	@include mq_sp{
+// 		@include fz_vw(36);
+// 		line-height: (52/36);
+// 	}
+// 	&:before {
+// 		content : "";
+// 		width : 100px;
+// 		height : 15px;
+// 		background: url(./img/common/icn_subHeading.svg) no-repeat center/cover;
+// 		position : absolute;
+// 		bottom : -31px;
+// 		left : 50%;
+// 		transform: translateX(-50%);
+// 		@include mq_sp{
+// 			width : size_sp(122);
+// 			height : size_sp(27);
+// 			background: url(./img/common/icn_subHeading-sp.svg) no-repeat center/cover;
+// 			bottom : size_sp(-51);
 	
-		}
-	}
-}
+// 		}
+// 	}
+// }
 
 .page-ttl{
 	@include font-size(24);
@@ -193,11 +193,9 @@ h6 {
 		padding: 10px 0;
 		background: $black02;
 		margin: 0 auto;
-		border-radius: 7px;
 		@include mq_sp{
 			width: size_sp(530);
 			padding: size_sp(16) 0;
-			border-radius: size_sp(7);
 		}
 	}
 	&:after{
@@ -208,56 +206,87 @@ h6 {
 		background: $black02;
 		z-index: -1;
 		@include mq_sp{
-			width: size_sp(680);
+			width: size_sp(630);
 			height: size_sp(4);
 		}
 	}
 } 
 
-.page-bracketsTtl {
-	font-size: 30px;
-	font-size: 1.875rem;
-	line-height: 1.46667;
-	letter-spacing: 0.035em;
-	text-align: center;
-	width: 100%;
-	@include mq_sp{
-    font-size: 4.8vw;
-    line-height: 1.44444;
-    max-width: none;
-	}
-	& span {
-		display: inline-block;
-    position: relative;
-    padding: 12px calc(43px - 0.025em) 12px 43px;
+
+.page-subHeading {
+	@include flex(flex, wrap, center, stretch, normal, row);
+	& > span {
+		font-size: 24px;
+		font-weight: 700;
+		line-height: (35/24);
+		padding-bottom: 19px;
+		text-align: center;
+		position: relative;
 		@include mq_sp{
-			padding : 2vw calc(7.46667vw - 0.025em) 2vw 7.46667vw;
+			@include fz_vw(36);
+			line-height: (52/36);
+			padding-bottom: size_sp(28);
 		}
 		&:before {
-			content: "";
+			content : "";
+			width: 72px;
+			height: 5px;
+			background : $black02;
 			position: absolute;
-			width: 36px;
-			height: 36px;
-			top: 0;
-			left: 0;
-			background: url(./img/page/icn_heading-group-l.svg) no-repeat center/cover;
-			@include mq_sp{
-				width: 5.86667vw;
-				height: 5.86667vw;
-			}
-		}
-		&:after {
-			content: "";
-			position: absolute;
-			width: 36px;
-			height: 36px;
+			left: 50%;
 			bottom: 0;
-			right: 0;
-			background: url(./img/page/icn_heading-group-r.svg) no-repeat center/cover;
+			transform: translateX(-50%);
 			@include mq_sp{
-				width: 5.86667vw;
-				height: 5.86667vw;
+				width: size_sp(112);
+				height: size_sp(10);
 			}
 		}
 	}
 }
+// .page-bracketsTtl {
+// 	font-size: 30px;
+// 	font-size: 1.875rem;
+// 	line-height: 1.46667;
+// 	letter-spacing: 0.035em;
+// 	text-align: center;
+// 	width: 100%;
+// 	@include mq_sp{
+//     font-size: 4.8vw;
+//     line-height: 1.44444;
+//     max-width: none;
+// 	}
+// 	& span {
+// 		display: inline-block;
+//     position: relative;
+//     padding: 12px calc(43px - 0.025em) 12px 43px;
+// 		@include mq_sp{
+// 			padding : 2vw calc(7.46667vw - 0.025em) 2vw 7.46667vw;
+// 		}
+// 		&:before {
+// 			content: "";
+// 			position: absolute;
+// 			width: 36px;
+// 			height: 36px;
+// 			top: 0;
+// 			left: 0;
+// 			background: url(./img/page/icn_heading-group-l.svg) no-repeat center/cover;
+// 			@include mq_sp{
+// 				width: 5.86667vw;
+// 				height: 5.86667vw;
+// 			}
+// 		}
+// 		&:after {
+// 			content: "";
+// 			position: absolute;
+// 			width: 36px;
+// 			height: 36px;
+// 			bottom: 0;
+// 			right: 0;
+// 			background: url(./img/page/icn_heading-group-r.svg) no-repeat center/cover;
+// 			@include mq_sp{
+// 				width: 5.86667vw;
+// 				height: 5.86667vw;
+// 			}
+// 		}
+// 	}
+// }
