@@ -6,7 +6,7 @@ $page-contact: ".page-contact";
 .page-contact{
   padding-top: 30px;
   @include mq_sp{
-    padding-top: size_sp(100);
+    padding-top: size_sp(61);
     padding-bottom: 0;
   }
   &__inner{
@@ -21,7 +21,7 @@ $page-contact: ".page-contact";
     @include flex(flex, wrap, center, normal, normal, row);
     margin-top: 50px;
     @include mq_sp{
-      margin-top: size_sp(80);
+      margin-top: size_sp(50);
     }
     .btn__anchor{
       @include font-size(15);
@@ -30,6 +30,9 @@ $page-contact: ".page-contact";
       @include mq_sp{
         @include fz_vw(26);
         width: size_sp(337);
+      }
+      &.children_club {
+        letter-spacing: 0em;
       }
       &:nth-of-type(n + 2){
         margin-left: 32px;
@@ -61,14 +64,14 @@ $page-contact: ".page-contact";
   &__cont{
     margin-top: 114px;
     @include mq_sp{
-      max-width: size_sp(680);
+      max-width: size_sp(630);
       width: 100%;
       margin: size_sp(146) auto 0;
     }
     &:nth-of-type( n + 3){
       margin-top: 150px;
       @include mq_sp{
-        margin-top: size_sp(150);
+        margin-top: size_sp(120);
       }
     }
     &:nth-of-type(3) {
@@ -94,59 +97,38 @@ $page-contact: ".page-contact";
         }
       }
     }
-  }
-  &__contTtl{}
-  &__list{
-    @include flex(flex, wrap, flex-start, normal, normal, row);
-    margin-top: 60px;
-    @include mq_sp{
-      max-width: size_sp(660);
-      margin: size_sp(70) auto 0;
-    }
-  }
-  &__item{
-    position: relative;
-    width: 374px;
-    padding: 24px 14px 21px;
-    margin-right: 20px;
-    border: 2px solid $gray01;
-    @include mq_sp{
-      width: 100%;
-      padding: size_sp(36) size_sp(32) size_sp(40);
-      margin-right: 0;
-      border-width: size_sp(4);
-    }
     &:not(.wide){
-      &:nth-of-type(2n){
-        margin-right: 0;
-      }
-      &:nth-of-type(n + 3){
-        margin-top: 40px;
-        @include mq_sp{
-          margin-top: size_sp(60);
+      #{$page-contact}__item{
+        &:nth-of-type(2n){
+          margin-right: 0;
+        }
+        &:nth-of-type(n + 3){
+          margin-top: 40px;
+          @include mq_sp{
+            margin-top: size_sp(60);
+          }
+        }
+        &:nth-of-type(n + 2){
+          @include mq_sp{
+            margin-top: size_sp(60);
+          }
         }
       }
-      &:nth-of-type(n + 2){
-        @include mq_sp{
-          margin-top: size_sp(60);
-        }
-      }
-    }
-    &:only-of-type{
-      margin: 0 auto;
     }
     &.wide{
-      @include flex(flex, wrap, space-between, center, normal, row);
-      width: 100%;
-      padding: 13px 36px 25px;
-      margin-right: 0;
-      @include mq_sp{
-        padding: size_sp(36) size_sp(32) size_sp(41);
-      }
-      &:nth-of-type(n + 2){
-        margin-top: 40px;
+      #{$page-contact}__item{
+        @include flex(flex, wrap, space-between, center, normal, row);
+        width: 100%;
+        padding: 12px 34px 23px 36px;
+        margin-right: 0;
         @include mq_sp{
-          margin-top: size_sp(60);
+          padding: size_sp(32) size_sp(32) size_sp(40);
+        }
+        &:nth-of-type(n + 2){
+          margin-top: 40px;
+          @include mq_sp{
+            margin-top: size_sp(60);
+          }
         }
       }
       #{$page-contact}__col{
@@ -158,22 +140,21 @@ $page-contact: ".page-contact";
       #{$page-contact}__ttl{
         align-items: flex-start;
         text-align: left;
-        line-height: (29/20);
         @include mq_sp{
-          line-height: (57/32);
           align-items: center;
           text-align: center;
         }
       }
       #{$page-contact}__info{
-        @include flex(flex, wrap, flex-start, normal, normal, row);
-        line-height: (20/14);
-        padding-top: 13px;
-        margin-top: -1px;
+        text-align: left;
+        justify-content: flex-start;
+        min-height: auto;
+        padding-top: 11px;
+        margin-top: -2px;
         @include mq_sp{
-          line-height: (58/28);
-          padding-top: size_sp(23);
-          margin-top: size_sp(27);
+          text-align: center;
+          padding-top: size_sp(25);
+          margin-top: size_sp(25);
         }
         span{
           display: block;
@@ -192,12 +173,68 @@ $page-contact: ".page-contact";
           }
         }
       }
-      #{$page-contact}__btn{
-        margin: 14px 0 0;
+      & .mod-btn {
+        margin-top: 0;
+        margin-right: 0;
+        margin-bottom: 13px;
         @include mq_sp{
-          margin: size_sp(31) auto 0;
+          margin: size_sp(33) auto 0;
         }
       }
+    }
+    &#vocational_school {
+      & .page-contact__item:nth-of-type(2) {
+        padding: 22px 14px 21px;
+        @include mq_sp{
+          padding: size_sp(32) size_sp(32) size_sp(40);
+        }
+        & .page-contact {
+          &__ttl {
+            font-size: 19px;
+            @include mq_sp{
+              @include fz_vw(30);
+            }
+          }
+          &__info {
+            max-width: 335px;
+            @include mq_sp{
+              max-width: size_sp(558);
+            }
+          }
+        }
+      }
+    }
+  }
+  &__contTtl{
+    & br {
+      display: none;
+    }
+  }
+  &__list{
+    @include flex(flex, wrap, center, normal, normal, row);
+    margin-top: 60px;
+    @include mq_sp{
+      max-width: size_sp(630);
+      margin: size_sp(70) auto 0;
+    }
+  }
+  &__item{
+    position: relative;
+    width: 374px;
+    padding: 24px 18px 22px;
+    margin-right: 20px;
+    border: 2px solid $gray01;
+    @include mq_sp{
+      width: 100%;
+      padding: size_sp(32) size_sp(32) size_sp(40);
+      margin-right: 0;
+      border-width: size_sp(4);
+    }
+    // &:only-of-type{
+    //   margin: 0 auto;
+    // }
+    &:last-of-type {
+      margin-right: 0;
     }
   }
   &__col{
@@ -211,8 +248,8 @@ $page-contact: ".page-contact";
     min-height: 58px;
     position : relative;
     @include mq_sp{
-      @include fz_vw(32);
-      line-height: (57/32);
+      @include fz_vw(30);
+      line-height: (60/30);
       height: auto;
     }
     & > span {
@@ -220,6 +257,7 @@ $page-contact: ".page-contact";
       font-weight: 500;
       line-height: 1;
       width: 100%;
+      // margin-top: 6px;
       position : absolute;
       left : 50%;
       bottom : -1px;
@@ -233,14 +271,19 @@ $page-contact: ".page-contact";
   &__info{
     @include font-size(14);
     line-height: (25/14);
+    text-align: center;
+    min-height: 70px;
     padding-top: 21px;
-    margin-top: 9px;
+    margin: 8px auto 0;
+    @include flex(flex, wrap, center, center, normal, row);
+    border-top : solid 2px $gray02;
     @include mq_sp{
       @include fz_vw(28);
-      line-height: (58/28);
+      line-height: (54/28);
+      min-height: auto;
       border-top-width: size_sp(3);
-      padding-top: size_sp(23);
-      margin-top: size_sp(27);
+      padding-top: size_sp(25);
+      margin-top: size_sp(25);
     }
     span{
       display: block;
@@ -248,31 +291,10 @@ $page-contact: ".page-contact";
       text-align: center;
     }
   }
-  &__btn{
-    @include font-size(13);
-    line-height: (19/13);
-    letter-spacing: 0.1em;
-    font-weight: 500;
-    text-align: center;
-    color: $white00;
-    display: block;
-    width: 146px;
-    padding: 8px 0 8px 0.05em;
+  & .mod-btn {
     margin: 21px auto 0;
-    background: $blue02;
-    border: 2px solid $blue02;
     @include mq_sp{
-      @include fz_vw(22);
-      line-height: (32/22);
-      width: size_sp(238);
-      padding: size_sp(16) 0 size_sp(16) 0.05em;
-      margin-top: size_sp(31);
-      border-width: size_sp(2);
-    }
-    &:hover{
-      opacity: 1;
-      color: $blue02;
-      background: $white00;
+      margin: size_sp(33) auto 0;
     }
   }
 }
