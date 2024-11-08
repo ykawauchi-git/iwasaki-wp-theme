@@ -9,7 +9,9 @@
   $ttl = get_the_title();
   $thumb = get_the_post_thumbnail_url('','full');
   $thumb_sp = get_field('thumb_sp');
-
+  $careerKV = get_field('career_kv','option');
+  $careerKV_pc = $careerKV['career_kv_pc'];
+  $careerKV_sp = $careerKV['career_kv_sp'];
 
   //page
   if(is_front_page() || is_home()) {
@@ -68,6 +70,12 @@
     }
 	//archives
 	}elseif(is_archive()){
+    if(is_post_type_archive()) {
+      echo '<section class="page-kv common-kv">';
+      echo '<figure class="common-kv__bg"><img src="'.$careerKV_pc.'" alt="'.$ttl.'" class="pctab-only object_fit"><img src="'.$careerKV_sp.'" alt="'.$ttl.'" class="sp-only object_fit"></figure>';
+      // echo '<h1 class="common-kv__ttl">'.$ttl.'</h1>';
+      echo '</section>';
+    }
 	//他
   }elseif(is_page('contact')){
   }elseif(is_page('privacy-policy')){

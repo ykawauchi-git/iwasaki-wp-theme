@@ -705,6 +705,18 @@
   }
   & .mod-banner {
     margin-top: 150px;
+    padding : 126px 0px 125px;
+    @include mq_sp{
+      padding : size_sp(231) 0 size_sp(230);
+    }
+    & .mod-btn {
+      &.b {
+        margin: 40px auto 0;
+        @include mq_sp{
+          margin-top: size_sp(60);
+        }
+      }
+    }
   }
 }
 

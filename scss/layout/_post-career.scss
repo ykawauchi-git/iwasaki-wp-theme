@@ -1,0 +1,101 @@
+/*  layout > policy
+============================================================================================================ */
+
+.post-career {
+  height: 371px;
+  background : $white00;
+  @include mq_sp{
+    height: auto;
+  }
+  &:first-of-type,&:nth-of-type(3n + 1) {
+    & a {
+      color : $white00;
+      background : $black02;
+    }
+  }
+  &:nth-of-type(2),&:nth-of-type(3n + 2) {
+    & a {
+      background : $gray01;
+    }
+  }
+  &:nth-of-type(3),&:nth-of-type(3n + 3) {
+    & a {
+      background : $white00;
+    }
+  }
+  &:nth-of-type(n + 2) {
+    margin-top: 60px;
+    @include mq_sp{
+      margin-top: size_sp(50);
+    }
+  }
+  & > a {
+    height: 100%;
+    @include flex(flex, nowrap, center, stretch, normal, row);
+    box-shadow: 0px 3px 6px rgba($black00, .15);
+    @include mq_sp{
+      flex-wrap: wrap;
+      box-shadow: 0px size_sp(3) size_sp(6) rgba($black00, .15);
+    }
+  }
+  &__thumb {
+    max-width: 526px;
+    width: 100%;
+    @include mq_sp{
+      max-width: none;
+      height: size_sp(380);
+    }
+  }
+  &__info {
+    text-align: right;
+    max-width: 422px;
+    padding : 29px 28px;
+    width: 100%;
+    @include flex(flex, wrap, stretch, flex-end, normal, column);
+    @include mq_sp{
+      text-align: left;
+      max-width: none;
+      padding: size_sp(48) size_sp(40) size_sp(43);
+      align-items: flex-start;
+      justify-content: space-between;
+      flex-direction: row;
+    }
+    &Cont {
+      @include mq_sp{
+        width: size_sp(360);
+      }
+    }
+    & h2 {
+      font-size: 28px;
+      font-weight: 700;
+      line-height: (40/28);
+      letter-spacing: .05em;
+      @include mq_sp{
+        @include fz_vw(38);
+        line-height: (55/38);
+        letter-spacing: 0em;
+      }
+    }
+    &Alma {
+      font-size: 16px;
+      line-height: (27/16);
+      margin-top: 15px;
+      @include mq_sp{
+        @include fz_vw(26);
+        line-height: (50/26);
+        margin-top: size_sp(24);
+      }
+    }
+    &Logo {
+      width: 120px;
+      height: 120px;
+      background : $white00;
+      margin-top: 38px;
+      @include mq_sp{
+        width: size_sp(122);
+        height: size_sp(122);
+        margin-top: 0;
+      }
+    }
+  }
+}

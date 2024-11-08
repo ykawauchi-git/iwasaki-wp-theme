@@ -1,7 +1,7 @@
 <?php
 $secName="post-career";
 $graduateTtl = get_the_title();
-$graduateInfo = get_sub_field('career_graduate_info');
+$graduateInfo = get_field('career_graduate_info');
 $graduateAlma = $graduateInfo['career_graduate_alma_mater'];
 $graduateOccupation = $graduateInfo['career_graduate_occupation'];
 ?>
