@@ -1,7 +1,7 @@
 .page-support {
   padding-top: 35px;
   @include mq_sp{
-    padding-top: size_sp(60);
+    padding-top: size_sp(61);
   }
   &__intro {
     font-size : 18px;
@@ -23,7 +23,7 @@
     margin : 0 auto;
     @include mq_sp{
       width : size_sp(696);
-      padding-top : size_sp(91);
+      padding-top : size_sp(92);
     }
     & .btn__anchor {
       width : 308px;
@@ -51,30 +51,31 @@
   &__foundation {
     padding-top : 114px;
     @include mq_sp{
-      padding-top : size_sp(147);
+      padding-top : size_sp(146);
     }
     &Inner {
       width : 768px;
-      padding-top : 20px;
+      padding-top : 26px;
       margin : 0 auto;
       @include flex(flex, wrap, space-between, center, normal, row);
       @include mq_sp{
         width : size_sp(630);
-        padding-top : size_sp(35);
+        padding-top : size_sp(41);
         flex-direction: column;
       }
     }
     &Left {
       max-width: 349px;
       width: 100%;
+      margin-bottom: 85px;
       @include mq_sp{
         max-width: 100%;
+        margin: 0;
       }
     }
     &Img {
       @include mq_sp{
         width: size_sp(532);
-        padding-top: size_sp(44);
         margin: 0 auto;
       }
     }
@@ -98,7 +99,7 @@
     &Txt {
       font-size : 18px;
       line-height : (34/18);
-      margin-top : 6px;
+      // margin-top : 6px;
       @include mq_sp{
         @include fz_vw(30);
         line-height : (60/30);
@@ -129,6 +130,7 @@
       }
       & > li {
         width : 356px;
+        background: $white00;
         padding : 28px 22px 26px;
         border : solid 2px $gray01;
         @include mq_sp{
@@ -496,7 +498,7 @@
         @include mq_sp{
           width: 100%;
           // width : size_sp(556);
-          padding-top : size_sp(29);
+          padding-top : size_sp(30);
         }
         &Item {
           &:not(:first-of-type) {

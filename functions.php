@@ -43,7 +43,7 @@ add_action('widgets_init', 'iwasaki_widgets_init');
 function iwasaki_scripts()
 {
   wp_enqueue_style('iwasaki-sanitize', get_template_directory_uri().'/css/sanitize.css');
-	wp_enqueue_style('beans_bitou2023-slick', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css',array(),'');
+	wp_enqueue_style('iwasaki-slick', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css',array(),'');
 	if(is_front_page() || is_home()) {
 		wp_enqueue_style('swiper-style','https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css');
 	}

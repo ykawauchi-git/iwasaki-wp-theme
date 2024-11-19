@@ -1,8 +1,24 @@
 /* POST
 ============================================================================ */
 
+// 現在カテゴリ時にクラス名つける
+$(document).ready(function() {
+  // 現在のURLを取得
+  const currentUrl = window.location.href;
+
+  // 各リンクをチェックして一致するものにクラスを追加
+  $('.archive-post__cat li a').each(function() {
+    const linkUrl = $(this).attr('href');
+
+    // 現在のURLがリンクURLと一致する場合、親の<li>にクラス"active"を追加
+    if (currentUrl.includes(linkUrl)) {
+      $(this).parent('li').addClass('now');
+    }
+  });
+});
+
 //無限スクロール
-var infScroll = new InfiniteScroll('.common-archive__inner', {
+var infScroll = new InfiniteScroll('.archive-post__inner', {
   append: '.mod-post',
   path: '.nextpostslink',
   hideNav: '.wp-pagenavi',

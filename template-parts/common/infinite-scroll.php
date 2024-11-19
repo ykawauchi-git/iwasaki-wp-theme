@@ -14,7 +14,7 @@ if( !$pages ) {
 // ページが1ページしかない場合は出力しない・最後のページでも出力しない
 if( $pages != 1 && $paged < $pages ) {
     echo ' 
-    <a class="btn__more yellow">もっと見る</a>
+    <a class="btn__more b">もっと見る</a>
     <div class="scroller-status">
         <div class="infinite-scroll-request"></div>
         <p class="infinite-scroll-last">これ以上は記事がありません</p>

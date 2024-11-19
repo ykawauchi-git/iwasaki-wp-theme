@@ -64,6 +64,14 @@ $header_height_sp: size_sp(102);
       }
     }
   }
+  &.privacy-policy {
+    & .common-main {
+      padding-bottom: 122px;
+      @include mq_sp{
+        padding-bottom: size_sp(141);
+      }
+    }
+  }
 }
 
 //Single 記事詳細ページ
@@ -86,16 +94,17 @@ $header_height_sp: size_sp(102);
 
 .pageSec {
   position: relative;
-  z-index : 2;
+  z-index : -1;
   &__bg {
     width: 100%;
-    height: 344px;
+    height: 100vh;
+    height: 100svh;
     display: block;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    z-index : 2;
+    z-index : -1;
     pointer-events: none;
     @include mq_sp{
       height: size_sp(517);
@@ -103,13 +112,14 @@ $header_height_sp: size_sp(102);
     &:before {
       content : "";
       width: 100%;
-      height: 668px;
+      height: 100%;
       background-image :url(./img/page/bg_confetti.png);
-      background-repeat: repeat-x;
+      background-repeat: repeat;
       position: absolute;
       bottom: 0;
       left: 50%;
       transform: translateX(-50%);
+      opacity: .1;
       z-index : -2;
       @include mq_sp{
         height: size_sp(750);

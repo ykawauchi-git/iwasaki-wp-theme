@@ -60,9 +60,9 @@
     }
     a{
       width: 100%;
-      padding: size_sp(24) size_sp(24) size_sp(31);
       @include flex(flex, wrap, flex-start, normal, normal, column);
       @include mq_sp{
+        padding: size_sp(24) size_sp(24) size_sp(31);
         justify-content: space-between;
         flex-direction: row;
       }

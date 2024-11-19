@@ -87,6 +87,7 @@ $page-access: ".page-access";
     }
   }
   &__item{
+    background : $white00;
     position: relative;
     padding: 28px;
     border: 2px solid $gray01;
@@ -101,7 +102,7 @@ $page-access: ".page-access";
         margin-top: size_sp(50);
       }
     }
-    & > span {
+    & small {
       font-size: 10px;
       font-weight: 500;
       line-height: 1;
