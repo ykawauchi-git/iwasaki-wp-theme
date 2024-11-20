@@ -6,7 +6,7 @@ $page-movie: ".page-movie";
 .page-movie{
   padding-top: 31px;
   @include mq_sp{
-    padding-top: size_sp(59);
+    padding-top: size_sp(60);
   }
   &__inner {
     max-width: 768px;

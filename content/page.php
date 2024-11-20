@@ -4,6 +4,6 @@
  */
 ?>
 
-<div class="editor-content">
+<!-- <div class="editor-content"> -->
 	<?php the_content(); ?>
-</div>
+<!-- </div> -->

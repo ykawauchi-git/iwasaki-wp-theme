@@ -9,8 +9,8 @@
       $kvSliderImgSP = $kvSliderImg['top_kv_slider_img_sp'];
       ?>
       <li class="swiper-slide">
-        <img src="<?php echo $kvSliderImgPC;?>" alt="" class="object_fit pctab-only">
-        <img src="<?php echo $kvSliderImgSP;?>" alt="" class="object_fit sp-only">
+        <img src="<?php echo $kvSliderImgPC;?>" alt="" class="object_fit pc-only">
+        <img src="<?php echo $kvSliderImgSP;?>" alt="" class="object_fit tabsp-only">
       </li>
       <?php endwhile;?>
     </ul>

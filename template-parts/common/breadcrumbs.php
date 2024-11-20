@@ -9,8 +9,11 @@
       <span class="post-root post post-post current-item">
         <?php
         $post_type = get_query_var('post');
-        $post_type_object = get_post_type_object($post_type);
-        echo $post_type_object->label;?>
+        if($post_type) {
+          $post_type_object = get_post_type_object($post_type);
+          echo $post_type_object->label;
+        }
+        ?>
       </span>
       <?php else:?>
       <?php bcn_display();?>

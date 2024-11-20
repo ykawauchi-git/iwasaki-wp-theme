@@ -1,5 +1,7 @@
- <?php if(!is_front_page() && !is_page(array('sitemap'))) {
-  echo '</section>';
+ <?php
+//パンくず
+  if(!is_front_page() && !is_page(array('sitemap','privacy-policy','media-policy')) && !is_archive() && !is_single() && !is_404()){
+  echo '<section class="pageSec"><span class="pageSec__bg"></span></section>';
  }
  ?>
 </main>
@@ -7,7 +9,7 @@
 
 <!-- フッター -->
 <footer class="common-footer" id="Footer">
-  <span class="common-footer__pageTop" style="display:none"></span>
+  <!-- <span class="common-footer__pageTop" style="display:none"></span> -->
   <div class="common-footer__inner">
     <figure class="common-footer__logo"><?php get_template_part('template-parts/svg/logo');?></figure>
     <nav class="common-footer__nav top">

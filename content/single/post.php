@@ -2,15 +2,27 @@
 /**
  * default template.
  */
-$pageName = "common-single";
+$pageName = "single-post";
+$singleTag = get_the_tags();
+$singleCat = get_the_category();
 ?>
-<section class="<?php echo $pageName;?>">
+<section class="<?php echo $pageName;?> single-wrap">
 	<div class="<?php echo $pageName;?>__inner">
-		<div class="<?php echo $pageName;?>__heading page-heading"><span>NEWS</span></div>
 		<h1 class="<?php echo $pageName;?>__ttl"><?php the_title();?></h1>
 		<div class="<?php echo $pageName;?>__info">
-			<time class="<?php echo $secName;?>__date"><?php the_time('Y.m.d'); ?></time>
+			<time class="<?php echo $pageName;?>__date"><?php the_time('Y.m.d'); ?></time>
 		</div>
+    <?php if($singleTag):?>
+    <ul class="<?php echo $pageName;?>__tag">
+      <?php
+      foreach($singleTag as $tag) :
+      // $tag_link = get_tag_link($tag->term_id);
+      $tag_name = $tag->name;
+      ?>
+      <li><?php echo $tag_name; ?></li>
+      <?php endforeach;?>
+    </ul>
+    <?php endif;?>
 		<div class="<?php echo $pageName;?>__thumb"><?php the_post_thumbnail();?></div>
 		<div class="editor-content">
 			<?php the_content(); ?>
@@ -28,7 +40,7 @@ $pageName = "common-single";
 		</div>
 	</div>
 	<div class="<?php echo $pageName;?>__new">
-		<h3 class="page-bracketsTtl"><span>最新記事</span></h3>
+		<h2 class="page-subHeading"><span>最新記事</span></h2>
 		<div class="<?php echo $pageName;?>__new-article">
 		<?php
 			$args = array(
@@ -44,6 +56,6 @@ $pageName = "common-single";
 			wp_reset_postdata(); // 直前のクエリを復元する
 		?>
 		</div>
-		<a href="<?php echo home_url('/about/career'); ?>" class="page-group__contBtn">一覧へ戻る</a>
+		<a href="<?php echo home_url('/news/'); ?>" class="btn__more b">一覧へ戻る</a>
 	</div>
 </section>

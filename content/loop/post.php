@@ -1,5 +1,16 @@
-<?php $secName="mod-post"?>
+<?php
+$secName="mod-post";
+$secTag = get_the_tags();
+$secCat = get_the_category();
+?>
 <article class="<?php echo $secName;?>">
+  <?php
+  foreach ($secCat as $cat):
+  $cat_name = $cat->name;
+  // $cat_url = get_category_link($cat->term_id);
+  ?>
+  <span class="<?php echo $secName;?>__cat"><?php echo $cat_name;?></span>
+  <?php endforeach;?>
   <a href="<?php the_permalink(); ?>" class="<?php echo $secName;?>__link" id="post-<?php the_ID(); ?>">
     <div class="<?php echo $secName;?>__high">
       <div class="<?php echo $secName;?>__left">
@@ -15,5 +26,17 @@
       <h2 class="<?php echo $secName;?>__ttl"><?php the_title(); ?></h2>
     </div>
     <div class="<?php echo $secName;?>__txt"><?php echo get_the_excerpt(); ?></div>
+    <!-- タグ一覧 -->
+    <?php if($secTag):?>
+    <ul class="<?php echo $secName;?>__tag">
+      <?php
+      foreach($secTag as $tag) :
+      // $tag_link = get_tag_link($tag->term_id);
+      $tag_name = $tag->name;
+      ?>
+      <li><?php echo $tag_name; ?></li>
+      <?php endforeach;?>
+    </ul>
+    <?php endif;?>
   </a>
 </article>

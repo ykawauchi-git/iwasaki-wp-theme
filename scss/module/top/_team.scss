@@ -10,6 +10,9 @@
     max-width: 990px;
     width: 100%;
     margin: 0 auto;
+    @include mq_tab{
+      max-width: 480px;
+    }
     @include mq_sp{
       max-width: size_sp(670);
     }
@@ -44,6 +47,9 @@
         }
       }
       &:nth-of-type(n + 4) {
+        @include mq_tab{
+          margin-top: 68px;
+        }
         @include mq_sp{
           margin-top: size_sp(47);
         }
@@ -52,7 +58,7 @@
         margin-right: 0;
       }
       &:nth-of-type(3n) {
-        @include mq_sp{
+        @include mq_tab{
           margin-right: 0;
         }
       }
