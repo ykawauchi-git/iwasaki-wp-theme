@@ -13,6 +13,9 @@
     @media screen and (max-width:1280px) {
       max-width: (948/1280)*100%;
     }
+    @include mq_tab{
+      max-width: 85%;
+    }
     @include mq_sp{
       max-width: size_sp(642);
       padding: 0;
@@ -84,11 +87,11 @@
       & span {
         font-size: 21px;
         line-height: (30/21);
-        letter-spacing: .05em;
+        letter-spacing: 0.065em;
         color : $white00;
         position: absolute;
-        right: 10px;
-        bottom: 10px;
+        right: 18px;
+        bottom: 20px;
         @include mq_sp{
           @include fz_vw(26);
           line-height: (37/26);

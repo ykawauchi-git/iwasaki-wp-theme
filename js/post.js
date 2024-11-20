@@ -22,7 +22,7 @@ var infScroll = new InfiniteScroll('.archive-post__inner', {
   append: '.mod-post',
   path: '.nextpostslink',
   hideNav: '.wp-pagenavi',
-  button: '.btn__more',
+  button: '.infiniteBtn',
   scrollThreshold: false,
   status: '.scroller-status',
   history: 'false',
@@ -34,4 +34,13 @@ $('.common-archive__inner').on('append.infiniteScroll', function(event, response
     img.outerHTML = img.outerHTML;
   });
 });
+});
+
+
+document.querySelectorAll('.archive-post__cat button').forEach(function(button) {
+    button.addEventListener('click', function() {
+        document.querySelector('.archive-post__cat .active').classList.remove('active');
+        this.classList.add('active');
+        document.querySelector('input[name="cat"]').value = this.getAttribute('data-category');
+    });
 });
