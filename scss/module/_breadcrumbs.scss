@@ -17,10 +17,36 @@
   }
   &__list {
     & > span {
+      margin-right: 21px;
+      position: relative;
+      @include mq_sp{
+        margin-right: size_sp(24);
+      }
       &:last-of-type {
         font-weight: 700;
+        margin-right: 0;
+        &:before {
+          display: none;
+        }
+      }
+      &:before {
+        content : "";
+        width: 6px;
+        height: 13px;
+        background-image: url(./img/common/arw_breadcrumbs.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: absolute;
+        top: 50%;
+        right: -14px;
+        transform: translateY(-50%);
+        @include mq_sp{
+          width: size_sp(9);
+          height: size_sp(19);
+          right: size_sp(-16);
+        }
       }
     }
   }
 }
-

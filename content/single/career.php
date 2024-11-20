@@ -5,7 +5,7 @@ $graduateInfo = get_field('career_graduate_info');
 $graduateAlma = $graduateInfo['career_graduate_alma_mater'];
 $graduateOccupation = $graduateInfo['career_graduate_occupation'];
 ?>
-<section class="<?php echo $pageName;?>">
+<section class="<?php echo $pageName;?> single-wrap">
   <div class="<?php echo $pageName;?>__info">
     <div class="<?php echo $pageName;?>__infoThumb">
       <?php if ( has_post_thumbnail() ): ?><!-- if文による条件分岐 アイキャッチが有る時-->

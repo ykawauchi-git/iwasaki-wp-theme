@@ -2,9 +2,11 @@
 ============================================================================================================ */
 
 .single-career {
-  margin-top: 73px;
-  @include mq_sp{
-    margin-top: size_sp(61);
+  .single-wrap {
+    margin-top: 73px;
+    @include mq_sp{
+      margin-top: size_sp(61);
+    }
   }
   &__info {
     max-width: 768px;
