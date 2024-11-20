@@ -1,130 +1,183 @@
 <?php $pageName="page-philosophy";?>
-<div class="<?php echo $pageName;?>">
-  <div class="<?php echo $pageName;?>__intro">
-    文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。
-  </div>
-  <div class="<?php echo $pageName;?>__concept">
-    <div class="<?php echo $pageName;?>__concept-main">
-      <div class="<?php echo $pageName;?>__concept-main-ttl">岩崎学園は<br><span>「楽しむこと」</span>を忘れない。</div>
-      <div class="<?php echo $pageName;?>__concept-main-txt">自分を磨き、世界の変化を作り出す<br class="sp-only">一歩がここにある。</div>
-      <div class="<?php echo $pageName;?>__concept-main-100th">
-        <div class="<?php echo $pageName;?>__concept-main-100th-ttl">人生<span>100年</span>時代を生きる</div>
-        <div class="<?php echo $pageName;?>__concept-main-100th-txt">
-          文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。
-          文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。
-        </div>
-      </div>
+<main class="<?php echo $pageName;?>">
+  <section class="<?php echo $pageName;?>__about">
+    <div class="<?php echo $pageName;?>__aboutInner <?php echo $pageName;?>__inner">
+      <h2 class="<?php echo $pageName;?>__aboutHeading page-heading"><span>産学・地域連携について</span></h2>
+      <p class="<?php echo $pageName;?>__aboutIntro">岩崎学園は、社会との連携を通じて、魅力的で実践的な教育を実現し、学生が将来の社会で自信を持って活躍できるよう、全力でサポートします。学生の未来の可能性を最大限に引き出す準備を整えています！</p>
     </div>
-    <div class="<?php echo $pageName;?>__concept-sub">
-      <div class="<?php echo $pageName;?>__concept-sub-left">
-        <img class="object_fit" src="<?php echo get_stylesheet_directory_uri();?>/img/page/philosophy/img_concept.jpg">
-      </div>
-      <div class="<?php echo $pageName;?>__concept-sub-right">
-        <div class="<?php echo $pageName;?>__concept-sub-right-ttl">
-          <img class="object_fit" src="<?php echo get_stylesheet_directory_uri();?>/img/page/philosophy/txt_3words.svg">
-        </div>
-        <div class="<?php echo $pageName;?>__concept-sub-right-txt">
-          文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- <div class="<?php echo $pageName;?>__adviser">
-    <div class="<?php echo $pageName;?>__adviser-intro">
-      文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。
-    </div>
-    <?php if(have_rows('acf_professor_group','option')): while(have_rows('acf_professor_group','option')): the_row(); ?>
-    <div class="<?php echo $pageName;?>__adviser-group">
-      <div class="<?php echo $pageName;?>__adviser-img">
-        <img class="object_fit" src="<?php the_sub_field('acf_professor_img');?>">
-      </div>
-      <div class="<?php echo $pageName;?>__adviser-role">
-        <div class="<?php echo $pageName;?>__adviser-director"><?php the_sub_field('acf_professor_position');?></div>
-        <div class="<?php echo $pageName;?>__adviser-name"><?php the_sub_field('acf_professor_name');?> 氏</div>
-      </div>
-      <div class="<?php echo $pageName;?>__adviser-txt"><?php the_sub_field('acf_professor_txt');?></div>
-    </div>
-    <?php endwhile; endif;?>
-  </div> -->
-  <!-- 専門力 × 開拓力 -->
-  <div class="<?php echo $pageName;?>__power">
-    <div class="<?php echo $pageName;?>__power-heading">
-      <div class="<?php echo $pageName;?>__power-heading-item">専門力</div>
-      <div class="<?php echo $pageName;?>__power-heading-item">開拓力</div>
-    </div>
-    <div class="<?php echo $pageName;?>__power-intro">
-      文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。
-    </div>
-    <div class="<?php echo $pageName;?>__power-list">
-      <div class="<?php echo $pageName;?>__power-item">
-        <div class="<?php echo $pageName;?>__power-inner">
-          <div class="<?php echo $pageName;?>__power-concept">専門知識・技術を学ぶ</div>
-          <div class="<?php echo $pageName;?>__power-ttl page-subHeading">専門力</div>
-          <div class="<?php echo $pageName;?>__power-txt">
-            文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。
-          </div>
-          <a href="<?php echo home_url('/philosophy/speciality'); ?>" class="page-group__contBtn">詳しく見る</a>
-        </div>
-      </div>
-      <div class="<?php echo $pageName;?>__power-item">
-        <div class="<?php echo $pageName;?>__power-inner">
-          <div class="<?php echo $pageName;?>__power-concept">未来を生きる力を磨く</div>
-          <div class="<?php echo $pageName;?>__power-ttl page-subHeading">開拓力</div>
-          <div class="<?php echo $pageName;?>__power-txt">
-            文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。
-          </div>
-          <a href="<?php echo home_url('/philosophy/pioneer'); ?>" class="page-group__contBtn">詳しく見る</a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- IWASAKI METHOD -->
-  <div class="<?php echo $pageName;?>__method">
-    <div class="<?php echo $pageName;?>__method-inner">
-    <div class="<?php echo $pageName;?>__method-ttl"><span>発想力を磨く</span>IWASAKI METHOD</div>
-    <div class="<?php echo $pageName;?>__method-txt">
-      文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります.
-      文章が入ります。文章が入ります、文章が入ります。
-    </div>
-    <a href="<?php echo home_url('/philosophy/pioneer/method'); ?>" class="page-group__contBtn">詳しく見る</a>
-    </div>
-  </div>
-  <!-- 岩崎学園の多様な学び -->
-  <div class="<?php echo $pageName;?>__learning">
-    <h2 class="<?php echo $pageName;?>__learning-ttl page-heading"><span>岩崎学園の多様な学び</span></h2>
-    <ul class="<?php echo $pageName;?>__learning-list">
-      <!-- 幼児教育 -->
-      <a href="<?php echo home_url('/philosophy/pioneer/'); ?>" class="<?php echo $pageName;?>__learning-item">
-        <div class="<?php echo $pageName;?>__learning-bg"></div>
-        <div class="<?php echo $pageName;?>__learning-inner">
-          <div class="<?php echo $pageName;?>__learning-center">幼児教育</div>
-          <span>詳しく見る</span>
-        </div>
-      </a>
-      <!-- 大学院教育 -->
-      <a href="<?php echo home_url('/philosophy/pioneer/'); ?>" class="<?php echo $pageName;?>__learning-item">
-        <div class="<?php echo $pageName;?>__learning-bg"></div>
-        <div class="<?php echo $pageName;?>__learning-inner">
-          <div class="<?php echo $pageName;?>__learning-center">大学院教育</div>
-          <span>詳しく見る</span>
-        </div>
-      </a>
-      <!-- 産学連携 -->
-      <a href="<?php echo home_url('/academic-industrial-collaboration/'); ?>" class="<?php echo $pageName;?>__learning-item">
-        <div class="<?php echo $pageName;?>__learning-bg"></div>
-        <div class="<?php echo $pageName;?>__learning-inner">
-          <div class="<?php echo $pageName;?>__learning-center">産学連携</div>
-          <span>詳しく見る</span>
-        </div>
-      </a>
+  </section>
+  <section class="<?php echo $pageName;?>__sports">
+    <h2 class="<?php echo $pageName;?>__sportsHeading page-heading <?php echo $pageName;?>__inner"><span>スポーツチームとの産学連携</span></h2>
+    <ul class="<?php echo $pageName;?>__sportsList">
+      <li class="<?php echo $pageName;?>__sportsItem">
+        <figure class="<?php echo $pageName;?>__sportsThumb"><img src="<?php echo get_stylesheet_directory_uri();?>/img/page/philosophy/logo_sports01.png" alt=""></figure>
+        <p class="<?php echo $pageName;?>__sportsTxt">三菱重工相模原<br>ダイナボアーズ</p>
+      </li>
+      <li class="<?php echo $pageName;?>__sportsItem">
+        <figure class="<?php echo $pageName;?>__sportsThumb"><img src="<?php echo get_stylesheet_directory_uri();?>/img/page/philosophy/logo_sports02.png" alt=""></figure>
+        <p class="<?php echo $pageName;?>__sportsTxt">横浜ビー・コルセアーズ</p>
+      </li>
+      <li class="<?php echo $pageName;?>__sportsItem">
+        <figure class="<?php echo $pageName;?>__sportsThumb"><img src="<?php echo get_stylesheet_directory_uri();?>/img/page/philosophy/logo_sports03.png" alt=""></figure>
+        <p class="<?php echo $pageName;?>__sportsTxt">横浜グリッツ</p>
+      </li>
+      <li class="<?php echo $pageName;?>__sportsItem">
+        <figure class="<?php echo $pageName;?>__sportsThumb"><img src="<?php echo get_stylesheet_directory_uri();?>/img/page/philosophy/logo_sports04.png" alt=""></figure>
+        <p class="<?php echo $pageName;?>__sportsTxt">チーム名チーム名チーム</p>
+      </li>
+      <li class="<?php echo $pageName;?>__sportsItem">
+        <figure class="<?php echo $pageName;?>__sportsThumb"><img src="<?php echo get_stylesheet_directory_uri();?>/img/page/philosophy/logo_sports05.png" alt=""></figure>
+        <p class="<?php echo $pageName;?>__sportsTxt">チーム名チーム名</p>
+      </li>
+      <li class="<?php echo $pageName;?>__sportsItem">
+        <figure class="<?php echo $pageName;?>__sportsThumb"><img src="<?php echo get_stylesheet_directory_uri();?>/img/page/philosophy/logo_sports06.png" alt=""></figure>
+        <p class="<?php echo $pageName;?>__sportsTxt">チーム名チーム名チーム名チーム名</p>
+      </li>
     </ul>
-  </div>
-  <div class="mod-banner">
-    <div class="mod-banner__ttl"><span>就職・資格</span></div>
-    <div class="mod-banner__txt">
-      文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります.
-      文章が入ります。文章が入ります、文章が入ります。
+    <ul class="<?php echo $pageName;?>__sportsImgs">
+      <li class="<?php echo $pageName;?>__sportsImg"><img src="https://placehold.jp/300x200.png" alt="" class="object_fit"></li>
+      <li class="<?php echo $pageName;?>__sportsImg"><img src="https://placehold.jp/300x200.png" alt="" class="object_fit"></li>
+      <li class="<?php echo $pageName;?>__sportsImg"><img src="https://placehold.jp/300x200.png" alt="" class="object_fit"></li>
+      <li class="<?php echo $pageName;?>__sportsImg"><img src="https://placehold.jp/300x200.png" alt="" class="object_fit"></li>
+    </ul>
+    <p class="<?php echo $pageName;?>__sportsInfo <?php echo $pageName;?>__inner">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト。</p>
+  </section>
+  <section class="<?php echo $pageName;?>__skill">
+    <div class="<?php echo $pageName;?>__skillInner <?php echo $pageName;?>__inner">
+      <h2 class="<?php echo $pageName;?>__skillHeading page-heading"><span>スキルを活かした産学連携</span></h2>
+      <p class="<?php echo $pageName;?>__skillIntro">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト。</p>
+      <ul class="<?php echo $pageName;?>__skillList">
+        <li class="<?php echo $pageName;?>__skillItem">
+          <h3 class="<?php echo $pageName;?>__skillItem-ttl">見出し見出し</h3>
+          <figure class="<?php echo $pageName;?>__skillItem-thumb"><img src="https://placehold.jp/300x200.png" alt="" class="object_fit"></figure>
+          <p class="<?php echo $pageName;?>__skillItem-txt">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト。</p>
+        </li>
+        <li class="<?php echo $pageName;?>__skillItem">
+          <h3 class="<?php echo $pageName;?>__skillItem-ttl">見出し見出し</h3>
+          <figure class="<?php echo $pageName;?>__skillItem-thumb"><img src="https://placehold.jp/300x200.png" alt="" class="object_fit"></figure>
+          <p class="<?php echo $pageName;?>__skillItem-txt">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト。</p>
+        </li>
+        <li class="<?php echo $pageName;?>__skillItem">
+          <h3 class="<?php echo $pageName;?>__skillItem-ttl">見出し見出し</h3>
+          <figure class="<?php echo $pageName;?>__skillItem-thumb"><img src="https://placehold.jp/300x200.png" alt="" class="object_fit"></figure>
+          <p class="<?php echo $pageName;?>__skillItem-txt">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト。</p>
+        </li>
+        <li class="<?php echo $pageName;?>__skillItem">
+          <h3 class="<?php echo $pageName;?>__skillItem-ttl">見出し見出し</h3>
+          <figure class="<?php echo $pageName;?>__skillItem-thumb"><img src="https://placehold.jp/300x200.png" alt="" class="object_fit"></figure>
+          <p class="<?php echo $pageName;?>__skillItem-txt">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト。</p>
+        </li>
+        <li class="<?php echo $pageName;?>__skillItem">
+          <h3 class="<?php echo $pageName;?>__skillItem-ttl">見出し見出し</h3>
+          <figure class="<?php echo $pageName;?>__skillItem-thumb"><img src="https://placehold.jp/300x200.png" alt="" class="object_fit"></figure>
+          <p class="<?php echo $pageName;?>__skillItem-txt">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト。</p>
+        </li>
+        <li class="<?php echo $pageName;?>__skillItem">
+          <h3 class="<?php echo $pageName;?>__skillItem-ttl">見出し見出し</h3>
+          <figure class="<?php echo $pageName;?>__skillItem-thumb"><img src="https://placehold.jp/300x200.png" alt="" class="object_fit"></figure>
+          <p class="<?php echo $pageName;?>__skillItem-txt">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト。</p>
+        </li>
+      </ul>
+      <div class="<?php echo $pageName;?>__skillPartner">
+        <h3 class="<?php echo $pageName;?>__skillPartner-heading">連携企業一覧</h3>
+        <ul class="<?php echo $pageName;?>__skillPartner-list">
+          <li class="<?php echo $pageName;?>__skillPartner-name">企業名企業名企業名業名企業</li>
+          <li class="<?php echo $pageName;?>__skillPartner-name">企業名企業名企業名企業名企業名企業名</li>
+          <li class="<?php echo $pageName;?>__skillPartner-name">企業名企業名企企業名企業</li>
+          <li class="<?php echo $pageName;?>__skillPartner-name">企業名企業名企業名企業名企業名企業名企</li>
+          <li class="<?php echo $pageName;?>__skillPartner-name">企業名企業名企業名企業名企業名企業</li>
+          <li class="<?php echo $pageName;?>__skillPartner-name">企業名企業名企業名企業名企業名企</li>
+          <li class="<?php echo $pageName;?>__skillPartner-name">企業名企企業名企業</li>
+          <li class="<?php echo $pageName;?>__skillPartner-name">企業名企業名企業名企業名企業名企業名企業</li>
+          <li class="<?php echo $pageName;?>__skillPartner-name">企業名企業名企業名企業名企業名企業</li>
+          <li class="<?php echo $pageName;?>__skillPartner-name">企業名業</li>
+          <li class="<?php echo $pageName;?>__skillPartner-name">企業名企業名業名企業名企業</li>
+          <li class="<?php echo $pageName;?>__skillPartner-name">企業名企業名企業名企業</li>
+          <li class="<?php echo $pageName;?>__skillPartner-name">企業名企業名企業名企業名企業</li>
+          <li class="<?php echo $pageName;?>__skillPartner-name">企業名企業名企業</li>
+        </ul>
+      </div>
     </div>
-    <a href="<?php echo home_url('/about/career'); ?>" class="page-group__contBtn">詳しく見る</a>
-  </div>
-</div>
+  </section>
+  <section class="<?php echo $pageName;?>__contribution">
+    <div class="<?php echo $pageName;?>__contributionInner <?php echo $pageName;?>__inner">
+      <h2 class="<?php echo $pageName;?>__contributionHeading page-heading"><span>横浜、神奈川、地域への貢献</span></h2>
+      <p class="<?php echo $pageName;?>__contributionTxt">横浜・神奈川の地から横浜・神奈川の活力となる確かな技術と豊かな心を持つ人材を送り出すことで、本学園を支え続けてくださる地域の企業や自治体、団体の皆さまに貢献していきます。</p>
+    </div>
+    <aside class="<?php echo $pageName;?>__contributionCont">
+      <div class="<?php echo $pageName;?>__contributionInner <?php echo $pageName;?>__inner">
+        <ul class="<?php echo $pageName;?>__contributionList">
+          <li class="<?php echo $pageName;?>__contributionItem">
+            <h3 class="<?php echo $pageName;?>__contributionTtl">神奈川県と<br>「連携と協力に関する包括協定」を締結</h3>
+            <div class="<?php echo $pageName;?>__contributionRow">
+              <figure class="<?php echo $pageName;?>__contributionThumb"><img src="<?php echo get_stylesheet_directory_uri();?>/img/page/philosophy/img_contribution01.jpg" alt="" class="object_fit"></figure>
+              <p class="<?php echo $pageName;?>__contributionInfo">セーリングなど国際競技大会の機運醸成やパラスポーツ普及支援などのスポーツ振興をはじめ、「子供・子育て支援」「未病・健康増進対策」などの8つの分野において、専門学校全7校と情報セキュリティ大学院大学でそれぞれの専門領域をいかした教育連携を進めてまいります。</p>
+            </div>
+          </li>
+          <li class="<?php echo $pageName;?>__contributionItem">
+            <h3 class="<?php echo $pageName;?>__contributionTtl">大規模イベントへの参画</h3>
+            <div class="<?php echo $pageName;?>__contributionRow">
+              <figure class="<?php echo $pageName;?>__contributionThumb"><img src="<?php echo get_stylesheet_directory_uri();?>/img/page/philosophy/img_contribution02.jpg" alt="" class="object_fit"></figure>
+              <p class="<?php echo $pageName;?>__contributionInfo">世界トライアスロンシリーズ横浜大会、横浜開港祭など、横浜の代表的な大規模イベントに協賛し、学生は、日頃の学びを活かし、制作協力やボランティアを通して盛り上げています。</p>
+            </div>
+          </li>
+          <li class="<?php echo $pageName;?>__contributionItem">
+            <h3 class="<?php echo $pageName;?>__contributionTtl">横浜市との包括協定</h3>
+            <div class="<?php echo $pageName;?>__contributionRow">
+              <figure class="<?php echo $pageName;?>__contributionThumb"><img src="<?php echo get_stylesheet_directory_uri();?>/img/page/philosophy/img_contribution03.jpg" alt="" class="object_fit"></figure>
+              <p class="<?php echo $pageName;?>__contributionInfo">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+            </div>
+          </li>
+          <li class="<?php echo $pageName;?>__contributionItem">
+            <h3 class="<?php echo $pageName;?>__contributionTtl">スポーツ医科学センターとの協定</h3>
+            <div class="<?php echo $pageName;?>__contributionRow">
+              <figure class="<?php echo $pageName;?>__contributionThumb"><img src="<?php echo get_stylesheet_directory_uri();?>/img/page/philosophy/img_contribution03.jpg" alt="" class="object_fit"></figure>
+              <p class="<?php echo $pageName;?>__contributionInfo">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </aside>
+  </section>
+  <section class="<?php echo $pageName;?>__alignment">
+    <div class="<?php echo $pageName;?>__alignmentInner <?php echo $pageName;?>__inner">
+      <h2 class="<?php echo $pageName;?>__alignmentHeading page-heading"><span>スキルを活かした産学連携</span></h2>
+    </div>
+    <aside class="<?php echo $pageName;?>__alignmentCont">
+      <div class="<?php echo $pageName;?>__alignmentInner <?php echo $pageName;?>__inner">
+        <ul class="<?php echo $pageName;?>__alignmentList">
+          <li class="<?php echo $pageName;?>__alignmentItem">
+            <h3 class="<?php echo $pageName;?>__alignmentTtl">「研究と実務融合による高度情報セキュリティ人材育成プログラム</h3>
+            <figure class="<?php echo $pageName;?>__alignmentLogo"><img src="<?php echo get_stylesheet_directory_uri();?>/img/page/philosophy/logo_alignment01.svg" alt="" class="object_fit"></figure>
+            <p class="<?php echo $pageName;?>__alignmentTxt">文部科学省「先導的ITスペシャリスト育成推進プログラム」採択拠点<br>文部科学省の平成19年度「先導的ITスペシャリスト育成推進プログラム」に採択されたISSスクエアは、情報セキュリティ大学院大学、中央大学、国立情報学研究所他、企業・研究機関11社の産学連携による高度情報セキュリティ人材育成プログラムです。 大学間や産学の壁を超えて潜在力を結集し、世界一安心できるIT社会の実現に向けて、情報セキュリティ分野における最高水準の人材育成を目指します。</p>
+            <a href="https://iss.iisec.ac.jp/" class="<?php echo $pageName;?>__alignmentBtn" target="_blank">ISSスクエア サイト</a>
+          </li>
+          <li class="<?php echo $pageName;?>__alignmentItem">
+            <h3 class="<?php echo $pageName;?>__alignmentTtl">NPO支援活動（NPO情報セキュリティフォーラム）</h3>
+            <p class="<?php echo $pageName;?>__alignmentTxt">企業や自治体、学校などのIT化が進む一方、ウイルスや不正アクセス、情報漏えいなどの懸念が増す現場での情報セキュリティの知識と意識の向上を目的に、情報セキュリティ大学院大学の知的財産を社会に還元するかたちで、セミナーによる啓発活動等をおこなっております。趣旨に賛同いただいた多くの会員企業とともに活動は日々発展しております。その成果として、2006年には情報セキュリティの促進に貢献した機関として経済産業大臣表彰を受け、その後、子どもたちのネット利用に関する啓発普及活動が評価され、2011年に内閣総理大臣表彰（子ども・若者育成支援部門）、2012年には総務省関東通信局長表彰を受けました。</p>
+            <a href="https://www.isef.or.jp/" class="<?php echo $pageName;?>__alignmentBtn" target="_blank">NPO情報セキュリティフォーラム サイト</a>
+          </li>
+          <li class="<?php echo $pageName;?>__alignmentItem">
+            <h3 class="<?php echo $pageName;?>__alignmentTtl">情報セキュリティ文化賞の制定</h3>
+            <p class="<?php echo $pageName;?>__alignmentTxt">情報セキュリティ大学院大学設立当初より、わが国の情報セキュリティ分野の進展に大きく貢献した個人を表彰することを通じて、自治体、企業などの組織における情報セキュリティの高度化に寄与することを狙いとし、国の各省や研究機関からの審査員により「情報セキュリティ文化賞」を選考しております。<br>例年、日本経済新聞社主催SECURITY SHOWの会期中に表彰式および受賞者講演会を行っております。</p>
+            <a href="https://www.iisec.ac.jp/" class="<?php echo $pageName;?>__alignmentBtn" target="_blank">情報セキュリティ大学院大学 サイト</a>
+          </li>
+          <li class="<?php echo $pageName;?>__alignmentItem">
+            <h3 class="<?php echo $pageName;?>__alignmentTtl">産業界と連携した<br class="sp-only">先進的な取り組みの推進</h3>
+            <p class="<?php echo $pageName;?>__alignmentTxt">国の政策による事業の受託により、産業界と連携して先進的な取り組みを推進しております。例えば、情報セキュリティ分野における社会人の学び直しのための実践的な教育プログラムや教材を開発し、社会人や専門学校、大学の学生などを対象とした講座を、関連する企業や業界団体等と連携して、実施して参りました。 また、専修学校の質保証・向上を目的として、IT分野の専修学校における教育活動や学修成果（ラーニング・アウトカムズ）を評価する枠組みを、認証機関やIT企業等と連携して検討する取り組みを行って参りました。</p>
+            <h4 class="<?php echo $pageName;?>__alignmentSubttl"><span>主な事例</span></h4>
+            <p class="<?php echo $pageName;?>__alignmentCase">文部科学省委託事業「職業実践専門課程等を通じた専修学校の質保証・向上の推進」、文部科学省委託事業「成長分野等における中核的専門人材養成等の戦略的推進」、文部科学省委託事業「専修学校による地域産業中核的人材養成事業」</p>
+          </li>
+        </ul>
+      </div>
+    </aside>
+  </section>
+  <section class="<?php echo $pageName;?>__contact">
+    <div class="<?php echo $pageName;?>__contactInner <?php echo $pageName;?>__inner">
+      <h2 class="<?php echo $pageName;?>__contactHeading">産学連携・インターンシップに<br class="sp-only">ついてのお問い合わせ</h2>
+      <p class="<?php echo $pageName;?>__contactTxt">文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります.
+      文章が入ります。文章が入ります、文章が入ります。</p>
+      <a href="" class="<?php echo $pageName;?>__contactBtn" target="_blank">詳しく見る</a>
+    </div>
+  </section>
+</main>

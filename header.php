@@ -128,7 +128,7 @@
 						<li><a href="<?php echo home_url('/facilities/'); ?>">教育事業</a></li>
 						<li><a href="<?php echo home_url('/philosophy/'); ?>">産学・地域連携</a></li>
 						<li><a href="<?php echo home_url('/career/'); ?>">卒業生の活躍</a></li>
-						<li><a href="<?php echo home_url('/about/'); ?>">学生支援</a></li>
+						<li><a href="<?php echo home_url('/support/'); ?>">学生支援</a></li>
 					</ul>
 					<ul class="common-header__btn tabsp-only--flex">
 						<li><a href="<?php echo home_url('/contact/'); ?>" class="contact">お問い合わせ</a></li>

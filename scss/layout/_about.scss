@@ -2,419 +2,330 @@
 ============================================================================================================ */
 
 .page-about {
-  // 学園メッセージ
+  // メッセージ
   &__message {
-    padding-top : 88px;
+    padding-top : 30px;
     @include mq_sp{
-      padding-top : size_sp(101);
+      padding-top : size_sp(60);
     }
-    &-ttl {
-      font-size: 40px;
-      letter-spacing: 0.05em;
-      width: 490px;
-      padding-left : 186px;
+    &Inner{
+      max-width: 738px;
+      width: 100%;
+      margin: 0 auto;
+      @include mq_sp{
+        max-width: size_sp(630);
+      }
+    }
+    &Catch{
+      max-width: 428px;
+      width: 100%;
+      margin: 60px auto 0;
+      @include mq_sp{
+        max-width: size_sp(428);
+        margin-top: size_sp(80)
+      }
+    }
+    &Txt{
+      @include font-size(20);
+      line-height: (38/20);
+      margin-top: 60px;
+      @include mq_sp{
+        @include fz_vw(34);
+        line-height: (64/34);
+        margin-top: size_sp(80);
+      }
+    }
+    &Imgs{
+      @include flex(flex, wrap, space-between, normal, normal, row);
       position: relative;
-      @include mq_sp{
-        @include fz_vw(42);
-        line-height : (61/42);
-        width : size_sp(430);
-        padding-left : size_sp(116);
+      left: 50%;
+      transform: translateX(-50%);
+      width: 1104px;
+      margin-top: 60px;
+      @media screen and (max-width: 1140px) {
+        max-width: 100%;
+        width: 100%;
       }
-      &:before {
-        content : "";
-        width : 164px;
-        height : 40px;
-        background-image: url(./img/page/about/icn_ttl.svg);
-        background-repeat: no-repeat;
-        background-size : cover;
-        position: absolute;
-        top : 50%;
-        left : 0;
-        transform: translateY(-50%);
-        box-shadow : 0px 3px 6px rgba(0, 0, 0, 0.16);
-        @include mq_sp{
-          width : size_sp(98);
-          height :size_sp(48);
-          background-image: url(./img/page/about/icn_ttl-sp.svg);
-          box-shadow : 0px size_sp(3) size_sp(6) rgba(0, 0, 0, 0.16);
-        }
+      @include mq_sp{
+        margin-top: size_sp(80);
       }
     }
-    &-inner {
-      width : 100%;
-      height : 450px;
-      margin-top : 37px;
-      position : relative;
-      @include mq_tab{
-        height : 450px;
-        margin-top : 80px;
+    &Img{
+      position: relative;
+      max-width: 348px;
+      width: 100%;
+      height: 232px;
+      @media screen and (max-width: 1140px) {
+        max-width: (348/1104) * 100%;
+        width: 100%;
+        height: 0;
+        padding-top: (232/1104) * 100%;
+        //aspect-ratio: 16 / 9;
       }
       @include mq_sp{
+        max-width: 100%;
+        height: size_sp(420);
+        padding-top: 0;
+      }
+      &:nth-of-type(n + 2){
         @include mq_sp{
-          height : size_sp(450);
-          margin-top : size_sp(80);
+          margin-top: size_sp(30);
         }
       }
-    }
-    &-left {
-      width : 322px;
-      position : absolute;
-      top : 385px;
-      left : 50%;
-      transform : translateX(-163%);
-      z-index: 2;
-      @include mq_tab{
-        width : 280px;
-        top : 288px;
-        transform : translateX(-120%);
-      }
-      @include mq_sp{
-        width :size_sp(280);
-        top : size_sp(288);
-        left :size_sp(30);
-        transform : translate(0);
-      }
-    }
-    &-right {
-      position : absolute;
-      top : 90px;
-      left : 50%;
-      transform : translateX(-31%);
-      z-index : 1;
-      @include mq_tab{
-        top : 89px;
-        transform : translateX(-50%);
-      }
-      @include mq_sp{
-        top : size_sp(89);
-        transform : translateX(-50%);
-      }
-      &-high {
-        font-size : 40px;
-        font-weight : 700;
-        line-height : (58/40);
-        letter-spacing: 0.05em;
-        color : $white00;
-        text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.16);
-        padding-left : 74px;
-        @include mq_tab{
-          font-size : 46px;
-          line-height: (66/46);
-          text-align: center;
-          padding : 0;
-        }
-        @include mq_sp{
-          @include fz_vw(46);
-          line-height: (66/46);
-          text-align: center;
-          text-shadow: 0px 0px size_sp(6) rgba(0, 0, 0, 0.16);
-          padding : 0;
-        }
-      }
-      &-low {
-        font-size: 16px;
-        line-height: (37/16);
-        color: $black01;
-        width: 760px;
-        height: 508px;
-        padding : 14px 30px 14px 74px;
-        margin-top : 21px;
-        background: rgba($blue10, .9);
-        @include mq_tab{
-          font-size: 28px;
-          line-height: (58/28);
-          width : 640px;
-          height : 1608px;
-          padding : 21px 40px;
-          margin-top : 130px;
-        }
-        @include mq_sp{
-          @include fz_vw(28);
-          line-height: (58/28);
-          width : size_sp(640);
-          height : size_sp(1608);
-          padding : size_sp(21) size_sp(40);
-          margin-top : size_sp(130);
-        }
-        & span {
-          @include mq_tab{
-            width : 308px;
-            display: block;
-            margin-left : auto;
-          }
-          @include mq_sp{
-            width : size_sp(308);
-            display: block;
-            margin-left: auto;
-          }
+      img{
+        @media screen and (max-width: 1140px) {
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 1;
         }
       }
     }
   }
-  &__philosophy {
-    margin-top : 576px;
-    @include mq_tab{
-      margin-top : 1711px;
-    }
+  &__professor{
+    margin-top: 100px;
     @include mq_sp{
-      margin-top : size_sp(1711);
+      margin-top: size_sp(120);
     }
-    &-concept {
-      font-size : 37px;
-      font-weight: 700;
-      line-height : (77/37);
-      letter-spacing: .05em;
-      text-align: center;
-      margin-top : 62px;
-      position: relative;
+    &Inner{
+      @include box-shadow(0,0,20px,0,$black00,0.1);
+      max-width: 738px;
+      width: 100%;
+      padding: 30px 30px 32px;
+      margin: 0 auto;
       @include mq_sp{
-        @include fz_vw(37);
-        line-height: (86/37);
-        margin-top : size_sp(63);
-        white-space: nowrap;
+        max-width: size_sp(630);
+        padding: size_sp(50) size_sp(30);
       }
-      & span {
-        width : 736px;
-        height : 7px;
-        background-color : $yellow01;
-        position : absolute;
-        top : 72px;
-        left : 50%;
-        transform: translateX(-50%);
+    }
+    &Heading{
+      @include font-size(24);
+      line-height: (35/24);
+      width: 100%;
+      @include mq_sp{
+        @include fz_vw(36);
+        line-height: (58/36);
+        text-align: center;
+      }
+    }
+    &Row{
+      @include flex(flex, wrap, space-between, normal, normal, row);
+      margin-top: 30px;
+      @include mq_sp{
+        margin-top: size_sp(47);
+      }
+    }
+    &Img{
+      max-width: 200px;
+      width: 100%;
+      height: 200px;
+      @include mq_sp{
+        max-width: size_sp(323);
+        height: size_sp(323);
+        margin: 0 auto;
+      }
+    }
+    &Txt{
+      @include font-size(18);
+      line-height: (34/18);
+      max-width: 454px;
+      width: 100%;
+      margin-top: -0.3em;
+      @include mq_sp{
+        @include fz_vw(30);
+        line-height: 2;
+        max-width: 100%;
+        margin-top: size_sp(40);
+      }
+    }
+  }
+  &__history{
+    margin-top: 100px;
+    @include mq_sp{
+      margin-top: size_sp(150);
+    }
+    &Inner{
+      max-width: 738px;
+      width: 100%;
+      margin: 0 auto;
+      @include mq_sp{
+        max-width: size_sp(630);
+      }
+    }
+    &Intro{
+      @include font-size(18);
+      line-height: (34/18);
+      margin-top: 30px;
+      @include mq_sp{
+        @include fz_vw(30);
+        line-height: 2;
+        margin-top: size_sp(47);
+      }
+    }
+    &Cont{
+      margin-top: 45px;
+      @include mq_sp{
+        margin-top: size_sp(77);
+      }
+    }
+    &Item{
+      @include flex(flex, wrap, flex-start, normal, normal, row);
+      @include font-size(20);
+      line-height: (38/20);
+      padding-bottom: 41px;
+      @include mq_sp{
+        @include fz_vw(34);
+        line-height: (64/34);
+        position: relative;
+        padding-bottom: size_sp(83);
+      }
+      &:before{
         @include mq_sp{
-          width : size_sp(348);
-          height : size_sp(10);
-          top : size_sp(75);
+          content: "";
+          position: absolute;
+          left: size_sp(16);
+          bottom: size_sp(22);
+          width: 1px;
+          min-height: size_sp(50);
+          height: size_sp(50);
+          background: $gray03;
         }
-        &:before {
-          content : "";
-          width : 540px;
-          height : 7px;
-          background-color : $yellow01;
-          position : absolute;
-          top : 77px;
-          left : 50%;
+      }
+      &:last-of-type{
+        padding-bottom: 0;
+        .page-about__historyItem-left{
+          &:before{
+            content: none;
+          }
+        }
+      }
+      &-left{
+        position: relative;
+        width: 3.22em;
+        margin-right: 20px;
+        @include mq_sp{
+          line-height: (49/34);
+          width: 100%;
+          margin-right: 0;
+        }
+        &:before{
+          content: "";
+          position: absolute;
+          top: 43px;
+          left: 50%;
           transform: translateX(-50%);
+          width: 1px;
+          min-height: 30px;
+          height: calc(100% - 43px + 30px);
+          background: $gray03;
           @include mq_sp{
-            width : size_sp(386);
-            height : size_sp(10);
-            top : size_sp(86);
-          }
-        }
-        &:after {
-          @include mq_sp{
-            content : "";
-            width : size_sp(540);
-            height : size_sp(10);
-            background-color : $yellow01;
-            position : absolute;
-            top : size_sp(172);
-            left : 50%;
-            transform: translateX(-50%);
+            content: none;
           }
         }
       }
-    }
-    &-txt {
-      font-size : 16px;
-      line-height : (37/16);
-      width : 716px;
-      margin : 0 auto;
-      background: rgba($blue10, .9);
-      padding : 13px 30px;
-      margin-top : 73px;
-      @include mq_sp{
-        @include fz_vw(28);
-        line-height: (58/28);
-        width : size_sp(640);
-        padding : size_sp(20) size_sp(40);
-        margin-top : size_sp(80);
-      }
-    }
-    &-list {
-      margin-top : 200px;
-      padding-bottom : 40px;
-      overflow: hidden;
-      @include mq_sp{
-        margin-top : size_sp(151);
-        padding-bottom: size_sp(50);
-      }
-    }
-    &-item {
-      @include flex(flex, wrap, flex-start, stretch, normal, row);
-      position: relative;
-      z-index: 1;
-      &:not(:first-of-type) {
-        margin-top : 140px;
-        @include mq_tab{
-          margin-top : 199px;
-        }
+      &-right{
+        max-width: 653px;
+        width: 100%;
         @include mq_sp{
-          margin-top : size_sp(199);
-        }
-      }
-      &:nth-of-type(even) {
-        flex-direction: row-reverse;
-        & .page-about__philosophy {
-          &-left {
-            @include mq_tab{
-              left : auto;
-              right : 0;
-            }
-            @include mq_sp{
-              left: auto;
-              right : 0;
-            }
-          }
-          &-right {
-            &-ttl {
-              text-align : right;
-            }
-            &-txt {
-              @include mq_tab{
-                margin-left : 0;
-                margin-right : auto;
-              }
-              @include mq_sp{
-                margin-left : 0;
-                margin-right : auto;
-              }
-            }
-          }
-        }
-        &:before {
-          left : auto;
-          right : 200px;
-          @include mq_tab{
-            left : auto;
-            right : 70px;
-          }
-          @include mq_sp{
-            left : auto;
-            right : size_sp(70);
-          }
-        }
-        & .page-group__contBtn {
-          @include mq_tab{
-            margin: 51px 143px 0 auto;
-          }
-          @include mq_sp{
-            margin: size_sp(51) size_sp(143) 0 auto;
-          }
-        }
-      }
-      &:before {
-        content : "";
-        width : 100vw;
-        height : 94%;
-        background-color: $blue10;
-        position: absolute;
-        top : 72px;
-        left : 200px;
-        z-index: -1;
-        @include mq_tab{
-          height : 1213px;
-          top : 310px;
-          left : 70px;
-        }
-        @include mq_sp{
-          height : size_sp(1213);
-          top : size_sp(310);
-          left : size_sp(70);
-        }
-      }
-    }
-    &-left {
-      width : 50%;
-      height : 451px;
-      @include mq_tab{
-        width : 616px;
-        height : 451px;
-        position: absolute;
-        top : 89px;
-        left : 0;
-      }
-      @include mq_sp{
-        width : size_sp(616);
-        height : size_sp(451);
-        position: absolute;
-        top : size_sp(89);
-        left : 0;
-      }
-    }
-    &-right {
-      width : 50%;
-      max-width: 640px;
-      padding : 1px 63px 0px;
-      @include mq_tab{
-        width : 630px;
-        padding : 0px;
-        margin : 0 auto;
-      }
-      @include mq_sp{
-        width : size_sp(630);
-        padding : 0;
-        margin : 0 auto;
-      }
-      &-ttl {
-        font-size : 36px;
-        font-weight: 700;
-        line-height : (52/36);
-        color : $blue02;
-        @include mq_tab{
-          font-size : 40px;
-          line-height: (58/40);
-        }
-        @include mq_sp{
-          @include fz_vw(40);
-          line-height: (58/40);
-        }
-      }
-      &-txt {
-        line-height: (37/16);
-        margin-top : 53px;
-        @include mq_tab{
-          font-size : 28px;
-          line-height: (58/28);
-          width : 560px;
-          margin-top : 521px;
-          margin-left : auto;
-        }
-        @include mq_sp{
-          @include fz_vw(28);
-          line-height: (58/28);
-          width : size_sp(560);
-          margin-top : size_sp(521);
-          margin-left : auto;
-        }
-      }
-      & .page-group__contBtn {
-        font-size : 15px;
-        line-height : (28/15);
-        width : 246px;
-        margin: 34px auto 0 111px;
-        padding : 11px 0;
-        @include mq_tab{
-          font-size : 24px;
-          line-height: (44/24);
-          width : 414px;
-          margin : 51px auto 0 143px;
-          padding : 22px 0px;
-        }
-        @include mq_sp{
-          @include fz_vw(24);
-          line-height: (44/24);
-          width : size_sp(414);
-          margin: size_sp(51) auto 0 size_sp(143);
-          padding: size_sp(22) 0;
+          max-width: 100%;
+          margin-top: size_sp(4);
         }
       }
     }
   }
-  & .mod-banner {
-    margin-top : 200px;
+  &__corporation{
+    margin-top: 95px;
     @include mq_sp{
-      margin-top : size_sp(200);
+      margin-top: size_sp(142);
+    }
+    &Inner{
+      max-width: 738px;
+      width: 100%;
+      margin: 0 auto;
+      @include mq_sp{
+        max-width: size_sp(630);
+      }
+    }
+    &Heading{
+      @include font-size(30);
+      @include mq_sp{
+        @include fz_vw(40);
+      }
+    }
+    &Thumb{
+      margin-top: 30px;
+      @include mq_sp{
+        margin-top: size_sp(50);
+      }
+    }
+    &List{
+      margin-top: 40px;
+      @include mq_sp{
+        margin-top: size_sp(50);
+      }
+    }
+    &Item{
+      @include flex(flex, wrap, flex-start, normal, normal, row);
+      padding-bottom: 16px;
+      @include mq_sp{
+        padding-bottom: size_sp(22);
+      }
+      &:nth-of-type(n + 2){
+        padding: 16px 0;
+        border-top: 1px solid $gray01;
+        @include mq_sp{
+          padding: size_sp(30) 0 size_sp(22);
+        }
+      }
+      &-left{
+        @include font-size(18);
+        line-height: (34/18);
+        font-weight: 600;
+        max-width: 120px;
+        width: 100%;
+        @include mq_sp{
+          @include fz_vw(34);
+          line-height: (49/34);
+          max-width: 100%;
+        }
+      }
+      &-right{
+        @include font-size(18);
+        line-height: (34/18);
+        max-width: calc(100% - 120px);
+        width: 100%;
+        @include mq_sp{
+          @include fz_vw(32);
+          line-height: (64/32);
+          max-width: 100%;
+          margin-top: size_sp(8);
+        }
+        span{
+          display: block;
+          &:nth-of-type(n + 2){
+            margin-top: 14px;
+            @include mq_sp{
+              margin-top: size_sp(30);
+            }
+          }
+          & > a{
+            //line-height: (28/18);
+            text-decoration: underline;
+            display: block;
+          }
+        }
+        small{
+          @include font-size(16);
+          line-height: (24/16);
+          display: block;
+          margin-top: 4px;
+          @include mq_sp{
+            @include fz_vw(22);
+            line-height: (32/22);
+            margin-top: size_sp(8);
+          }
+        }
+      }
     }
   }
 }
