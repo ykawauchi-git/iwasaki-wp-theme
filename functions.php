@@ -72,6 +72,9 @@ function iwasaki_scripts()
 		wp_enqueue_script('slick-js', 'https://kenwheeler.github.io/slick/slick/slick.js', '','',true);
 		wp_enqueue_script('iwasaki-group-scripts', get_template_directory_uri().'/js/group.js', '',filemtime( get_stylesheet_directory() . '/js/group.js' ),true);
 	}
+	if(is_page('facilities')){
+		wp_enqueue_script('iwasaki-group-scripts', get_template_directory_uri().'/js/facilities.js', '',filemtime( get_stylesheet_directory() . '/js/facilities.js' ),true);
+	}
 	if(is_archive()) {
 		wp_enqueue_script('infinite-scripts', get_template_directory_uri().'/js/infinite-scroll.js', '','',true);
 		wp_enqueue_script('post-scripts', get_template_directory_uri().'/js/post.js', '','',true);
