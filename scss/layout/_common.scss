@@ -11,7 +11,7 @@ $header_height_sp: size_sp(102);
   margin-top: $header_height_pc;//ヘッダーの高さを入れる
   padding-bottom: 150px;
   position: relative;
-  @media screen and (max-width: 1000px) {
+  @include mq_tab {
     margin-top: 102px;
   }
 	@include mq_sp {
