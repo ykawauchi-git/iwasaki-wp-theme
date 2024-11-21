@@ -92,6 +92,13 @@
       top: 50%;
       right: 10px;
       transform: translateY(-50%);
+      z-index : 2;
+      pointer-events: none;
+      @include mq_sp{
+        width: size_sp(31);
+        height: size_sp(23);
+        right: size_sp(29);
+      }
     }
   }
   &__cat {

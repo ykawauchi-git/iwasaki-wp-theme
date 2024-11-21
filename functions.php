@@ -79,10 +79,15 @@ function iwasaki_scripts()
 		wp_enqueue_script('infinite-scripts', get_template_directory_uri().'/js/infinite-scroll.js', '','',true);
 		wp_enqueue_script('post-scripts', get_template_directory_uri().'/js/post.js', '','',true);
 	}
+	if(is_single()) {
+		wp_enqueue_script('single-scripts', get_template_directory_uri().'/js/single.js', '','',true);
+	}
 }
 add_action('wp_enqueue_scripts', 'iwasaki_scripts');
 
+
 //incフォルダからインクルード
+require get_template_directory().'/inc/editor.php';
 require get_template_directory().'/inc/reset.php';
 require get_template_directory().'/inc/device_if.php';
 require get_template_directory().'/inc/body_class.php';

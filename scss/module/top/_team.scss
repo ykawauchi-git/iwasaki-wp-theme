@@ -65,15 +65,20 @@
       &:last-of-type {
         margin-right: 0;
       }
-      & a {
+      & > a {
         width: 100%;
         height: 100%;
         display: block;
         position: relative;
         & figure {
           height: 140px;
+          @include flex(flex, wrap, center, center, normal, row);
           @include mq_sp{
             height: size_sp(204);
+          }
+          & img {
+            width: 100%;
+            object-fit: cover;
           }
         }
         & span {
