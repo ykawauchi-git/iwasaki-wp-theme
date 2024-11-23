@@ -116,6 +116,9 @@ $header_height_sp: size_sp(102);
   }
   &__menu {
     margin-left: 58px;
+    @media screen and (max-width: 1200px) {
+      margin-left: 0;
+    }
     @include mq_tab{
       color : $white00;
       background : rgba($black02,0.9);
@@ -153,6 +156,9 @@ $header_height_sp: size_sp(102);
         }
         &:nth-of-type(n + 2) {
           margin-left: 40px;
+          @media screen and (max-width: 1200px) {
+            margin-left: 28px;
+          }
           @include mq_tab{
             margin-top: 35px;
             margin-left: 0;

@@ -27,15 +27,15 @@ $singleCat = get_the_category();
 		<div class="editor-content">
 			<?php the_content(); ?>
 			<div class="<?php echo $pageName;?>__sns">
-				<a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode(get_permalink()); ?>" target="_blank" rel="noopener noreferrer">
+				<a class="<?php echo $pageName;?>__snsItem" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode(get_permalink()); ?>" target="_blank" rel="noopener noreferrer">
 					<img class="object_fit" src="<?php echo get_stylesheet_directory_uri();?>/img/common/icn_facebook-navy.svg" alt="">
 				</a>
-				<a href="https://twitter.com/intent/tweet?url=<?php echo urlencode(get_permalink()); ?>&text=<?php echo urlencode(get_the_title()); ?>" target="_blank" rel="noopener noreferrer">
+				<a class="<?php echo $pageName;?>__snsItem" href="https://twitter.com/intent/tweet?url=<?php echo urlencode(get_permalink()); ?>&text=<?php echo urlencode(get_the_title()); ?>" target="_blank" rel="noopener noreferrer">
 					<img class="object_fit" src="<?php echo get_stylesheet_directory_uri();?>/img/common/icn_twitter-navy.svg" alt="">
 				</a>
-				<a href="" target="_blank">
+				<button class="<?php echo $pageName;?>__snsItem" id="copy" data-url="">
 					<img class="object_fit" src="<?php echo get_stylesheet_directory_uri();?>/img/common/icn_link-navy.svg" alt="">
-				</a>
+				</button>
 			</div>
 		</div>
 	</div>

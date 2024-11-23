@@ -82,18 +82,25 @@
     @include mq_sp{
       margin-top: size_sp(100);
     }
-    & > a {
+    &Item {
       width: 40px;
       display: block;
+      margin: 0 20px;
+      cursor: pointer;
+      transition: .6s;
       @include mq_sp{
         width: size_sp(68);
+        margin: 0 size_sp(25);
       }
-      &:not(:first-of-type) {
-        margin-left : 40px;
-        @include mq_sp{
-          margin-left: size_sp(50);
-        }
+      &:hover {
+        opacity: .6;
       }
+      // &:not(:first-of-type) {
+      //   margin-left : 40px;
+      //   @include mq_sp{
+      //     margin-left: size_sp(50);
+      //   }
+      // }
     }
   }
   & .editor-content {
