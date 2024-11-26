@@ -145,7 +145,7 @@
 
     <!-- コンテンツ -->
     <main class="common-main">
-      <?php //get_template_part('template-parts/common/page-title'); ?>
+      <?php get_template_part('template-parts/common/page-title'); ?>
       <?php
 			if(!is_front_page()){
 				get_template_part('template-parts/common/breadcrumbs');

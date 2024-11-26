@@ -139,25 +139,28 @@ $(function(){
 });
 
 // 学生支援
-$(function () {
-  $('.page-support__dormitoryGuideLeftSubItem:first-of-type').addClass('current');
-  $(".page-support__dormitoryGuideLeftSubItem img").on("click", function () {
-    // メイン画像に切り替えるimgのsrc取得
-    img = $(this).attr("src");
-    // currentクラス付け替え(枠線などを変えたい時に)
-    $(".page-support__dormitoryGuideLeftSubItem").removeClass("current");
-    $(this).parent().addClass("current");
-    // fadeOutできたらsrc変更してfadeIn
-    $(".page-support__dormitoryGuideLeftMain img").fadeOut(250, function () {
-      $(".page-support__dormitoryGuideLeftMain img")
-        .attr("src", img)
-        .on("load", function () {
-          $(this).fadeIn(250);
-        });
+$(document).ready(function () {
+  // サムネイル画像をクリックした際の処理
+  $('.page-support__dormitoryGuideLeftSubItem').on('click', function () {
+    // クラスの付け替え
+    $('.page-support__dormitoryGuideLeftSubItem').removeClass('current');
+    $(this).addClass('current');
+
+    // メイン画像をフェードで切り替え
+    const newSrc = $(this).find('img').attr('data-src');
+    const newSrcset = $(this).find('img').attr('data-srcset');
+    const $mainImage = $('.page-support__dormitoryGuideLeftMain img');
+
+    $mainImage.fadeOut(500, function () {
+      // フェードアウト完了後に画像を切り替え
+      $mainImage.attr('src', newSrc);
+      $mainImage.attr('srcset', newSrcset);
+
+      // フェードイン
+      $mainImage.fadeIn(400);
     });
   });
 });
-
 // 企業の皆さまへ
 $(function(){
 	$('.page-recruiters__post-question').click(function(){

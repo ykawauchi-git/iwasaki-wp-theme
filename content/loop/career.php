@@ -20,7 +20,10 @@ $graduateOccupation = $graduateInfo['career_graduate_occupation'];
         <h2><?php echo $graduateTtl;?></h2>
         <?php endif;?>
         <?php if($graduateAlma):?>
-        <div class="<?php echo $secName;?>__infoAlma"><?php echo $graduateAlma;?></div>
+        <div class="<?php echo $secName;?>__infoAlma"><?php echo $graduateAlma;?>　卒業</div>
+        <?php endif;?>
+        <?php if($graduateOccupation):?>
+        <div class="<?php echo $secName;?>__infoOccupation"><?php echo $graduateOccupation;?></div>
         <?php endif;?>
       </div>
       <div class="<?php echo $secName;?>__infoLogo"></div>

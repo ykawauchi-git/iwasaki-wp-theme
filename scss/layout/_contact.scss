@@ -179,7 +179,8 @@ $page-contact: ".page-contact";
         margin-right: 0;
         // margin-top: 0;
         // margin-bottom: 13px;
-        margin-top: size_sp(13);
+        // margin-top: size_sp(13);
+        margin-top: 13px;
         @include mq_sp{
           width: size_sp(262);
           margin: size_sp(33) auto 0;

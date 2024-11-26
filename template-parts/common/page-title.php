@@ -17,64 +17,22 @@
   if(is_front_page() || is_home()) {
   } elseif(is_page()){
     if(!is_page(array('sitemap','contact','access','document','media-policy','privacy-policy','history','career','facilities','pioneer','speciality','method','academic-industrial-collaboration'))){
+      if($thumb && $thumb_sp) {
       echo '<section class="page-kv common-kv">';
       echo '<figure class="common-kv__bg"><img src="'.$thumb.'" alt="'.$ttl.'" class="pctab-only object_fit"><img src="'.$thumb_sp.'" alt="'.$ttl.'" class="sp-only object_fit"></figure>';
       // echo '<h1 class="common-kv__ttl">'.$ttl.'</h1>';
       echo '</section>';
-    }
-    // 就職・資格サポート
-    if(is_page('career')) {
-      echo '<div class="common-subKv"">';
-        echo '<figure class="common-subKv__bg"><img src="'.$thumb.'" alt="'.$ttl.'" class="pctab-only object_fit"><img src="'.$thumb_sp.'" alt="'.$ttl.'" class="sp-only object_fit"></figure>';
-        echo '<div class="common-subKv__inner">';
-          echo '<div class="common-subKv__ttl page-subHeading">就職・資格サポート</div>';
-          echo '<div class="common-subKv__txt">';
-            echo '文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。<br>
-            文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。';
-          echo'</div>';
-        echo'</div>';
-      echo'</div>';
-    }
-    // 専門力
-    if(is_page('speciality')) {
-      echo '<div class="common-subKv"">';
-        echo '<figure class="common-subKv__bg"><img src="'.$thumb.'" alt="'.$ttl.'" class="pctab-only object_fit"><img src="'.$thumb_sp.'" alt="'.$ttl.'" class="sp-only object_fit"></figure>';
-        echo '<div class="common-subKv__inner">';
-          echo '<div class="common-subKv__ttl page-subHeading">岩崎学園の専門力</div>';
-          echo '<div class="common-subKv__txt">';
-            echo '文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。<br>
-            文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。';
-          echo'</div>';
-        echo'</div>';
-      echo'</div>';
-    }
-    // 専門力
-    if(is_page('pioneer')) {
-      echo '<div class="common-subKv"">';
-        echo '<figure class="common-subKv__bg"><img src="'.$thumb.'" alt="'.$ttl.'" class="pctab-only object_fit"><img src="'.$thumb_sp.'" alt="'.$ttl.'" class="sp-only object_fit"></figure>';
-        echo '<div class="common-subKv__inner">';
-          echo '<div class="common-subKv__ttl page-subHeading">未来を生きる力を磨く「開拓力」</div>';
-          echo '<div class="common-subKv__txt">';
-            echo '文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。<br>
-            文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。文章が入ります、文章が入ります。';
-          echo'</div>';
-        echo'</div>';
-      echo'</div>';
-    }
-    // IWASAKI METHOD
-    if(is_page('method')){
-      echo '<section class="page-kv common-kv">';
-      echo '<figure class="common-kv__bg"><img src="'.$thumb.'" alt="'.$ttl.'" class="pctab-only object_fit"><img src="'.$thumb_sp.'" alt="'.$ttl.'" class="sp-only object_fit"></figure>';
-      echo '<h1 class="common-kv__ttl">発想力豊かな人材を育成する<br>IWASAKI METHOD</h1>';
-      echo '</section>';
+      }
     }
 	//archives
 	}elseif(is_archive()){
-    if(is_post_type_archive()) {
+    if(is_post_type_archive('career')) {
+      if($careerKV_pc && $careerKV_sp) {
       echo '<section class="page-kv common-kv">';
       echo '<figure class="common-kv__bg"><img src="'.$careerKV_pc.'" alt="'.$ttl.'" class="pctab-only object_fit"><img src="'.$careerKV_sp.'" alt="'.$ttl.'" class="sp-only object_fit"></figure>';
       // echo '<h1 class="common-kv__ttl">'.$ttl.'</h1>';
       echo '</section>';
+      }
     }
 	//他
   }elseif(is_page('contact')){

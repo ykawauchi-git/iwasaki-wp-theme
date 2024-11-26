@@ -32,7 +32,7 @@
       @include mq_sp{
         @include fz_vw(34);
         line-height: (64/34);
-        margin-top: size_sp(80);
+        margin-top: size_sp(73);
       }
     }
     &Imgs{
@@ -41,13 +41,13 @@
       left: 50%;
       transform: translateX(-50%);
       width: 1104px;
-      margin-top: 60px;
+      margin-top: 54px;
       @media screen and (max-width: 1140px) {
         max-width: 100%;
         width: 100%;
       }
       @include mq_sp{
-        margin-top: size_sp(80);
+        margin-top: size_sp(72);
       }
     }
     &Img{
@@ -88,14 +88,15 @@
       margin-top: size_sp(120);
     }
     &Inner{
+      background: $white00;
       @include box-shadow(0,0,20px,0,$black00,0.1);
       max-width: 738px;
       width: 100%;
-      padding: 30px 30px 32px;
+      padding: 40px 30px 36px;
       margin: 0 auto;
       @include mq_sp{
-        max-width: size_sp(630);
-        padding: size_sp(50) size_sp(30);
+        max-width: size_sp(644);
+        padding: size_sp(47) size_sp(29) size_sp(42);
       }
     }
     &Heading{
@@ -135,7 +136,7 @@
         @include fz_vw(30);
         line-height: 2;
         max-width: 100%;
-        margin-top: size_sp(40);
+        margin-top: size_sp(32);
       }
     }
   }
@@ -155,17 +156,17 @@
     &Intro{
       @include font-size(18);
       line-height: (34/18);
-      margin-top: 30px;
+      margin-top: 26px;
       @include mq_sp{
         @include fz_vw(30);
         line-height: 2;
-        margin-top: size_sp(47);
+        margin-top: size_sp(42);
       }
     }
     &Cont{
-      margin-top: 45px;
+      margin-top: 42px;
       @include mq_sp{
-        margin-top: size_sp(77);
+        margin-top: size_sp(72);
       }
     }
     &Item{
@@ -177,7 +178,7 @@
         @include fz_vw(34);
         line-height: (64/34);
         position: relative;
-        padding-bottom: size_sp(83);
+        padding-bottom: size_sp(81);
       }
       &:before{
         @include mq_sp{
@@ -234,7 +235,7 @@
     }
   }
   &__corporation{
-    margin-top: 95px;
+    margin-top: 96px;
     @include mq_sp{
       margin-top: size_sp(142);
     }
@@ -253,13 +254,13 @@
       }
     }
     &Thumb{
-      margin-top: 30px;
+      margin-top: 31px;
       @include mq_sp{
-        margin-top: size_sp(50);
+        margin-top: size_sp(51);
       }
     }
     &List{
-      margin-top: 40px;
+      margin-top: 36px;
       @include mq_sp{
         margin-top: size_sp(50);
       }
@@ -268,13 +269,13 @@
       @include flex(flex, wrap, flex-start, normal, normal, row);
       padding-bottom: 16px;
       @include mq_sp{
-        padding-bottom: size_sp(22);
+        padding-bottom: size_sp(20);
       }
       &:nth-of-type(n + 2){
         padding: 16px 0;
         border-top: 1px solid $gray01;
         @include mq_sp{
-          padding: size_sp(30) 0 size_sp(22);
+          padding: size_sp(30) 0 size_sp(20);
         }
       }
       &-left{
@@ -298,14 +299,14 @@
           @include fz_vw(32);
           line-height: (64/32);
           max-width: 100%;
-          margin-top: size_sp(8);
+          margin-top: size_sp(11);
         }
         span{
           display: block;
           &:nth-of-type(n + 2){
-            margin-top: 14px;
+            margin-top: 10px;
             @include mq_sp{
-              margin-top: size_sp(30);
+              margin-top: size_sp(21);
             }
           }
           & > a{
@@ -318,11 +319,11 @@
           @include font-size(16);
           line-height: (24/16);
           display: block;
-          margin-top: 4px;
+          margin-top: 2px;
           @include mq_sp{
             @include fz_vw(22);
             line-height: (32/22);
-            margin-top: size_sp(8);
+            margin-top: size_sp(7);
           }
         }
       }

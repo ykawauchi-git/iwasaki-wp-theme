@@ -1,7 +1,7 @@
 .page-facilities {
   padding-top : 30px;
   @include mq_sp{
-    padding-top : size_sp(100);
+    padding-top : size_sp(61);
   }
   &__group{
     &Inner{
@@ -22,6 +22,7 @@
       margin-top: 26px;
       @include mq_sp{
         @include fz_vw(30);
+        line-height: 2;
         margin-top: size_sp(42);
       }
     }
@@ -29,7 +30,7 @@
       max-width: 757px;
       width: 100%;
       padding: 35px;
-      margin: 47px auto 0;
+      margin: 46px auto 0;
       background: rgba($gray01,0.3);
       @include mq_sp{
         max-width: size_sp(630);
@@ -39,7 +40,7 @@
     }
     &Sec{
       &:nth-of-type(n + 2){
-        margin-top: 36px;
+        margin-top: 35px;
         @include mq_sp{
           margin-top: size_sp(70);
         }
@@ -107,7 +108,7 @@
         @include flex(flex, wrap, space-between, normal, normal, row);
         margin-top: 17px;
         @include mq_sp{
-          margin-top: size_sp(29);
+          margin-top: size_sp(28);
         }
       }
       &-item{
@@ -165,7 +166,7 @@
   &__facility{
     margin-top: 130px;
     @include mq_sp{
-      margin-top: size_sp(120);
+      margin-top: size_sp(70);
     }
     &List{
       max-width: 768px;
@@ -180,9 +181,21 @@
     }
     &Item{
       &:nth-of-type(n + 2){
-        margin-top: 100px;
+        margin-top: 98px;
         @include mq_sp{
           margin-top: size_sp(130);
+        }
+      }
+      &#facility14 {
+        & .page-facilities__facility {
+          &Btn {
+            font-size: 14px;
+            padding: 9px 0 8px;
+            @include mq_sp{
+              @include fz_vw(22);
+              padding: size_sp(22) 0;
+            }
+          }
         }
       }
     }
@@ -204,7 +217,7 @@
     &Info{
       max-width: 478px;
       width: (478/768) * 100%;
-      margin-top: -0.1em;
+      // margin-top: -0.1em;
       @include mq_sp{
         max-width: size_sp(345);
         width: 100%;
@@ -214,10 +227,11 @@
     &Ttl{
       @include font-size(20);
       line-height: (29/20);
-      letter-spacing: 0.005em;
+      letter-spacing: 0.05em;
       @include mq_sp{
         @include fz_vw(32);
         line-height: (56/32);
+        letter-spacing: 0em;
       }
       small{
         @include font-size(15);
@@ -234,24 +248,24 @@
     }
     &Intro{
       line-height: (27/16);
-      margin-top: 16px;
+      margin-top: 15px;
       @include mq_sp{
         @include fz_vw(26);
         line-height: (50/26);
-        margin-top: size_sp(24);
+        margin-top: size_sp(19);
       }
     }
     &Txt{
       @include font-size(18);
       line-height: (34/18);
       position: relative;
-      padding-top: 12px;
-      margin-top: 20px;
+      padding-top: 17px;
+      margin-top: 17px;
       @include mq_sp{
         @include fz_vw(26);
         line-height: (50/26);
         padding-top: 0;
-        margin-top: size_sp(12);
+        margin-top: size_sp(34);
       }
       &:before{
         content: "";
@@ -274,16 +288,18 @@
       display: block;
       max-width: 148px;
       width: 100%;
-      padding: 8px 0;
-      margin-top: 22px;
+      padding: 7px 0;
+      margin-top: 26px;
       margin-left: auto;
       border: 1px solid $black01;
       @include mq_sp{
         @include fz_vw(22);
         line-height: (32/22);
         max-width: size_sp(262);
-        padding: size_sp(22) 0;
+        padding: size_sp(20) 0;
+        margin-top: size_sp(33);
         margin-right: auto;
+        border: size_sp(2) solid $black01;
       }
       &.sp{
         display: none;
@@ -320,7 +336,7 @@
         }
       }
       &-txt{
-        margin-top: 8px;
+        margin-top: 9px;
         @include mq_sp{
           max-width: size_sp(285);
           margin-top: -0.25em;

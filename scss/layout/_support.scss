@@ -1,5 +1,5 @@
 .page-support {
-  padding-top: 35px;
+  padding-top: 30px;
   @include mq_sp{
     padding-top: size_sp(61);
   }
@@ -67,7 +67,7 @@
     &Left {
       max-width: 349px;
       width: 100%;
-      margin-bottom: 85px;
+      margin-bottom: 64px;
       @include mq_sp{
         max-width: 100%;
         margin: 0;

@@ -87,6 +87,6 @@ $graduateOccupation = $graduateInfo['career_graduate_occupation'];
       echo '<p style="margin-top: 3em;">まだ記事がありません。</p>';
       endif;?>
     </ul>
-    <a class="btn__more b" href="">一覧へ戻る</a>
+    <a class="btn__more b" href="<?php echo home_url('/career/');?>">一覧へ戻る</a>
   </div>
 </section>

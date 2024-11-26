@@ -22,7 +22,7 @@
   &__inner {
     max-width: 948px;
     width: 100%;
-    padding-top: 75px;
+    padding-top: 76px;
     margin: 0 auto;
     @include mq_tab{
       max-width: 100%;
@@ -31,36 +31,52 @@
     @include mq_sp{
       max-width: size_sp(630);
       padding-top: size_sp(72);
+      padding-left: 0;
+      padding-right: 0;
     }
   }
   &__employment {
     max-width: 768px;
     width: 100%;
-    padding-top: 80px;
+    padding-top: 130px;
     margin: 0 auto;
     @include mq_sp{
       max-width: size_sp(630);
       padding-top: size_sp(120);
     }
-    & > li {
-      &:nth-of-type(n + 2) {
-        margin-top: 48px;
-        @include mq_sp{
-          margin-top: size_sp(53);
-        }
+    & > h2 {
+      font-size: 26px;
+      line-height: (37/26);
+      @include mq_sp{
+        @include fz_vw(40);
+        line-height: (58/40);
       }
-      & h3 {
-        font-size: 20px;
-        font-weight: 700;
-        line-height: (29/20);
-        text-align: center;
-        color: $white00;
-        background : $black02;
-        padding: 11px;
-        @include mq_sp{
-          @include fz_vw(34);
-          line-height: (64/34);
-          padding: size_sp(9) size_sp(9) size_sp(8);
+    }
+    &Group {
+      padding-top: 30px;
+      @include mq_sp{
+        padding-top: size_sp(50);
+      }
+      & > li {
+        &:nth-of-type(n + 2) {
+          margin-top: 48px;
+          @include mq_sp{
+            margin-top: size_sp(53);
+          }
+        }
+        & h3 {
+          font-size: 20px;
+          font-weight: 700;
+          line-height: (29/20);
+          text-align: center;
+          color: $white00;
+          background : $black02;
+          padding: 11px;
+          @include mq_sp{
+            @include fz_vw(34);
+            line-height: (64/34);
+            padding: size_sp(9) size_sp(9) size_sp(8);
+          }
         }
       }
     }
@@ -77,7 +93,7 @@
         position: relative;
         @include mq_sp{
           width: 100%;
-          padding-left: size_sp(26);
+          padding-left: size_sp(30);
         }
         & > span {
           position: absolute;

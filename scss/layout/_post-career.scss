@@ -49,20 +49,21 @@
   &__info {
     text-align: right;
     max-width: 422px;
-    padding : 29px 28px;
+    // padding : 29px 28px;
+    padding: 30px;
     width: 100%;
     @include flex(flex, wrap, stretch, flex-end, normal, column);
     @include mq_sp{
       text-align: left;
       max-width: none;
-      padding: size_sp(48) size_sp(40) size_sp(43);
+      padding: size_sp(52) size_sp(30) size_sp(41);
       align-items: flex-start;
       justify-content: space-between;
       flex-direction: row;
     }
     &Cont {
       @include mq_sp{
-        width: size_sp(360);
+        width: size_sp(432);
       }
     }
     & h2 {
@@ -71,19 +72,31 @@
       line-height: (40/28);
       letter-spacing: .05em;
       @include mq_sp{
-        @include fz_vw(38);
-        line-height: (55/38);
+        @include fz_vw(36);
+        line-height: (52/36);
         letter-spacing: 0em;
       }
     }
     &Alma {
       font-size: 16px;
+      font-weight: 400;
       line-height: (27/16);
       margin-top: 15px;
       @include mq_sp{
-        @include fz_vw(26);
-        line-height: (50/26);
-        margin-top: size_sp(24);
+        @include fz_vw(24);
+        line-height: (50/24);
+        margin-top: size_sp(23);
+      }
+    }
+    &Occupation {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: (27/16);
+      margin-top: 13px;
+      @include mq_sp{
+        @include fz_vw(22);
+        line-height: (50/22);
+        margin-top: size_sp(3);
       }
     }
     &Logo {
@@ -92,8 +105,8 @@
       background : $white00;
       margin-top: 38px;
       @include mq_sp{
-        width: size_sp(122);
-        height: size_sp(122);
+        width: size_sp(110);
+        height: size_sp(110);
         margin-top: 0;
       }
     }
