@@ -28,7 +28,14 @@ $(document).ready(function() {
   var bannerSwiper = new Swiper('.top-kv__slider', {
     autoHeight: true,
     slidesPerView: 1,
+    effect: 'fade',
     loop: true,
+    speed: 1000,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+      waitForTransition: false,
+    },
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
