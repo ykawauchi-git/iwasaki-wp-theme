@@ -27,16 +27,16 @@
         margin-right: size_sp(34);
       }
       &:nth-of-type(odd) {
-        background: $black01;
         & > a {
+          background: $black01;
           & > span {
             color : $white00;
           }
         }
       }
       &:nth-of-type(even) {
-        background: $gray01;
         & > a {
+          background: $gray01;
           & > span {
             color : $black01;
           }

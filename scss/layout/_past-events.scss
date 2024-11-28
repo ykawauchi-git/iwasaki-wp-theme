@@ -15,7 +15,7 @@
     padding-top: 50px;
     @include flex(flex, wrap, center, stretch, normal, row);
     @include mq_sp{
-      width: 523px;
+      width: size_sp(523);
       margin: 0 auto;
       flex-direction: column;
     }

@@ -41,7 +41,7 @@
   <div class="mod-banner">
     <div class="mod-banner__ttl"><span>求人申し込みはこちら</span></div>
     <div class="mod-banner__txt">
-      岩崎学園では、共に変化を楽しみ<br class="pctab-only">教育サービスを提供しつづけることができる​方を募集しています。
+      ご登録頂きました求人は岩崎学園全体の学生が閲覧可能なシステムに反映されます。
     </div>
     <a href="<?php echo home_url('/facility'); ?>" class="mod-btn b">詳しく見る</a>
   </div>

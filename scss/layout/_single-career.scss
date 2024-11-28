@@ -32,7 +32,7 @@
     &Cont {
       background : $gray01;
       width: 424px;
-      padding: 46px 31px 43px 70px;
+      padding: 46px 31px 48px 70px;
       margin-left: auto;
       @include mq_sp{
         width: size_sp(568);
@@ -49,13 +49,13 @@
       }
     }
     &List {
-      margin-top: 19px;
+      margin-top: 24px;
       @include mq_sp{
         margin-top: size_sp(23);
       }
       & > li {
         font-size: 16px;
-        line-height: (37/16);
+        line-height: (27/16);
         @include flex(flex, wrap, space-between, normal, normal, row);
         @include mq_sp{
           @include fz_vw(26);
@@ -63,7 +63,7 @@
           flex-direction: column;
         }
         &:nth-of-type(n + 2) {
-          margin-top: 3px;
+          margin-top: 13px;
           @include mq_sp{
             margin-top: size_sp(15);
           }
@@ -166,8 +166,10 @@
       }
     }
     &Thumb {
-      width: 447px;
-      height: 298px;
+      // width: 447px;
+      // height: 298px;
+      width: 100%;
+      height: 512px;
       margin: 24px auto;
       @include mq_sp{
         width: 100%;

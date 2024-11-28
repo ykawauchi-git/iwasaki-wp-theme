@@ -17,8 +17,8 @@ $secCat = get_the_category();
         <div class="<?php echo $secName;?>__thumb">
           <?php if ( has_post_thumbnail() ): ?><!-- if文による条件分岐 アイキャッチが有る時-->
             <?php echo get_the_post_thumbnail($post->ID,'full', array('class' => 'object_fit')); ?>
-            <?php else: ?><!-- アイキャッチが無い時-->
-            <!-- <img class="object_fit" src="<?php echo get_stylesheet_directory_uri();?>/img/archive/img_none.jpg"> -->
+          <?php else: ?><!-- アイキャッチが無い時-->
+            <img class="object_fit" src="<?php echo get_stylesheet_directory_uri();?>/img/common/img_none.jpg" alt="">
           <?php endif; ?>
         </div>
         <time class="<?php echo $secName;?>__date"><?php the_time('Y.m.d'); ?></time>

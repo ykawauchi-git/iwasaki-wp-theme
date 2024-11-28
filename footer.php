@@ -35,9 +35,9 @@
             <li><a href="https://iscs.iwasaki.ac.jp/" target="_blank">横浜スポーツ＆医療ウェルネス専門学校<span>(旧校名 横浜医療情報専門学校)</span></a></li>
             <li><a href="https://yfc.iwasaki.ac.jp/" target="_blank">横浜ｆカレッジ</a></li>
             <li><a href="https://ycr.iwasaki.ac.jp/" target="_blank">横浜リハビリテーション専門学校</a></li>
-            <li><a href="https://yda.iwasaki.ac.jp/index.html" target="_blank">横浜デジタルアーツ専門学校</a></li>
+            <li><a href="https://yda.iwasaki.ac.jp/" target="_blank">横浜デジタルアーツ専門学校</a></li>
             <li><a href="https://hoiku.iwasaki.ac.jp/" target="_blank">横浜保育福祉専門学校</a></li>
-            <li><a href="https://jkango.iwasaki.ac.jp/index.html" target="_blank">横浜実践看護専門学校</a></li>
+            <li><a href="https://jkango.iwasaki.ac.jp/" target="_blank">横浜実践看護専門学校</a></li>
           </ul>
         </li>
         <li>

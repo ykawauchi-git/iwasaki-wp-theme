@@ -106,14 +106,15 @@ $header_height_sp: size_sp(102);
     transform: translateX(-50%);
     z-index : -1;
     pointer-events: none;
-    @include mq_sp{
-      height: size_sp(517);
-    }
+    // @include mq_sp{
+    //   height: size_sp(517);
+    // }
     &:before {
       content : "";
       width: 100%;
       height: 100%;
       background-image :url(./img/page/bg_confetti.png);
+      background-size: contain;
       background-repeat: repeat;
       position: absolute;
       bottom: 0;
@@ -122,9 +123,7 @@ $header_height_sp: size_sp(102);
       opacity: .1;
       z-index : -2;
       @include mq_sp{
-        height: size_sp(750);
         background-image :url(./img/page/bg_confetti-sp.png);
-  
       }
     }
   }

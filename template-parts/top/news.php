@@ -28,5 +28,5 @@
       <?php endwhile; endif; wp_reset_postdata();?>
     </div>
   </div>
-  <a href="<?php echo home_url('/');?>" class="btn__more w">もっと見る</a>
+  <a href="<?php echo home_url('/news/');?>" class="btn__more w">もっと見る</a>
 </section>

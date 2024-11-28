@@ -84,6 +84,14 @@ $page-sitemap :".page-sitemap";
       @include mq_sp{
         box-shadow: 0px 0px size_sp(10) rgba($black00, .1);
       }
+      &.past-events {
+        & > a {
+          @include mq_sp{
+            @include fz_vw(23);
+            padding: size_sp(16) 0 size_sp(16) size_sp(40);
+          }
+        }
+      }
       > a{
         @include font-size(16);
         line-height: (27/16);

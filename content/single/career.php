@@ -80,6 +80,7 @@ $graduateOccupation = $graduateInfo['career_graduate_occupation'];
         'post_type' => 'career',
         'posts_per_page' => 2,
         'orderby' => 'rand',
+        'post__not_in' => array($post -> ID),
       );
       $career_query = new WP_Query($args); if($career_query->have_posts()): while ($career_query->have_posts()): $career_query->the_post();
       get_template_part('content/loop/career');

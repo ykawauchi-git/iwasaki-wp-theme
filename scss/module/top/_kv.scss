@@ -20,6 +20,9 @@
     }
     & .swiper-slide{
       height: 100%;
+      & img {
+        height: auto;
+      }
     }
     & .swiper-pagination {
       line-height: 1;

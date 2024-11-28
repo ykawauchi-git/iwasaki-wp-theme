@@ -60,7 +60,7 @@
       @include flex(flex, wrap, space-between, center, normal, row);
       @include mq_sp{
         width : size_sp(630);
-        padding-top : size_sp(41);
+        padding-top : size_sp(42);
         flex-direction: column;
       }
     }
@@ -103,7 +103,7 @@
       @include mq_sp{
         @include fz_vw(30);
         line-height : (60/30);
-        margin-top : size_sp(42);
+        margin-top : size_sp(11);
       }
     }
     & .mod-btn {
