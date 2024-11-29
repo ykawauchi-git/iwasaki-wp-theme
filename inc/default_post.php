@@ -57,3 +57,33 @@ function change_post_object_label() {
 }
 add_action( 'init', 'change_post_object_label' );
 add_action( 'admin_menu', 'change_post_menu_label' );
+
+//通常投稿パーマリンク変更
+function b2n_replace_slug( $slug, $post_ID, $post_status, $post_type ){
+
+	if($post_type !== 'post'){
+		return $slug;
+	}
+
+	$get_post = get_post($post_ID);
+	if( !empty($get_post->post_name) ){
+		return $slug;
+	}
+
+	$date_slug = date("Ymd");
+	$post_id = get_page_by_path($date_slug, "OBJECT", "post");
+
+	if( $post_id !== null ){
+		$i = 1;
+		while( $post_id !== null ){
+			++$i;
+			$post_id = get_page_by_path($date_slug.'-'.$i, "OBJECT", "post");
+		}
+		$date_slug = $date_slug.'-'.$i;
+	}
+
+	return $date_slug;
+
+}
+add_filter( 'wp_unique_post_slug', 'b2n_replace_slug' , 10, 4 );
+
