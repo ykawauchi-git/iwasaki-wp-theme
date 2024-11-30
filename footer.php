@@ -1,6 +1,6 @@
  <?php
 //パンくず
-  if(!is_front_page() && !is_page(array('sitemap','privacy-policy','media-policy')) && !is_archive() && !is_single() && !is_404()){
+  if(!is_page(array('sitemap','privacy-policy','media-policy')) && !is_archive() && !is_single() && !is_404()){
   echo '<section class="pageSec"><span class="pageSec__bg"></span></section>';
  }
  ?>

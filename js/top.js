@@ -31,6 +31,7 @@ $(document).ready(function() {
     effect: 'fade',
     loop: true,
     speed: 1000,
+    fadeEffect: { crossFade: true },
     autoplay: {
       delay: 3000,
       disableOnInteraction: false,

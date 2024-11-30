@@ -124,11 +124,11 @@
 				</div>
 				<nav class="common-header__menu">
 					<ul class="common-header__menuList">
-						<li><a href="<?php echo home_url('/about/'); ?>">岩崎学園について</a></li>
-						<li><a href="<?php echo home_url('/facilities/'); ?>">教育事業</a></li>
-						<li><a href="<?php echo home_url('/philosophy/'); ?>">産学・地域連携</a></li>
-						<li><a href="<?php echo home_url('/career/'); ?>">卒業生の活躍</a></li>
-						<li><a href="<?php echo home_url('/support/'); ?>">学生支援</a></li>
+						<li class="<?php if(is_page('about')){echo 'current';}?>"><a href="<?php echo home_url('/about/'); ?>">岩崎学園について</a></li>
+						<li class="<?php if(is_page('facilities')){echo 'current';}?>"><a href="<?php echo home_url('/facilities/'); ?>">教育事業</a></li>
+						<li class="<?php if(is_page('philosophy')){echo 'current';}?>"><a href="<?php echo home_url('/philosophy/'); ?>">産学・地域連携</a></li>
+						<li class="<?php if(is_post_type_archive('career') || is_singular('career')){echo 'current';}?>"><a href="<?php echo home_url('/career/'); ?>">卒業生の活躍</a></li>
+						<li class="<?php if(is_page('support')){echo 'current';}?>"><a href="<?php echo home_url('/support/'); ?>">学生支援</a></li>
 					</ul>
 					<ul class="common-header__btn tabsp-only--flex">
 						<li><a href="<?php echo home_url('/contact/'); ?>" class="contact">お問い合わせ</a></li>

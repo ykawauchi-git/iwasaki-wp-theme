@@ -5,7 +5,10 @@
   font-size: 13px;
   line-height: (19/13);
   width: 100%;
+  height: 27px;
   padding: 8px 20px 0px;
+  position: relative;
+  z-index: 98;
   // position: absolute;
   // top: 0;
   // left: 50%;
@@ -13,7 +16,22 @@
   @include mq_sp{
     @include fz_vw(22);
     line-height: (32/22);
+    height: size_sp(43);
     padding: size_sp(11) size_sp(12) 0;
+  }
+  &__inner {
+    width: (1260/1280)*100%;
+    white-space: nowrap;
+    position: fixed;
+    top: 84px;
+    overflow-x: scroll;
+    @include mq_tab{
+      top: 110px;
+    }
+    @include mq_sp{
+      width: size_sp(738);
+      top: size_sp(112);
+    }
   }
   &__list {
     & > span {

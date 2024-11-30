@@ -32,25 +32,40 @@ $(window).on('load',function(){
 objectFitImages('img.object_fit');
 
 //ヘッダーメニュー
-$(function(){
+$(function() {
   let common_header = $(".common-header");
   let header_toggle = $(".common-header__toggle");
   let header_nav = $(".common-header__menu");
-  function checkMediaQuery(){
-    header_toggle.off();
-    if(window.matchMedia('(max-width: 1024px)').matches){
-      header_nav.hide();
-      header_toggle.on("click",function(){
+
+  function checkMediaQuery() {
+    header_toggle.off(); // クリックイベントを解除
+    if (window.matchMedia('(max-width: 1024px)').matches) {
+      // 1024px以下のときの動作
+      // header_nav.hide(); // 初期状態で非表示にする
+      header_toggle.on("click", function() {
         $(this).add(common_header).toggleClass("is-open");
-        header_nav.show().toggleClass("is-open");
-      })
+        if (header_nav.hasClass("is-open")) {
+          header_nav.removeClass("is-open"); // メニューを非表示
+        } else {
+          header_nav.addClass("is-open"); // メニューを表示
+        }
+      });
+    } else {
+      // 1025px以上のときの動作
+      header_nav.show().removeClass("is-open"); // メニューを表示し、状態をリセット
+      common_header.removeClass("is-open");
+      header_toggle.removeClass("is-open");
     }
   }
-  window.onload = checkMediaQuery();
+
+  // 初期実行
+  checkMediaQuery();
+
+  // リサイズ時に動作をチェック
   let lastInnerWidth = window.innerWidth;
-  window.addEventListener( "resize", function () {
-    if ( lastInnerWidth != window.innerWidth ) {
-      lastInnerWidth = window.innerWidth ;
+  window.addEventListener("resize", function() {
+    if (lastInnerWidth !== window.innerWidth) {
+      lastInnerWidth = window.innerWidth;
       checkMediaQuery();
     }
   });

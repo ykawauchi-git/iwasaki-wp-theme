@@ -168,8 +168,30 @@ $header_height_sp: size_sp(102);
             margin-left: 0;
           }
         }
+        &.current {
+          & > a {
+            &:before {
+              content: "";
+              width: 100%;
+              height: 3px;
+              background: $pink01;
+              position: absolute;
+              left: 50%;
+              bottom: 0;
+              transform: translateX(-50%);
+              @include mq_tab{
+                display: none;
+              }
+            }
+          }
+        }
         & > a {
-          display: block
+          display: block;
+          padding: 8px 0;
+          position: relative;
+          @include mq_tab{
+            padding: 0;
+          }
         }
       }
     }

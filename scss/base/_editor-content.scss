@@ -118,4 +118,22 @@
 		margin-bottom: 20px;
 		padding: 0.5em;
 	}
+	.gallery {
+		&-item {
+			@include mq_sp{
+				margin-top: size_sp(10) !important;
+			}
+		}
+		&-icon {
+			margin: 0 5px;
+			@include mq_sp{
+				margin: 0 size_sp(5);
+			}
+			& img {
+				width: 100%;
+				margin: 0px !important;
+				border: none !important;
+			}
+		}
+	}
 }

@@ -6,6 +6,7 @@
   padding: 60px 0 30px;
   background-color: $black02;
   color: $white00;
+  z-index: 99;
   @include mq_sp{
     padding: size_sp(100) 0 size_sp(50);
   }
