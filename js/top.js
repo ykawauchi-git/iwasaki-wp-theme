@@ -25,21 +25,39 @@ $(document).ready(function() {
       prevEl: '.swiper-button-prev',
     },
   });
-  var bannerSwiper = new Swiper('.top-kv__slider', {
-    autoHeight: true,
-    slidesPerView: 1,
-    effect: 'fade',
-    loop: true,
-    speed: 1000,
-    fadeEffect: { crossFade: true },
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false,
-      waitForTransition: false,
-    },
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-  });
+  // スライダーの初期化前にスライドの数をチェック
+  const slides = document.querySelectorAll('.top-kv__slider .swiper-slide');
+  if (slides.length <= 1) {
+    // スライドが1枚以下の場合はスライダー機能をオフにする
+    new Swiper('.top-kv__slider', {
+      autoHeight: true,
+      slidesPerView: 1,
+      effect: 'fade',
+      speed: 1000,
+      fadeEffect: { crossFade: true },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    });
+  } else {
+    // スライドが複数枚ある場合は通常のスライダー機能を有効化
+    new Swiper('.top-kv__slider', {
+      autoHeight: true,
+      slidesPerView: 1,
+      effect: 'fade',
+      loop: true,
+      speed: 1000,
+      fadeEffect: { crossFade: true },
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+        waitForTransition: false,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    });
+  }
 });

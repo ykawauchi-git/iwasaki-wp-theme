@@ -19,18 +19,32 @@
     height: size_sp(43);
     padding: size_sp(11) size_sp(12) 0;
   }
+  &.fixed {
+    & .mod-breadcrumbs {
+      &__inner {
+        position: fixed;
+        top: 84px;
+        bottom: auto;
+        @include mq_tab{
+          top: 110px;
+        }
+        @include mq_sp{
+          top: size_sp(112);
+        }
+      }
+    }
+  }
   &__inner {
     width: (1260/1280)*100%;
     white-space: nowrap;
-    position: fixed;
-    top: 84px;
+    position: absolute;
+    bottom: 0;
     overflow-x: scroll;
-    @include mq_tab{
-      top: 110px;
-    }
     @include mq_sp{
       width: size_sp(738);
-      top: size_sp(112);
+    }
+    &::-webkit-scrollbar{
+      display: none;
     }
   }
   &__list {
@@ -63,6 +77,11 @@
           width: size_sp(9);
           height: size_sp(19);
           right: size_sp(-16);
+        }
+      }
+      & > span {
+        &.post-career {
+          background: transparent;
         }
       }
     }
