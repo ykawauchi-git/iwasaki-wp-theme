@@ -35,8 +35,8 @@ add_filter( 'post_rewrite_rules', 'add_article_post_rewrite_rules' );
 function change_post_menu_label() {
   global $menu;
   global $submenu;
-  $menu[5][0] = 'お知らせ';
-  $submenu['edit.php'][5][0] = 'お知らせ一覧';
+  $menu[5][0] = 'ニュース';
+  $submenu['edit.php'][5][0] = 'ニュース一覧';
   $submenu['edit.php'][10][0] = '新規追加';
   $submenu['edit.php'][16][0] = 'タグ';
 }
@@ -44,16 +44,16 @@ function change_post_menu_label() {
 function change_post_object_label() {
   global $wp_post_types;
   $labels = &$wp_post_types['post']->labels;
-  $labels->name = 'お知らせ';
-  $labels->singular_name = 'お知らせ';
-  $labels->add_new = _x('追加', 'お知らせ');
-  $labels->add_new_item = 'お知らせの新規追加';
-  $labels->edit_item = 'お知らせの編集';
-  $labels->new_item = 'お知らせ記事';
-  $labels->view_item = 'お知らせを表示';
-  $labels->search_items = 'お知らせを検索';
-  $labels->not_found = 'お知らせが見つかりませんでした';
-  $labels->not_found_in_trash = 'ゴミ箱にお知らせは見つかりませんでした';
+  $labels->name = 'ニュース';
+  $labels->singular_name = 'ニュース';
+  $labels->add_new = _x('追加', 'ニュース');
+  $labels->add_new_item = 'ニュースの新規追加';
+  $labels->edit_item = 'ニュースの編集';
+  $labels->new_item = 'ニュース記事';
+  $labels->view_item = 'ニュースを表示';
+  $labels->search_items = 'ニュースを検索';
+  $labels->not_found = 'ニュースが見つかりませんでした';
+  $labels->not_found_in_trash = 'ゴミ箱にニュースは見つかりませんでした';
 }
 add_action( 'init', 'change_post_object_label' );
 add_action( 'admin_menu', 'change_post_menu_label' );
