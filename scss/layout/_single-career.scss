@@ -36,7 +36,7 @@
       margin-left: auto;
       @include mq_sp{
         width: size_sp(568);
-        padding: size_sp(102) size_sp(50) size_sp(43);
+        padding: size_sp(102) size_sp(50) size_sp(46);
       }
       & > h1 {
         font-size: 20px;
@@ -51,21 +51,21 @@
     &List {
       margin-top: 24px;
       @include mq_sp{
-        margin-top: size_sp(23);
+        margin-top: size_sp(25);
       }
       & > li {
         font-size: 16px;
         line-height: (27/16);
         @include flex(flex, wrap, space-between, normal, normal, row);
         @include mq_sp{
-          @include fz_vw(26);
-          line-height: (50/26);
+          @include fz_vw(22);
+          line-height: (39/22);
           flex-direction: column;
         }
         &:nth-of-type(n + 2) {
           margin-top: 13px;
           @include mq_sp{
-            margin-top: size_sp(15);
+            margin-top: size_sp(21);
           }
         }
       }
@@ -80,7 +80,7 @@
       width: 255px;
       @include mq_sp{
         width: 100%;
-        margin-top: size_sp(-1);
+        margin-top: size_sp(5);
       }
     }
   }

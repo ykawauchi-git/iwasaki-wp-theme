@@ -113,7 +113,28 @@ $(function () {
     $("html, body").animate({ scrollTop: position - header_height - 50 }, 700, "swing");
     return false;
   });
+
+  // パンくず追従
+  var $breadcrumbs = $('.mod-breadcrumbs');
+  var headerHeight = $('.common-header').outerHeight();
+  var offset = $breadcrumbs.offset().top - headerHeight;
+  if ($(window).scrollTop() > offset) {
+    $breadcrumbs.addClass('fixed');
+  } else {
+      $breadcrumbs.removeClass('fixed');
+  }
+  $(window).on('scroll', function () {
+      if ($(window).scrollTop() > offset) {
+          $breadcrumbs.addClass('fixed');
+      } else {
+          $breadcrumbs.removeClass('fixed');
+      }
+  });
+  $(window).on('resize', function () {
+    offset = $breadcrumbs.offset().top;
+  });
 });
+
 
 // 歴史ページ
 $(function(){
