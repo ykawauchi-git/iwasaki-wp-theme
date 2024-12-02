@@ -4,11 +4,13 @@
 .mod-post {
   max-width: 364px;
   width: (364/1162) * 100%;
+  padding-bottom: (28/1162) * 100%;
   border : solid 2px $gray01;
   position: relative;
   @include mq_sp{
     max-width: size_sp(630);
     width: 100%;
+    padding-bottom: size_sp(38);
     border-width : size_sp(2);
   }
   &:not(:nth-of-type(3n)) {
@@ -29,10 +31,10 @@
     }
   }
   & > a {
-    padding: (28/360) * 100% (28/360) * 100% (28/360) * 100%;
+    padding: (28/360) * 100% (28/360) * 100% 0;
     display: block;
     @include mq_sp{
-      padding: size_sp(68) size_sp(28) size_sp(38);
+      padding: size_sp(68) size_sp(28) 0;
     }
   }
   &__cat {
@@ -107,13 +109,13 @@
     }
   }
   &__tag {
-    padding-top: 16px;
+    padding: 16px (28/360) * 100% 0;
     @include flex(flex, wrap, flex-start, stretch, normal, row);
     margin-top: -6px;
     position: relative;
     left: -3px;
     @include mq_sp{
-      padding-top: size_sp(23);
+      padding: size_sp(23) size_sp(28) 0;
       margin-top: size_sp(-20);
       left: size_sp(-10);
     }

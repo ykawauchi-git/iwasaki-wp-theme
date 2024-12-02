@@ -4,11 +4,11 @@
 add_filter( 'emoji_svg_url', '__return_false' );
 
 //インラインスタイル削除(html直書きstylesheet削除)
-function remove_recent_comments_style(){
-  global $wp_widget_factory;
-  remove_action('wp_head', array( $wp_widget_factory->widgets['WP_Widget_Recent_Comments'], 'recent_comments_style' ));
-}
-add_action( 'widgets_init', 'remove_recent_comments_style' );
+// function remove_recent_comments_style(){
+//   global $wp_widget_factory;
+//   remove_action('wp_head', array( $wp_widget_factory->widgets['WP_Widget_Recent_Comments'], 'recent_comments_style' ));
+// }
+// add_action( 'widgets_init', 'remove_recent_comments_style' );
 
 //全てのバージョンの表示の削除
 function remove_cssjs_ver2( $src ) {

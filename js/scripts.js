@@ -166,13 +166,13 @@ $(document).ready(function () {
     const newSrcset = $(this).find('img').attr('data-srcset');
     const $mainImage = $('.page-support__dormitoryGuideLeftMain img');
 
-    $mainImage.fadeOut(500, function () {
+    $mainImage.fadeOut(200, function () {
       // フェードアウト完了後に画像を切り替え
       $mainImage.attr('src', newSrc);
       $mainImage.attr('srcset', newSrcset);
 
       // フェードイン
-      $mainImage.fadeIn(400);
+      $mainImage.fadeIn(300);
     });
   });
 });

@@ -64,8 +64,8 @@
     @include mq_sp{
       @include fz_vw(28);
     }
-    strong, b{
-      font-weight: 700;
+    strong{
+      font-weight: normal;
     }
   }
 	table {

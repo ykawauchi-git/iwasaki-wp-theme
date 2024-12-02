@@ -45,10 +45,14 @@
     width: (317/1011) * 100%;
     background: $white00;
     margin-right: (30/1011) * 100%;
+    @include flex(flex, wrap, flex-start, normal, normal, column);
     @include mq_sp{
       max-width: 100%;
       width: 100%;
       margin-right: 0;
+      justify-content: space-between;
+      flex-direction: row;
+      padding: size_sp(24) size_sp(24) size_sp(31);
     }
     &:nth-of-type(n + 2){
       @include mq_sp{
@@ -58,15 +62,6 @@
     &:last-of-type{
       margin-right: 0;
     }
-    a{
-      width: 100%;
-      @include flex(flex, wrap, flex-start, normal, normal, column);
-      @include mq_sp{
-        padding: size_sp(24) size_sp(24) size_sp(31);
-        justify-content: space-between;
-        flex-direction: row;
-      }
-    }
     &Thumb{
       width: 100%;
       height: 211px;
@@ -75,21 +70,31 @@
         height: size_sp(145);
         margin-top: size_sp(12);
       }
+      & > a {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
     }
     &Info{
       padding: 16px 20px 29px;
       @include mq_sp{
         max-width: size_sp(382);
+        width: 100%;
         padding: 0;
+      }
+      & > a{
+        width: 100%;
+        @include flex(flex, wrap, flex-start, normal, normal, column);
       }
     }
     &Date{
       font-weight: 400;
       line-height: (24/16);
-      margin-bottom: size_sp(5);
       @include mq_sp{
         @include fz_vw(22);
         line-height: (37/22);
+        margin-bottom: size_sp(5);
       }
     }
     &Ttl{
@@ -114,7 +119,6 @@
       li{
         font-size: 12px;
         display: inline-block;
-        padding: 3px 7px;
         line-height: (17/12);
         color: $blue03;
         border: 1px solid $blue03;
@@ -122,10 +126,16 @@
         margin-bottom: 12px;
         @include mq_sp{
           @include fz_vw(22);
-          padding: size_sp(10) size_sp(20);
           line-height: (32/22);
           margin-right: size_sp(20);
           margin-bottom: size_sp(20);
+        }
+        & > a {
+          padding: 3px 7px;
+          display: block;
+          @include mq_sp{
+            padding: size_sp(10) size_sp(20);
+          }
         }
       }
     }

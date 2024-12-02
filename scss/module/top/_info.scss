@@ -31,6 +31,7 @@
     }
   }
   &__box{
+    background: $white00;
     @include box-shadow();
     border: 3px solid $black02;
     padding: 28px 52px;

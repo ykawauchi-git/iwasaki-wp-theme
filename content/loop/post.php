@@ -26,6 +26,7 @@ $secCat = get_the_category();
       <h2 class="<?php echo $secName;?>__ttl"><?php the_title(); ?></h2>
     </div>
     <div class="<?php echo $secName;?>__txt"><?php echo get_the_excerpt(); ?></div>
+    </a>
     <!-- タグ一覧 -->
     <?php if($secTag):?>
     <ul class="<?php echo $secName;?>__tag">
@@ -33,10 +34,10 @@ $secCat = get_the_category();
       foreach($secTag as $tag) :
       // $tag_link = get_tag_link($tag->term_id);
       $tag_name = $tag->name;
+      $tag_link = get_tag_link($tag->term_id);
       ?>
-      <li><?php echo $tag_name; ?></li>
+      <li><a href="<?php echo $tag_link;?>"><?php echo $tag_name; ?></a></li>
       <?php endforeach;?>
     </ul>
     <?php endif;?>
-  </a>
 </article>
