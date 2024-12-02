@@ -7,9 +7,13 @@
     padding-top: size_sp(149);
   }
   &__inner {
-    max-width: 990px;
+    // max-width: 990px;
+    max-width: 1160px;
     width: 100%;
     margin: 0 auto;
+    @media screen and (max-width: 1279px) {
+      max-width: 650px;
+    }
     @include mq_tab{
       max-width: 480px;
     }
@@ -40,8 +44,16 @@
         margin-right: size_sp(29);
       }
 
-      &:nth-of-type(n + 7) {
+      &:nth-of-type(n + 8) {
         margin-top: 68px;
+        @include mq_sp{
+          margin-top: size_sp(47);
+        }
+      }
+      &:nth-of-type(n + 5) {
+        @media screen and (max-width: 1279px) {
+          margin-top: 68px;
+        }
         @include mq_sp{
           margin-top: size_sp(47);
         }
@@ -54,8 +66,25 @@
           margin-top: size_sp(47);
         }
       }
-      &:nth-of-type(6n) {
+      &:nth-of-type(7n) {
         margin-right: 0;
+        @media screen and (max-width: 1279px) {
+          margin-right: 30px;
+        }
+        @include mq_sp{
+          margin-right: size_sp(29);
+        }
+      }
+      &:nth-of-type(4n) {
+        @media screen and (max-width: 1279px) {
+          margin-right: 0;
+        }
+        @include mq_tab{
+          margin-right: 30px;
+        }
+        @include mq_sp{
+          margin-right: size_sp(29);
+        }
       }
       &:nth-of-type(3n) {
         @include mq_tab{
