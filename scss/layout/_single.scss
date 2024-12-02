@@ -54,14 +54,19 @@
       font-size: 12px;
       line-height: (17/12);
       border : solid 1px $gray04;
-      padding: 3px 7px;
       margin: 18px 9px 0;
       @include mq_sp{
         @include fz_vw(20);
         line-height: (29/20);
-        padding: size_sp(5) size_sp(9);
         margin: size_sp(20) size_sp(10) 0;
         border-width: size_sp(1);
+      }
+      & > a {
+        padding: 3px 7px;
+        display: block;
+        @include mq_sp{
+          padding: size_sp(5) size_sp(9);
+        }
       }
     }
   }

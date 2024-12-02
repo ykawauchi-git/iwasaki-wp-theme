@@ -16,10 +16,10 @@ $singleCat = get_the_category();
     <ul class="<?php echo $pageName;?>__tag">
       <?php
       foreach($singleTag as $tag) :
-      // $tag_link = get_tag_link($tag->term_id);
+      $tag_link = get_tag_link($tag->term_id);
       $tag_name = $tag->name;
       ?>
-      <li><?php echo $tag_name; ?></li>
+      <li><a href="<?php echo $tag_link;?>"><?php echo $tag_name; ?></a></li>
       <?php endforeach;?>
     </ul>
     <?php endif;?>
