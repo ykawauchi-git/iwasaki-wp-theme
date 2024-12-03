@@ -1,6 +1,7 @@
 <?php
 $sticky = get_option('sticky_posts');
-$the_query = new WP_Query($args = array('post_type' => 'post', 'posts_per_page' => 1,'post__in' => $sticky,));
+if (!empty($sticky)):
+$the_query = new WP_Query($args = array('post_type' => 'post', 'posts_per_page' => 3,'post__in' => $sticky,));
 if ($the_query->have_posts()):?>
 <section class="top-info">
   <div class="top-info__inner">
@@ -16,4 +17,4 @@ if ($the_query->have_posts()):?>
     </div>
   </div>
 </section>
-<?php endif; wp_reset_postdata();?>
+<?php endif; wp_reset_postdata(); endif;?>
