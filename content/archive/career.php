@@ -6,7 +6,10 @@
   岩崎学園は90年以上にわたり、どのような未来にも自分らしく活躍できる、個性ある卒業生を社会に送り出しています。
   </div>
   <div class="<?php echo $pageName;?>__inner">
-    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+    <?php if(get_field('career_archive','option')):
+      remove_filter ('acf_the_content', 'wpautop');
+      the_field("career_archive", 'option');
+      elseif (have_posts()) : while (have_posts()) : the_post(); ?>
       <?php get_template_part('content/loop/career');?>
     <?php endwhile; endif;?>
   </div>
