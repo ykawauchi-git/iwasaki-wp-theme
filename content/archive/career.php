@@ -40,7 +40,7 @@
       <?php endwhile;?>
     </ul>
   </div>
-  <?php endif;?>
+  <?php endif; reset_rows();?>
   <div class="mod-banner">
     <?php
       $career_cta = get_field('career_cta','option');

@@ -63,7 +63,7 @@
     }
     &Cont {
       @include mq_sp{
-        width: size_sp(432);
+        width: size_sp(330);
       }
     }
     & h2 {
@@ -100,14 +100,16 @@
       }
     }
     &Logo {
-      width: 120px;
-      height: 120px;
+      line-height: 1;
+      width: 209px;
+      // height: 120px;
       background : $white00;
+      padding: 12px;
       margin-top: 38px;
       @include mq_sp{
-        width: size_sp(110);
-        height: size_sp(110);
-        margin-top: 0;
+        width: size_sp(209);
+        padding: size_sp(12);
+        margin-top: size_sp(-3);
       }
     }
   }
