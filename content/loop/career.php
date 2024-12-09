@@ -4,6 +4,7 @@ $graduateTtl = get_the_title();
 $graduateInfo = get_field('career_graduate_info');
 $graduateAlma = $graduateInfo['career_graduate_alma_mater'];
 $graduateOccupation = $graduateInfo['career_graduate_occupation'];
+$graduateLogo = $graduateInfo['career_graduate_logo'];
 ?>
 <article class="<?php echo $secName;?>">
   <a href="<?php the_permalink(); ?>" class="<?php echo $secName;?>__link" id="post-<?php the_ID(); ?>">
@@ -26,7 +27,9 @@ $graduateOccupation = $graduateInfo['career_graduate_occupation'];
         <div class="<?php echo $secName;?>__infoOccupation"><?php echo $graduateOccupation;?></div>
         <?php endif;?>
       </div>
-      <div class="<?php echo $secName;?>__infoLogo"></div>
+      <?php if($graduateLogo):?>
+      <div class="<?php echo $secName;?>__infoLogo"><img class="object_fit" src="<?php echo $graduateLogo;?>" alt=""></div>
+      <?php endif;?>
     </div>
   </a>
 </article>

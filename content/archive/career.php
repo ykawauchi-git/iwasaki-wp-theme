@@ -37,7 +37,7 @@
       <?php endwhile;?>
     </ul>
   </div>
-  <?php endif;?>
+  <?php endif; reset_rows();?>
   <div class="mod-banner">
     <div class="mod-banner__ttl"><span>求人申し込みはこちら</span></div>
     <div class="mod-banner__txt">
