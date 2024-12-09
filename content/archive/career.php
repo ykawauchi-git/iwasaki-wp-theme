@@ -3,7 +3,7 @@
 <div class="<?php echo $pageName;?> archive-wrap">
   <h1 class="<?php echo $pageName;?>__heading page-heading"><span>学園の卒業生・就職実績</span></h1>
   <div class="<?php echo $pageName;?>__intro">
-  岩崎学園は90年以上にわたり、どのような未来にも自分らしく活躍できる、個性ある卒業生を社会に送り出しています。
+  <?php echo get_field('career_intro','option');?>
   </div>
   <div class="<?php echo $pageName;?>__inner">
     <?php if(get_field('career_archive','option')):
@@ -42,10 +42,14 @@
   </div>
   <?php endif;?>
   <div class="mod-banner">
-    <div class="mod-banner__ttl"><span>求人申し込みはこちら</span></div>
+    <?php
+      $career_cta = get_field('career_cta','option');
+      $career_cta_link = $career_cta['career_cta_link'];
+    ?>
+    <div class="mod-banner__ttl"><span><?php echo $career_cta['career_cta_ttl'];?></span></div>
     <div class="mod-banner__txt">
-      ご登録頂きました求人は岩崎学園全体の学生が閲覧可能なシステムに反映されます。
+    <?php echo $career_cta['career_cta_txt'];?>
     </div>
-    <a href="<?php echo home_url('/facility'); ?>" class="mod-btn b">詳しく見る</a>
+    <a href="<?php echo $career_cta_link['url'];?>" target="<?php echo $career_cta_link['target'];?>" class="mod-btn b"><?php echo $career_cta_link['title'];?></a>
   </div>
 </div>
