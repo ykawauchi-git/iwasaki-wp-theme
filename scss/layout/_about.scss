@@ -171,12 +171,12 @@
     }
     &Item{
       @include flex(flex, wrap, flex-start, normal, normal, row);
-      @include font-size(20);
+      @include font-size(18);
       line-height: (38/20);
       padding-bottom: 41px;
       @include mq_sp{
-        @include fz_vw(34);
-        line-height: (64/34);
+        @include fz_vw(30);
+        line-height: (64/30);
         position: relative;
         padding-bottom: size_sp(81);
       }
@@ -202,7 +202,7 @@
       }
       &-left{
         position: relative;
-        width: 3.22em;
+        width: 2.3em;
         margin-right: 20px;
         @include mq_sp{
           line-height: (49/34);
@@ -212,7 +212,7 @@
         &:before{
           content: "";
           position: absolute;
-          top: 43px;
+          top: 40px;
           left: 50%;
           transform: translateX(-50%);
           width: 1px;
