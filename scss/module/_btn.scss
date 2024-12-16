@@ -55,6 +55,7 @@
   display: block;
   width: 228px;
   padding: 17px 0 17px 0.05em;
+  box-shadow: 0px 3px 6px rgba($black00, .1);
   background: $black02;
   @include mq_sp{
     @include fz_vw(26);
@@ -62,6 +63,25 @@
     letter-spacing: 0em;
     width: size_sp(338);
     padding: size_sp(26) 0 size_sp(26) 0.05em;
+    box-shadow: 0px size_sp(3) size_sp(6) rgba($black00, .1);
+  }
+  &:hover {
+    color: $black02;
+    background: $white00;
+    opacity: 1;
+    @include mq_tab{
+      color: $white00;
+      background: $black02;
+    }
+    &:before {
+      bottom: -19px;
+      @include mq_tab{
+        bottom: -14px;
+      }
+      @include mq_sp{
+        bottom: size_sp(-26);
+      }
+    }
   }
   &:before{
     @include abso-center-h();
@@ -71,6 +91,7 @@
     width: 27px;
     height: 19px;
     background: url(./img/page/arw_anchor.svg) no-repeat center/cover;
+    transition: .4s;
     @include mq_sp{
       width: size_sp(50);
       height: size_sp(35);

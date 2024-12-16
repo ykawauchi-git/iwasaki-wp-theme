@@ -16,6 +16,10 @@ $(document).ready(function() {
     slidesPerView: "auto", //variablewidthにするため､autoを指定
     centeredSlides: true, //スライドを中央に寄せる
     loop: true,
+    speed: 500,
+    autoplay: { // 自動再生
+      delay: 2000, // 1.5秒後に次のスライド
+    },
     pagination: {
       el: '.swiper-pagination',
       clickable: true,

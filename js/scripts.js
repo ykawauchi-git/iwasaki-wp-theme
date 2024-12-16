@@ -5,7 +5,7 @@ let $ = jQuery.noConflict();
 //Web font loader
 window.WebFontConfig = {
   // 以下にフォントを指定する
-  google: { families: ['Noto+Sans+JP:300,400,500,700',, 'Noto+Serif+JP'] },//使用するフォントと太さだけ指定
+  google: { families: ['Noto+Sans+JP:300,400,500,700', 'Noto+Serif+JP'] },//使用するフォントと太さだけ指定
   //custom: { families: ['futura-pt'],urls: ['https://use.typekit.net/jxv2kur.css'] },//Adobe Fonts等
   active: function () {
     sessionStorage.fonts = true;
@@ -115,24 +115,26 @@ $(function () {
   });
 
   // パンくず追従
-  var $breadcrumbs = $('.mod-breadcrumbs');
-  var headerHeight = $('.common-header').outerHeight();
-  var offset = $breadcrumbs.offset().top - headerHeight;
-  if ($(window).scrollTop() > offset) {
-    $breadcrumbs.addClass('fixed');
-  } else {
-      $breadcrumbs.removeClass('fixed');
+  if (window.location.pathname !== "/") {
+    var $breadcrumbs = $('.mod-breadcrumbs');
+    var headerHeight = $('.common-header').outerHeight();
+    var offset = $breadcrumbs.offset().top - headerHeight;
+    if ($(window).scrollTop() > offset) {
+      $breadcrumbs.addClass('fixed');
+    } else {
+        $breadcrumbs.removeClass('fixed');
+    }
+    $(window).on('scroll', function () {
+        if ($(window).scrollTop() > offset) {
+            $breadcrumbs.addClass('fixed');
+        } else {
+            $breadcrumbs.removeClass('fixed');
+        }
+    });
+    $(window).on('resize', function () {
+      offset = $breadcrumbs.offset().top;
+    });
   }
-  $(window).on('scroll', function () {
-      if ($(window).scrollTop() > offset) {
-          $breadcrumbs.addClass('fixed');
-      } else {
-          $breadcrumbs.removeClass('fixed');
-      }
-  });
-  $(window).on('resize', function () {
-    offset = $breadcrumbs.offset().top;
-  });
 });
 
 

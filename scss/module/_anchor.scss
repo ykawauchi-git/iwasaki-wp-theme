@@ -41,6 +41,10 @@
     &:last-of-type {
       margin-right: 0;
     }
+    &:hover {
+      color: $black02;
+      background: $white00;
+    }
     & > small {
       display: none;
     }
