@@ -12,6 +12,32 @@ if (have_posts()) {
 		}
 	}
 	?>
+	<?php if(is_page('philosophy')):?>
+	<div class="mod-banner">
+    <?php
+      $ctaHeading = get_field('cta_heading', 'option');
+      $ctaTxt = get_field('cta_txt', 'option');
+    ?>
+    <?php if($ctaHeading):?>
+    <div class="mod-banner__ttl"><span><?php echo $ctaHeading;?></span></div>
+    <?php endif;?>
+    <?php if($ctaTxt):?>
+    <div class="mod-banner__txt">
+    <?php echo $ctaTxt;?>
+    </div>
+    <?php endif;?>
+    <?php if(have_rows('cta_btn', 'option')):?>
+    <div class="mod-banner__btn">
+      <?php
+      while(have_rows('cta_btn', 'option')): the_row();
+      $ctaBtn = get_sub_field('cta_btn_item','option');
+      ?>
+      <a href="<?php echo $ctaBtn['url'];?>" target="<?php echo $ctaBtn['target'];?>" class="mod-btn b"><?php echo $ctaBtn['title'];?></a>
+      <?php endwhile;?>
+    </div>
+    <?php endif;?>
+  </div>
+	<?php endif;?>
 	<?php if (function_exists('wp_pagenavi')) {
 		wp_pagenavi();
 	} ?>

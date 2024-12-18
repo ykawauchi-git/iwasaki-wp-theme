@@ -34,12 +34,28 @@
       }
     }
   }
+  &:before {
+    content: "";
+    width: 100%;
+    height: 118px;
+    background: linear-gradient($white00 0%, $white00 86%, rgba($white00, 0) 100%);
+    position: fixed;
+    // top: -76px;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    @include mq_sp{
+      height: size_sp(172);
+      // top: size_sp(-102);
+    }
+  }
   &__inner {
     width: (1260/1280)*100%;
     white-space: nowrap;
     position: absolute;
     bottom: 0;
     overflow-x: scroll;
+    z-index: 2;
     @include mq_sp{
       width: size_sp(738);
     }

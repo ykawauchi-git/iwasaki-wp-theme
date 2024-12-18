@@ -43,13 +43,26 @@
   <?php endif; reset_rows();?>
   <div class="mod-banner">
     <?php
-      $career_cta = get_field('career_cta','option');
-      $career_cta_link = $career_cta['career_cta_link'];
+      $ctaHeading = get_field('cta_heading', 'option');
+      $ctaTxt = get_field('cta_txt', 'option');
     ?>
-    <div class="mod-banner__ttl"><span><?php echo $career_cta['career_cta_ttl'];?></span></div>
+    <?php if($ctaHeading):?>
+    <div class="mod-banner__ttl"><span><?php echo $ctaHeading;?></span></div>
+    <?php endif;?>
+    <?php if($ctaTxt):?>
     <div class="mod-banner__txt">
-    <?php echo $career_cta['career_cta_txt'];?>
+    <?php echo $ctaTxt;?>
     </div>
-    <a href="<?php echo $career_cta_link['url'];?>" target="<?php echo $career_cta_link['target'];?>" class="mod-btn b"><?php echo $career_cta_link['title'];?></a>
+    <?php endif;?>
+    <?php if(have_rows('cta_btn', 'option')):?>
+    <div class="mod-banner__btn">
+      <?php
+      while(have_rows('cta_btn', 'option')): the_row();
+      $ctaBtn = get_sub_field('cta_btn_item','option');
+      ?>
+      <a href="<?php echo $ctaBtn['url'];?>" target="<?php echo $ctaBtn['target'];?>" class="mod-btn b"><?php echo $ctaBtn['title'];?></a>
+      <?php endwhile;?>
+    </div>
+    <?php endif;?>
   </div>
 </div>
