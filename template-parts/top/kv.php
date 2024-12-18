@@ -17,7 +17,9 @@
     <div class="swiper-pagination"></div>
   </div>
   <?php endif;?>
+  <?php /*
   <span class="top-kv__catch"><img src="<?php echo get_stylesheet_directory_uri();?>/img/top/txt_kv.svg" alt="" class="object_fit"></span>
+  */?>
   <span class="top-kv__scroll">Scroll</span>
 </section>
 

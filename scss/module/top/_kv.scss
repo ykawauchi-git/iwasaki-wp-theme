@@ -53,19 +53,19 @@
       }
     }
   }
-  &__catch{
-    width: 458px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    z-index: 2;
-    transform : translate(-109%, -41%);
-    color: $white00;
-    @include mq_sp{
-      width: size_sp(458);
-      transform : translate(-50%, -50%);
-    }
-  }
+  // &__catch{
+  //   width: 458px;
+  //   position: absolute;
+  //   top: 50%;
+  //   left: 50%;
+  //   z-index: 2;
+  //   transform : translate(-109%, -41%);
+  //   color: $white00;
+  //   @include mq_sp{
+  //     width: size_sp(458);
+  //     transform : translate(-50%, -50%);
+  //   }
+  // }
   &__scroll{
     font-size: 20px;
     font-weight: 700;
