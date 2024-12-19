@@ -51,11 +51,9 @@ function my_disable_redirect_canonical($redirect_url) {
 function iwasaki_scripts()
 {
   wp_enqueue_style('iwasaki-sanitize', get_template_directory_uri().'/css/sanitize.css');
-	wp_enqueue_style('iwasaki-slick', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css',array(),'');
-	if(is_front_page() || is_home()) {
+	if(is_front_page() || is_home() || is_page('about') || is_page('facilities') || is_page('philosophy')) {
 		wp_enqueue_style('swiper-style','https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css');
 	}
-	wp_enqueue_style('iwasaki-slick-theme', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css',array(),'');
 	wp_enqueue_style('iwasaki-style', get_stylesheet_uri(),array(), filemtime( get_stylesheet_directory() . '/style.css' ));
 
 	wp_deregister_script('jquery');
@@ -68,12 +66,17 @@ function iwasaki_scripts()
 		wp_enqueue_script('swiper-scripts', 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js', '','',true);
 		wp_enqueue_script('iwasaki-top-scripts', get_template_directory_uri().'/js/top.js', '',filemtime( get_stylesheet_directory() . '/js/top.js' ),true);
 	}
-	if(is_page('group')){
-		wp_enqueue_script('slick-js', 'https://kenwheeler.github.io/slick/slick/slick.js', '','',true);
-		wp_enqueue_script('iwasaki-group-scripts', get_template_directory_uri().'/js/group.js', '',filemtime( get_stylesheet_directory() . '/js/group.js' ),true);
+	if(is_page('about')){
+		wp_enqueue_script('swiper-scripts', 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js', '','',true);
+		wp_enqueue_script('iwasaki-about-scripts', get_template_directory_uri().'/js/about.js', '',filemtime( get_stylesheet_directory() . '/js/about.js' ),true);
 	}
 	if(is_page('facilities')){
-		wp_enqueue_script('iwasaki-group-scripts', get_template_directory_uri().'/js/facilities.js', '',filemtime( get_stylesheet_directory() . '/js/facilities.js' ),true);
+		wp_enqueue_script('swiper-scripts', 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js', '','',true);
+		wp_enqueue_script('iwasaki-facilities-scripts', get_template_directory_uri().'/js/facilities.js', '',filemtime( get_stylesheet_directory() . '/js/facilities.js' ),true);
+	}
+	if(is_page('philosophy')){
+		wp_enqueue_script('swiper-scripts', 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js', '','',true);
+		wp_enqueue_script('iwasaki-philosophy-scripts', get_template_directory_uri().'/js/philosophy.js', '',filemtime( get_stylesheet_directory() . '/js/philosophy.js' ),true);
 	}
 	if(is_archive()) {
 		wp_enqueue_script('infinite-scripts', get_template_directory_uri().'/js/infinite-scroll.js', '','',true);
