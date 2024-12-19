@@ -32,8 +32,8 @@ function dis_emojis() {
 add_action( 'init', 'dis_emojis' );
 
 /* WP5.x.xのブロックエディタ用スタイルの排除 */
-wp_deregister_style( 'wp-block-library' );
-wp_deregister_style( 'wp-block-library-theme' );
+//wp_deregister_style( 'wp-block-library' );
+//wp_deregister_style( 'wp-block-library-theme' );
 
 //コメントのフィードなどの表示削除
 remove_action('wp_head', 'feed_links_extra', 3);
