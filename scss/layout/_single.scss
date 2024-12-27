@@ -109,9 +109,11 @@
     }
   }
   & .editor-content {
+    padding-top: 40px;
     padding-bottom: 80px;
     border-bottom : solid 1px $gray03;
     @include mq_sp{
+      padding-top: size_sp(40);
       padding-bottom: size_sp(100);
       border-bottom-width : size_sp(2);
     }

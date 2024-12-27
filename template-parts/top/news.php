@@ -10,7 +10,7 @@
       <article class="<?php echo $secName;?>__post">
           <figure class="<?php echo $secName;?>__postThumb">
             <a href="<?php the_permalink();?>">
-              <img src="<?php if(has_post_thumbnail()){echo get_the_post_thumbnail_url('','full');}else{echo 'http://placehold.jp/150x150.png';}?>" alt="" class="object_fit">
+              <img src="<?php if(has_post_thumbnail()){echo get_the_post_thumbnail_url('','full');}else{echo get_stylesheet_directory_uri().'/img/common/img_none.jpg';}?>" alt="" class="object_fit">
             </a>
           </figure>
           <figcaption class="<?php echo $secName;?>__postInfo">

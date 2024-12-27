@@ -27,10 +27,12 @@ $singleCat = get_the_category();
 		<div class="<?php echo $pageName;?>__thumb">
 			<img src="<?php echo get_field('thumb_detail');?>" alt="<?php echo esc_html(get_the_title());?>">
 		</div>
+		<?php /*
 		<?php elseif(has_post_thumbnail()):?>
 		<div class="<?php echo $pageName;?>__thumb">
 			<img src="<?php echo get_the_post_thumbnail_url( '', 'full');?>" alt="<?php echo esc_html(get_the_title());?>">
 		</div>
+		*/?>
 		<?php endif;?>
 	<div class="editor-content">
 			<?php the_content(); ?>
