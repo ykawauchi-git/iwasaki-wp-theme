@@ -652,6 +652,12 @@
           line-height: (60/30);
           margin-top : size_sp(22);
         }
+        & > small {
+          font-size: 14px;
+          @include mq_sp{
+            @include fz_vw(26);
+          }
+        }
       }
     }
     &Guidance {

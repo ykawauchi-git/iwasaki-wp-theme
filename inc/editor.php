@@ -34,6 +34,7 @@ add_filter('tiny_mce_before_init', function ($initArray) {
   // 自動整形を無効化
   $initArray['wpautop'] = false;
   $initArray['forced_root_block'] = false;
+  $initArray['force_br_newlines'] = true;
   return $initArray;
 });
 

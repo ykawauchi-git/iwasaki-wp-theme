@@ -6,10 +6,15 @@ $years = $wpdb->get_col("SELECT DISTINCT YEAR(post_date) FROM $wpdb->posts WHERE
 $categories = get_categories();
 $current_year = isset($_GET['year']) ? $_GET['year'] : '';
 $current_cat = isset($_GET['cat']) ? $_GET['cat'] : '';
+$current_obj = get_queried_object();
+if($current_obj) {
+  // カテゴリースラッグの取得
+  $current_category_slug = $current_obj->slug;
+}
 ?>
 <div class="<?php echo $pageName;?> archive-wrap">
   <h1 class="<?php echo $pageName;?>__heading page-heading"><span>ニュース一覧</span></h1>
-  <form class="<?php echo $pageName;?>__search" method="GET" action="">
+  <form class="<?php echo $pageName;?>__search" method="GET" action="<?php echo home_url( '/news/' ); ?>">
     <div class="<?php echo $pageName;?>__year">
       <select name="year">
         <option value="">年　次</option>
@@ -36,13 +41,30 @@ $current_cat = isset($_GET['cat']) ? $_GET['cat'] : '';
 
   <?php
   $paged = get_query_var('paged') ? get_query_var('paged') : 1;
-  $args = array(
-    'post_type'      => 'post', // カスタム投稿タイプのスラッグ
-    'posts_per_page' => 12,      // 1ページに表示する投稿数
-    'orderby'        => 'date', // 日付順
-    'order'          => 'DESC', // 新着順
-    'paged'          =>  $paged, // 現在のページ番号
-  );
+  if(is_category()) {
+    $args = array(
+      'post_type'      => 'post', // カスタム投稿タイプのスラッグ
+      'posts_per_page' => 12,      // 1ページに表示する投稿数
+      'orderby'        => 'date', // 日付順
+      'order'          => 'DESC', // 新着順
+      'tax_query'      => [
+        [
+          'taxonomy' => 'category',
+          'field'    => 'slug',
+          'terms'    => $current_category_slug,
+        ]
+      ],
+      'paged'          =>  $paged, // 現在のページ番号
+    );
+  }  else {
+    $args = array(
+      'post_type'      => 'post', // カスタム投稿タイプのスラッグ
+      'posts_per_page' => 12,      // 1ページに表示する投稿数
+      'orderby'        => 'date', // 日付順
+      'order'          => 'DESC', // 新着順
+      'paged'          =>  $paged, // 現在のページ番号
+    );
+  }
   if(!empty($current_year)) {
     $args['year'] = $current_year;
   }

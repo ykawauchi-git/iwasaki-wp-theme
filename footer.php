@@ -16,7 +16,7 @@
       <ul class="common-footer__navMenu page">
         <li><a href="<?php echo home_url('/about/');?>">岩崎学園について</a></li>
         <li><a href="<?php echo home_url('/facilities/');?>">教育事業</a></li>
-        <li><a href="<?php echo home_url('/philosophy/');?>">産学・地域連携</a></li>
+        <li><a href="<?php echo home_url('/philosophy/');?>">産官学・地域連携</a></li>
         <li><a href="<?php echo home_url('/career/');?>">卒業生の活躍</a></li>
         <li><a href="<?php echo home_url('/movie/');?>">動画で見る岩崎学園</a></li>
       </ul>
@@ -29,22 +29,22 @@
       <h3>岩崎学園施設</h3>
       <ul class="common-footer__navMenu institution">
         <li>
-          <span>専門学校</span>
+          <span>専門学校教育</span>
           <ul>
             <li><a href="https://isc.iwasaki.ac.jp/" target="_blank">情報科学専門学校</a></li>
             <li><a href="https://iscs.iwasaki.ac.jp/" target="_blank">横浜スポーツ＆医療ウェルネス専門学校<span>(旧校名 横浜医療情報専門学校)</span></a></li>
             <li><a href="https://yfc.iwasaki.ac.jp/" target="_blank">横浜ｆカレッジ</a></li>
-            <li><a href="https://ycr.iwasaki.ac.jp/" target="_blank">横浜リハビリテーション専門学校</a></li>
             <li><a href="https://yda.iwasaki.ac.jp/" target="_blank">横浜デジタルアーツ専門学校</a></li>
+            <li><a href="https://ycr.iwasaki.ac.jp/" target="_blank">横浜リハビリテーション専門学校</a></li>
             <li><a href="https://hoiku.iwasaki.ac.jp/" target="_blank">横浜保育福祉専門学校</a></li>
             <li><a href="https://jkango.iwasaki.ac.jp/" target="_blank">横浜実践看護専門学校</a></li>
           </ul>
         </li>
         <li>
-          <span>幼児教育施設</span>
+          <span>子育て支援・幼児教育</span>
           <ul>
-            <li><a href="https://www.iwasaki.ac.jp/hodogaya/index.html" target="_blank">岩崎学園付属幼稚園</a></li>
-            <li><a href="https://www.iwasaki.ac.jp/isogo/index.htm" target="_blank">岩崎学園付属磯子幼稚園</a></li>
+            <li><a href="https://www.iwasaki.ac.jp/hodogaya/index.html" target="_blank">岩崎学園附属幼稚園</a></li>
+            <li><a href="https://www.iwasaki.ac.jp/isogo/index.htm" target="_blank">岩崎学園附属磯子幼稚園</a></li>
             <li><a href="https://hoiku.iwasaki.ac.jp/nursery/" target="_blank">岩崎学園東戸塚保育園</a></li>
             <li><a href="https://hoiku.iwasaki.ac.jp/kosodate/isyh/index.html" target="_blank">岩崎学園新横浜保育園</a></li>
             <li><a href="https://hoiku.iwasaki.ac.jp/kosodate/isyh2/index.html" target="_blank">​岩崎学園新横浜第二保育園</a></li>
@@ -60,9 +60,15 @@
             </ul>
           </div>
           <div class="col">
-            <span>文化施設</span>
+            <span>生涯教育・NPO支援事業</span>
             <ul>
-              <li><a href="https://www.iwasaki.ac.jp/museum/index.html" target="_blank">岩崎博物館（ゲーテ座記念）</a></li>
+              <li><a href="https://www.isef.or.jp/" target="_blank">特定非営利活動法人 <br>NPO情報セキュリティフォーラム</a></li>
+            </ul>
+          </div>
+          <div class="col">
+            <span>文化振興</span>
+            <ul>
+              <li><a href="https://www.iwasaki.ac.jp/museum/index.html" target="_blank">岩崎博物館［ゲーテ座記念］</a></li>
             </ul>
           </div>
         </li>

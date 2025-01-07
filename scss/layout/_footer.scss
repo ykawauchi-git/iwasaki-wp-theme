@@ -40,11 +40,13 @@
     }
   }
   &__inner{
-    max-width: 822px;
+    // max-width: 822px;
+    max-width: 840px;
     width: 100%;
     margin: 0 auto;
     @media screen and (max-width: 882px) {
-      max-width: 95%;
+      // max-width: 95%;
+      max-width: 96%;
     }
     @include mq_sp{
       max-width: size_sp(690);
@@ -247,7 +249,8 @@
         & > li{
           margin-right: 8px;
           @media screen and (max-width: 882px) {
-            margin-right: 20px;
+            // margin-right: 20px;
+            margin-right: 7px;
           }
           @include mq_sp{
             margin-right: 0;

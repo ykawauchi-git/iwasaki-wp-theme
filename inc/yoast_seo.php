@@ -1,6 +1,7 @@
 <?php
 function custom_opengraph_image($img) {
 	global $post;
+  if ( is_null( $post ) ) { return; }
 
   if(get_field('thumb_detail', $post->ID)){
     $top_image = get_field('thumb_detail', $post->ID);

@@ -34,8 +34,9 @@ $singleCat = get_the_category();
 		</div>
 		*/?>
 		<?php endif;?>
-	<div class="editor-content">
+		<div class="editor-content">
 			<?php the_content(); ?>
+			<?php /*
 			<div class="<?php echo $pageName;?>__sns">
 				<a class="<?php echo $pageName;?>__snsItem" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode(get_permalink()); ?>" target="_blank" rel="noopener noreferrer">
 					<img class="object_fit" src="<?php echo get_stylesheet_directory_uri();?>/img/common/icn_facebook-navy.svg" alt="">
@@ -47,6 +48,7 @@ $singleCat = get_the_category();
 					<img class="object_fit" src="<?php echo get_stylesheet_directory_uri();?>/img/common/icn_link-navy.svg" alt="">
 				</button>
 			</div>
+			*/?>
 		</div>
 	</div>
 	<div class="<?php echo $pageName;?>__new">
