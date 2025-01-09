@@ -310,11 +310,14 @@
       @include mq_sp{}
     }
     &Other{
-      margin-top: 40px;
+      max-width: 768px;
+      width: 100%;
+      margin: 40px auto 0;
       @media screen and (min-width: 768px) {
         @include flex(flex, wrap, center, normal, normal, row);
       }
       @include mq_sp{
+        max-width: 100%;
         margin-top: size_sp(60);
       }
       &.swiper-wrapper{

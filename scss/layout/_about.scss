@@ -111,10 +111,11 @@
       }
     }
     &Heading{
-      @include font-size(34);
+      @include font-size(38);
       line-height: (35/24);
-      letter-spacing: 0.1em;
-      text-align: center;
+      letter-spacing: 0.2em;
+      text-align: left;
+      color: #888;
       font-family: $NotoSerif;
       position: relative;
       z-index: 1;
