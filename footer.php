@@ -1,9 +1,9 @@
- <?php
+<?php
 //パンくず
   if(!is_page(array('sitemap','privacy-policy','media-policy')) && !is_archive() && !is_single() && !is_404()){
-  echo '<section class="pageSec"><span class="pageSec__bg"></span></section>';
- }
- ?>
+    echo '<section class="pageSec"><span class="pageSec__bg"></span></section>';
+  }
+?>
 </main>
 <!-- ////コンテンツ -->
 
@@ -32,7 +32,7 @@
           <span>専門学校教育</span>
           <ul>
             <li><a href="https://isc.iwasaki.ac.jp/" target="_blank">情報科学専門学校</a></li>
-            <li><a href="https://iscs.iwasaki.ac.jp/" target="_blank">横浜スポーツ＆医療ウェルネス専門学校<span>(旧校名 横浜医療情報専門学校)</span></a></li>
+            <li><a href="https://ysw.iwasaki.ac.jp/" target="_blank">横浜スポーツ＆医療ウェルネス専門学校<span>(旧校名 横浜医療情報専門学校)</span></a></li>
             <li><a href="https://yfc.iwasaki.ac.jp/" target="_blank">横浜ｆカレッジ</a></li>
             <li><a href="https://yda.iwasaki.ac.jp/" target="_blank">横浜デジタルアーツ専門学校</a></li>
             <li><a href="https://ycr.iwasaki.ac.jp/" target="_blank">横浜リハビリテーション専門学校</a></li>
@@ -79,7 +79,7 @@
       <li><a href="<?php echo home_url('/privacy-policy/');?>">サイトポリシー</a></li>
       <li><a href="<?php echo home_url('/media-policy/');?>">メディアポリシー</a></li>
     </ul>
-    <small class="common-footer__copyright">&copy; 2024 IWASAKI GAKUEN.</small>
+    <small class="common-footer__copyright">&copy; 2025 IWASAKI GAKUEN.</small>
   </div>
 </footer>
 <!-- ////フッター -->

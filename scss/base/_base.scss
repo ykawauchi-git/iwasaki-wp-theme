@@ -13,7 +13,7 @@ body {
 	font-weight: $base-font-weight;
 	position: relative;
 	-webkit-print-color-adjust: exact;
-	// overflow-x: hidden;
+	overflow-x: hidden;
 	// -ms-overflow-style: none;    /* IE, Edge 対応 */
 	// scrollbar-width: none;       /* Firefox 対応 */
   @include mq_sp {
@@ -21,8 +21,19 @@ body {
     line-height: $base-line-height-sp;
   }
 	&::-webkit-scrollbar {  /* Chrome, Safari 対応 */
-		display:none;
+		//display:none;
 	}
+  &::-webkit-scrollbar{
+    width: 10px;
+    height: auto;
+  }
+  &::-webkit-scrollbar-thumb{
+    border-radius: 100px;
+    background: #888;
+  }
+  &::-webkit-scrollbar-track{
+    background: rgba(225, 230, 230, 0.7);
+  }
 }
 
 //ローディング前後

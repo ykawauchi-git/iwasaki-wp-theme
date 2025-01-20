@@ -2,7 +2,7 @@
 <main class="<?php echo $pageName;?>">
   <section class="<?php echo $pageName;?>__about">
     <div class="<?php echo $pageName;?>__aboutInner <?php echo $pageName;?>__inner">
-      <h2 class="<?php echo $pageName;?>__aboutHeading page-heading"><span>産学・地域連携について</span></h2>
+      <h2 class="<?php echo $pageName;?>__aboutHeading page-heading"><span>産官学・地域連携について</span></h2>
       <p class="<?php echo $pageName;?>__aboutIntro">岩崎学園は、社会との連携を通じて、魅力的で実践的な教育を実現し、学生が将来の社会で自信を持って活躍できるよう、全力でサポートします。学生の未来の可能性を最大限に引き出す準備を整えています！</p>
     </div>
   </section>

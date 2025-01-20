@@ -1,6 +1,6 @@
 .common-kv{
   position: relative;
-  height: 330px;
+  height: (330/1280) * 100%;
   z-index: 99;
   @include mq_sp{
     height: size_sp(392)
@@ -32,9 +32,9 @@
 .common-subKv {
   position: relative;
   height : 454px;
- @include mq_sp{
-   height : size_sp(977);
- }
+  @include mq_sp{
+    height : size_sp(977);
+  }
   &__bg{
     width: 100%;
     height: 100%;

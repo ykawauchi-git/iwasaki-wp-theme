@@ -207,6 +207,12 @@
           @include fz_vw(34);
           line-height: (49/34);
         }
+        small{
+          @include font-size(14);
+          @include mq_sp{
+            @include fz_vw(24);
+          }
+        }
       }
       &-thumb{
         width: 100%;
