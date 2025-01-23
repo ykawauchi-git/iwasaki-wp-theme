@@ -52,7 +52,7 @@
         </div>
       </div>
     </div>
-    <a href="<?php echo home_url('/support/'); ?>" class="page-group__contBtn">詳しく見る</a>
+    <a href="<?php echo home_url('/students_support/'); ?>" class="page-group__contBtn">詳しく見る</a>
   </div>
 
   <!-- 就職サポート -->

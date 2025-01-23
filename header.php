@@ -62,7 +62,7 @@
 						<li><a href="<?php echo home_url('/about/'); ?>" class="<?php if(is_page('about')){echo "is-current";}?>">岩崎学園について</a></li>
 						<li><a href="<?php echo home_url('/group/');?>" class="<?php if(is_page('group')){echo "is-current";}?>">岩崎学園グループ</a></li>
 						<li><a href="<?php echo home_url('/philosophy/'); ?>" class="<?php if(is_page('philosophy')){echo "is-current";}?>">岩崎学園の学び</a></li>
-						<li><a href="<?php echo home_url('/support/');?>" class="<?php if(is_page('support')){echo "is-current";}?>">学生支援</a></li>
+						<li><a href="<?php echo home_url('/students_support/');?>" class="<?php if(is_page('students_support')){echo "is-current";}?>">学生支援</a></li>
 						<li><a href="<?php echo home_url( '/movie/' ); ?>" class="<?php if(is_page('movie')){echo "is-current";}?>">動画で見る岩崎学園</a></li>
 					</ul>
 					<ul class="common-header__menu contact">
@@ -98,7 +98,7 @@
 						<li><a href="<?php echo home_url('/about/'); ?>" class="<?php if(is_page('about')){echo "is-current";}?>">岩崎学園について</a></li>
 						<li><a href="<?php echo home_url('/group/');?>" class="<?php if(is_page('group')){echo "is-current";}?>">岩崎学園グループ</a></li>
 						<li><a href="<?php echo home_url('/philosophy/'); ?>" class="<?php if(is_page('philosophy')){echo "is-current";}?>">岩崎学園の学び</a></li>
-						<li><a href="<?php echo home_url('/support/');?>" class="<?php if(is_page('support')){echo "is-current";}?>">学生支援</a></li>
+						<li><a href="<?php echo home_url('/students_support/');?>" class="<?php if(is_page('students_support')){echo "is-current";}?>">学生支援</a></li>
 						<li><a href="<?php echo home_url( '/movie/' ); ?>" class="<?php if(is_page('movie')){echo "is-current";}?>">動画で見る岩崎学園</a></li>
 					</ul>
 				</nav>
@@ -128,7 +128,7 @@
 						<li class="<?php if(is_page('facilities')){echo 'current';}?>"><a href="<?php echo home_url('/facilities/'); ?>">教育事業</a></li>
 						<li class="<?php if(is_page('philosophy')){echo 'current';}?>"><a href="<?php echo home_url('/philosophy/'); ?>">産官学・地域連携</a></li>
 						<li class="<?php if(is_post_type_archive('career') || is_singular('career')){echo 'current';}?>"><a href="<?php echo home_url('/career/'); ?>">卒業生の活躍</a></li>
-						<li class="<?php if(is_page('support')){echo 'current';}?>"><a href="<?php echo home_url('/support/'); ?>">学生支援</a></li>
+						<li class="<?php if(is_page('students_support')){echo 'current';}?>"><a href="<?php echo home_url('/students_support/'); ?>">学生支援</a></li>
 					</ul>
 					<ul class="common-header__btn tabsp-only--flex">
 						<li><a href="<?php echo home_url('/contact/'); ?>" class="contact">お問い合わせ</a></li>
