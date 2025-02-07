@@ -106,3 +106,6 @@ require get_template_directory().'/inc/only_publish.php';
 require get_template_directory().'/inc/is_parent_slug.php';
 require get_template_directory().'/inc/wp_nav.php';
 require get_template_directory().'/inc/yoast_seo.php';
+require get_template_directory().'/inc/wp_head.php';
+
+

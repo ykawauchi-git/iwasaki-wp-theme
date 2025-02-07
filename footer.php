@@ -7,7 +7,7 @@
 </main>
 <!-- ////コンテンツ -->
 
-<!-- フッター -->
+<?php /*<!-- フッター -->
 <footer class="common-footer" id="Footer">
   <!-- <span class="common-footer__pageTop" style="display:none"></span> -->
   <div class="common-footer__inner">
@@ -82,7 +82,9 @@
     <small class="common-footer__copyright">&copy; 2025 IWASAKI GAKUEN.</small>
   </div>
 </footer>
-<!-- ////フッター -->
+<!-- ////フッター -->*/?>
+
+<?php remove_filter ('acf_the_content', 'wpautop'); the_field('common_footer','option');?>
 
 </div><!-- / #Wrapper-->
 <?php wp_footer(); ?>

@@ -21,10 +21,12 @@
 		function gtag(){dataLayer.push(arguments);}
 		gtag('js', new Date());
 
-		gtag('config', 'UA-144028859-1'); 
+		gtag('config', 'UA-144028859-1');
 	</script>
 
 	<?php wp_head(); ?>
+	<?php remove_filter ('acf_the_content', 'wpautop');the_field('head_tag','option'); ?>
+	<style><?php the_field('common_css','option');?></style>
 </head>
 <body <?php body_class(); ?>>
 	<!-- Google Tag Manager (noscript) 202106 Data Management Project -->
@@ -124,11 +126,9 @@
 				</div>
 				<nav class="common-header__menu">
 					<ul class="common-header__menuList">
-						<li class="<?php if(is_page('about')){echo 'current';}?>"><a href="<?php echo home_url('/about/'); ?>">岩崎学園について</a></li>
-						<li class="<?php if(is_page('facilities')){echo 'current';}?>"><a href="<?php echo home_url('/facilities/'); ?>">教育事業</a></li>
-						<li class="<?php if(is_page('philosophy')){echo 'current';}?>"><a href="<?php echo home_url('/philosophy/'); ?>">産官学・地域連携</a></li>
-						<li class="<?php if(is_post_type_archive('career') || is_singular('career')){echo 'current';}?>"><a href="<?php echo home_url('/career/'); ?>">卒業生の活躍</a></li>
-						<li class="<?php if(is_page('students_support')){echo 'current';}?>"><a href="<?php echo home_url('/students_support/'); ?>">学生支援</a></li>
+						<?php if(have_rows('header_menu','option')): while(have_rows('header_menu','option')): the_row(); $header_menu_url = get_sub_field('header_menu_url');  $current_path = untrailingslashit( parse_url( get_permalink(), PHP_URL_PATH ) ); $menu_path = untrailingslashit( parse_url( $header_menu_url['url'], PHP_URL_PATH ) ); $is_current = ($current_path === $menu_path) ? 'current' : ''; if ( $menu_path === '/career' && ( is_post_type_archive( 'career' ) || is_singular( 'career' ) ) ) {$is_current = 'current';}?>
+						<li class="<?php echo $is_current;?>"><a href="<?php echo $header_menu_url['url'];?>" target="<?php echo $header_menu_url['target'];?>"><?php echo $header_menu_url['title'];?></a></li>
+						<?php endwhile; endif;?>
 					</ul>
 					<ul class="common-header__btn tabsp-only--flex">
 						<li><a href="<?php echo home_url('/contact/'); ?>" class="contact">お問い合わせ</a></li>
