@@ -6,10 +6,12 @@ $years = $wpdb->get_col("SELECT DISTINCT YEAR(post_date) FROM $wpdb->posts WHERE
 $categories = get_categories();
 $current_year = isset($_GET['year']) ? $_GET['year'] : '';
 $current_cat = isset($_GET['cat']) ? $_GET['cat'] : '';
-$current_obj = get_queried_object();
-if($current_obj) {
-  // カテゴリースラッグの取得
-  $current_category_slug = $current_obj->slug;
+if(is_category()) {
+  $current_obj = get_queried_object();
+  if($current_obj) {
+    // カテゴリースラッグの取得
+    $current_category_slug = $current_obj->slug;
+  }
 }
 ?>
 <div class="<?php echo $pageName;?> archive-wrap">
