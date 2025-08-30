@@ -2,11 +2,11 @@
 ============================================================================================================ */
 
 .post-career {
-  // height: 371px;
+  height: 340px;
   background : $white00;
-  // @include mq_sp{
-  //   height: auto;
-  // }
+  @include mq_sp{
+    height: auto;
+  }
   &:first-of-type,&:nth-of-type(3n + 1) {
     & a {
       color : $white00;
