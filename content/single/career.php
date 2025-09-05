@@ -22,7 +22,7 @@ $graduateAlma = $graduateInfo['career_graduate_alma_mater'];
   <div class="<?php echo $pageName;?>__other">
     <h2 class="page-subHeading"><span>他の卒業生たち</span></h2>
     <ul class="<?php echo $pageName;?>__otherList">
-      <?php
+      <?php /*
       $args = array(
         'post_type' => 'career',
         'posts_per_page' => 2,
@@ -33,7 +33,14 @@ $graduateAlma = $graduateInfo['career_graduate_alma_mater'];
       get_template_part('content/loop/career');
       endwhile;else:
       echo '<p style="margin-top: 3em;">まだ記事がありません。</p>';
-      endif;?>
+      endif;
+      */?>
+      <?php if(get_field('career_archive','option')):
+        remove_filter ('acf_the_content', 'wpautop');
+        the_field("career_archive", 'option');
+        elseif (have_posts()) : while (have_posts()) : the_post(); ?>
+        <?php get_template_part('content/loop/career');?>
+      <?php endwhile; endif; reset_rows();?>
     </ul>
     <a class="btn__more b" href="<?php echo home_url('/career/');?>">一覧へ戻る</a>
   </div>

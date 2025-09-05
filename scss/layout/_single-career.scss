@@ -11,76 +11,27 @@
   &__info {
     max-width: 768px;
     width: 100%;
-    padding-top: 123px;
+    // padding-top: 123px;
     margin: 0 auto;
     position: relative;
     @include mq_sp{
-      max-width: size_sp(670);
-      padding-top: size_sp(297);
+      max-width: size_sp(630);
+      // padding-top: size_sp(297);
+    }
+    &Heading {
+      font-size: 26px;
+      line-height : (49/26);
+      text-align: center;
+      @include mq_sp{
+        @include fz_vw(36);
+        line-height: (68/36);
+      }
     }
     &Thumb {
-      width: 384px;
-      height: 256px;
-      position: absolute;
-      top: 0;
-      left: 0;
+      width: 100%;
+      margin: 24px auto 0;
       @include mq_sp{
-        width: size_sp(550);
-        height: size_sp(367);
-      }
-    }
-    &Cont {
-      background : $gray01;
-      width: 424px;
-      padding: 46px 31px 48px 70px;
-      margin-left: auto;
-      @include mq_sp{
-        width: size_sp(568);
-        padding: size_sp(102) size_sp(50) size_sp(46);
-      }
-      & > h1 {
-        font-size: 20px;
-        font-weight: 700;
-        line-height: (38/20);
-        @include mq_sp{
-          @include fz_vw(34);
-          line-height: (64/34);
-        }
-      }
-    }
-    &List {
-      margin-top: 24px;
-      @include mq_sp{
-        margin-top: size_sp(25);
-      }
-      & > li {
-        font-size: 16px;
-        line-height: (27/16);
-        @include flex(flex, wrap, space-between, normal, normal, row);
-        @include mq_sp{
-          @include fz_vw(22);
-          line-height: (39/22);
-          flex-direction: column;
-        }
-        &:nth-of-type(n + 2) {
-          margin-top: 13px;
-          @include mq_sp{
-            margin-top: size_sp(21);
-          }
-        }
-      }
-    }
-    &Ttl {
-      width: 48px;
-      @include mq_sp{
-        width: 100%;
-      }
-    }
-    &Detail {
-      width: 255px;
-      @include mq_sp{
-        width: 100%;
-        margin-top: size_sp(5);
+        margin-top: size_sp(32);
       }
     }
   }
@@ -96,6 +47,19 @@
       padding-top: size_sp(72);
       padding-bottom: size_sp(111);
       border-bottom-width : size_sp(2);
+    }
+    & >* {
+      margin: calc(18px * 1.5) 0;
+  
+      @include mq_sp {
+        margin: calc(#{size_sp(30)} * 1.5) 0;
+      }
+      &:first-child {
+        margin-top: unset;
+      }
+      &:last-child {
+        margin-bottom: unset;
+      }
     }
     & > li {
       &:nth-of-type(n + 2){
@@ -185,12 +149,103 @@
         line-height: (60/30);
       }
     }
+    // ブロックエディター用
+    & .wp-block-heading {
+      font-size: 24px;
+      line-height: (49/24);
+      margin: 19px 0;
+      @include mq_sp{
+        @include fz_vw(36);
+        line-height: (70/36);
+        margin: size_sp(22) 0;
+      }
+    }
+    & .wp-block-image {
+      width: 100%;
+      aspect-ratio: 3/2;
+      &.is-vertical {
+        aspect-ratio: auto;
+        height: auto;
+      }
+      & img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain !important;
+      }
+    }
+    & .wp-block-spacer {
+      max-height: 109px;
+      @include mq_sp{
+        max-height: size_sp(104);
+      }
+    }
+    & .wp-block-columns {
+      justify-content: space-between;
+      @include mq_sp{
+        flex-direction: column;
+        row-gap: size_sp(22);
+      }
+      &.reverse {
+        @include mq_sp{
+          flex-direction: column-reverse;
+        }
+      }
+      & .wp-block-column {
+        &:has(.wp-block-image) {
+          min-width: 384px;
+          max-width: 384px;
+          height: 256px;
+          margin: 0;
+          @include mq_sp{
+            min-width: 100%;
+            max-width: 100%;
+            width: 100%;
+            height: size_sp(420);
+          }
+          & .wp-block-image {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+          }
+        }
+        &:has(p) {
+          min-width: 344px;
+          max-width: 344px;
+          @include mq_sp{
+            min-width: 100%;
+            max-width: 100%;
+            width: 100%;
+          }
+        }
+      }
+    }
+    & p {
+      font-size: 18px;
+      line-height: (34/18);
+      @include mq_sp{
+        @include fz_vw(30);
+        line-height: (60/30);
+      }
+    }
+    & a {
+      color: #0066cc;
+      text-decoration: underline;
+      &:hover {
+        text-decoration: underline;
+      }
+      &:visited {
+        color: #5a3694 !important;
+      }
+    }
   }
   &__other {
     max-width: 948px;
     width: 100%;
     padding-top: 80px;
     margin: 0 auto;
+    @include mq_tab{
+      max-width: (948/1024)*100%;
+    }
     @include mq_sp{
       max-width: size_sp(630);
       padding-top: size_sp(80);
