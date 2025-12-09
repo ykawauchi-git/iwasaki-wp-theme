@@ -1,0 +1,33 @@
+/* SCSS メディアクエリ */ //(setting/variables.scssに横幅記載あり)
+@mixin mq_pc {
+	@media (min-width: $screen-pc-min){
+		@content;
+	}
+}
+@mixin mq_tab {
+	@media (max-width: $screen-tab-max){
+		@content;
+	}
+}
+@mixin mq_pad {
+	@media (max-width: $screen-tab-min){
+		@content;
+	}
+}
+@mixin mq_sp {
+	@media (max-width: $screen-sp-max){
+		@content;
+	}
+}
+@mixin mq_se {
+	@media (max-width: $screen-sp-min){
+		@content;
+	}
+}
+
+// 印刷の設定
+@mixin print () {
+	@media print {
+		@content;
+	}
+}

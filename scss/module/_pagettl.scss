@@ -1,0 +1,66 @@
+.common-kv{
+  position: relative;
+  height: (330/1280) * 100%;
+  z-index: 99;
+  @include mq_sp{
+    height: size_sp(392)
+  }
+  &__bg{
+    width: 100%;
+    height: 100%;
+  }
+  &__ttl{
+    @include abso-center();
+    @include font-size(30);
+    z-index: 2;
+    line-height: (44/30);
+    text-align: center;
+    //font-weight: 500;
+    letter-spacing: 0.05em;
+    width: 381px;
+    padding: 20px 0;
+    background: rgba($white00,0.8);
+    @include mq_sp{
+      @include fz_vw(36);
+      line-height: (52/36);
+      width: size_sp(402);
+      padding: size_sp(15) 0;
+    }
+  }
+}
+
+.common-subKv {
+  position: relative;
+  height : 454px;
+  @include mq_sp{
+    height : size_sp(977);
+  }
+  &__bg{
+    width: 100%;
+    height: 100%;
+  }
+  &__inner {
+    width : 704px;
+    padding : 32px 40px 28px;
+    margin : 0 auto;
+    background-color : rgba($white00, .8);
+    position: absolute;
+    top : 50%;
+    left : 50%;
+    transform: translate(-50%,-50%);
+    @include mq_sp{
+      width : size_sp(620);
+      padding : size_sp(50) size_sp(30) size_sp(61);
+    }
+  }
+  &__txt {
+    font-size : 16px;
+    line-height : (37/16);
+    margin-top : 56px;
+    @include mq_sp{
+      @include fz_vw(28);
+      line-height : (58/28);
+      margin-top : size_sp(92);
+    }
+  }
+}

@@ -1,0 +1,145 @@
+/* module > btn
+============================================================================ */
+
+.btn__more{
+  font-size: 20px;
+  font-weight: 400;
+  position: relative;
+  display: block;
+  width: 220px;
+  height: 61px;
+  padding-top: 2px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  @include flex(flex, wrap, center, center, normal, row);
+  cursor: pointer;
+  border-radius: 47px;
+  box-shadow : 0px 3px 6px rgba($black00, .1);
+  @include mq_sp{
+    @include fz_vw(32);
+    width: size_sp(320);
+    height: size_sp(94);
+    padding-bottom: size_sp(3);
+    border-radius: size_sp(47);
+    box-shadow : 0px size_sp(3) size_sp(6) rgba($black00, .1);
+  }
+  &.w {
+    color : $black01;
+    background : $white00;
+    &:hover {
+      color : $white00;
+      background : $black01;
+      opacity: 1;
+    }
+  }
+  &.b {
+    color : $white00;
+    background : $black02;
+    &:hover {
+      color : $black02;
+      background : $white00;
+      opacity: 1;
+    }
+  }
+}
+
+.btn__anchor{
+  @include font-size(15);
+  line-height: (28/15);
+  letter-spacing: 0.1em;
+  font-weight: 500;
+  text-align: center;
+  color: $white00;
+  position: relative;
+  display: block;
+  width: 228px;
+  padding: 17px 0 17px 0.05em;
+  box-shadow: 0px 3px 6px rgba($black00, .1);
+  background: $black02;
+  @include mq_sp{
+    @include fz_vw(26);
+    line-height: (37/26);
+    letter-spacing: 0em;
+    width: size_sp(338);
+    padding: size_sp(26) 0 size_sp(26) 0.05em;
+    box-shadow: 0px size_sp(3) size_sp(6) rgba($black00, .1);
+  }
+  &:hover {
+    color: $black02;
+    background: $white00;
+    opacity: 1;
+    @include mq_tab{
+      color: $white00;
+      background: $black02;
+    }
+    &:before {
+      bottom: -19px;
+      @include mq_tab{
+        bottom: -14px;
+      }
+      @include mq_sp{
+        bottom: size_sp(-26);
+      }
+    }
+  }
+  &:before{
+    @include abso-center-h();
+    bottom: -14px;
+    z-index: 1;
+    content: "";
+    width: 27px;
+    height: 19px;
+    background: url(./img/page/arw_anchor.svg) no-repeat center/cover;
+    transition: .4s;
+    @include mq_sp{
+      width: size_sp(50);
+      height: size_sp(35);
+      bottom: size_sp(-26);
+    }
+  }
+}
+
+.mod-btn {
+  max-width: 148px;
+  width: 100%;
+  text-align: center;
+  color : $black01;
+  padding: 6px 6px 5px;
+  display: block;
+  border : solid 1px $black01;
+  @include mq_sp{
+    @include fz_vw(22);
+    line-height: (44/22);
+    max-width: size_sp(262);
+    padding: size_sp(14);
+    border-width: size_sp(2);
+  }
+  &:hover {
+    opacity: 1;
+  }
+  &.w {
+    color : $black01;
+    background : $white00;
+    border : solid 1px $black01;
+    @include mq_sp{
+      border-width : size_sp(2);
+    }
+    &:hover {
+      color : $white00;
+      background : $black01;
+    }
+  }
+  &.b {
+    color : $white00;
+    background : $black02;
+    border : solid 1px $black02;
+    @include mq_sp{
+      border-width : size_sp(2);
+    }
+    &:hover {
+      color : $black02;
+      background : $white00;
+    }
+  }
+}

@@ -1,0 +1,292 @@
+/*  layout > policy
+============================================================================================================ */
+.media-policy {
+  .page-policy{
+    &__main {
+      margin-top: 61px;
+      & > h4 {
+        &:nth-of-type(n + 2) {
+          margin-top: 69px;
+        }
+      }
+    }
+  }
+}
+
+.page-policy{
+  max-width: 768px;
+  width: 100%;
+  padding-top: 30px;
+  margin: 0 auto;
+  @include mq_sp{
+    max-width: size_sp(630);
+    padding-top: size_sp(60);
+  }
+  &__inner {
+    & > h1 {
+      font-size: 26px;
+      line-height: (37/26);
+      @include mq_sp{
+        @include fz_vw(40);
+        line-height: (58/40);
+      }
+    }
+  }
+  &__intro{
+    margin-top: 46px;
+    @include mq_sp{
+      margin-top: 0;
+    }
+    h2{
+      line-height: (44/30);
+      letter-spacing: 0.05em;
+      font-weight: 700;
+      text-align: center;
+      color: $blue02;
+      position: relative;
+      left: 0.025em;
+      @include mq_sp{
+        @include fz_vw(38);
+        line-height: (58/38);
+      }
+    }
+    p{
+      font-size: 18px;
+      line-height: (34/18);
+      margin-top: 34px;
+      @include mq_sp{
+        @include fz_vw(28);
+        line-height: (58/28);
+        margin-top: size_sp(41);
+      }
+    }
+  }
+  &__main{
+    max-width: 670px;
+    width: 100%;
+    margin: 45px auto 0;
+    @include mq_sp{
+      max-width: size_sp(630);
+      margin-top: size_sp(41);
+    }
+    &.privacy,&:nth-of-type(n + 3){
+      margin-top: 91px;
+      @include mq_sp{
+        margin-top: size_sp(103);
+      }
+    }
+    h3{
+      font-size: 28px;
+      line-height: 1.8;
+      letter-spacing: 0.1em;
+      position: relative;
+      border-bottom: 4px solid $black02;
+      @include mq_sp{
+        @include fz_vw(38);
+        line-height: 1.95;
+        border-bottom-width: size_sp(4);
+      }
+    }
+    h4{
+      @include font-size(20);
+      font-weight: 500;
+      line-height: 1.6;
+      letter-spacing: 0.1em;
+      color: $black01;
+      position: relative;
+      margin-top: 94px;
+      border-bottom: 4px solid $gray01;
+      @include mq_sp{
+        @include fz_vw(30);
+        line-height: (58/30);
+        margin-top: size_sp(85);
+        border-bottom: size_sp(4) solid $gray01;
+      }
+      &:first-of-type {
+        margin-top: 65px;
+        @include mq_sp{
+          margin-top: size_sp(65);
+        }
+      }
+      &:nth-of-type(n + 2){
+        margin-top: 65px;
+        @include mq_sp{
+          margin-top: size_sp(55);
+        }
+      }
+    }
+    p{
+      font-size: 18px;
+      line-height: (34/18);
+      max-width: 530px;
+      width: 100%;
+      margin: 26px auto 0;
+      @include mq_sp{
+        @include fz_vw(30);
+        line-height: (60/30);
+        max-width: size_sp(582);
+        margin-top: size_sp(42);
+      }
+      &:nth-of-type(n + 2){
+        margin-top: 24px;
+        @include mq_sp{
+          margin-top: size_sp(41);
+        }
+      }
+    }
+  }
+  &__sns{
+    max-width: 600px;
+    width: 100%;
+    margin: 38px 0 0 auto;
+    @include mq_sp{
+      @include fz_vw(28);
+      max-width: size_sp(582);
+      margin: size_sp(49) auto 0;
+    }
+    &Box{
+      &:nth-of-type(n + 2){
+        margin-top: 50px;
+        @include mq_sp{
+          margin-top: size_sp(70);
+        }
+      }
+      p{
+        max-width: none;
+        @include flex(flex, wrap, space-between, stretch, normal, row);
+        &:first-of-type {
+          margin-top: 0;
+        }
+        &:nth-of-type(n + 2){
+          margin-top: 14px;
+          @include mq_sp{
+            margin-top: size_sp(30);
+          }
+        }
+        & span{
+          display: block;
+          &:first-of-type{
+            @include font-size(12);
+            line-height: (17/12);
+            text-align: center;
+            color: $white00;
+            width: 84px;
+            height: 25px;
+            padding: 4px 0;
+            margin-right: 10px;
+            background: $black02;
+            @include mq_sp{
+              @include fz_vw(26);
+              line-height: (37/26);
+              width: size_sp(186);
+              height: auto;
+              padding: size_sp(9) 0 size_sp(7);
+              margin: 0;
+            }
+          }
+          &:last-of-type{
+            @include font-size(14);
+            line-height: (20/14);
+            width: 506px;
+            padding-top: 3px;
+            @include mq_sp{
+              @include fz_vw(28);
+              line-height: (40/28);
+              display: block;
+              width: 100%;
+              padding-top: 0;
+              margin-top: size_sp(12);
+            }
+          }
+          a{
+            color: $base-font-color;
+          }
+        }
+      }
+    }
+    h5{
+      @include font-size(16);
+      line-height: (24/16);
+      font-weight: 500;
+      @include mq_sp{
+        @include fz_vw(30);
+        line-height: (44/30);
+      }
+      & > span {
+        font-size: 10px;
+        line-height: 1;
+        display: block;
+        margin-top: 8px;
+        @include mq_sp{
+          @include fz_vw(20);
+          margin-top: size_sp(15);
+        }
+      }
+    }
+  }
+  ul{
+    font-size: 18px;
+    line-height: (34/18);
+    max-width: 530px;
+    width: 100%;
+    padding-left: 1em;
+    margin: 0 auto;
+    @include mq_sp{
+      @include fz_vw(30);
+      line-height: (60/30);
+      max-width: size_sp(582);
+      padding-left: 1em;
+    }
+    &.no-padding{
+      padding-left: 0;
+      margin-top: 24px;
+      @include mq_sp{
+        margin-top: size_sp(41);
+      }
+    }
+    li{
+      text-indent: -1em;
+      padding-left: 1em;
+    }
+  }
+  ol{
+    padding-left: 1em;
+    margin: 15px 0;
+    @include mq_sp{
+      @include fz_vw(24);
+      display: inline-block;
+      text-align: left;
+      line-height: (42/24);
+      margin: size_sp(20) 0;
+    }
+    li{
+      list-style: inherit;
+      & > ol{
+        padding-left: 2em;
+        margin: 10px 0 20px;
+        @include mq_sp{
+          margin: size_sp(15) 0 size_sp(25);
+        }
+        li{
+          list-style-type: cjk-ideographic;
+        }
+      }
+    }
+  }
+  p{
+    &.last{
+      text-align: right;
+      margin-top: 80px;
+      @include mq_sp{
+        margin-top: size_sp(100);
+      }
+    }
+    a{
+      color: blue;
+      word-break: break-all;
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+  }
+}
