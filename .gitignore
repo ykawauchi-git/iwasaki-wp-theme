@@ -3,3 +3,10 @@
 node_modules/
 dist/
 vendor/
+# backup files
+*.bak
+*.bak*
+*.utf8
+
+# OS files
+.DS_Store
