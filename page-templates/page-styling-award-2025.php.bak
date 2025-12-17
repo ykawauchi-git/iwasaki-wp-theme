@@ -1,0 +1,12 @@
+<?php
+/**
+ * Template Name: スタイリングアワード2025 LP
+ * Template Post Type: page
+ */
+?>
+
+<?php get_header(); ?>
+
+<!-- ここにLPのHTML / ブロック出力 -->
+
+<?php get_footer(); ?>

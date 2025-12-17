@@ -16591,3 +16591,22 @@ input[type=button], input[type=reset], input[type=submit] {
     margin-top: 1.3333333333vw;
   }
 }/*# sourceMappingURL=style.css.map */
+/* ===== LP2025: card 表示の安定 ===== */
+.lp2025-page .lp2025-card{
+  overflow: visible; /* 変な閉じ込めを防ぐ */
+}
+
+.lp2025-page .lp2025-card-img img{
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* サムネはcoverの方が自然 */
+  display: block;
+}
+/* ===== LP2025: filter / layout 調整 ===== */
+.lp2025-filter-buttons {
+  margin-bottom: 32px;
+}
+
+.lp2025-card-grid {
+  position: relative;
+}

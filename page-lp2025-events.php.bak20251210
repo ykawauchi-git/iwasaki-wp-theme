@@ -1,0 +1,210 @@
+<?php
+/**
+ * Template Name: LP 2025 イベント一覧
+ * Description: LPイベント投稿から自動生成するイベントLP（カレンダー＋絞り込み＋モーダル）。
+ */
+
+get_header();
+
+// ── FV用（ページACF） ─────────────────────────
+$fv_image      = get_field( 'fv_image' ); // なくてもOK
+$fv_title      = get_field( 'fv_title' ) ?: '一押しイベントタイトルが入ります';
+$fv_lead       = get_field( 'fv_lead' );
+$fv_btn_label  = get_field( 'fv_button_label' ) ?: '応募する';
+$fv_btn_url    = get_field( 'fv_button_url' ) ?: '#';
+$fv_date_label = get_field( 'fv_date_label' ); // 「12/25」など任意
+?>
+
+<main id="primary" class="lp2025-page">
+
+  <p style="padding:16px;background:#fee;">DEBUG: LP 2025 テンプレ読み込み済み</p>
+
+  <!-- ===== FV（一押しイベントカード） ===== -->
+  <section class="lp2025-fv">
+    <div class="lp2025-feature-card">
+      <div class="lp2025-feature-img">
+        <?php if ( $fv_image ) : ?>
+          <img src="<?php echo esc_url( $fv_image['url'] ); ?>"
+               alt="<?php echo esc_attr( $fv_image['alt'] ); ?>">
+        <?php endif; ?>
+      </div>
+      <div class="lp2025-feature-body">
+        <h2 class="lp2025-feature-title">
+          <?php echo esc_html( $fv_title ); ?>
+        </h2>
+
+        <?php if ( $fv_lead ) : ?>
+          <p class="lp2025-feature-text">
+            <?php echo wp_kses_post( nl2br( $fv_lead ) ); ?>
+          </p>
+        <?php endif; ?>
+
+        <div class="lp2025-feature-meta">
+          <?php if ( $fv_date_label ) : ?>
+            <span class="lp2025-feature-date">
+              <?php echo esc_html( $fv_date_label ); ?>
+            </span>
+          <?php endif; ?>
+          <?php if ( $fv_btn_url && '#' !== $fv_btn_url ) : ?>
+            <a href="<?php echo esc_url( $fv_btn_url ); ?>"
+               class="lp2025-feature-btn"
+               target="_blank"
+               rel="noopener">
+              <?php echo esc_html( $fv_btn_label ); ?>
+            </a>
+          <?php endif; ?>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ① イベントを条件でさがす（フィルタ＋カード一覧） ===== -->
+  <section class="lp2025-section">
+    <h2 class="lp2025-title">イベントを条件でさがす</h2>
+
+    <div class="lp2025-filter-buttons">
+      <button type="button" data-tag="all" class="active">すべて</button>
+      <button type="button" data-tag="soon">開催間近</button>
+      <button type="button" data-tag="oc">オープンキャンパス</button>
+      <button type="button" data-tag="trial">体験授業</button>
+      <button type="button" data-tag="briefing">説明会</button>
+    </div>
+
+    <div class="lp2025-card-grid lp2025-filter-grid">
+      <?php
+      // ── LPイベント投稿の取得 ─────────────────
+      $args = array(
+        'post_type'      => 'lp_event',
+        'post_status'    => 'publish',
+        'posts_per_page' => -1,
+        'meta_key'       => 'lp_event_date',   // 開催日で並び替え
+        'orderby'        => 'meta_value',
+        'order'          => 'ASC',
+      );
+      $lp_query = new WP_Query( $args );
+
+      if ( $lp_query->have_posts() ) :
+        while ( $lp_query->have_posts() ) :
+          $lp_query->the_post();
+          $event_id = get_the_ID();
+
+          // メタボックスで保存した値を取得
+          $tag        = get_post_meta( $event_id, 'lp_event_tag', true ) ?: 'oc';
+          $date       = get_post_meta( $event_id, 'lp_event_date', true );        // Y-m-d
+          $date_label = get_post_meta( $event_id, 'lp_event_date_label', true );  // 表示用
+          $short      = get_post_meta( $event_id, 'lp_event_short', true );
+          $detail     = get_post_meta( $event_id, 'lp_event_detail', true );
+          $link       = get_post_meta( $event_id, 'lp_event_link', true );
+
+          // 表示用日付が無い場合は、カレンダー用の日付から自動生成（例：12/14）
+          if ( ! $date_label && $date ) {
+            $date_label = date_i18n( 'n/j', strtotime( $date ) );
+          }
+
+          // アイキャッチ画像
+          $thumb_id  = get_post_thumbnail_id( $event_id );
+          $img_url   = $thumb_id ? wp_get_attachment_image_url( $thumb_id, 'large' ) : '';
+          $img_alt   = $thumb_id ? get_post_meta( $thumb_id, '_wp_attachment_image_alt', true ) : '';
+          ?>
+          <article
+            class="lp2025-card"
+            data-tag="<?php echo esc_attr( $tag ); ?>"
+            data-date="<?php echo esc_attr( $date ); ?>"
+            <?php if ( $img_url ) : ?>
+              data-modal-img="<?php echo esc_url( $img_url ); ?>"
+            <?php endif; ?>
+            data-modal-title="<?php echo esc_attr( get_the_title() ); ?>"
+            data-modal-desc="<?php echo esc_attr( $short ); ?>"
+            data-modal-detail="<?php echo esc_attr( $detail ); ?>"
+            <?php if ( $link ) : ?>
+              data-modal-link="<?php echo esc_url( $link ); ?>"
+            <?php endif; ?>
+          >
+            <div class="lp2025-card-img">
+              <?php if ( $img_url ) : ?>
+                <img src="<?php echo esc_url( $img_url ); ?>"
+                     alt="<?php echo esc_attr( $img_alt ); ?>">
+              <?php endif; ?>
+            </div>
+            <div class="lp2025-card-body">
+              <h3 class="lp2025-card-title"><?php the_title(); ?></h3>
+              <?php if ( $short ) : ?>
+                <p><?php echo esc_html( $short ); ?></p>
+              <?php endif; ?>
+            </div>
+            <?php if ( $date_label ) : ?>
+              <div class="lp2025-card-date">
+                <?php echo esc_html( $date_label ); ?>
+              </div>
+            <?php endif; ?>
+          </article>
+          <?php
+        endwhile;
+        wp_reset_postdata();
+      else :
+        ?>
+        <p>現在、登録されているイベントはありません。</p>
+      <?php endif; ?>
+    </div><!-- /.lp2025-card-grid -->
+  </section>
+
+  <!-- ===== ② カレンダーからさがす（下側に移動） ===== -->
+  <section class="lp2025-section lp2025-section-calendar">
+    <h2 class="lp2025-title">カレンダーからさがす</h2>
+
+    <div id="lp2025-calendar"></div>
+
+    <p class="lp2025-calendar-note">
+      ※ カレンダーで日付を選ぶと、その日のイベントだけが表示されます。<br>
+      条件をクリアすると、すべてのイベント一覧に戻ります。
+    </p>
+
+    <div id="lp2025-calendar-state" class="lp2025-calendar-state" style="display:none;">
+      <span id="lp2025-calendar-state-text"></span>
+      <button id="lp2025-calendar-reset" type="button" class="lp2025-calendar-reset-btn">
+        条件をクリア
+      </button>
+    </div>
+  </section>
+
+  <!-- ===== 詳細モーダル ===== -->
+  <div id="lp2025-modal" class="lp2025-modal">
+    <div class="lp2025-modal-inner">
+      <span class="lp2025-modal-close">&times;</span>
+      <img id="lp2025-modal-img" alt="">
+      <h3 id="lp2025-modal-title"></h3>
+      <p id="lp2025-modal-desc"></p>
+      <p id="lp2025-modal-detail"></p>
+      <a id="lp2025-modal-link"
+         href="#"
+         target="_blank"
+         rel="noopener"
+         class="lp2025-modal-btn"
+         style="display:none;">
+        応募・詳細を見る
+      </a>
+    </div>
+  </div>
+
+  <!-- ===== ページ読み込み時ポップアップ（任意） ===== -->
+  <div id="lp2025-entry-popup" class="lp2025-modal lp2025-entry-popup">
+    <div class="lp2025-modal-inner">
+      <span class="lp2025-modal-close">&times;</span>
+      <h3>イベントの参加予約はお済みですか？</h3>
+      <p>
+        まずはオープンキャンパスや体験授業に参加して、<br>
+        学校の雰囲気をチェックしてみてください。
+      </p>
+      <a href="https://www.iwasaki.ac.jp/"
+         class="lp2025-modal-btn"
+         target="_blank"
+         rel="noopener">
+        イベント一覧・予約ページへ
+      </a>
+    </div>
+  </div>
+
+</main>
+
+<?php
+get_footer();
