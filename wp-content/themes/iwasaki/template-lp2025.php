@@ -614,7 +614,6 @@ if (empty($pickup_events) && !empty($all_sorted_events)) {
     transform: translateY(0);
   }
 
-  /* Slider Logic Styles */
   .lp2025-slider {
     position: relative;
     max-width: 1200px;
@@ -625,32 +624,16 @@ if (empty($pickup_events) && !empty($all_sorted_events)) {
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
   }
 
-  .lp2025-featured__media {
-    background: #eee;
-    position: relative;
-    width: 100%;
-    aspect-ratio: 16/9;
-    overflow: hidden;
-  }
-
-  .lp2025-featured__media img {
-    position: absolute;
-    top: 0;
-    left: 0;
+  .lp2025-slider__track {
+    display: flex;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    display: block;
-    vertical-align: bottom;
   }
 
   .lp2025-slide {
-    display: none;
-    animation: lpFade 0.8s ease-in-out forwards;
-  }
-
-  .lp2025-slide.is-active {
-    display: block;
+    flex: 0 0 100%;
+    width: 100%;
   }
 
   @keyframes lpFade {
@@ -889,12 +872,29 @@ if (empty($pickup_events) && !empty($all_sorted_events)) {
   }
 
   @keyframes lpGlitch {
-    0% { transform: translate(0); }
-    20% { transform: translate(-2px, 2px); }
-    40% { transform: translate(-2px, -2px); }
-    60% { transform: translate(2px, 2px); }
-    80% { transform: translate(2px, -2px); }
-    100% { transform: translate(0); }
+    0% {
+      transform: translate(0);
+    }
+
+    20% {
+      transform: translate(-2px, 2px);
+    }
+
+    40% {
+      transform: translate(-2px, -2px);
+    }
+
+    60% {
+      transform: translate(2px, 2px);
+    }
+
+    80% {
+      transform: translate(2px, -2px);
+    }
+
+    100% {
+      transform: translate(0);
+    }
   }
 
   .lp-static-noise {
@@ -928,11 +928,25 @@ if (empty($pickup_events) && !empty($all_sorted_events)) {
   }
 
   @keyframes lpShake {
-    0% { transform: translate(0, 0) rotate(0); }
-    25% { transform: translate(5px, 5px) rotate(5deg); }
-    50% { transform: translate(-5px, 5px) rotate(-5deg); }
-    75% { transform: translate(5px, -5px) rotate(5deg); }
-    100% { transform: translate(-5px, -5px) rotate(-5deg); }
+    0% {
+      transform: translate(0, 0) rotate(0);
+    }
+
+    25% {
+      transform: translate(5px, 5px) rotate(5deg);
+    }
+
+    50% {
+      transform: translate(-5px, 5px) rotate(-5deg);
+    }
+
+    75% {
+      transform: translate(5px, -5px) rotate(5deg);
+    }
+
+    100% {
+      transform: translate(-5px, -5px) rotate(-5deg);
+    }
   }
 
   /* Progressive Effects */
@@ -999,7 +1013,7 @@ if (empty($pickup_events) && !empty($all_sorted_events)) {
 
     <h1 class="lp2025__title" id="lp-main-title"><?php echo esc_html($page_title); ?></h1>
     <script>
-      (function() {
+      (function () {
         if (sessionStorage.getItem('lp_horror_seen')) {
           const title = document.getElementById('lp-main-title');
           if (title) title.textContent = "Welcome... back";
@@ -1023,53 +1037,54 @@ if (empty($pickup_events) && !empty($all_sorted_events)) {
 
       <?php /* --- PICKUP SLIDER --- */ ?>
       <section class="lp2025-slider">
-        <?php foreach ($pickup_events as $idx => $p): ?>
-          <article class="lp2025-slide <?php echo ($idx === 0) ? 'is-active' : ''; ?>"
-            data-id="<?php echo esc_attr($p['id']); ?>">
-            <div class="lp2025-featured__inner" style="cursor: pointer;"
-              onclick="lpOpenModal(<?php echo esc_attr($p['id']); ?>)">
-              <div class="lp2025-featured__media">
-                <img src="<?php echo esc_url($p['image_url']); ?>" width="1200" height="675"
-                  alt="<?php echo esc_attr($p['title']); ?>" loading="lazy">
-              </div>
-              <div class="lp2025-featured__body">
-                <div class="lp2025-featured__kicker">
-                  <?php if ($p['course']): ?>
-                    <span class="lp2025-featured__tag"><?php echo esc_html($p['course']); ?></span>
-                  <?php endif; ?>
-                  <span>Pickup Event</span>
+        <div class="lp2025-slider__track" id="lp-slider-track">
+          <?php foreach ($pickup_events as $idx => $p): ?>
+            <article class="lp2025-slide" data-id="<?php echo esc_attr($p['id']); ?>">
+              <div class="lp2025-featured__inner" style="cursor: pointer;"
+                onclick="lpOpenModal(<?php echo esc_attr($p['id']); ?>)">
+                <div class="lp2025-featured__media">
+                  <img src="<?php echo esc_url($p['image_url']); ?>" width="1200" height="675"
+                    alt="<?php echo esc_attr($p['title']); ?>" loading="lazy">
                 </div>
-                <h2 class="lp2025-featured__title"><?php echo esc_html($p['title']); ?></h2>
-                <?php if ($p['lead']): ?>
-                  <p class="lp2025-featured__lead"><?php echo esc_html($p['lead']); ?></p>
-                <?php endif; ?>
-
-                <dl class="lp2025-featured__meta">
-                  <div>
-                    <dt>開催日</dt>
-                    <dd><?php echo esc_html($p['date_text'] ?: $p['date_ymd']); ?></dd>
+                <div class="lp2025-featured__body">
+                  <div class="lp2025-featured__kicker">
+                    <?php if ($p['course']): ?>
+                      <span class="lp2025-featured__tag"><?php echo esc_html($p['course']); ?></span>
+                    <?php endif; ?>
+                    <span>Pickup Event</span>
                   </div>
-                  <?php if ($p['time']): ?>
-                    <div>
-                      <dt>時間</dt>
-                      <dd><?php echo esc_html($p['time']); ?></dd>
-                    </div><?php endif; ?>
-                  <?php if ($p['place']): ?>
-                    <div>
-                      <dt>場所</dt>
-                      <dd><?php echo esc_html($p['place']); ?></dd>
-                    </div><?php endif; ?>
-                </dl>
+                  <h2 class="lp2025-featured__title"><?php echo esc_html($p['title']); ?></h2>
+                  <?php if ($p['lead']): ?>
+                    <p class="lp2025-featured__lead"><?php echo esc_html($p['lead']); ?></p>
+                  <?php endif; ?>
 
-                <?php if ($p['is_open']): ?>
-                  <span class="lp2025-btn">詳細を見る</span>
-                <?php else: ?>
-                  <span class="lp2025-btn-closed">受付終了</span>
-                <?php endif; ?>
+                  <dl class="lp2025-featured__meta">
+                    <div>
+                      <dt>開催日</dt>
+                      <dd><?php echo esc_html($p['date_text'] ?: $p['date_ymd']); ?></dd>
+                    </div>
+                    <?php if ($p['time']): ?>
+                      <div>
+                        <dt>時間</dt>
+                        <dd><?php echo esc_html($p['time']); ?></dd>
+                      </div><?php endif; ?>
+                    <?php if ($p['place']): ?>
+                      <div>
+                        <dt>場所</dt>
+                        <dd><?php echo esc_html($p['place']); ?></dd>
+                      </div><?php endif; ?>
+                  </dl>
+
+                  <?php if ($p['is_open']): ?>
+                    <span class="lp2025-btn">詳細を見る</span>
+                  <?php else: ?>
+                    <span class="lp2025-btn-closed">受付終了</span>
+                  <?php endif; ?>
+                </div>
               </div>
-            </div>
-          </article>
-        <?php endforeach; ?>
+            </article>
+          <?php endforeach; ?>
+        </div>
 
         <?php if (count($pickup_events) > 1): ?>
           <div class="lp2025-slider__arrow lp2025-slider__arrow--prev" id="lp-slider-prev"></div>
@@ -1192,7 +1207,7 @@ if (empty($pickup_events) && !empty($all_sorted_events)) {
     const allCards = Array.from(document.querySelectorAll('.lp2025-card'));
     const clickedCard = document.getElementById(`event-${id}`);
     const visualIdx = allCards.indexOf(clickedCard);
-    
+
     if (visualIdx !== -1) {
       lpClickSequence.push(visualIdx);
       if (lpClickSequence.length > lpSecretPattern.length) lpClickSequence.shift();
@@ -1270,7 +1285,7 @@ if (empty($pickup_events) && !empty($all_sorted_events)) {
   `;
 
     modal.classList.add('is-open');
-    document.body.style.overflow = 'hidden'; 
+    document.body.style.overflow = 'hidden';
 
     // Move close button away on hover in horror mode
     if (isHorror) {
@@ -1304,26 +1319,58 @@ if (empty($pickup_events) && !empty($all_sorted_events)) {
   document.addEventListener('DOMContentLoaded', function () {
     // Slider Logic
     const slides = document.querySelectorAll('.lp2025-slide');
-    if (slides.length > 1) {
-      let currentSlide = 0;
+    const track = document.getElementById('lp-slider-track');
 
-      const showSlide = (n) => {
-        slides[currentSlide].classList.remove('is-active');
-        currentSlide = (n + slides.length) % slides.length;
-        slides[currentSlide].classList.add('is-active');
+    if (slides.length > 1 && track) {
+      // 1. Clone slides for infinite loop
+      const firstClone = slides[0].cloneNode(true);
+      const lastClone = slides[slides.length - 1].cloneNode(true);
+
+      track.appendChild(firstClone);
+      track.insertBefore(lastClone, slides[0]);
+
+      // 2. Initial setup
+      let currentSlide = 1; // Start at the first original slide (index 1 after prepending)
+      const slideCount = slides.length;
+      let isTransitioning = false;
+
+      const updateTrack = (animate = true) => {
+        track.style.transition = animate ? 'transform 0.6s cubic-bezier(0.25, 1, 0.5, 1)' : 'none';
+        track.style.transform = `translateX(-${currentSlide * 100}%)`;
       };
 
-      // Auto
-      let timer = setInterval(() => showSlide(currentSlide + 1), 6000);
+      // Set initial position without animation
+      updateTrack(false);
 
-      // Arrows
-      const nextBtn = document.getElementById('lp-slider-next');
-      const prevBtn = document.getElementById('lp-slider-prev');
+      const showSlide = (n) => {
+        if (isTransitioning) return;
+        isTransitioning = true;
+        currentSlide = n;
+        updateTrack(true);
+      };
+
+      // Handle seamless reset after transition
+      track.addEventListener('transitionend', () => {
+        isTransitioning = false;
+        if (currentSlide === 0) {
+          currentSlide = slideCount;
+          updateTrack(false);
+        } else if (currentSlide === slideCount + 1) {
+          currentSlide = 1;
+          updateTrack(false);
+        }
+      });
+
+      // Auto-play logic
+      let timer = setInterval(() => showSlide(currentSlide + 1), 6000);
 
       const resetTimer = () => {
         clearInterval(timer);
         timer = setInterval(() => showSlide(currentSlide + 1), 6000);
       };
+
+      const nextBtn = document.getElementById('lp-slider-next');
+      const prevBtn = document.getElementById('lp-slider-prev');
 
       if (nextBtn) {
         nextBtn.addEventListener('click', (e) => {
