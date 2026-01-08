@@ -1,0 +1,14 @@
+// -------------------------------------------------------------
+// Headline
+@mixin headline-common() {
+	font-feature-settings: "palt";
+}
+
+@mixin headline-before-icon($iconpath, $toppos:-1px) {
+	&::before {
+		content: url($iconpath);
+		margin: 0.5em;
+		position: relative;
+		top: $toppos;
+	}
+}

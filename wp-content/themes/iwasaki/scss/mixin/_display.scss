@@ -1,0 +1,114 @@
+/*-------------------------------------------------------------
+display指定class
+
+【only】
+.pc-only / .tab-only / .pad-only / .sp-only /.se-only
+.pctab-only / .tabsp-only / .sp-none
+
+-------------------------------------------------------------*/
+.pc-only {
+	display: block !important;//PC
+	@include mq_tab { display: none !important;}
+	@include mq_pad { display: none !important;}
+	@include mq_sp { display: none !important;}
+	@include mq_se { display: none !important;}
+	&--flex{
+	display: flex !important;//PC
+	@include mq_tab { display: none !important;}
+	@include mq_pad { display: none !important;}
+	@include mq_sp { display: none !important;}
+	@include mq_se { display: none !important;}
+	}
+}
+.tab-only {
+	display: none !important;//PC
+	@include mq_tab { display: block !important;}
+	@include mq_pad { display: none !important;}
+	@include mq_sp { display: none !important;}
+	@include mq_se { display: none !important;}
+	&--flex{
+	display: none !important;//PC
+	@include mq_tab { display: flex !important;}
+	@include mq_pad { display: none !important;}
+	@include mq_sp { display: none !important;}
+	@include mq_se { display: none !important;}
+	}
+}
+.pad-only {
+	display: none !important;//PC
+	@include mq_tab { display: none !important;}
+	@include mq_pad { display: block !important;}
+	@include mq_sp { display: none !important;}
+	@include mq_se { display: none !important;}
+	&--flex{
+	display: none !important;//PC
+	@include mq_tab { display: none !important;}
+	@include mq_pad { display: flex !important;}
+	@include mq_sp { display: none !important;}
+	@include mq_se { display: none !important;}
+	}
+}
+.sp-only {
+	display: none !important;//PC
+	@include mq_tab { display: none !important;}
+	@include mq_pad { display: none !important;}
+	@include mq_sp { display: block !important;}
+	@include mq_se { display: block !important;}
+	&--flex{
+	display: none !important;//PC
+	@include mq_tab { display: none !important;}
+	@include mq_pad { display: none !important;}
+	@include mq_sp { display: flex !important;}
+	@include mq_se { display: flex !important;}
+	}
+}
+.se-only {
+	display: none !important;//PC
+	@include mq_tab { display: none !important;}
+	@include mq_pad { display: none !important;}
+	@include mq_sp { display: none !important;}
+  @include mq_se { display: block !important;}
+	&--flex{
+	display: none !important;//PC
+	@include mq_tab { display: none !important;}
+	@include mq_pad { display: none !important;}
+	@include mq_sp { display: none !important;}
+  @include mq_se { display: flex !important;}
+	}
+}
+
+
+.pctab-only {
+	display: block !important;
+	@include mq_tab { display: block !important;}
+	@include mq_pad { display: block !important;}
+	@include mq_sp { display: none !important;}
+	@include mq_se { display: none !important;}
+	&--flex{
+	display: flex !important;
+	@include mq_tab { display: flex !important;}
+	@include mq_pad { display: flex !important;}
+	@include mq_sp { display: none !important;}
+	@include mq_se { display: none !important;}
+	}
+}
+
+.tabsp-only {
+	display: none !important;
+	@include mq_tab { display: block !important;}
+	@include mq_pad { display: block !important;}
+	@include mq_sp { display: block !important;}
+	@include mq_se { display: block !important;}
+	&--flex{
+	display: none !important;
+	@include mq_tab { display: flex !important;}
+	@include mq_pad { display: flex !important;}
+	@include mq_sp { display: flex !important;}
+	@include mq_se { display: flex !important;}
+	}
+}
+
+.sp-none{
+	@include mq_sp {display: none;}
+	@include mq_se {display: none;}
+}

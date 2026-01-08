@@ -1,0 +1,18 @@
+/*  layout > container
+============================================================================================================ */
+
+.l-container{
+  &--1000{
+		max-width: 1000px;
+		margin: {
+      right: auto;
+      left: auto;
+    }
+		@include mq_tab {
+			max-width: 95%;
+		}
+		@include mq_sp {
+			max-width: size_sp(690);
+		}
+	}
+}
