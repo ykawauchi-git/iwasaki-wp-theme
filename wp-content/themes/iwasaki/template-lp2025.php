@@ -599,19 +599,38 @@ if (empty($pickup_events) && !empty($all_sorted_events)) {
 
   /* Reveal Animation */
   .lp2025-card--hidden {
-    display: none;
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.5s ease, transform 0.5s ease;
-  }
-
-  .lp2025-card--show {
-    display: flex !important;
+    pointer-events: none;
   }
 
   .lp2025-card--fadein {
     opacity: 1;
     transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  /* Grid Extra Wrapper for Smooth Expand */
+  .lp2025-grid__extra-wrapper {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.7s cubic-bezier(0.33, 1, 0.68, 1);
+    overflow: hidden;
+  }
+
+  .lp2025-grid__extra-wrapper.is-open {
+    grid-template-rows: 1fr;
+  }
+
+  .lp2025-grid__extra-inner {
+    min-height: 0;
+    padding-bottom: 24px; /* Maintain gap between cards and button area */
+  }
+
+  .lp2025-grid--extra {
+    margin-bottom: 0;
+    padding-top: 24px;
   }
 
   .lp2025-slider {
@@ -1096,12 +1115,11 @@ if (empty($pickup_events) && !empty($all_sorted_events)) {
       <?php if (!empty($grid_events)): ?>
         <section class="lp2025-grid">
           <?php
-          $item_idx = 0;
-          foreach ($grid_events as $ev):
-            $is_hidden = ($item_idx >= 6); // グリッドは全件表示（ただし初期は6件まで）
-            $hidden_class = $is_hidden ? 'lp2025-card--hidden' : '';
+          $initial_count = 6;
+          for ($i = 0; $i < min($initial_count, count($grid_events)); $i++):
+            $ev = $grid_events[$i];
             ?>
-            <article class="lp2025-card <?php echo $hidden_class; ?>" id="event-<?php echo esc_attr($ev['id']); ?>">
+            <article class="lp2025-card" id="event-<?php echo esc_attr($ev['id']); ?>">
               <div class="lp2025-card__link--div" style="cursor: pointer;"
                 onclick="lpOpenModal(<?php echo esc_attr($ev['id']); ?>)">
                 <div class="lp2025-card__media">
@@ -1134,12 +1152,55 @@ if (empty($pickup_events) && !empty($all_sorted_events)) {
                 </div>
               </div>
             </article>
-            <?php
-            $item_idx++;
-          endforeach; ?>
+          <?php endfor; ?>
         </section>
 
-        <?php if (count($grid_events) > 6): ?>
+        <?php if (count($grid_events) > $initial_count): ?>
+          <div class="lp2025-grid__extra-wrapper" id="lp2025-extra-wrapper">
+            <div class="lp2025-grid__extra-inner">
+              <section class="lp2025-grid lp2025-grid--extra">
+                <?php
+                for ($i = $initial_count; $i < count($grid_events); $i++):
+                  $ev = $grid_events[$i];
+                  ?>
+                  <article class="lp2025-card lp2025-card--hidden" id="event-<?php echo esc_attr($ev['id']); ?>">
+                    <div class="lp2025-card__link--div" style="cursor: pointer;"
+                      onclick="lpOpenModal(<?php echo esc_attr($ev['id']); ?>)">
+                      <div class="lp2025-card__media">
+                        <img src="<?php echo esc_url($ev['image_url']); ?>" width="1200" height="675"
+                          alt="<?php echo esc_attr($ev['title']); ?>" loading="lazy">
+                      </div>
+                      <div class="lp2025-card__body">
+                        <?php if ($ev['course']): ?>
+                          <div class="lp2025-card__tags"><span class="lp2025-tag"><?php echo esc_html($ev['course']); ?></span></div>
+                        <?php endif; ?>
+                        <h3 class="lp2025-card__title"><?php echo esc_html($ev['title']); ?></h3>
+                        <dl class="lp2025-card__meta">
+                          <div>
+                            <dt>日程</dt>
+                            <dd><?php echo esc_html($ev['date_text'] ?: $ev['date_ymd']); ?></dd>
+                          </div>
+                          <?php if ($ev['time']): ?>
+                            <div>
+                              <dt>時間</dt>
+                              <dd><?php echo esc_html($ev['time']); ?></dd>
+                            </div><?php endif; ?>
+                        </dl>
+                        <div class="lp2025-card__btn-area">
+                          <?php if ($ev['is_open']): ?>
+                            <span class="lp2025-card-btn">詳細を見る</span>
+                          <?php else: ?>
+                            <span class="lp2025-card-btn-closed">受付終了</span>
+                          <?php endif; ?>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                <?php endfor; ?>
+              </section>
+            </div>
+          </div>
+
           <div class="lp2025-load-more-area" id="lp2025-scroll-anchor">
             <button type="button" id="lp2025-load-more" class="lp2025-load-more" data-text-open="MORE EVENTS"
               data-text-close="CLOSE LIST">MORE EVENTS</button>
@@ -1390,29 +1451,48 @@ if (empty($pickup_events) && !empty($all_sorted_events)) {
 
     // Load More Toggle
     const loadMoreBtn = document.getElementById('lp2025-load-more');
+    const extraWrapper = document.getElementById('lp2025-extra-wrapper');
     const anchor = document.getElementById('lp2025-scroll-anchor');
-    if (loadMoreBtn) {
+
+    if (loadMoreBtn && extraWrapper) {
       let isExpanded = false;
       loadMoreBtn.addEventListener('click', function () {
-        const hiddenCards = Array.from(document.querySelectorAll('.lp2025-card--hidden'));
+        const hiddenCards = Array.from(extraWrapper.querySelectorAll('.lp2025-card--hidden'));
+        
         if (!isExpanded) {
-          hiddenCards.forEach((c, i) => {
-            c.classList.add('lp2025-card--show');
-            setTimeout(() => c.classList.add('lp2025-card--fadein'), i * 60);
-          });
+          // Open
+          isExpanded = true;
+          extraWrapper.classList.add('is-open');
           loadMoreBtn.textContent = loadMoreBtn.dataset.textClose;
           loadMoreBtn.classList.add('is-expanded');
-          isExpanded = true;
+
+          // Staggered reveal - start slightly after expansion begins
+          setTimeout(() => {
+            hiddenCards.forEach((c, i) => {
+              setTimeout(() => c.classList.add('lp2025-card--fadein'), i * 70);
+            });
+          }, 100);
         } else {
-          anchor.scrollIntoView({ behavior: 'smooth', block: 'center' });
-          hiddenCards.forEach(c => {
-            c.classList.remove('lp2025-card--fadein');
-            // Check isExpanded again in case user clicks rapidly
-            setTimeout(() => { if (!isExpanded) c.classList.remove('lp2025-card--show'); }, 500);
-          });
-          loadMoreBtn.textContent = loadMoreBtn.dataset.textOpen;
-          loadMoreBtn.classList.remove('is-expanded');
+          // Close
           isExpanded = false;
+          
+          // 1. Smooth scroll to the scroll-anchor area (which will move)
+          // But to make it smoother, we scroll to the anchor *while* it's moving
+          // or scroll to the grid original bottom.
+          anchor.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+          // 2. Start fade out immediately
+          hiddenCards.forEach(c => c.classList.remove('lp2025-card--fadein'));
+
+          // 3. Collapse
+          // Use a longer delay to ensure the scroll is well underway
+          setTimeout(() => {
+            if (!isExpanded) {
+              extraWrapper.classList.remove('is-open');
+              loadMoreBtn.textContent = loadMoreBtn.dataset.textOpen;
+              loadMoreBtn.classList.remove('is-expanded');
+            }
+          }, 300);
         }
       });
     }
