@@ -21,7 +21,6 @@
     &Heading {
       font-size: 26px;
       line-height : (49/26);
-      text-align: center;
       @include mq_sp{
         @include fz_vw(36);
         line-height: (68/36);

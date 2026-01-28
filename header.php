@@ -1,37 +1,56 @@
 <!doctype html>
 <html <?php language_attributes(); ?>>
+
 <head>
 	<!-- Google Tag Manager 202106 Data Management Project -->
-	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-	})(window,document,'script','dataLayer','GTM-M7DLZK3');</script>
+	<script>
+		(function(w, d, s, l, i) {
+			w[l] = w[l] || [];
+			w[l].push({
+				'gtm.start': new Date().getTime(),
+				event: 'gtm.js'
+			});
+			var f = d.getElementsByTagName(s)[0],
+				j = d.createElement(s),
+				dl = l != 'dataLayer' ? '&l=' + l : '';
+			j.async = true;
+			j.src =
+				'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+			f.parentNode.insertBefore(j, f);
+		})(window, document, 'script', 'dataLayer', 'GTM-M7DLZK3');
+	</script>
 	<!-- End Google Tag Manager -->
 	<meta charset="<?php bloginfo('charset'); ?>">
 	<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
 	<meta name="format-detection" content="telephone=no">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
-	<link rel="icon" href="<?php echo get_stylesheet_directory_uri();?>/img/common/favicon.ico" sizes="any">
+	<link rel="icon" href="<?php echo get_stylesheet_directory_uri(); ?>/img/common/favicon.ico" sizes="any">
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-144028859-1"></script>
 	<script>
 		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
+
+		function gtag() {
+			dataLayer.push(arguments);
+		}
 		gtag('js', new Date());
 
 		gtag('config', 'UA-144028859-1');
 	</script>
 
 	<?php wp_head(); ?>
-	<?php remove_filter ('acf_the_content', 'wpautop');the_field('head_tag','option'); ?>
-	<style><?php the_field('common_css','option');?></style>
+	<?php remove_filter('acf_the_content', 'wpautop');
+	the_field('head_tag', 'option'); ?>
+	<style>
+		<?php the_field('common_css', 'option'); ?>
+	</style>
 </head>
+
 <body <?php body_class(); ?>>
 	<!-- Google Tag Manager (noscript) 202106 Data Management Project -->
 	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M7DLZK3"
-	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+			height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<!-- End Google Tag Manager (noscript) -->
 
 	<div id="Wrapper">
@@ -106,18 +125,18 @@
 				</nav>
 			</div>
 		</header>
-		*/?>
+		*/ ?>
 		<header class="common-header">
 			<div class="common-header__inner">
 				<!-- *** logo *** -->
-				<?php if(is_front_page()): ?>
-				<h1 class="common-header__logo">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php get_template_part('template-parts/svg/logo');?></a>
-				</h1>
+				<?php if (is_front_page()): ?>
+					<h1 class="common-header__logo">
+						<a href="<?php echo esc_url(home_url('/')); ?>"><?php get_template_part('template-parts/svg/logo'); ?></a>
+					</h1>
 				<?php else: ?>
-				<div class="common-header__logo">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php get_template_part('template-parts/svg/logo');?></a>
-				</div>
+					<div class="common-header__logo">
+						<a href="<?php echo esc_url(home_url('/')); ?>"><?php get_template_part('template-parts/svg/logo'); ?></a>
+					</div>
 				<?php endif; ?>
 				<div class="common-header__toggle">
 					<span></span>
@@ -126,9 +145,29 @@
 				</div>
 				<nav class="common-header__menu">
 					<ul class="common-header__menuList">
-						<?php if(have_rows('header_menu','option')): while(have_rows('header_menu','option')): the_row(); $header_menu_url = get_sub_field('header_menu_url');  $current_path = untrailingslashit( parse_url( get_permalink(), PHP_URL_PATH ) ); $menu_path = untrailingslashit( parse_url( $header_menu_url['url'], PHP_URL_PATH ) ); $is_current = ($current_path === $menu_path) ? 'current' : ''; if ( $menu_path === '/career' && ( is_post_type_archive( 'career' ) || is_singular( 'career' ) ) ) {$is_current = 'current';}?>
-						<li class="<?php echo $is_current;?>"><a href="<?php echo $header_menu_url['url'];?>" target="<?php echo $header_menu_url['target'];?>"><?php echo $header_menu_url['title'];?></a></li>
-						<?php endwhile; endif;?>
+						<?php if (have_rows('header_menu', 'option')): ?>
+							<?php
+							$site_host   = parse_url(home_url(), PHP_URL_HOST);
+							$current_path = untrailingslashit(parse_url(get_permalink(), PHP_URL_PATH));
+							?>
+							<?php while (have_rows('header_menu', 'option')): the_row(); ?>
+								<?php
+								$link = get_sub_field('header_menu_url');
+								if (empty($link) || empty($link['url'])) continue;
+
+								$menu_host = parse_url($link['url'], PHP_URL_HOST);
+								$menu_path = untrailingslashit(parse_url($link['url'], PHP_URL_PATH));
+								$is_internal = (empty($menu_host) || $menu_host === $site_host);
+
+								$is_current = '';
+								if ($is_internal && $current_path === $menu_path) $is_current = 'current';
+								if ($is_internal && $menu_path === '/career' && (is_post_type_archive('career') || is_singular('career'))) $is_current = 'current';
+								?>
+								<li class="<?php echo $is_current; ?>">
+									<a href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>"><?php echo $link['title']; ?></a>
+								</li>
+							<?php endwhile; ?>
+						<?php endif; ?>
 					</ul>
 					<ul class="common-header__btn tabsp-only--flex">
 						<li><a href="<?php echo home_url('/contact/'); ?>" class="contact">お問い合わせ</a></li>
@@ -143,11 +182,11 @@
 		</header>
 		<!-- ////ヘッダー -->
 
-    <!-- コンテンツ -->
-    <main class="common-main">
-      <?php get_template_part('template-parts/common/page-title'); ?>
-      <?php
-			if(!is_front_page()){
+		<!-- コンテンツ -->
+		<main class="common-main">
+			<?php get_template_part('template-parts/common/page-title'); ?>
+			<?php
+			if (!is_front_page()) {
 				get_template_part('template-parts/common/breadcrumbs');
 			}
 			?>
