@@ -1,0 +1,92 @@
+/*  layout > policy
+============================================================================================================ */
+
+.post-career {
+  &:nth-of-type(n + 2) {
+    margin-top: 60px;
+    @include mq_sp{
+      margin-top: size_sp(50);
+    }
+  }
+  & > a {
+    height: 100%;
+    @include flex(flex, nowrap, space-between, flex-start, normal, row);
+    @include mq_sp{
+      flex-wrap: wrap;
+    }
+  }
+  &__thumb {
+    min-width: none;
+    width: 55.5%;
+    aspect-ratio: 526 / 371;
+    @include mq_sp{
+      max-width: none;
+      width: 100%;
+      aspect-ratio: 63/38;
+    }
+  }
+  &__info {
+    width: 40%;
+    @include flex(flex, nowrap, stretch, flex-start, normal, column);
+    @include mq_sp{
+      width: 100%;
+      // padding: size_sp(52) size_sp(30) size_sp(46);
+      padding: size_sp(52) 0 size_sp(46);
+      align-items: flex-start;
+      justify-content: space-between;
+      flex-direction: row;
+    }
+    &Cont {
+      width: 100%;
+      @include mq_sp{
+        width: size_sp(330);
+      }
+    }
+    & h2 {
+      font-size: 28px;
+      font-weight: 700;
+      line-height: (40/28);
+      letter-spacing: .05em;
+      @include mq_sp{
+        @include fz_vw(36);
+        line-height: (52/36);
+        letter-spacing: 0em;
+      }
+    }
+    &Alma {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: (27/16);
+      margin-top: 15px;
+      @include mq_sp{
+        @include fz_vw(22);
+        line-height: (39/22);
+        margin-top: size_sp(27);
+      }
+    }
+    &Occupation {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: (27/16);
+      margin-top: 13px;
+      @include mq_sp{
+        @include fz_vw(22);
+        line-height: (39/22);
+        margin-top: size_sp(13);
+      }
+    }
+    &Logo {
+      line-height: 1;
+      width: 209px;
+      // height: 120px;
+      background : $white00;
+      padding: 12px;
+      margin-top: 38px;
+      @include mq_sp{
+        width: size_sp(209);
+        padding: size_sp(12);
+        margin-top: size_sp(-3);
+      }
+    }
+  }
+}

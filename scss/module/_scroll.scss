@@ -1,0 +1,13 @@
+[data-scroll] {
+  transition: 1s;
+}
+[data-scroll="in"]{
+  opacity: 1;
+}
+[data-scroll="out"]{
+}
+
+img{
+  &.lazyloaded{
+  }
+}

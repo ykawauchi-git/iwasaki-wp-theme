@@ -1,0 +1,65 @@
+.clearfix:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+li {
+	list-style: none;
+}
+
+ul,
+ol,
+dl,
+p {
+	padding: 0;
+	margin: 0;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+a {
+	color: inherit;
+	/* ress.cssだとunderlineがつくのを阻止 */
+	text-decoration: none;
+}
+
+select {
+	color: $base-font-color;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	line-height: 1 !important;
+	position: relative;
+}
+
+table {
+	table-layout: fixed;
+	/* ress.css用 */
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+td input {
+	max-width: 100%;
+}
+
+i,
+em {
+	font-style: normal;
+}
+
+*{
+	box-sizing: border-box;
+}
+small{
+	font-size: 100%;
+}
+
+//IE　端末の画面サイズをviewportのサイズにする。
+@-ms-viewport {
+  width: device-width;
+}
