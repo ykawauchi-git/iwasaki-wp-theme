@@ -1,5 +1,16 @@
 <?php
-/** ACF Fallback: Define dummy functions if ACF is not active to prevent fatal errors **/
+/**
+ * iwasaki Theme Functions and definitions
+ *
+ * @link https://developer.wordpress.org/themes/basics/theme-functions/
+ *
+ * @package iwasaki
+ */
+
+/**
+ * ACF Fallback: Define dummy functions if ACF is not active to prevent fatal errors.
+ * This ensures the site doesn't crash if the Advanced Custom Fields plugin is deactivated.
+ */
 if (!function_exists('have_rows')) {
 	function have_rows(...$args)
 	{
@@ -34,18 +45,44 @@ if (!function_exists('acf_add_options_page')) {
 	}
 }
 
-
+/**
+ * Sets up theme defaults and registers support for various WordPress features.
+ * 
+ * Note that this function is hooked into the after_setup_theme hook, which
+ * runs before the init hook. The init hook is too late for some features, such
+ * as indicating support for post thumbnails.
+ */
 if (!function_exists('iwasaki_setup')) {
 	function iwasaki_setup()
 	{
+		// Add default posts and comments RSS feed links to head.
 		add_theme_support('automatic-feed-links');
+
+		/*
+		 * Let WordPress manage the document title.
+		 * By adding theme support, we declare that this theme does not use a
+		 * hard-coded <title> tag in the document head, and expect WordPress to
+		 * provide it for us.
+		 */
 		add_theme_support('title-tag');
+
+		/*
+		 * Enable support for Post Thumbnails on posts and pages.
+		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
+		 */
 		add_theme_support('post-thumbnails');
+
+		// This theme uses wp_nav_menu() in three locations.
 		register_nav_menus([
 			'menu-1' => esc_html__('Primary', 'iwasaki'),
 			'global' => 'グローバルメニュー',
 			'footer' => 'フッターメニュー'
 		]);
+
+		/*
+		 * Switch default core markup for search form, comment form, and comments
+		 * to output valid HTML5.
+		 */
 		add_theme_support('html5', [
 			'search-form',
 			'comment-form',
@@ -57,12 +94,19 @@ if (!function_exists('iwasaki_setup')) {
 }
 add_action('after_setup_theme', 'iwasaki_setup');
 
+/**
+ * Set the content width in pixels, based on the theme's design and stylesheet.
+ */
 function iwasaki_content_width()
 {
 	$GLOBALS['content_width'] = apply_filters('iwasaki_content_width', 640);
 }
 add_action('after_setup_theme', 'iwasaki_content_width', 0);
 
+/**
+ * Register widget area.
+ * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
+ */
 function iwasaki_widgets_init()
 {
 	register_sidebar([
@@ -77,6 +121,9 @@ function iwasaki_widgets_init()
 }
 add_action('widgets_init', 'iwasaki_widgets_init');
 
+/**
+ * Disable canonical redirect for archives to prevent unintended SEO redirects.
+ */
 add_filter('redirect_canonical', 'my_disable_redirect_canonical');
 function my_disable_redirect_canonical($redirect_url)
 {
@@ -86,20 +133,37 @@ function my_disable_redirect_canonical($redirect_url)
 	return $redirect_url;
 }
 
+/**
+ * Enqueue scripts and styles.
+ */
 function iwasaki_scripts()
 {
+	// Sanitize CSS
 	wp_enqueue_style('iwasaki-sanitize', get_template_directory_uri() . '/css/sanitize.css');
+
+	// Swiper CSS for specific pages
 	if (is_front_page() || is_home() || is_page('about') || is_page('facilities') || is_page('philosophy')) {
 		wp_enqueue_style('swiper-style', 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css');
 	}
+
+	// Main Style
 	wp_enqueue_style('iwasaki-style', get_stylesheet_uri(), array(), filemtime(get_stylesheet_directory() . '/style.css'));
 
+	// Replace Core jQuery with CDN version for performance
 	wp_deregister_script('jquery');
 	wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js', '', '', true);
+
+	// Object Fit Images (Polyfill for IE)
 	wp_enqueue_script('ofi', get_template_directory_uri() . '/js/ofi.min.js', '', '', true);
+
+	// Animation Libraries (GSAP)
 	wp_enqueue_script('gsap', 'https://cdn.jsdelivr.net/npm/gsap@3.7.0/dist/gsap.min.js', '', '', true);
 	wp_enqueue_script('scrollTrigger', 'https://cdn.jsdelivr.net/npm/gsap@3.7.0/dist/ScrollTrigger.min.js', '', '', true);
+
+	// Theme Main Script
 	wp_enqueue_script('iwasaki-scripts', get_template_directory_uri() . '/js/scripts.js', '', filemtime(get_stylesheet_directory() . '/js/scripts.js'), true);
+
+	// Page-specific scripts
 	if (is_front_page()) {
 		wp_enqueue_script('swiper-scripts', 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js', '', '', true);
 		wp_enqueue_script('iwasaki-top-scripts', get_template_directory_uri() . '/js/top.js', '', filemtime(get_stylesheet_directory() . '/js/top.js'), true);
@@ -126,8 +190,10 @@ function iwasaki_scripts()
 }
 add_action('wp_enqueue_scripts', 'iwasaki_scripts');
 
-
-//incフォルダからインクルード
+/**
+ * Include helper files from /inc directory.
+ * This keeps functions.php clean by separating logic into modules.
+ */
 require get_template_directory() . '/inc/editor.php';
 require get_template_directory() . '/inc/reset.php';
 require get_template_directory() . '/inc/device_if.php';
@@ -154,12 +220,13 @@ if (function_exists('get_field')) {
 	require get_template_directory() . '/inc/wp_head.php';
 }
 
-// ==============================
-// LP2025: Event CPT + Meta Boxes
-// ==============================
+/* ==========================================================================
+   LP2025: Custom Event Post Type and Meta Management
+   ========================================================================== */
 
 /**
- * Register CPT: lp_event and Taxonomy: lp_event_course
+ * Register Custom Post Type: lp_event and Custom Taxonomy: lp_event_course.
+ * This is used specifically for the 2025 LP template.
  */
 function lp2025_register_event_cpt()
 {
@@ -179,11 +246,11 @@ function lp2025_register_event_cpt()
 		'show_in_rest' => true,
 	]);
 
-	register_taxonomy('lp_event_course', 'lp_event', [
+	register_taxonomy('lp_event_school', 'lp_event', [
 		'labels' => [
-			'name' => 'コース分類',
-			'singular_name' => 'コース',
-			'add_new_item' => 'コースを追加',
+			'name' => '学校分類',
+			'singular_name' => '学校',
+			'add_new_item' => '学校を追加',
 		],
 		'show_admin_column' => true,
 		'show_in_rest' => true,
@@ -193,11 +260,11 @@ function lp2025_register_event_cpt()
 add_action('init', 'lp2025_register_event_cpt');
 
 /**
- * Add Meta Boxes
+ * Add Meta Boxes to 'lp_event' and 'page' post types.
  */
 function lp2025_add_meta_boxes()
 {
-	// For lp_event
+	// Main event information for the LP
 	add_meta_box(
 		'lp2025_event_meta_box',
 		'イベント情報',
@@ -207,10 +274,10 @@ function lp2025_add_meta_boxes()
 		'high'
 	);
 
-	// For page
+	// Page-specific settings like CTA URLs and Target School
 	add_meta_box(
 		'lp2025_page_meta_box',
-		'LP設定（資料請求URL）',
+		'LP設定',
 		'lp2025_render_page_meta_box',
 		'page',
 		'side',
@@ -220,7 +287,9 @@ function lp2025_add_meta_boxes()
 add_action('add_meta_boxes', 'lp2025_add_meta_boxes');
 
 /**
- * Render Event Meta Box
+ * Render the HTML for the LP event meta box.
+ * 
+ * @param WP_Post $post The current post object.
  */
 function lp2025_render_event_meta_box($post)
 {
@@ -308,30 +377,55 @@ function lp2025_render_event_meta_box($post)
 }
 
 /**
- * Render Page Meta Box
+ * Render the HTML for the LP page meta box (Side panel).
+ * 
+ * @param WP_Post $post The current post object.
  */
 function lp2025_render_page_meta_box($post)
 {
 	wp_nonce_field('lp2025_save_page_meta', 'lp2025_page_meta_nonce');
 	$cta_url = get_post_meta($post->ID, 'lp_hero_cta_url', true);
+	$target_school = get_post_meta($post->ID, 'lp_target_school', true);
+
+	// Fetch all school terms
+	$schools = get_terms([
+		'taxonomy' => 'lp_event_school',
+		'hide_empty' => false,
+	]);
 	?>
-	<p>
+	<div style="margin-bottom: 20px;">
 		<label for="lp_hero_cta_url" style="font-weight:bold;">資料請求ボタンURL</label><br>
 		<input type="url" id="lp_hero_cta_url" name="lp_hero_cta_url" value="<?php echo esc_attr($cta_url); ?>"
 			style="width:100%; margin-top:4px;" placeholder="https://...">
-	</p>
-	<p style="font-size:12px; color:#666;">
-		「LP2025」テンプレート使用時のボタン遷移先になります。
-	</p>
+	</div>
+
+	<div>
+		<label for="lp_target_school" style="font-weight:bold;">表示対象校</label><br>
+		<select id="lp_target_school" name="lp_target_school" style="width:100%; margin-top:4px;">
+			<option value="">すべての学校を表示</option>
+			<?php if (!is_wp_error($schools) && !empty($schools)): ?>
+				<?php foreach ($schools as $school): ?>
+					<option value="<?php echo esc_attr($school->term_id); ?>" <?php selected($target_school, $school->term_id); ?>>
+						<?php echo esc_html($school->name); ?>
+					</option>
+				<?php endforeach; ?>
+			<?php endif; ?>
+		</select>
+		<p style="font-size:12px; color:#666; margin-top:4px;">
+			特定の学校のイベントのみを表示したい場合に選択してください。
+		</p>
+	</div>
 	<?php
 }
 
 /**
- * Save Meta Boxes
+ * Save meta box data when a post is saved.
+ * 
+ * @param int $post_id The ID of the post being saved.
  */
 function lp2025_save_meta_data($post_id)
 {
-	// 1. Nonce Check for event
+	// 1. Nonce Check for event-specific meta
 	if (isset($_POST['lp2025_event_meta_nonce']) && wp_verify_nonce($_POST['lp2025_event_meta_nonce'], 'lp2025_save_event_meta')) {
 		$fields = [
 			'event_date_ymd' => 'sanitize_text_field',
@@ -349,25 +443,26 @@ function lp2025_save_meta_data($post_id)
 			}
 		}
 
-		// Checkbox
+		// Handle checkbox for pickup
 		$pickup = isset($_POST['event_is_pickup']) ? 'on' : '';
 		update_post_meta($post_id, 'event_is_pickup', $pickup);
 	}
 
-	// 2. Nonce Check for page
+	// 2. Nonce Check for page-specific settings
 	if (isset($_POST['lp2025_page_meta_nonce']) && wp_verify_nonce($_POST['lp2025_page_meta_nonce'], 'lp2025_save_page_meta')) {
 		if (isset($_POST['lp_hero_cta_url'])) {
 			update_post_meta($post_id, 'lp_hero_cta_url', esc_url_raw($_POST['lp_hero_cta_url']));
+		}
+		if (isset($_POST['lp_target_school'])) {
+			update_post_meta($post_id, 'lp_target_school', sanitize_text_field($_POST['lp_target_school']));
 		}
 	}
 }
 add_action('save_post', 'lp2025_save_meta_data');
 
-
-
-
 /**
  * Change Admin Bar color to orange in dev environment for safety.
+ * This helps distinguish between development and production environments.
  */
 function iwasaki_dev_admin_bar_color()
 {

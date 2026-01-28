@@ -57,142 +57,145 @@
 <!-- ヘッダー -->
 <header class="common-header" id="Header">
 <div class="common-header__inner">
- <!-- *** logo *** -->
- <?php if(is_front_page()): ?>
-	 <h1 class="common-header__logo">
-		 <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
-			 <img src="<?php echo get_stylesheet_directory_uri();?>/img/common/logo_header.svg" alt="学園法人 岩崎学園">
-		 </a>
-	 </h1>
- <?php else: ?>
-	 <div class="common-header__logo">
-		 <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
-		 <img src="<?php echo get_stylesheet_directory_uri();?>/img/common/logo_header.svg" alt="学園法人 岩崎学園">
-		 </a>
-	 </div>
- <?php endif; ?>
- <div class="common-header__toggle">
-	 <span></span>
-	 <span></span>
-	 <span></span>
- </div>
+<!-- *** logo *** -->
+<?php if(is_front_page()): ?>
+<h1 class="common-header__logo">
+	<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
+		<img src="<?php echo get_stylesheet_directory_uri();?>/img/common/logo_header.svg" alt="学園法人 岩崎学園">
+	</a>
+</h1>
+<?php else: ?>
+<div class="common-header__logo">
+	<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
+	<img src="<?php echo get_stylesheet_directory_uri();?>/img/common/logo_header.svg" alt="学園法人 岩崎学園">
+	</a>
+</div>
+<?php endif; ?>
+<div class="common-header__toggle">
+<span></span>
+<span></span>
+<span></span>
+</div>
 
- <nav class="common-header__nav sp">
-	 <ul class="common-header__menu page">
-		 <li><a href="<?php echo home_url('/about/'); ?>" class="<?php if(is_page('about')){echo "is-current";}?>">岩崎学園について</a></li>
-		 <li><a href="<?php echo home_url('/group/');?>" class="<?php if(is_page('group')){echo "is-current";}?>">岩崎学園グループ</a></li>
-		 <li><a href="<?php echo home_url('/philosophy/'); ?>" class="<?php if(is_page('philosophy')){echo "is-current";}?>">岩崎学園の学び</a></li>
-		 <li><a href="<?php echo home_url('/students_support/');?>" class="<?php if(is_page('students_support')){echo "is-current";}?>">学生支援</a></li>
-		 <li><a href="<?php echo home_url( '/movie/' ); ?>" class="<?php if(is_page('movie')){echo "is-current";}?>">動画で見る岩崎学園</a></li>
-	 </ul>
-	 <ul class="common-header__menu contact">
-		 <li><a href="<?php echo home_url('/for-parents/'); ?>" class="<?php if(is_page('for-parents')){echo "is-current";}?>">保護者の方</a></li>
-		 <li><a href="<?php echo home_url('/for-teachers/');?>" class="<?php if(is_page('for-teachers')){echo "is-current";}?>">高校の先生方</a></li>
-		 <li><a href="<?php echo home_url('/for-recruiters/'); ?>" class="<?php if(is_page('for-recruiters')){echo "is-current";}?>">企業の方</a></li>
-		 <li><a href="<?php echo home_url('/for-graduates/');?>" class="<?php if(is_page('for-graduates')){echo "is-current";}?>">卒業生の方</a></li>
-		 <li><a href="<?php echo home_url( '/' ); ?>" target="_blank">教職員採用</a></li>
-	 </ul>
-	 <ul class="common-header__menu info">
-		 <li><a href="<?php echo home_url('/contact/'); ?>" class="contact">お問い合わせ</a></li>
-		 <li><a href="<?php echo home_url('/document/');?>" class="document">資料請求</a></li>
-		 <li><a href="<?php echo home_url('/access/'); ?>" class="access">アクセス</a></li>
-	 </ul>
- </nav>
+<nav class="common-header__nav sp">
+<ul class="common-header__menu page">
+	<li><a href="<?php echo home_url('/about/'); ?>" class="<?php if(is_page('about')){echo "is-current";}?>">岩崎学園について</a></li>
+	<li><a href="<?php echo home_url('/group/');?>" class="<?php if(is_page('group')){echo "is-current";}?>">岩崎学園グループ</a></li>
+	<li><a href="<?php echo home_url('/philosophy/'); ?>" class="<?php if(is_page('philosophy')){echo "is-current";}?>">岩崎学園の学び</a></li>
+	<li><a href="<?php echo home_url('/students_support/');?>" class="<?php if(is_page('students_support')){echo "is-current";}?>">学生支援</a></li>
+	<li><a href="<?php echo home_url( '/movie/' ); ?>" class="<?php if(is_page('movie')){echo "is-current";}?>">動画で見る岩崎学園</a></li>
+</ul>
+<ul class="common-header__menu contact">
+	<li><a href="<?php echo home_url('/for-parents/'); ?>" class="<?php if(is_page('for-parents')){echo "is-current";}?>">保護者の方</a></li>
+	<li><a href="<?php echo home_url('/for-teachers/');?>" class="<?php if(is_page('for-teachers')){echo "is-current";}?>">高校の先生方</a></li>
+	<li><a href="<?php echo home_url('/for-recruiters/'); ?>" class="<?php if(is_page('for-recruiters')){echo "is-current";}?>">企業の方</a></li>
+	<li><a href="<?php echo home_url('/for-graduates/');?>" class="<?php if(is_page('for-graduates')){echo "is-current";}?>">卒業生の方</a></li>
+	<li><a href="<?php echo home_url( '/' ); ?>" target="_blank">教職員採用</a></li>
+</ul>
+<ul class="common-header__menu info">
+	<li><a href="<?php echo home_url('/contact/'); ?>" class="contact">お問い合わせ</a></li>
+	<li><a href="<?php echo home_url('/document/');?>" class="document">資料請求</a></li>
+	<li><a href="<?php echo home_url('/access/'); ?>" class="access">アクセス</a></li>
+</ul>
+</nav>
 
- <nav class="common-header__nav upper">
-	 <ul class="common-header__menu contact">
-		 <li><a href="<?php echo home_url('/for-parents/'); ?>">保護者の方</a></li>
-		 <li><a href="<?php echo home_url('/for-teachers/');?>">高校の先生方</a></li>
-		 <li><a href="<?php echo home_url('/for-recruiters/'); ?>">企業の方</a></li>
-		 <li><a href="<?php echo home_url('/for-graduates/');?>">卒業生の方</a></li>
-		 <li><a href="https://recruit.iwasaki.ac.jp/" target="_blank">教職員採用</a></li>
-	 </ul>
-	 <ul class="common-header__menu info">
-		 <li><a href="<?php echo home_url('/contact/'); ?>" class="contact">お問い合わせ</a></li>
-		 <li><a href="<?php echo home_url('/document/');?>" class="document">資料請求</a></li>
-		 <li><a href="<?php echo home_url('/access/'); ?>" class="access">アクセス</a></li>
-	 </ul>
- </nav>
- <nav class="common-header__nav lower">
-	 <ul class="common-header__menu page">
-		 <li><a href="<?php echo home_url('/about/'); ?>" class="<?php if(is_page('about')){echo "is-current";}?>">岩崎学園について</a></li>
-		 <li><a href="<?php echo home_url('/group/');?>" class="<?php if(is_page('group')){echo "is-current";}?>">岩崎学園グループ</a></li>
-		 <li><a href="<?php echo home_url('/philosophy/'); ?>" class="<?php if(is_page('philosophy')){echo "is-current";}?>">岩崎学園の学び</a></li>
-		 <li><a href="<?php echo home_url('/students_support/');?>" class="<?php if(is_page('students_support')){echo "is-current";}?>">学生支援</a></li>
-		 <li><a href="<?php echo home_url( '/movie/' ); ?>" class="<?php if(is_page('movie')){echo "is-current";}?>">動画で見る岩崎学園</a></li>
-	 </ul>
- </nav>
+<nav class="common-header__nav upper">
+<ul class="common-header__menu contact">
+	<li><a href="<?php echo home_url('/for-parents/'); ?>">保護者の方</a></li>
+	<li><a href="<?php echo home_url('/for-teachers/');?>">高校の先生方</a></li>
+	<li><a href="<?php echo home_url('/for-recruiters/'); ?>">企業の方</a></li>
+	<li><a href="<?php echo home_url('/for-graduates/');?>">卒業生の方</a></li>
+	<li><a href="https://recruit.iwasaki.ac.jp/" target="_blank">教職員採用</a></li>
+</ul>
+<ul class="common-header__menu info">
+	<li><a href="<?php echo home_url('/contact/'); ?>" class="contact">お問い合わせ</a></li>
+	<li><a href="<?php echo home_url('/document/');?>" class="document">資料請求</a></li>
+	<li><a href="<?php echo home_url('/access/'); ?>" class="access">アクセス</a></li>
+</ul>
+</nav>
+<nav class="common-header__nav lower">
+<ul class="common-header__menu page">
+	<li><a href="<?php echo home_url('/about/'); ?>" class="<?php if(is_page('about')){echo "is-current";}?>">岩崎学園について</a></li>
+	<li><a href="<?php echo home_url('/group/');?>" class="<?php if(is_page('group')){echo "is-current";}?>">岩崎学園グループ</a></li>
+	<li><a href="<?php echo home_url('/philosophy/'); ?>" class="<?php if(is_page('philosophy')){echo "is-current";}?>">岩崎学園の学び</a></li>
+	<li><a href="<?php echo home_url('/students_support/');?>" class="<?php if(is_page('students_support')){echo "is-current";}?>">学生支援</a></li>
+	<li><a href="<?php echo home_url( '/movie/' ); ?>" class="<?php if(is_page('movie')){echo "is-current";}?>">動画で見る岩崎学園</a></li>
+</ul>
+</nav>
 </div>
 </header>
 */ ?>
-		<header class="common-header">
-			<div class="common-header__inner">
-				<!-- *** logo *** -->
-				<?php if (is_front_page()): ?>
-					<h1 class="common-header__logo">
-						<a
-							href="<?php echo esc_url(home_url('/')); ?>"><?php get_template_part('template-parts/svg/logo'); ?></a>
-					</h1>
-				<?php else: ?>
-					<div class="common-header__logo">
-						<a
-							href="<?php echo esc_url(home_url('/')); ?>"><?php get_template_part('template-parts/svg/logo'); ?></a>
-					</div>
-				<?php endif; ?>
-				<div class="common-header__toggle">
-					<span></span>
-					<span></span>
-					<span></span>
+	<header class="common-header">
+		<div class="common-header__inner">
+			<!-- *** logo *** -->
+			<?php if (is_front_page()): ?>
+				<h1 class="common-header__logo">
+					<a href="<?php echo esc_url(home_url('/')); ?>">
+						<?php get_template_part('template-parts/svg/logo'); ?>
+					</a>
+				</h1>
+			<?php else: ?>
+				<div class="common-header__logo">
+					<a href="<?php echo esc_url(home_url('/')); ?>">
+						<?php get_template_part('template-parts/svg/logo'); ?>
+					</a>
 				</div>
-				<nav class="common-header__menu">
-					<ul class="common-header__menuList">
-						<?php if (function_exists('have_rows') && have_rows('header_menu', 'option')): ?>
+			<?php endif; ?>
+			<div class="common-header__toggle">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+			<nav class="common-header__menu">
+				<ul class="common-header__menuList">
+					<?php if (function_exists('have_rows') && have_rows('header_menu', 'option')): ?>
+						<?php
+						$site_host = parse_url(home_url(), PHP_URL_HOST);
+						$current_path = untrailingslashit(parse_url(get_permalink(), PHP_URL_PATH));
+						?>
+						<?php while (function_exists('have_rows') && have_rows('header_menu', 'option')):
+							the_row(); ?>
 							<?php
-							$site_host = parse_url(home_url(), PHP_URL_HOST);
-							$current_path = untrailingslashit(parse_url(get_permalink(), PHP_URL_PATH));
+							$link = get_sub_field('header_menu_url');
+							if (empty($link) || empty($link['url']))
+								continue;
+
+							$menu_host = parse_url($link['url'], PHP_URL_HOST);
+							$menu_path = untrailingslashit(parse_url($link['url'], PHP_URL_PATH));
+							$is_internal = (empty($menu_host) || $menu_host === $site_host);
+
+							$is_current = '';
+							if ($is_internal && $current_path === $menu_path)
+								$is_current = 'current';
+							if ($is_internal && $menu_path === '/career' && (is_post_type_archive('career') || is_singular('career')))
+								$is_current = 'current';
 							?>
-							<?php while (function_exists('have_rows') && have_rows('header_menu', 'option')):
-								the_row(); ?>
-								<?php
-								$link = get_sub_field('header_menu_url');
-								if (empty($link) || empty($link['url']))
-									continue;
-
-								$menu_host = parse_url($link['url'], PHP_URL_HOST);
-								$menu_path = untrailingslashit(parse_url($link['url'], PHP_URL_PATH));
-								$is_internal = (empty($menu_host) || $menu_host === $site_host);
-
-								$is_current = '';
-								if ($is_internal && $current_path === $menu_path)
-									$is_current = 'current';
-								if ($is_internal && $menu_path === '/career' && (is_post_type_archive('career') || is_singular('career')))
-									$is_current = 'current';
-								?>
-								<li class="<?php echo $is_current; ?>">
-									<a href="<?php echo $link['url']; ?>"
-										target="<?php echo $link['target']; ?>"><?php echo $link['title']; ?></a>
-								</li>
-							<?php endwhile; ?>
-						<?php endif; ?>
-					</ul>
-					<ul class="common-header__btn tabsp-only--flex">
-						<li><a href="<?php echo home_url('/contact/'); ?>" class="contact">お問い合わせ</a></li>
-						<li><a href="<?php echo home_url('/access/'); ?>" class="access">アクセス</a></li>
-					</ul>
-				</nav>
-				<ul class="common-header__btn pc-only--flex">
+							<li class="<?php echo $is_current; ?>">
+								<a href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>">
+									<?php echo $link['title']; ?>
+								</a>
+							</li>
+						<?php endwhile; ?>
+					<?php endif; ?>
+				</ul>
+				<ul class="common-header__btn tabsp-only--flex">
 					<li><a href="<?php echo home_url('/contact/'); ?>" class="contact">お問い合わせ</a></li>
 					<li><a href="<?php echo home_url('/access/'); ?>" class="access">アクセス</a></li>
 				</ul>
-			</div>
-		</header>
-		<!-- ////ヘッダー -->
+			</nav>
+			<ul class="common-header__btn pc-only--flex">
+				<li><a href="<?php echo home_url('/contact/'); ?>" class="contact">お問い合わせ</a></li>
+				<li><a href="<?php echo home_url('/access/'); ?>" class="access">アクセス</a></li>
+			</ul>
+		</div>
+	</header>
+	<!-- ////ヘッダー -->
 
-		<!-- コンテンツ -->
-		<main class="common-main">
-			<?php get_template_part('template-parts/common/page-title'); ?>
-			<?php
-			if (!is_front_page()) {
-				get_template_part('template-parts/common/breadcrumbs');
-			}
-			?>
+	<!-- コンテンツ -->
+	<main class="common-main">
+		<?php get_template_part('template-parts/common/page-title'); ?>
+		<?php
+		if (!is_front_page()) {
+			get_template_part('template-parts/common/breadcrumbs');
+		}
+		?>

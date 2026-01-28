@@ -1,13 +1,13 @@
 <?php
 /**
  * Template Name: LP2025（テスト）
- * Description: カスタム投稿タイプ 'lp_event' からイベントを取得して表示。
+ * Description: カスタム投稿タイプ 'lp_event' からイベントを取得して表示するランディングページ。
  * 
- * 仕様:
- * - カレンダー削除（シンプル化）
- * - 未来イベント優先（昇順）、なければ過去イベント（降順）
- * - 日付ロジック：今日以降は受付中（厳密な整数比較）
- * - 管理者のみデバッグ情報表示
+ * 仕様詳細:
+ * - 多機能なカレンダーを排除し、シンプルなリスト形式を採用。
+ * - 未来のイベントを優先的に整理：未来（近い順）-> 日付未定 -> 過去（新しい順）の順で表示。
+ * - 日付判定：サーバー時刻ではなく WordPress 設定のローカルタイムを基準に判定。
+ * - 権限管理：サイト管理者（manage_options 権限保持者）に対してのみデバッグ情報を表示。
  */
 
 get_header();
@@ -21,42 +21,61 @@ $hero_cta_url = '';
 
 if (have_posts()) {
   while (have_posts()) {
-    the_post(); // Main Page Loop
+    the_post(); // WordPress メインループを開始し、グローバル $post 変数をセット
     $page_title = get_the_title();
     $page_content = get_the_content();
+    // カスタムフィールド 'lp_hero_cta_url' から CTA の遷移先 URL を取得
     $hero_cta_url = get_post_meta(get_the_ID(), 'lp_hero_cta_url', true);
+    // 表示対象の学校 ID を取得
+    $target_school_id = get_post_meta(get_the_ID(), 'lp_target_school', true);
   }
 }
-// Fallback CTA
+
+// CTA URL が設定されていない場合のフォールバック（デフォルト値）
 if (!$hero_cta_url) {
   $hero_cta_url = '#';
 }
 
 /* =========================================================
- * 1. データ取得 (WP_Query)
+ * 1. データ取得 (WP_Query: lp_event)
  * ======================================================= */
-// 日付基準：WordPressのローカルタイムで Ymd (int) を取得
+// 日付基準：WordPress 設定のタイムゾーンに基づいた Ymd 形式（整数）を取得
 $today_int = (int) wp_date('Ymd');
-$is_admin = is_user_logged_in() && current_user_can('manage_options');
+// 管理者かどうか、かつ URL 引数に 'debug' が含まれているかを判定（デバッグ表示用）
+$is_admin = is_user_logged_in() && current_user_can('manage_options') && isset($_GET['debug']);
 
-// Debug output buffer
+// デバッグ情報を蓄積するためのバッファ
 $debug_html = '';
 
 if ($is_admin) {
   $debug_html .= '<div style="background:#ffe; color:#333; padding:10px; border-bottom:1px solid #fcc; font-size:11px; font-family:monospace; position:fixed; top:32px; right:10px; z-index:9999; max-width:300px; opacity:0.95; max-height:80vh; overflow-y:auto;">';
   $debug_html .= '<strong>[Admin Debug]</strong><br>';
   $debug_html .= 'Today(int): ' . $today_int . '<br>';
+  $debug_html .= 'Target School ID: ' . ($target_school_id ? $target_school_id : 'None') . '<br>';
   $debug_html .= '------------------<br>';
 }
 
+// カスタム投稿 'lp_event' を全件取得するためのクエリ定義
 $args = [
   'post_type' => 'lp_event',
-  'posts_per_page' => -1, // 全件取得
+  'posts_per_page' => -1, // 全件取得。ページネーションは行わず JS 側で表示制御する
   'post_status' => 'publish',
-  // 'meta_key'    => 'event_date_ymd', // 必須にすると日付未設定の投稿が出なくなるため除外
 ];
+
+// 学校フィルターが設定されている場合、クエリに追加
+if (!empty($target_school_id)) {
+  $args['tax_query'] = [
+    [
+      'taxonomy' => 'lp_event_school',
+      'field' => 'term_id',
+      'terms' => $target_school_id,
+    ],
+  ];
+}
+
 $query = new WP_Query($args);
 
+// 管理画面での参考として投稿ステータスごとの件数をデバッグ出力
 $counts = wp_count_posts('lp_event');
 $count_publish = $counts->publish;
 $count_draft = $counts->draft;
@@ -68,32 +87,32 @@ if ($is_admin) {
   $debug_html .= 'Query Found: ' . $query->found_posts . '<br>';
 }
 
-$future_events = [];
-$past_events = [];
-$nodate_events = []; // 日付未設定
+// カテゴリ分け用の配列を初期化
+$future_events = []; // 今日以降のイベント
+$past_events = [];   // 過去のイベント
+$nodate_events = []; // 日付未設定のイベント
 
 if ($query->have_posts()) {
   while ($query->have_posts()) {
     $query->the_post();
 
-    // Meta取得
+    // カスタムフィールドから日付情報を取得
     $d_ymd_raw = get_post_meta(get_the_ID(), 'event_date_ymd', true);
-    // 正規化（数字以外除去してint化）
+    // 数字以外を除去し、比較用の整数型に変換（例: "2026/01/01" -> 20260101）
     $event_date_int = (int) preg_replace('/\D/', '', $d_ymd_raw);
 
+    // ボタンの遷移先 URL や Pickup フラグの取得
     $event_url = get_post_meta(get_the_ID(), 'event_url', true);
-
     $is_pickup = get_post_meta(get_the_ID(), 'event_is_pickup', true) === 'on';
 
-    // 受付ステータス判定: Open if event date is today or future
-    // 日付未設定($event_date_int == 0)の場合はどうするか？ -> 一応表示するが「詳細未定」扱いなど
+    // 受付ステータス判定: 開催日が今日以降であれば Open（受付中）
     if ($event_date_int > 0) {
       $is_open = ($event_date_int >= $today_int);
     } else {
-      $is_open = true; // 日付未定ならとりあえずOpen扱いにする（要件次第）
+      $is_open = true; // 日付未定の場合はデフォルトでオープン扱い
     }
 
-    // Debug info per post
+    // 管理者向けデバッグ表示の構築
     if ($is_admin) {
       $status_label = $is_open ? '<span style="color:green;font-weight:bold;">OPEN</span>' : '<span style="color:red;">CLOSED</span>';
       $url_label = !empty($event_url) ? '(URL:Yes)' : '(URL:No)';
@@ -109,20 +128,21 @@ if ($query->have_posts()) {
       );
     }
 
-    // 画像判定
+    // 画像のURL判定：アイキャッチ > カスタムフィールド画像 > デフォルト画像 の優先順位
     $thumb_url = get_the_post_thumbnail_url(get_the_ID(), 'large');
     if (!$thumb_url) {
       $thumb_url = get_post_meta(get_the_ID(), 'event_image_url', true);
     }
     if (empty($thumb_url)) {
+      // 画像が全く設定されていない場合のダミー画像（No Image）
       $thumb_url = 'https://placehold.jp/24/cccccc/ffffff/1200x675.png?text=No%20Image';
     }
 
-    // コース情報
+    // 分類（タクソノミー）情報の取得：最初の1つを代表コース名として表示
     $terms = get_the_terms(get_the_ID(), 'lp_event_course');
     $course_name = ($terms && !is_wp_error($terms)) ? $terms[0]->name : '';
 
-    // 日付整形
+    // 表示用日付テキストの構築（カスタムフィールドが空の場合は Ymd から自動生成）
     $date_text = get_post_meta(get_the_ID(), 'event_date_text', true);
     if (empty($date_text) && $event_date_int > 0) {
       $ymd_str = (string) $event_date_int;
@@ -134,13 +154,14 @@ if ($query->have_posts()) {
       }
     }
 
+    // 表示用の一時的なデータ配列を作成
     $event_data = [
       'id' => get_the_ID(),
       'title' => get_the_title(),
-      'content' => get_the_content(), // Add for Modal
+      'content' => get_the_content(), // モーダル表示用に使用
       'lead' => get_the_excerpt(),
-      'date_ymd' => $d_ymd_raw, // Original String
-      'date_int' => $event_date_int, // Integer
+      'date_ymd' => $d_ymd_raw,
+      'date_int' => $event_date_int,
       'date_text' => $date_text,
       'time' => get_post_meta(get_the_ID(), 'event_time', true),
       'place' => get_post_meta(get_the_ID(), 'event_place', true),
@@ -152,6 +173,7 @@ if ($query->have_posts()) {
       'is_pickup' => $is_pickup,
     ];
 
+    // 配列への振り分け
     if ($event_date_int == 0) {
       $nodate_events[] = $event_data;
     } else if ($is_open) {
@@ -160,9 +182,10 @@ if ($query->have_posts()) {
       $past_events[] = $event_data;
     }
   }
-  wp_reset_postdata();
+  wp_reset_postdata(); // メインクエリへの影響を防ぐためリセット
 }
 
+// 最終的なデバッグ件数表示
 if ($is_admin) {
   $debug_html .= 'Future: ' . count($future_events) . '<br>';
   $debug_html .= 'Past: ' . count($past_events) . '<br>';
@@ -172,27 +195,27 @@ if ($is_admin) {
 }
 
 /* =========================================================
- * 2. 表示用リストの構築
+ * 2. 表示用リストの構築（並び替えと結合）
  * ======================================================= */
-// 並び替え: 未来(近い順) -> 日付未定 -> 過去(新しい順)
-// 未来イベント（昇順）
+// 未来イベント：日付が近い順（昇順）
 if (!empty($future_events)) {
   usort($future_events, function ($a, $b) {
     return $a['date_int'] - $b['date_int'];
   });
 }
-// 過去イベント（降順）
+// 過去イベント：日付が新しい順（降順）
 if (!empty($past_events)) {
   usort($past_events, function ($a, $b) {
     return $b['date_int'] - $a['date_int'];
   });
 }
 
-// 結合: 未来 -> 日付なし -> 過去
+// 結合順：未来 -> 日付未定 -> 過去 の順で1つのリストに統合
 $all_sorted_events = array_merge($future_events, $nodate_events, $past_events);
 
 $pickup_events = [];
-$grid_events = $all_sorted_events; // Pickup含め、すべての予定を一覧に表示する
+// 一覧グリッド用には全てのソート済みイベントを使用
+$grid_events = $all_sorted_events;
 
 foreach ($all_sorted_events as $ev) {
   if ($ev['is_pickup']) {
@@ -200,14 +223,13 @@ foreach ($all_sorted_events as $ev) {
   }
 }
 
-// Pickupがない場合のフォールバック: 全体から最初の1つをPickupにする
+// Pickup 指定がない場合のフォールバック: ソート済みリストの先頭を Pickup 枠に配置
 if (empty($pickup_events) && !empty($all_sorted_events)) {
   $pickup_events[] = $all_sorted_events[0];
 }
 
-
 /* =========================================================
- * 3. CSS (Scoped)
+ * 3. スタイリング (Scoped CSS)
  * ======================================================= */
 ?>
 <style>
@@ -625,7 +647,8 @@ if (empty($pickup_events) && !empty($all_sorted_events)) {
 
   .lp2025-grid__extra-inner {
     min-height: 0;
-    padding-bottom: 24px; /* Maintain gap between cards and button area */
+    padding-bottom: 24px;
+    /* Maintain gap between cards and button area */
   }
 
   .lp2025-grid--extra {
@@ -1172,7 +1195,8 @@ if (empty($pickup_events) && !empty($all_sorted_events)) {
                       </div>
                       <div class="lp2025-card__body">
                         <?php if ($ev['course']): ?>
-                          <div class="lp2025-card__tags"><span class="lp2025-tag"><?php echo esc_html($ev['course']); ?></span></div>
+                          <div class="lp2025-card__tags"><span class="lp2025-tag"><?php echo esc_html($ev['course']); ?></span>
+                          </div>
                         <?php endif; ?>
                         <h3 class="lp2025-card__title"><?php echo esc_html($ev['title']); ?></h3>
                         <dl class="lp2025-card__meta">
@@ -1255,7 +1279,7 @@ if (empty($pickup_events) && !empty($all_sorted_events)) {
     ];
   }
   echo json_encode($map);
-  ?>;
+  ?>
 
   let lpClickSequence = [];
   const lpSecretPattern = [1, 5, 0, 2, 3, 1]; // Visual index ritual: Top-Ctr -> Bot-R -> Top-L -> Top-R -> Bot-L -> Top-Ctr
@@ -1458,7 +1482,7 @@ if (empty($pickup_events) && !empty($all_sorted_events)) {
       let isExpanded = false;
       loadMoreBtn.addEventListener('click', function () {
         const hiddenCards = Array.from(extraWrapper.querySelectorAll('.lp2025-card--hidden'));
-        
+
         if (!isExpanded) {
           // Open
           isExpanded = true;
@@ -1475,7 +1499,7 @@ if (empty($pickup_events) && !empty($all_sorted_events)) {
         } else {
           // Close
           isExpanded = false;
-          
+
           // 1. Smooth scroll to the scroll-anchor area (which will move)
           // But to make it smoother, we scroll to the anchor *while* it's moving
           // or scroll to the grid original bottom.
