@@ -1,0 +1,6 @@
+/*最後の要素の余白リセット*/
+@mixin last-mb0() {
+	> :last-child {
+		margin-bottom: 0;
+	}
+}

@@ -1,0 +1,745 @@
+.page-support {
+  padding-top: 30px;
+  @include mq_sp{
+    padding-top: size_sp(61);
+  }
+  &__intro {
+    font-size : 18px;
+    line-height: (34/18);
+    width : 768px;
+    padding-top : 26px;
+    margin : 0 auto;
+    @include mq_sp{
+      @include fz_vw(30);
+      line-height : (60/30);
+      width : size_sp(630);
+      padding-top : size_sp(42);
+    }
+  }
+  &__anchor {
+    width : 656px;
+    @include flex(flex, wrap, center, stretch, normal, row);
+    padding-top : 66px;
+    margin : 0 auto;
+    @include mq_sp{
+      width : size_sp(696);
+      padding-top : size_sp(92);
+    }
+    & .btn__anchor {
+      width : 308px;
+      padding : 14px 0 13px 0.05em;
+      @include mq_sp{
+        @include fz_vw(26);
+        line-height : (37/26);
+        width : size_sp(338);
+        padding : size_sp(26) 0;
+      } 
+      &:nth-of-type(even) {
+        margin-left : 40px;
+        @include mq_sp{
+          margin-left : size_sp(20);
+        }
+      }
+      &:nth-of-type(n + 3) {
+        margin-top : 54px;
+        @include mq_sp{
+          margin-top : size_sp(66);
+        }
+      }
+    }
+  }
+  &__foundation {
+    padding-top : 114px;
+    @include mq_sp{
+      padding-top : size_sp(146);
+    }
+    &Inner {
+      width : 768px;
+      padding-top : 26px;
+      margin : 0 auto;
+      @include flex(flex, wrap, space-between, center, normal, row);
+      @include mq_sp{
+        width : size_sp(630);
+        padding-top : size_sp(42);
+        flex-direction: column;
+      }
+    }
+    &Left {
+      max-width: 349px;
+      width: 100%;
+      margin-bottom: 64px;
+      @include mq_sp{
+        max-width: 100%;
+        margin: 0;
+      }
+    }
+    &Img {
+      @include mq_sp{
+        width: size_sp(532);
+        margin: 0 auto;
+      }
+    }
+    &Right {
+      max-width: 384px;
+      width: 100%;
+      @include mq_sp{
+        max-width: 100%;
+      }
+    }
+    &Ttl {
+      font-size : 20px;
+      font-weight : 400;
+      line-height : (49/20);
+      @include mq_sp{
+        @include fz_vw(34);
+        line-height : (60/34);
+        text-align: center;
+      }
+    }
+    &Txt {
+      font-size : 18px;
+      line-height : (34/18);
+      // margin-top : 6px;
+      @include mq_sp{
+        @include fz_vw(30);
+        line-height : (60/30);
+        margin-top : size_sp(11);
+      }
+    }
+    & .mod-btn {
+      margin: 46px auto 0;
+      @include mq_sp{
+        margin-top: size_sp(62);
+      }
+    }
+  }
+  &__plan {
+    margin-top : 150px;
+    @include mq_sp{
+      margin-top : size_sp(150);
+    }
+    &List {
+      width : 756px;
+      padding-top : 50px;
+      margin : 0 auto;
+      @include flex(flex, wrap, flex-start, stretch, normal, row);
+      @include mq_sp{
+        width : size_sp(630);
+        padding-top : size_sp(50);
+        flex-direction: column;
+      }
+      & > li {
+        width : 356px;
+        background: $white00;
+        padding : 28px 22px 26px;
+        border : solid 2px $gray01;
+        @include mq_sp{
+          width : 100%;
+          padding: size_sp(46) size_sp(36) size_sp(39);
+          border-width : size_sp(4);
+        }
+        &:nth-of-type(even) {
+          margin-left :44px;
+          @include mq_sp{
+            margin-left : 0;
+          }
+        }
+        &:nth-of-type(n + 3) {
+          margin-top : 60px;
+          @include mq_sp{
+            margin-top : size_sp(50);
+          }
+        }
+        &:nth-of-type(n + 2) {
+          @include mq_sp{
+            margin-top : size_sp(50);
+          }
+        }
+      }
+    }
+    &Ttl {
+      font-size : 16px;
+      font-weight: 700;
+      line-height : (24/16);
+      text-align: center;
+      color : $white00;
+      background-color : $black02;
+      padding : 12px 12px 10px;
+      @include mq_sp{
+        @include fz_vw(32);
+        line-height: (46/32);
+        padding : size_sp(18) 0;
+      }
+    }
+    &Txt {
+      font-size : 16px;
+      line-height: (27/16);
+      margin-top : 13px;
+      @include mq_sp{
+        @include fz_vw(26);
+        line-height : (50/26);
+        margin-top : size_sp(24);
+      }
+    }
+    &Sub {
+      &List {
+        margin-top : 28px;
+        @include mq_sp{
+          margin-top : size_sp(43);
+        }
+      }
+      &Item {
+        &:not(:first-of-type) {
+          margin-top : 28px;
+          @include mq_sp{
+            margin-top : size_sp(43);
+          }
+        }
+      }
+      &Ttl {
+        font-size : 12px;
+        line-height : (17/12);
+        text-align: center;
+        color : $white00;
+        background-color : $black02;
+        width : 64px;
+        padding : 4px 0px;
+        @include mq_sp{
+          @include fz_vw(24);
+          line-height : (35/24);
+          width : size_sp(128);
+          padding : size_sp(7)0 size_sp(8);
+        }
+      }
+      &Txt {
+        font-size : 16px;
+        line-height : (27/16);
+        margin-top : 9px;
+        @include mq_sp{
+          @include fz_vw(26);
+          line-height : (50/26);
+          margin-top : size_sp(14);
+        }
+      }
+    }
+    &System {
+      background-color : rgba($gray01, .2);
+      margin-top : 150px;
+      padding : 60px 0px 60px;
+      @include mq_sp{
+        margin-top : size_sp(150);
+        padding : size_sp(79) 0 size_sp(80);
+      }
+      &Intro {
+        font-size : 16px;
+        line-height : (37/16);
+        width : 768px;
+        margin : 24px auto 0;
+        @include mq_sp{
+          @include fz_vw(30);
+          line-height : (60/30);
+          width : size_sp(630);
+          margin-top : size_sp(42);
+        }
+      }
+      &List {
+        width : 765px;
+        padding-top : 43px;
+        margin : 0 auto;
+        @include flex(flex, wrap, flex-start, stretch, normal, row);
+        @include mq_sp{
+          width : size_sp(630);
+          padding-top : size_sp(72);
+          flex-direction: column;
+        }
+        & > li {
+          width : 361px;
+          padding : 30px 25px 28px 28px;
+          background-color : $white00;
+          position : relative;
+          @include mq_sp{
+            width : 100%;
+            padding : size_sp(43) size_sp(40) size_sp(43);
+          }
+          &:nth-of-type(even) {
+            margin-left :43px;
+            @include mq_sp{
+              margin-left : 0;
+            }
+          }
+          &:nth-of-type(n+2) {
+            @include mq_sp{
+              margin-top : size_sp(80);
+            }
+          }
+          &:before {
+            content : "";
+            width : 68px;
+            height : 68px;
+            background: url(./img/page/support/icn_triangle.svg) no-repeat center/cover;
+            position : absolute;
+            top : 0;
+            left : 0;
+            @include mq_sp{
+              width : size_sp(80);
+              height : size_sp(100);
+              background: url(./img/page/support/icn_triangle-sp.svg) no-repeat center/cover;
+            }
+          }
+        }
+      }
+      &Num {
+        font-size : 31px;
+        font-weight: 700;
+        line-height : (45/31);
+        color : $white00;
+        position : absolute;
+        top : 0;
+        left : 9px;
+        z-index: 1;
+        @include mq_sp{
+          @include fz_vw(41);
+          line-height : (60/41);
+          top : 0;
+          left : size_sp(8);
+        }
+      }
+      &Ttl {
+        font-size : 20px;
+        font-weight: 700;
+        line-height : (29/20);
+        text-align: center;
+        @include mq_sp{
+          @include fz_vw(34);
+          line-height: (64/34);
+        }
+      }
+      &Txt {
+        font-size : 16px;
+        line-height: (27/16);
+        color : $black01;
+        margin-top : 19px;
+        @include mq_sp{
+          @include fz_vw(26);
+          line-height: (50/26);
+          margin-top: size_sp(26);
+        }
+      }
+      &Sub {
+        &List {
+          margin-top : 28px;
+          @include mq_sp{
+            margin-top : size_sp(43);
+          }
+        }
+        &Item {
+          &:not(:first-of-type) {
+            margin-top : 28px;
+            @include mq_sp{
+              margin-top : size_sp(43);
+            }
+          }
+        }
+        &Ttl {
+          font-size : 12px;
+          line-height : (17/12);
+          text-align: center;
+          color : $white00;
+          background-color : $black02;
+          width : 64px;
+          padding : 4px 0px;
+          @include mq_sp{
+            @include fz_vw(24);
+            line-height : (35/24);
+            width : size_sp(128);
+            padding : size_sp(7) 0 size_sp(8);
+          }
+        }
+        &Txt {
+          font-size : 16px;
+          line-height : (27/16);
+          margin-top : 9px;
+          @include mq_sp{
+            @include fz_vw(26);
+            line-height : (50/26);
+            margin-top : size_sp(14);
+          }
+        }
+      }
+    }
+  }
+  &__dormitory {
+    margin-top : 150px;
+    @include mq_sp{
+      margin-top : size_sp(150);
+    }
+    &Intro {
+      font-size : 18px;
+      line-height : (34/18);
+      width : 768px;
+      margin : 26px auto 0;
+      @include mq_sp{
+        @include fz_vw(30);
+        line-height: (60/30);
+        width : size_sp(630);
+        margin-top : size_sp(42);
+      }
+    }
+    &Guide {
+      width : 768px;
+      padding-top : 96px;
+      margin : 0 auto;
+      @include mq_sp{
+        width : size_sp(630);
+        padding-top : size_sp(92);
+      }
+      &Intro {
+        font-size : 18px;
+        line-height : (34/18);
+        margin-top : 56px;
+        @include mq_sp{
+          @include fz_vw(30);
+          line-height: (60/30);
+          margin-top : size_sp(52);
+        }
+      }
+      &Group {
+        margin-top : 56px;
+        background-color: $black02;
+        border : solid 3px $black02;
+        @include mq_sp{
+          margin-top: size_sp(42);
+          border : solid size_sp(3) $black02;
+        }
+      }
+      &Name {
+        font-size : 26px;
+        font-weight : 700;
+        line-height : (37/26);
+        text-align: center;
+        color : $white00;
+        padding : 12px 0px 15px;
+        @include mq_sp{
+          @include fz_vw(34);
+          line-height: (49/34);
+          padding : size_sp(25) size_sp(25) size_sp(28);
+        }
+      }
+      &Inner {
+        background-color: $white00;
+        padding : 24px 27px 25px;
+        @include flex(flex, wrap, center, stretch, normal, row);
+        @include mq_sp{
+          padding : size_sp(50) size_sp(41) size_sp(40);
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+      &Left {
+        width : 346px;
+        padding-top : 6px;
+        margin-right : 20px;
+        @include mq_sp{
+          // width : size_sp(556);
+          width: 100%;
+          padding-top : 0;
+          margin-right : 0;
+        }
+        &Main {
+          height : 245px;
+          @include mq_sp{
+            height : size_sp(388);
+          }
+          & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+        &Sub {
+          margin-top : 20px;
+          @include flex(flex, wrap, flex-start, stretch, normal, row);
+          @include mq_sp{
+            margin-top : size_sp(16);
+          }
+          &Item {
+            width : 105px;
+            height : 85px;
+            position : relative;
+            cursor : pointer;
+            @include mq_sp{
+              width : size_sp(170);
+              height : size_sp(127);
+            }
+            &.current {
+              &:before {
+                opacity: 0;
+              }
+            }
+            &:before {
+              content : "";
+              width : 100%;
+              height : 100%;
+              background-color : rgba($black01, .6);
+              position : absolute;
+              top : 0;
+              left : 0;
+              pointer-events: none;
+              transition : .5s;
+              z-index: 1;
+              pointer-events: none;
+            }
+            &:not(:first-of-type) {
+              margin-left : 15px;
+              @include mq_sp{
+                margin-left : size_sp(16);
+              }
+            }
+            & img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+          }
+        }
+      }
+      &Right {
+        width: 342px;
+        @include mq_sp{
+          width: 100%;
+          // width : size_sp(556);
+          padding-top : size_sp(30);
+        }
+        &Item {
+          &:not(:first-of-type) {
+            margin-top : 10px;
+            @include mq_sp{
+              margin-top : size_sp(43);
+            }
+          }
+        }
+        &Ttl {
+          font-size : 16px;
+          font-weight : 700;
+          line-height : (37/16);
+          @include mq_sp{
+            @include fz_vw(26);
+            line-height: (37/26);
+          }
+        }
+        &Txt {
+          font-size : 16px;
+          line-height: (27/16);
+          margin-top : 2px;
+          @include mq_sp{
+            @include fz_vw(26);
+            line-height: (50/26);
+            margin-top : size_sp(14);
+          }
+        }
+      }
+    }
+    &Point {
+      padding-top : 100px;
+      @include mq_sp{
+        padding-top : size_sp(100);
+      }
+      &List {
+        width : 768px;
+        padding-top : 84px;
+        margin : 0 auto;
+        @include mq_sp{
+          width : size_sp(630);
+          padding-top : size_sp(103);
+        }
+      }
+      &Item {
+        padding-left : 26px;
+        @include flex(flex, wrap, flex-start, stretch, normal, row);
+        @include mq_sp{
+          padding : 0;
+          flex-direction: column;
+        }
+        &:not(:first-of-type) {
+          margin-top : 54px;
+          @include mq_sp{
+            margin-top : size_sp(115);
+          }
+        }
+        // &:nth-of-type(3) {
+        //   margin-top : 53px;
+        //   @include mq_sp{
+        //     margin-top : size_sp(84);
+        //   }
+        // }
+      }
+      &Left {
+        width : 244px;
+        height : 173px;
+        margin-top: 5px;
+        margin-right : 18px;
+        position: relative;
+        @include mq_sp{
+          width : 100%;
+          height : size_sp(420);
+          margin-top: 0;
+          margin-right : 0;
+        }
+        & img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      &Num {
+        width : 52px;
+        height : 52px;
+        background-color: $black02;
+        box-shadow: 0px 3px 6px rgba($black00, .1);
+        border-radius: 50%;
+        position: absolute;
+        top : -23px;
+        left : -26px;
+        z-index : 1;
+        @include mq_sp{
+          width : size_sp(104);
+          height : size_sp(104);
+          box-shadow: 0px size_sp(3) size_sp(6) rgba($black00, .1);
+          top : size_sp(-34);
+          left : size_sp(-34);
+        }
+        & span {
+          font-size : 39px;
+          font-weight: 400;
+          line-height : 1;
+          height : 44px;
+          color : $white00;
+          position: absolute;
+          top : 50%;
+          left : 50%;
+          // height消す
+          // transform : translate(-50%, -56%);
+          transform : translate(-50%, -50%);
+          @include mq_sp{
+            @include fz_vw(74);
+            height : size_sp(80);
+          }
+        }
+      }
+      &Right {
+        width : 480px;
+        @include mq_sp{
+          width : 100%;
+          margin-top : size_sp(30);
+        }
+      }
+      &Ttl {
+        font-size : 20px;
+        font-weight : 700;
+        line-height : (37/20);
+        @include mq_sp{
+          @include fz_vw(34);
+          line-height : (49/34);
+          text-align: center;
+        }
+      }
+      &Txt {
+        font-size : 18px;
+        line-height: (34/18);
+        margin-top: 3px;
+        @include mq_sp{
+          @include fz_vw(30);
+          line-height: (60/30);
+          margin-top : size_sp(22);
+        }
+        & > small {
+          font-size: 14px;
+          @include mq_sp{
+            @include fz_vw(26);
+          }
+        }
+      }
+    }
+    &Guidance {
+      width : 768px;
+      padding-top : 92px;
+      margin : 0 auto;
+      @include mq_sp{
+        width :size_sp(630);
+        padding-top : size_sp(112);
+      }
+      &Item {
+        @include flex(flex, wrap, space-between, center, normal, row);
+        @include mq_sp{
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+        }
+        &:not(:first-of-type) {
+          margin-top : 92px;
+          @include mq_sp{
+            margin-top : size_sp(92);
+          }
+        }
+      }
+      &Left {
+        width : 367px;
+        @include mq_sp{
+          width : 100%;
+        }
+      }
+      &Right {
+        font-size : 18px;
+        line-height : (34/18);
+        width : 364px;
+        @include mq_sp{
+          @include fz_vw(30);
+          line-height: (60/30);
+          width : 100%;
+          margin-top : size_sp(52);
+        }
+      }
+    }
+    &Cv {
+      margin-top : 96px;
+      @include mq_sp{
+        margin-top : size_sp(104);
+      }
+      &Txt {
+        font-size : 18px;
+        font-weight: 700;
+        line-height: (26/18);
+        text-align: center;
+        @include mq_sp{
+          @include fz_vw(30);
+          line-height : (60/30);
+        }
+      }
+      & .mod-btn {
+        margin: 40px auto 0;
+        @include mq_sp{
+          margin-top: size_sp(28);
+        }
+      }
+    }
+  }
+  & .mod-banner {
+    margin-top: 150px;
+    padding : 126px 0px 125px;
+    @include mq_sp{
+      padding : size_sp(231) 0 size_sp(230);
+    }
+    & .mod-btn {
+      &.b {
+        margin: 40px auto 0;
+        @include mq_sp{
+          margin-top: size_sp(60);
+        }
+      }
+    }
+  }
+}
+
+::-webkit-full-page-media, :future, :root .page-support__dormitory-point-num span {
+  transform : translate(-50%, -50%);
+}

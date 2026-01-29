@@ -1,0 +1,15 @@
+/* フレックスボックス */
+@mixin flex($display: flex, $wrap: nowrap, $justify_c: space-between, $align_i: flex-start, $align_c: stretch, $direction:row,) {
+	display: -webkit- + $display;
+	display: $display;
+	-webkit-flex-wrap: $wrap;
+	flex-wrap: $wrap;
+	-webkit-justify-content: $justify_c;
+	justify-content: $justify_c;
+	-webkit-align-items: $align_i;
+	align-items: $align_i;
+	-webkit-align-content: $align_c;
+	align-content: $align_c;
+	-webkit-flex-direction: $direction;
+	flex-direction: $direction;
+}

@@ -1,0 +1,89 @@
+/* module > top > info
+============================================================================ */
+
+.top-info{
+  margin-top: 40px;
+  @include mq_sp{
+    margin-top: size_sp(149);
+  }
+  &__inner{
+    max-width: 980px;
+    padding-left: 11px;
+    width: 100%;
+    margin: 0 auto;
+    @media screen and (max-width: 1000px) {
+      max-width: 95%;
+    }
+    @include mq_sp{
+      max-width: size_sp(630);
+      padding-left: 0;
+    }
+  }
+  &__heading{
+    font-size: 26px;
+    padding-left: 5px;
+    line-height: (37/26);
+    color: $black01;
+    @include mq_sp{
+      @include fz_vw(40);
+      line-height: (58/40);
+      padding-left: 0;
+    }
+  }
+  &__box{
+    background: $white00;
+    @include box-shadow();
+    border: 3px solid $black02;
+    padding: 28px 52px;
+    margin-top: 12px;
+    @include mq_sp{
+      border-width: size_sp(4);
+      padding: size_sp(27) size_sp(30) size_sp(22);
+      margin-top: size_sp(40);
+      box-shadow: 0px size_sp(3) size_sp(6) 0px rgba($black00, 0.16);
+    }
+  }
+  &__post{
+    position: relative;
+    width: 100%;
+    &:nth-of-type(n + 2){
+      margin-top: 34px;
+      @include mq_sp{
+        margin-top: size_sp(35);
+      }
+    }
+  }
+  &__date{
+    position: absolute;
+    top: -5px;
+    left: -66px;
+    z-index: 1;
+    padding: 6px 11px 6px 28px;
+    background: $black02;
+    line-height: (24/16);
+    font-weight: 500;
+    color: $white00;
+    @include mq_sp{
+      @include fz_vw(28);
+      line-height: (37/28);
+      padding: size_sp(8) size_sp(19) size_sp(7);
+      display: inline-block;
+      position: relative;
+      top: auto;
+      left: size_sp(-50);
+      bottom:auto;
+    }
+  }
+  &__ttl{
+    @include font-size(18);
+    line-height: (26/18);
+    font-weight: 400;
+    padding-left: 71px;
+    @include mq_sp{
+      @include fz_vw(22);
+      line-height: (42/22);
+      padding-left: 0;
+      margin-top: size_sp(10);
+    }
+  }
+}
