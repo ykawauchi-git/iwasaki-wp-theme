@@ -40,7 +40,7 @@ $graduateAlma = $graduateInfo['career_graduate_alma_mater'];
         the_field("career_archive", 'option');
         elseif (have_posts()) : while (have_posts()) : the_post(); ?>
         <?php get_template_part('content/loop/career');?>
-      <?php endwhile; endif; reset_rows();?>
+      <?php endwhile; endif;?>
     </ul>
     <a class="btn__more b" href="<?php echo home_url('/career/');?>">一覧へ戻る</a>
   </div>
