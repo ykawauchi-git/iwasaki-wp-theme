@@ -20,14 +20,11 @@
     }
   }
   &__inner {
-    max-width: 948px;
-    // max-width: 768px;
+    // max-width: 948px;
+    max-width: 768px;
     width: 100%;
     padding-top: 76px;
     margin: 0 auto;
-    @include mq_tab{
-      max-width: (948/1024)*100%;
-    }
     @include mq_tab{
       max-width: 100%;
       padding: 75px 38px 0;

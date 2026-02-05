@@ -1,4 +1,5 @@
 <?php
+if (class_exists('MW_WP_Form')) {
 /* mw wp form validate いずれか必須状態 */
 
 function entry_validation_rule( $Validation, $data) {
@@ -146,3 +147,4 @@ $Validation->set_rule( 'your_mail-confirm', 'eq', array('target' => 'your_mail',
 return $Validation;
 }
 add_filter( 'mwform_validation_mw-wp-form-701', 'my_exam_validation_rule4', 10, 3 );
+}
