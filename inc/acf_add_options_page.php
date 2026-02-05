@@ -12,12 +12,10 @@ function my_acf_options_page_settings( $settings )
   $settings['capability'] = 'edit_posts';
 	return $settings;
 }
-if (function_exists('acf_add_options_page')) {
-    add_filter('acf/options_page/settings', 'my_acf_options_page_settings');
-}
+add_filter('acf/options_page/settings', 'my_acf_options_page_settings');
 
 //追加オプションページカスタマイズ
- if (function_exists('acf_add_options_page')) {
+ if( function_exists('acf_add_options_page') ) {
   acf_add_options_page(array(
     'page_title' => '情報設定',
     'menu_title' => '情報設定',

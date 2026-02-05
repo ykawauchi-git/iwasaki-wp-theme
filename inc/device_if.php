@@ -1,18 +1,10 @@
 <?php
-/**
- * Device-Specific Conditional Logic
- * 
- * Provides helper functions to detect the user's device based on the User-Agent string.
- */
+/****************************************
+		 デバイスの条件分岐
+*****************************************/
 
-/**
- * Detects if the device is a mobile phone (excluding tablets in most cases).
- * Historically used for switching between Mobile and PC/Tablet layouts.
- * 
- * @return bool True if mobile, false otherwise.
- */
-function is_mobile()
-{
+/*スマホ・PC＆タブレット表示切り替え　is_mobile() */
+function is_mobile() {
     $useragents = array(
         'iPhone',          // iPhone
         'iPod',            // iPod touch
@@ -28,56 +20,42 @@ function is_mobile()
         'incognito',       // Other iPhone browser
         'webmate'          // Other iPhone browser
     );
-    $pattern = '/' . implode('|', $useragents) . '/i';
+    $pattern = '/'.implode('|', $useragents).'/i';
     return preg_match($pattern, $_SERVER['HTTP_USER_AGENT']);
 }
 
-/**
- * Specifically identifies smartphones.
- * Covers a wide range of mobile browsers including Windows Phone and Firefox Mobile.
- * 
- * @return bool True if smartphone, false otherwise.
- */
-function wp_is_phone()
-{
-    $ua = $_SERVER['HTTP_USER_AGENT'];
-    if (
-        strpos($ua, 'iPhone') 							// iPhone
-        || strpos($ua, 'iPod') 								// iPod touch
-        || (strpos($ua, 'Android') && strpos($ua, 'Mobile'))	// Android smartphone
-        || (strpos($ua, 'Windows') && strpos($ua, 'Mobile')) // Windows Phone
-        || (strpos($ua, 'firefox') && strpos($ua, 'Mobile')) // Firefox Mobile
-        || strpos($ua, 'Opera Mini')						// Opera Mini
-        || strpos($ua, 'Opera Mobi')						// Opera Mobile
-        || strpos($ua, 'webmate') 							// Other mobile
-        || strpos($ua, 'incognito') 						// Other mobile
-    ) {
-        return true;
-    } else {
-        return false;
-    }
+//スマートフォンの判別
+function wp_is_phone() {
+	$ua = $_SERVER['HTTP_USER_AGENT'];
+	if (   strpos($ua, 'iPhone') 							// iPhone
+		|| strpos($ua, 'iPod') 								// iPod touch
+		||(strpos($ua, 'Android') && strpos($ua, 'Mobile'))	// Android搭載スマホ
+		||(strpos($ua, 'Windows') && strpos($ua, 'Mobile')) // Windows Phone
+		||(strpos($ua, 'firefox') && strpos($ua, 'Mobile')) // firefox製ブラウザ
+		|| strpos($ua, 'Opera Mini')						// Androidで人気のブラウザ
+		|| strpos($ua, 'Opera Mobi')						// Androidで人気のブラウザ
+		|| strpos($ua, 'webmate') 							// その他の Other iPhone browser
+		|| strpos($uat,'incognito') 						// その他の iPhone browser
+	) {
+		return true;
+	} else {
+		return false;
+	}
 }
-
-/**
- * Specifically identifies tablets.
- * 
- * @return bool True if tablet, false otherwise.
- */
-function wp_is_tablet()
-{
-    $uat = $_SERVER['HTTP_USER_AGENT'];
-    if (
-        strpos($uat, 'iPad') // iPad
-        || strpos($uat, 'iPad Pro') // iPad Pro
-        || (strpos($uat, 'Android') && strpos($uat, 'Mobile') === false) // Android tablet
-        || strpos($uat, 'windows touch') // Windows touch devices
-        || strpos($uat, 'Kindle') // Kindle
-        || strpos($uat, 'Silk') // Amazon Silk
-        || strpos($uat, 'firefox tablet') // Firefox tablet
-        || strpos($uat, 'WebOS') // Palm WebOS
-    ) {
-        return true;
-    } else {
-        return false;
-    }
+//タブレットの判別
+function wp_is_tablet() {
+	$uat = $_SERVER['HTTP_USER_AGENT'];
+	if ( strpos($uat, 'iPad') // iPad
+		|| strpos($uat, 'iPad Pro') // iPad Pro
+		||(strpos($uat, 'Android') && strpos($uat, 'Mobile')=== false ) // Android搭載タブレット
+		|| strpos($uat, 'windows touch') //windows touch
+		|| strpos($uat, 'Kindle') // Kindle
+		|| strpos($uat, 'Silk') // Kindle に付属の Amazon 製ブラウザ
+		|| strpos($uat, 'firefox tablet') //firefox tablet
+		|| strpos($uat, 'WebOS') // Palm
+	) {
+		return true;
+	} else {
+		return false;
+	}
 }
