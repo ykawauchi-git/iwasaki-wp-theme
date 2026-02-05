@@ -1,4 +1,9 @@
-style.css
-style.css.map
-bs-config.js
-node_modules 
+# WordPress
+node_modules/
+npm-debug.log
+yarn-error.log
+.DS_Store
+*.map
+*.log
+debug-db.php
+lp2025_changes.diff

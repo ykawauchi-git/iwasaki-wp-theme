@@ -205,19 +205,6 @@
         display: none;
       }
     }
-    & .wp-block-image {
-      width: 100%;
-      aspect-ratio: 3/2;
-      &.is-vertical {
-        aspect-ratio: auto;
-        height: auto;
-      }
-      & img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain !important;
-      }
-    }
   }
   &__new {
     padding-top: 79px;
