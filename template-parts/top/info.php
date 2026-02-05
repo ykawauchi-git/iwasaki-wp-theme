@@ -1,5 +1,4 @@
 <?php
-if (function_exists('get_option')) {
 $sticky = get_option('sticky_posts');
 if (!empty($sticky)):
 $the_query = new WP_Query($args = array('post_type' => 'post', 'posts_per_page' => 3,'post__in' => $sticky,));
@@ -18,6 +17,4 @@ if ($the_query->have_posts()):?>
     </div>
   </div>
 </section>
-<?php endif; wp_reset_postdata(); endif;
-}
-?>
+<?php endif; wp_reset_postdata(); endif;?>
