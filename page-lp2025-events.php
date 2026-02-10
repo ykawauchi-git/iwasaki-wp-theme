@@ -30,6 +30,7 @@ $fixed_btn_text = get_field('lp_fixed_btn_text') ?: '資料請求はこちら！
 // LINE
 $show_line = get_field('lp_show_line');
 $line_url = get_field('lp_line_url');
+$line_bubble = get_field('lp_line_bubble_text');
 ?>
 
 <style>
@@ -377,9 +378,14 @@ endif; ?>
 
   <!-- LINE友達追加ボタン -->
   <?php if ($show_line && $line_url): ?>
-    <a href="<?php echo esc_url($line_url); ?>" target="_blank" rel="noopener" class="lp2025-line-btn" id="lp2025-line-btn">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/LINE_logo.svg" alt="LINE友達追加">
-    </a>
+    <div class="lp2025-line-wrap" id="lp2025-line-wrap">
+      <?php if ($line_bubble): ?>
+        <div class="lp2025-line-bubble"><?php echo esc_html($line_bubble); ?></div>
+      <?php endif; ?>
+      <a href="<?php echo esc_url($line_url); ?>" target="_blank" rel="noopener" class="lp2025-line-btn">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/LINE_logo.svg" alt="LINE友達追加">
+      </a>
+    </div>
   <?php endif; ?>
 
 </main>

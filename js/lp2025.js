@@ -292,17 +292,17 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   // LINEボタンの表示制御（スクロールで「ぴょこん、ぼいん」と登場）
-  const lineBtn = document.getElementById('lp2025-line-btn');
-  if (lineBtn) {
+  const lineWrap = document.getElementById('lp2025-line-wrap');
+  if (lineWrap) {
     window.addEventListener('scroll', () => {
       const scrollPos = window.pageYOffset || document.documentElement.scrollTop;
       // 300pxほどスクロールしたら表示
       if (scrollPos > 300) {
-        if (!lineBtn.classList.contains('is-visible')) {
-          lineBtn.classList.add('is-visible');
+        if (!lineWrap.classList.contains('is-visible')) {
+          lineWrap.classList.add('is-visible');
         }
       } else {
-        lineBtn.classList.remove('is-visible');
+        lineWrap.classList.remove('is-visible');
       }
     });
   }

@@ -231,7 +231,7 @@ function iwasaki_render_lp_event_metabox($post)
         <td>
             <label>
                 <input type="checkbox" name="lp_event_featured" id="lp_event_featured" value="1" <?php
-    checked($is_featured, '1'); ?>>
+                    checked($is_featured, '1' ); ?>>
                 このイベントをLP上部の「おすすめのイベント」に表示する
             </label>
             <p class="description">チェックされたイベントが1件以上ある場合、その中から1件だけ表示します。</p>
