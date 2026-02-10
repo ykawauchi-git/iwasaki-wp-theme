@@ -681,3 +681,65 @@
     margin-bottom: 60px;
   }
 }
+
+/* LINE友達追加ボタン */
+.lp2025-line-btn {
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  z-index: 10000;
+  width: 65px;
+  height: 65px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(50px) scale(0.5);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.2));
+}
+
+.lp2025-line-btn.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+  animation: boinboin 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+.lp2025-line-btn:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0 6px 15px rgba(0, 0, 0, 0.3));
+}
+
+.lp2025-line-btn img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@keyframes boinboin {
+  0% {
+    transform: scale(0.3) translateY(50px);
+    opacity: 0;
+  }
+
+  60% {
+    transform: scale(1.2) translateY(-10px);
+    opacity: 1;
+  }
+
+  80% {
+    transform: scale(0.9) translateY(5px);
+  }
+
+  100% {
+    transform: scale(1) translateY(0);
+  }
+}
+
+@media (max-width: 767px) {
+  .lp2025-line-btn {
+    width: 55px;
+    height: 55px;
+    left: 15px;
+    bottom: 15px;
+  }
+}

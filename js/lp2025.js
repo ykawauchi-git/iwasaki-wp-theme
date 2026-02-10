@@ -290,4 +290,20 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   }
+
+  // LINEボタンの表示制御（スクロールで「ぴょこん、ぼいん」と登場）
+  const lineBtn = document.getElementById('lp2025-line-btn');
+  if (lineBtn) {
+    window.addEventListener('scroll', () => {
+      const scrollPos = window.pageYOffset || document.documentElement.scrollTop;
+      // 300pxほどスクロールしたら表示
+      if (scrollPos > 300) {
+        if (!lineBtn.classList.contains('is-visible')) {
+          lineBtn.classList.add('is-visible');
+        }
+      } else {
+        lineBtn.classList.remove('is-visible');
+      }
+    });
+  }
 });

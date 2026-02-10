@@ -51,18 +51,90 @@ if (function_exists('acf_add_local_field_group')):
                 'add_term' => 0,
                 'save_terms' => 0,
                 'load_terms' => 0,
-                			'return_format' => 'id', // IDで取得するのが確実
-		),
-		array(
-			'key' => 'field_lp_request_link',
-			'label' => '資料請求リンク',
-			'name' => 'lp_request_link',
-			'type' => 'url',
-			'instructions' => 'ページ下部と固定ボタンに使用する資料請求ページのURLを入力してください。',
-			'required' => 0,
-			'placeholder' => 'https://www.iwasaki.ac.jp/request/',
-		),
-	),
+                'return_format' => 'id', // IDで取得するのが確実
+            ),
+                array(
+                'key' => 'field_lp_theme_color',
+                'label' => 'テーマカラー（アクセント）',
+                'name' => 'lp_theme_color',
+                'type' => 'color_picker',
+                'instructions' => 'ボタンやタイトルなどで使用するメインのアクセントカラーを選択してください。未指定の場合はデフォルト（青）になります。',
+                'default_value' => '#0070c9',
+            ),
+                array(
+                'key' => 'field_lp_sub_color',
+                'label' => 'サブカラー（日付等）',
+                'name' => 'lp_sub_color',
+                'type' => 'color_picker',
+                'instructions' => '日付ラベルなどで使用するサブカラーを選択してください。未指定の場合はデフォルト（黄色）になります。',
+                'default_value' => '#ffb800',
+            ),
+                array(
+                'key' => 'field_lp_request_link',
+                'label' => '資料請求リンク',
+                'name' => 'lp_request_link',
+                'type' => 'url',
+                'instructions' => 'ページ下部と固定ボタンに使用する資料請求ページのURLを入力してください。',
+                'required' => 0,
+                'placeholder' => 'https://www.iwasaki.ac.jp/request/',
+            ),
+                array(
+                'key' => 'field_lp_request_title',
+                'label' => '資料請求セクション：見出し',
+                'name' => 'lp_request_title',
+                'type' => 'text',
+                'default_value' => '資料請求で、もっと詳しく。',
+            ),
+                array(
+                'key' => 'field_lp_fixed_btn_text',
+                'label' => '固定ボタン：テキスト',
+                'name' => 'lp_fixed_btn_text',
+                'type' => 'text',
+                'default_value' => '資料請求はこちら！',
+            ),
+                array(
+                'key' => 'field_lp_request_desc',
+                'label' => '資料請求セクション：説明文',
+                'name' => 'lp_request_desc',
+                'type' => 'textarea',
+                'default_value' => "学科の詳細や、校風が伝わるパンフレットをお届けします。\n将来の進路選びに、ぜひお役立てください。",
+            ),
+                array(
+                'key' => 'field_lp_section_title_featured',
+                'label' => 'おすすめセクション：見出し',
+                'name' => 'lp_title_featured',
+                'type' => 'text',
+                'default_value' => 'おすすめのイベント',
+            ),
+                array(
+                'default_value' => 'イベントを条件でさがす',
+            ),
+                array(
+                'key' => 'field_lp_show_line',
+                'label' => 'LINE友達追加を表示する',
+                'name' => 'lp_show_line',
+                'type' => 'true_false',
+                'instructions' => 'チェックを入れると、左下にLINE友達追加ボタンが表示されます。',
+                'ui' => 1,
+                'default_value' => 0,
+            ),
+                array(
+                'key' => 'field_lp_line_url',
+                'label' => 'LINE友達追加URL',
+                'name' => 'lp_line_url',
+                'type' => 'url',
+                'instructions' => 'LINEの友達追加用URLを入力してください。',
+                'conditional_logic' => array(
+                        array(
+                            array(
+                            'field' => 'field_lp_show_line',
+                            'operator' => '==',
+                            'value' => '1',
+                        ),
+                    ),
+                ),
+            ),
+        ),
         'location' => array(
                 array(
                     array(
@@ -332,7 +404,8 @@ function iwasaki_lp_event_columns_content($column, $post_id)
         if (!empty($warnings)) {
             echo '<span style="color: #d63638; font-weight: bold;">⚠️ ' . implode('<br>', $warnings) . '</span>';
             echo '<br><small>※LPには表示されません</small>';
-        } else {
+        }
+        else {
             echo '<span style="color: #008a20;">✅ OK</span>';
         }
     }

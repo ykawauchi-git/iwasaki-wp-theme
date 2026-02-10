@@ -18,6 +18,42 @@ $today = current_time('Y-m-d');
 $target_course_raw = get_field('lp_target_course'); // IDまたはスラッグを取得
 $request_link = get_field('lp_request_link'); // 資料請求リンクを取得
 
+// テーマカスタマイズ
+$theme_color = get_field('lp_theme_color') ?: '#0070c9';
+$sub_color = get_field('lp_sub_color') ?: '#ffb800';
+$title_featured = get_field('lp_title_featured') ?: 'おすすめのイベント';
+$title_list = get_field('lp_title_list') ?: 'イベントを条件でさがす';
+$request_title = get_field('lp_request_title') ?: '資料請求で、もっと詳しく。';
+$request_desc = get_field('lp_request_desc') ?: "学科の詳細や、校風が伝わるパンフレットをお届けします。\n将来の進路選びに、ぜひお役立てください。";
+$fixed_btn_text = get_field('lp_fixed_btn_text') ?: '資料請求はこちら！';
+
+// LINE
+$show_line = get_field('lp_show_line');
+$line_url = get_field('lp_line_url');
+?>
+
+<style>
+  :root {
+    --lp2025-accent: <?php echo esc_html($theme_color); ?>;
+    --lp2025-sub: <?php echo esc_html($sub_color); ?>;
+    --lp2025-accent-rgb: <?php 
+      // RGB変換（box-shadow用）
+      $hex = str_replace('#', '', $theme_color);
+      if(strlen($hex) == 3) $hex = $hex[0].$hex[0].$hex[1].$hex[1].$hex[2].$hex[2];
+      $r = hexdec(substr($hex, 0, 2));
+      $g = hexdec(substr($hex, 2, 2));
+      $b = hexdec(substr($hex, 4, 2));
+      echo "$r, $g, $b";
+    ?>;
+  }
+  .lp2025-feature-btn, .lp2025-modal-btn, .lp2025-card-date, .lp2025-bottom-btn, .lp2025-fixed-request { background-color: var(--lp2025-accent) !important; }
+  .lp2025-feature-date, .lp2025-filter-buttons button.active { background-color: var(--lp2025-sub) !important; }
+  .lp2025-title, .lp2025-bottom-title { color: var(--lp2025-accent) !important; }
+  .lp2025-card.is-soon::before { background-color: var(--lp2025-sub) !important; }
+  .lp2025-calendar-day.has-event::after { background-color: var(--lp2025-accent) !important; }
+</style>
+
+<?php
 // タックスクエリ用のパラメータを整理
 $course_filter_field = 'slug';
 $course_filter_value = $target_course_raw;
@@ -80,7 +116,7 @@ $featured_query = new WP_Query($featured_args);
 if ($featured_query->have_posts()):
 ?>
   <section class="lp2025-section lp2025-section-feature">
-    <h2 class="lp2025-title">おすすめのイベント</h2>
+    <h2 class="lp2025-title"><?php echo esc_html($title_featured); ?></h2>
 
     <div class="swiper lp2025-feature-swiper">
       <div class="swiper-wrapper">
@@ -157,7 +193,7 @@ endif;
        イベント一覧（条件検索）
        ========================================= -->
   <section class="lp2025-section">
-    <h2 class="lp2025-title">イベントを条件でさがす</h2>
+    <h2 class="lp2025-title"><?php echo esc_html($title_list); ?></h2>
 
     <div class="lp2025-filter-buttons">
       <button type="button" data-tag="all" class="active">すべて</button>
@@ -321,23 +357,29 @@ endif; ?>
 
   <!-- 資料請求固定ボタン -->
   <?php if ($request_link): ?>
-    <a href="#lp-request-bottom" class="lp2025-fixed-request">資料請求はこちら！</a>
+    <a href="#lp-request-bottom" class="lp2025-fixed-request"><?php echo esc_html($fixed_btn_text); ?></a>
   <?php endif; ?>
 
   <!-- 資料請求詳細セクション -->
   <?php if ($request_link): ?>
     <section id="lp-request-bottom" class="lp2025-bottom-section">
       <div class="lp2025-container">
-        <h2 class="lp2025-bottom-title">資料請求で、もっと詳しく。</h2>
-        <p class="lp2025-bottom-desc">
-          学科の詳細や、校風が伝わるパンフレットをお届けします。<br>
-          将来の進路選びに、ぜひお役立てください。
-        </p>
+        <h2 class="lp2025-bottom-title"><?php echo esc_html($request_title); ?></h2>
+        <div class="lp2025-bottom-desc">
+          <?php echo nl2br(esc_html($request_desc)); ?>
+        </div>
         <a href="<?php echo esc_url($request_link); ?>" target="_blank" rel="noopener" class="lp2025-bottom-btn">
           資料請求（無料）はこちら
         </a>
       </div>
     </section>
+  <?php endif; ?>
+
+  <!-- LINE友達追加ボタン -->
+  <?php if ($show_line && $line_url): ?>
+    <a href="<?php echo esc_url($line_url); ?>" target="_blank" rel="noopener" class="lp2025-line-btn" id="lp2025-line-btn">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/LINE_logo.svg" alt="LINE友達追加">
+    </a>
   <?php endif; ?>
 
 </main>
