@@ -51,9 +51,18 @@ if (function_exists('acf_add_local_field_group')):
                 'add_term' => 0,
                 'save_terms' => 0,
                 'load_terms' => 0,
-                'return_format' => 'id', // IDで取得するのが確実
-            ),
-        ),
+                			'return_format' => 'id', // IDで取得するのが確実
+		),
+		array(
+			'key' => 'field_lp_request_link',
+			'label' => '資料請求リンク',
+			'name' => 'lp_request_link',
+			'type' => 'url',
+			'instructions' => 'ページ下部と固定ボタンに使用する資料請求ページのURLを入力してください。',
+			'required' => 0,
+			'placeholder' => 'https://www.iwasaki.ac.jp/request/',
+		),
+	),
         'location' => array(
                 array(
                     array(

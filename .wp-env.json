@@ -1,0 +1,10 @@
+{
+    "core": "https://wordpress.org/wordpress-6.7.1.zip",
+    "themes": [
+        "."
+    ],
+    "port": 8888,
+    "mappings": {
+        "wp-content/uploads": "./wp-content/uploads"
+    }
+}

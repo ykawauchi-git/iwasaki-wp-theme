@@ -1,0 +1,28 @@
+{
+    "name": "iwasaki-wp-theme",
+    "version": "1.0.0",
+    "description": "Restored build configuration for Iwasaki WP Theme",
+    "main": "index.js",
+    "scripts": {
+        "build:sass": "sass style.scss style.css --style expanded",
+        "build:postcss": "postcss style.css --use autoprefixer --replace",
+        "build": "npm run build:sass && npm run build:postcss",
+        "watch": "onchange \"style.scss\" \"scss/**/*.scss\" -- npm run build"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@wordpress/env": "^10.39.0",
+        "autoprefixer": "^10.4.19",
+        "onchange": "^7.1.0",
+        "postcss": "^8.4.38",
+        "postcss-cli": "^11.0.0",
+        "sass": "^1.77.2"
+    },
+    "browserslist": [
+        "last 2 versions",
+        "> 1%",
+        "IE 11"
+    ]
+}

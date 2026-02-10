@@ -269,5 +269,23 @@ document.addEventListener('DOMContentLoaded', function () {
         },
       },
     });
-  }
-});
+    // 資料請求スムーズスクロール
+    const fixedReqBtn = document.querySelector('.lp2025-fixed-request');
+    if (fixedReqBtn) {
+      fixedReqBtn.addEventListener('click', (e) => {
+        const href = fixedReqBtn.getAttribute('href');
+        if (href.startsWith('#')) {
+          e.preventDefault();
+          const target = document.querySelector(href);
+          if (target) {
+            const headerHeight = document.querySelectorAll('header')[0]?.offsetHeight || 0;
+            const targetPos = target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+            window.scrollTo({
+              top: targetPos,
+              behavior: 'smooth'
+            });
+          }
+        }
+      });
+    }
+  });
