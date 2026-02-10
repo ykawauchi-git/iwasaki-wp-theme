@@ -37,7 +37,7 @@
   padding: 24px;
   background: #ffffff;
   border-radius: 20px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
   display: flex;
   gap: 24px;
   align-items: center;
@@ -100,7 +100,7 @@
   font-size: 15px;
   font-weight: 700;
   text-decoration: none;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
@@ -124,13 +124,26 @@
   position: relative;
   background: #fff;
   border-radius: 14px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
   overflow: hidden;
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.lp2025-card-img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #f0f0f0;
+  overflow: hidden;
+  flex-shrink: 0;
 }
 
 .lp2025-card-img img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
   display: block;
 }
 
@@ -138,6 +151,7 @@
   padding: 16px;
   font-size: 16px;
   line-height: 1.7;
+  flex: 1;
 }
 
 .lp2025-card-title {
@@ -157,7 +171,7 @@
   border-radius: 20px;
   font-size: 14px;
   font-weight: 700;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* フィルタボタン */
@@ -296,7 +310,8 @@
 .lp2025-modal {
   position: fixed;
   inset: 0;
-  display: none; /* JSで表示 */
+  display: none;
+  /* JSで表示 */
   align-items: center;
   justify-content: center;
   background: rgba(0, 0, 0, 0.6);
@@ -312,7 +327,7 @@
   box-sizing: border-box;
   background: #fff;
   border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
   overflow-y: auto;
 }
 
@@ -367,17 +382,19 @@
 }
 
 /* ===== LP2025: modal 基本 ===== */
-#lp2025-modal.lp2025-modal{
+#lp2025-modal.lp2025-modal {
   position: fixed;
   inset: 0;
-  display: none;              /* JSが flex にする */
+  display: none;
+  /* JSが flex にする */
   align-items: center;
   justify-content: center;
-  background: rgba(0,0,0,.65);
-  z-index: 100000;            /* 何より前に */
+  background: rgba(0, 0, 0, .65);
+  z-index: 100000;
+  /* 何より前に */
 }
 
-#lp2025-modal .lp2025-modal-inner{
+#lp2025-modal .lp2025-modal-inner {
   width: min(900px, 92vw);
   max-height: 82vh;
   overflow: auto;
@@ -388,7 +405,7 @@
 }
 
 /* 閉じるボタン */
-#lp2025-modal .lp2025-modal-close{
+#lp2025-modal .lp2025-modal-close {
   position: absolute;
   top: 12px;
   right: 12px;
@@ -398,10 +415,11 @@
 }
 
 /* モーダル内画像：ここが「拡大してない感」を消す */
-#lp2025-modal-img{
+#lp2025-modal-img {
   width: 100%;
   max-height: 48vh;
-  object-fit: contain;        /* つぶれない */
+  object-fit: contain;
+  /* つぶれない */
   display: block;
   border-radius: 12px;
   margin: 0 0 12px;
@@ -442,6 +460,7 @@
     font-size: 20px;
   }
 }
+
 /* ===== FV（一押しイベント）レイアウト調整 ===== */
 
 .lp2025-fv {
@@ -455,7 +474,7 @@
   gap: 40px;
   padding: 40px;
   border-radius: 24px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.06);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
 }
 
 /* 画像を大きめに表示 */
@@ -485,7 +504,91 @@
     padding: 24px;
     gap: 24px;
   }
+
   .lp2025-feature-img {
     flex: 0 0 auto;
+  }
+}
+
+/* おすすめイベントスライダー追加スタイル */
+.lp2025-feature-swiper {
+  padding: 20px 0 60px !important;
+  position: relative;
+  overflow: visible !important;
+  /* 両端を見せる */
+}
+
+.lp2025-feature-swiper .swiper-slide {
+  width: 1000px;
+  max-width: 90%;
+  height: auto;
+  opacity: 0.4;
+  transition: opacity 0.3s;
+}
+
+.lp2025-feature-swiper .swiper-slide-active {
+  opacity: 1;
+}
+
+.lp2025-feature-card {
+  max-width: 100%;
+  /* スライダー側で制御 */
+  margin: 0;
+  /* スライダー側で制御 */
+  height: 100%;
+}
+
+.lp2025-feature-pagination {
+  bottom: 0 !important;
+}
+
+.lp2025-feature-pagination .swiper-pagination-bullet {
+  background: #E65100;
+  opacity: 0.3;
+}
+
+.lp2025-feature-pagination .swiper-pagination-bullet-active {
+  opacity: 1;
+}
+
+/* 矢印のカスタマイズ */
+.lp2025-feature-prev,
+.lp2025-feature-next {
+  color: #E65100 !important;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.lp2025-feature-prev:after,
+.lp2025-feature-next:after {
+  font-size: 24px !important;
+  font-weight: bold;
+}
+
+/* 「ふよん」とするアニメーション */
+.lp2025-feature-prev:hover {
+  transform: translateX(-10px) scale(1.2);
+}
+
+.lp2025-feature-next:hover {
+  transform: translateX(10px) scale(1.2);
+}
+
+@media (max-width: 767px) {
+
+  .lp2025-feature-prev,
+  .lp2025-feature-next {
+    display: none !important;
+    /* スマホでは非表示 */
+  }
+}
+/* カレンダーと一覧の間の余白調整 */
+.lp2025-calendar-wrap {
+  max-width: 500px;
+  margin: 0 auto 100px; /* 100pxの大きな余白を確保 */
+}
+
+@media (max-width: 767px) {
+  .lp2025-calendar-wrap {
+    margin-bottom: 60px;
   }
 }
