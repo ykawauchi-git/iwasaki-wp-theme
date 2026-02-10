@@ -33,28 +33,51 @@ $line_url = get_field('lp_line_url');
 $line_bubble = get_field('lp_line_bubble_text');
 ?>
 
-<style>
-  :root {
-    --lp2025-accent: <?php echo esc_html($theme_color); ?>;
-    --lp2025-sub: <?php echo esc_html($sub_color); ?>;
-    --lp2025-accent-rgb: <?php 
-      // RGB変換（box-shadow用）
-      $hex = str_replace('#', '', $theme_color);
-      if(strlen($hex) == 3) $hex = $hex[0].$hex[0].$hex[1].$hex[1].$hex[2].$hex[2];
-      $r = hexdec(substr($hex, 0, 2));
-      $g = hexdec(substr($hex, 2, 2));
-      $b = hexdec(substr($hex, 4, 2));
-      echo "$r, $g, $b";
-    ?>;
-  }
-  .lp2025-feature-btn, .lp2025-modal-btn, .lp2025-card-date, .lp2025-bottom-btn, .lp2025-fixed-request { background-color: var(--lp2025-accent) !important; }
-  .lp2025-feature-date, .lp2025-filter-buttons button.active { background-color: var(--lp2025-sub) !important; }
-  .lp2025-title, .lp2025-bottom-title { color: var(--lp2025-accent) !important; }
-  .lp2025-card.is-soon::before { background-color: var(--lp2025-sub) !important; }
-  .lp2025-calendar-day.has-event::after { background-color: var(--lp2025-accent) !important; }
-</style>
+  <style>
+    :root {
+      --lp2025-accent: <?php echo esc_html($theme_color);
+?>;
+      --lp2025-sub: <?php echo esc_html($sub_color);
+?>;
+      --lp2025-accent-rgb: <?php // RGB変換（box-shadow用）
+$hex = str_replace('#', '', $theme_color);
+if (strlen($hex) == 3)
+  $hex = $hex[0] . $hex[0] . $hex[1] . $hex[1] . $hex[2] . $hex[2];
+$r = hexdec(substr($hex, 0, 2));
+$g = hexdec(substr($hex, 2, 2));
+$b = hexdec(substr($hex, 4, 2));
+echo "$r, $g, $b";
+?>;
+    }
 
-<?php
+    .lp2025-feature-btn,
+    .lp2025-modal-btn,
+    .lp2025-card-date,
+    .lp2025-bottom-btn,
+    .lp2025-fixed-request {
+      background-color: var(--lp2025-accent) !important;
+    }
+
+    .lp2025-feature-date,
+    .lp2025-filter-buttons button.active {
+      background-color: var(--lp2025-sub) !important;
+    }
+
+    .lp2025-title,
+    .lp2025-bottom-title {
+      color: var(--lp2025-accent) !important;
+    }
+
+    .lp2025-card.is-soon::before {
+      background-color: var(--lp2025-sub) !important;
+    }
+
+    .lp2025-calendar-day.has-event::after {
+      background-color: var(--lp2025-accent) !important;
+    }
+  </style>
+
+  <?php
 // タックスクエリ用のパラメータを整理
 $course_filter_field = 'slug';
 $course_filter_value = $target_course_raw;
@@ -98,18 +121,19 @@ if ($target_course_raw) {
     'relation' => 'OR',
     [
       'taxonomy' => 'lp_event_course',
-      'field'    => $course_filter_field,
-      'terms'    => $course_filter_value,
+      'field' => $course_filter_field,
+      'terms' => $course_filter_value,
     ],
     [
       'taxonomy' => 'lp_event_course',
-      'field'    => 'slug',
-      'terms'    => 'all', // 全体表示用コース
+      'field' => 'slug',
+      'terms' => 'all', // 全体表示用コース
     ],
   ];
-} else {
-  // 指定がない（All表示）場合でも、タグ未設定のものは非表示にするための追加条件
-  // (meta_query ですでに対応済み)
+}
+else {
+// 指定がない（All表示）場合でも、タグ未設定のものは非表示にするための追加条件
+// (meta_query ですでに対応済み)
 }
 
 $featured_query = new WP_Query($featured_args);
@@ -117,161 +141,17 @@ $featured_query = new WP_Query($featured_args);
 if ($featured_query->have_posts()):
 ?>
   <section class="lp2025-section lp2025-section-feature">
-    <h2 class="lp2025-title"><?php echo esc_html($title_featured); ?></h2>
+    <h2 class="lp2025-title">
+      <?php echo esc_html($title_featured); ?>
+    </h2>
 
     <div class="swiper lp2025-feature-swiper">
       <div class="swiper-wrapper">
         <?php
-        while ($featured_query->have_posts()):
-          $featured_query->the_post();
-
-          $event_id = get_the_ID();
-          $date = get_post_meta($event_id, 'lp_event_date', true);
-          $date_label = get_post_meta($event_id, 'lp_event_date_label', true);
-          $short = get_post_meta($event_id, 'lp_event_short', true);
-          $detail = get_post_meta($event_id, 'lp_event_detail', true);
-          $link = get_post_meta($event_id, 'lp_event_link', true);
-
-          if (!$date_label && $date) {
-            $date_label = date_i18n('n/j', strtotime($date));
-          }
-
-          $thumb_id = get_post_thumbnail_id($event_id);
-          $img_url = $thumb_id ? wp_get_attachment_image_url($thumb_id, 'large') : '';
-          $img_alt = $thumb_id ? get_post_meta($thumb_id, '_wp_attachment_image_alt', true) : '';
-        ?>
-          <div class="swiper-slide">
-            <div class="lp2025-feature-card">
-              <?php if ($img_url): ?>
-                <div class="lp2025-feature-img">
-                  <img src="<?php echo esc_url($img_url); ?>" alt="<?php echo esc_attr($img_alt); ?>">
-                </div>
-              <?php endif; ?>
-
-              <div class="lp2025-feature-body">
-                <h3 class="lp2025-feature-title">
-                  <?php the_title(); ?>
-                </h3>
-
-                <?php if ($short): ?>
-                  <p class="lp2025-feature-text">
-                    <?php echo esc_html($short); ?>
-                  </p>
-                <?php endif; ?>
-
-                <div class="lp2025-feature-meta">
-                  <?php if ($date_label): ?>
-                    <span class="lp2025-feature-date">
-                      <?php echo esc_html($date_label); ?>
-                    </span>
-                  <?php endif; ?>
-
-                  <?php if ($link): ?>
-                    <a href="<?php echo esc_url($link); ?>" class="lp2025-feature-btn" target="_blank" rel="noopener">
-                      詳細・申込を見る
-                    </a>
-                  <?php endif; ?>
-                </div>
-              </div>
-            </div>
-          </div>
-        <?php endwhile; ?>
-      </div>
-      <!-- Pagination (Dots) -->
-      <div class="lp2025-feature-pagination swiper-pagination"></div>
-      
-      <!-- Navigation (Arrows) -->
-      <div class="lp2025-feature-prev swiper-button-prev"></div>
-      <div class="lp2025-feature-next swiper-button-next"></div>
-    </div>
-  </section>
-<?php
-  wp_reset_postdata();
-endif;
-?>
-
-  <!-- =========================================
-       イベント一覧（条件検索）
-       ========================================= -->
-  <section class="lp2025-section">
-    <h2 class="lp2025-title"><?php echo esc_html($title_list); ?></h2>
-
-    <div class="lp2025-filter-buttons">
-      <button type="button" data-tag="all" class="active">すべて</button>
-      <button type="button" data-tag="oc">オープンキャンパス</button>
-      <button type="button" data-tag="trial">体験授業</button>
-      <button type="button" data-tag="briefing">説明会</button>
-      <button type="button" data-tag="soon">開催間近</button>
-    </div>
-
-    <!-- =========================================
-         カレンダー（表示枠）
-         ※ JSで #lp2025-calendar に中身を描画する想定
-         ========================================= -->
-    <div class="lp2025-calendar-wrap">
-      <div class="lp2025-calendar-head" style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
-        <button type="button" id="lp2025-cal-prev" class="lp2025-cal-nav" style="border:none;background:#f0f0f0;border-radius:16px;padding:4px 10px;cursor:pointer;font-size:18px;">‹</button>
-        <div id="lp2025-cal-title" class="lp2025-cal-title" style="font-weight:700;"></div>
-        <button type="button" id="lp2025-cal-next" class="lp2025-cal-nav" style="border:none;background:#f0f0f0;border-radius:16px;padding:4px 10px;cursor:pointer;font-size:18px;">›</button>
-      </div>
-
-      <div id="lp2025-calendar" class="lp2025-calendar"></div>
-
-      <div id="lp2025-cal-state" class="lp2025-cal-state" style="display:none;">
-        <span id="lp2025-cal-state-text"></span>
-        <button type="button" id="lp2025-cal-reset" class="lp2025-cal-reset">解除</button>
-      </div>
-    </div>
-
-    <div class="lp2025-card-grid">
-      <?php
-$list_args = [
-  'post_type' => 'lp_event',
-  'post_status' => 'publish',
-  'posts_per_page' => -1,
-  'meta_query' => [
-    'relation' => 'AND',
-    'tag_clause' => [
-      'key' => 'lp_event_tag',
-      'value' => '',
-      'compare' => '!=',
-    ],
-    'date_clause' => [
-      'key' => 'lp_event_date',
-      'value' => $today,
-      'compare' => '>=',
-      'type' => 'DATE',
-    ],
-  ],
-  'orderby' => [
-    'date_clause' => 'ASC',
-  ],
-];
-
-if ($target_course_raw) {
-  $list_args['tax_query'] = [
-    'relation' => 'OR',
-    [
-      'taxonomy' => 'lp_event_course',
-      'field'    => $course_filter_field,
-      'terms'    => $course_filter_value,
-    ],
-    [
-      'taxonomy' => 'lp_event_course',
-      'field'    => 'slug',
-      'terms'    => 'all', // 全体表示用コース
-    ],
-  ];
-}
-
-$events_query = new WP_Query($list_args);
-
-if ($events_query->have_posts()):
-  while ($events_query->have_posts()):
-    $events_query->the_post();
+  while ($featured_query->have_posts()):
+    $featured_query->the_post();
 
     $event_id = get_the_ID();
-    $tag = get_post_meta($event_id, 'lp_event_tag', true) ?: 'oc';
     $date = get_post_meta($event_id, 'lp_event_date', true);
     $date_label = get_post_meta($event_id, 'lp_event_date_label', true);
     $short = get_post_meta($event_id, 'lp_event_short', true);
@@ -286,58 +166,205 @@ if ($events_query->have_posts()):
     $img_url = $thumb_id ? wp_get_attachment_image_url($thumb_id, 'large') : '';
     $img_alt = $thumb_id ? get_post_meta($thumb_id, '_wp_attachment_image_alt', true) : '';
 ?>
-
-      <article class="lp2025-card" data-tag="<?php echo esc_attr($tag); ?>"
-        data-date="<?php echo esc_attr($date); ?>" data-modal-title="<?php echo esc_attr(get_the_title()); ?>"
-        data-modal-desc="<?php echo esc_attr($short); ?>" data-modal-detail="<?php echo esc_attr($detail); ?>" <?php
-        if ($img_url): ?>
-        data-modal-img="
-        <?php echo esc_url($img_url); ?>"
-        <?php
+        <div class="swiper-slide">
+          <div class="lp2025-feature-card">
+            <?php if ($img_url): ?>
+            <div class="lp2025-feature-img">
+              <img src="<?php echo esc_url($img_url); ?>" alt="<?php echo esc_attr($img_alt); ?>">
+            </div>
+            <?php
     endif; ?>
-        <?php if ($link): ?>
-        data-modal-link="
-        <?php echo esc_url($link); ?>"
-        <?php
-    endif; ?>
-        >
 
-        <div class="lp2025-card-img">
-          <?php if ($img_url): ?>
-            <img src="<?php echo esc_url($img_url); ?>" alt="<?php echo esc_attr($img_alt); ?>">
-          <?php endif; ?>
+            <div class="lp2025-feature-body">
+              <h3 class="lp2025-feature-title">
+                <?php the_title(); ?>
+              </h3>
+
+              <?php if ($short): ?>
+              <p class="lp2025-feature-text">
+                <?php echo esc_html($short); ?>
+              </p>
+              <?php
+    endif; ?>
+
+              <div class="lp2025-feature-meta">
+                <?php if ($date_label): ?>
+                <span class="lp2025-feature-date">
+                  <?php echo esc_html($date_label); ?>
+                </span>
+                <?php
+    endif; ?>
+
+                <?php if ($link): ?>
+                <a href="<?php echo esc_url($link); ?>" class="lp2025-feature-btn" target="_blank" rel="noopener">
+                  詳細・申込を見る
+                </a>
+                <?php
+    endif; ?>
+              </div>
+            </div>
+          </div>
         </div>
-
-        <div class="lp2025-card-body">
-          <h3 class="lp2025-card-title">
-            <?php the_title(); ?>
-          </h3>
-          <?php if ($short): ?>
-          <p>
-            <?php echo esc_html($short); ?>
-          </p>
-          <?php
-    endif; ?>
-        </div>
-
-        <?php if ($date_label): ?>
-        <div class="lp2025-card-date">
-          <?php echo esc_html($date_label); ?>
-        </div>
         <?php
-    endif; ?>
+  endwhile; ?>
+      </div>
+      <!-- Pagination (Dots) -->
+      <div class="lp2025-feature-pagination swiper-pagination"></div>
 
-      </article>
-
-      <?php
-  endwhile;
+      <!-- Navigation (Arrows) -->
+      <div class="lp2025-feature-prev swiper-button-prev"></div>
+      <div class="lp2025-feature-next swiper-button-next"></div>
+    </div>
+  </section>
+  <?php
   wp_reset_postdata();
-else:
+endif;
 ?>
-      <p>現在、開催予定のイベントはありません。</p>
+
+  <!-- =========================================
+       イベント一覧（条件検索）
+       ========================================= -->
+  <section class="lp2025-section">
+    <h2 class="lp2025-title">
+      <?php echo esc_html($title_list); ?>
+    </h2>
+
+    <div class="lp2025-filter-buttons">
+      <button type="button" data-tag="all" class="active">すべて</button>
+      <button type="button" data-tag="oc">オープンキャンパス</button>
+      <button type="button" data-tag="trial">体験授業</button>
+      <button type="button" data-tag="briefing">説明会</button>
+      <button type="button" data-tag="soon">開催間近</button>
+    </div>
+
+    <!-- =========================================
+         カレンダー（表示枠）
+         ※ JSで #lp2025-calendar に中身を描画する想定
+         ========================================= -->
+    <div class="lp2025-calendar-wrap">
+      <div class="lp2025-calendar-head"
+        style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+        <button type="button" id="lp2025-cal-prev" class="lp2025-cal-nav"
+          style="border:none;background:#f0f0f0;border-radius:16px;padding:4px 10px;cursor:pointer;font-size:18px;">‹</button>
+        <div id="lp2025-cal-title" class="lp2025-cal-title" style="font-weight:700;"></div>
+        <button type="button" id="lp2025-cal-next" class="lp2025-cal-nav"
+          style="border:none;background:#f0f0f0;border-radius:16px;padding:4px 10px;cursor:pointer;font-size:18px;">›</button>
+      </div>
+
+      <div id="lp2025-calendar" class="lp2025-calendar"></div>
+
+      <div id="lp2025-cal-state" class="lp2025-cal-state" style="display:none;">
+        <span id="lp2025-cal-state-text"></span>
+        <button type="button" id="lp2025-cal-reset" class="lp2025-cal-reset">解除</button>
+      </div>
+    </div>
+
+    <div class="lp2025-card-grid">
       <?php
-endif; ?>
+      $list_args = [
+        'post_type' => 'lp_event',
+        'post_status' => 'publish',
+        'posts_per_page' => -1,
+        'meta_query' => [
+          'relation' => 'AND',
+          'tag_clause' => [
+            'key' => 'lp_event_tag',
+            'value' => '',
+            'compare' => '!=',
+          ],
+          'date_clause' => [
+            'key' => 'lp_event_date',
+            'value' => $today,
+            'compare' => '>=',
+            'type' => 'DATE',
+          ],
+        ],
+        'orderby' => [
+          'date_clause' => 'ASC',
+        ],
+      ];
+
+      if ($target_course_raw) {
+        $list_args['tax_query'] = [
+          'relation' => 'OR',
+          [
+            'taxonomy' => 'lp_event_course',
+            'field' => $course_filter_field,
+            'terms' => $course_filter_value,
+          ],
+          [
+            'taxonomy' => 'lp_event_course',
+            'field' => 'slug',
+            'terms' => 'all', // 全体表示用コース
+          ],
+        ];
+      }
+
+      $events_query = new WP_Query($list_args);
+
+      if ($events_query->have_posts()):
+        $count = 0;
+        while ($events_query->have_posts()):
+          $events_query->the_post();
+          $count++;
+
+          $event_id = get_the_ID();
+          $tag = get_post_meta($event_id, 'lp_event_tag', true) ?: 'oc';
+          $date = get_post_meta($event_id, 'lp_event_date', true);
+          $date_label = get_post_meta($event_id, 'lp_event_date_label', true);
+          $short = get_post_meta($event_id, 'lp_event_short', true);
+          $detail = get_post_meta($event_id, 'lp_event_detail', true);
+          $link = get_post_meta($event_id, 'lp_event_link', true);
+
+          if (!$date_label && $date) {
+            $date_label = date_i18n('n/j', strtotime($date));
+          }
+
+          $thumb_id = get_post_thumbnail_id($event_id);
+          $img_url = $thumb_id ? wp_get_attachment_image_url($thumb_id, 'large') : '';
+
+          if ($count == 7): ?>
+            </div><!-- /.lp2025-card-grid -->
+            <div class="lp2025-card-grid lp2025-extra-cards" id="lp2025-extra-cards">
+          <?php endif; ?>
+
+          <article class="lp2025-card" data-tag="<?php echo esc_attr($tag); ?>" data-date="<?php echo esc_attr($date); ?>"
+            data-modal-title="<?php echo esc_attr(get_the_title()); ?>" data-modal-desc="<?php echo esc_attr($short); ?>"
+            data-modal-detail="<?php echo esc_attr($detail); ?>" <?php if ($img_url): ?>data-modal-img="<?php echo esc_url($img_url); ?>"<?php endif; ?>
+            <?php if ($link): ?>data-modal-link="<?php echo esc_url($link); ?>"<?php endif; ?>>
+
+            <div class="lp2025-card-img">
+              <?php if ($img_url): ?>
+              <img src="<?php echo esc_url($img_url); ?>" alt="<?php the_title_attribute(); ?>" loading="lazy">
+              <?php else: ?>
+              <div class="lp2025-card-noimg">No Image</div>
+              <?php endif; ?>
+            </div>
+            <div class="lp2025-card-body">
+              <h3 class="lp2025-card-title"><?php the_title(); ?></h3>
+              <p class="lp2025-card-text"><?php echo esc_html($short); ?></p>
+              <div class="lp2025-card-footer">
+                <span class="lp2025-card-date"><?php echo esc_html($date_label); ?></span>
+                <span class="lp2025-card-btn">詳細を見る</span>
+              </div>
+            </div>
+          </article>
+        <?php endwhile; ?>
+      </div><!-- /.lp2025-card-grid or .lp2025-extra-cards -->
+
+      <?php if ($count >= 7): ?>
+        <div class="lp2025-more-btn-wrap">
+          <button type="button" id="lp2025-more-btn" class="lp2025-more-btn">
+            <span>もっと見る</span>
+          </button>
+        </div>
+      <?php endif; ?>
+
+      <?php wp_reset_postdata(); ?>
+    <?php else: ?>
+      <p>現在、開催予定のイベントはありません。</p>
     </div><!-- /.lp2025-card-grid -->
+    <?php endif; ?>
   </section><!-- /.lp2025-section -->
 
   <!-- =========================================
@@ -358,35 +385,48 @@ endif; ?>
 
   <!-- 資料請求固定ボタン -->
   <?php if ($request_link): ?>
-    <a href="#lp-request-bottom" class="lp2025-fixed-request"><?php echo esc_html($fixed_btn_text); ?></a>
-  <?php endif; ?>
+  <a href="#lp-request-bottom" class="lp2025-fixed-request">
+    <span class="lp2025-fixed-request-text">
+      <?php echo esc_html($fixed_btn_text); ?>
+    </span>
+    <span class="lp2025-fixed-request-sp">資料<br>請求</span>
+  </a>
+  <?php
+endif; ?>
 
   <!-- 資料請求詳細セクション -->
   <?php if ($request_link): ?>
-    <section id="lp-request-bottom" class="lp2025-bottom-section">
-      <div class="lp2025-container">
-        <h2 class="lp2025-bottom-title"><?php echo esc_html($request_title); ?></h2>
-        <div class="lp2025-bottom-desc">
-          <?php echo nl2br(esc_html($request_desc)); ?>
-        </div>
-        <a href="<?php echo esc_url($request_link); ?>" target="_blank" rel="noopener" class="lp2025-bottom-btn">
-          資料請求（無料）はこちら
-        </a>
+  <section id="lp-request-bottom" class="lp2025-bottom-section">
+    <div class="lp2025-container">
+      <h2 class="lp2025-bottom-title">
+        <?php echo esc_html($request_title); ?>
+      </h2>
+      <div class="lp2025-bottom-desc">
+        <?php echo nl2br(esc_html($request_desc)); ?>
       </div>
-    </section>
-  <?php endif; ?>
+      <a href="<?php echo esc_url($request_link); ?>" target="_blank" rel="noopener" class="lp2025-bottom-btn">
+        資料請求（無料）はこちら
+      </a>
+    </div>
+  </section>
+  <?php
+endif; ?>
 
   <!-- LINE友達追加ボタン -->
   <?php if ($show_line && $line_url): ?>
-    <div class="lp2025-line-wrap" id="lp2025-line-wrap">
-      <?php if ($line_bubble): ?>
-        <div class="lp2025-line-bubble"><?php echo esc_html($line_bubble); ?></div>
-      <?php endif; ?>
-      <a href="<?php echo esc_url($line_url); ?>" target="_blank" rel="noopener" class="lp2025-line-btn">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/LINE_logo.svg" alt="LINE友達追加">
-      </a>
+  <div class="lp2025-line-wrap" id="lp2025-line-wrap">
+    <?php if ($line_bubble): ?>
+    <div class="lp2025-line-bubble">
+      <?php echo esc_html($line_bubble); ?>
     </div>
-  <?php endif; ?>
+    <?php
+  endif; ?>
+    <a href="<?php echo esc_url($line_url); ?>" target="_blank" rel="noopener" class="lp2025-line-btn">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/LINE_logo.svg" alt="LINE友達追加">
+    </a>
+  </div>
+  <?php
+endif; ?>
 
 </main>
 

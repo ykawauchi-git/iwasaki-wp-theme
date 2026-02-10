@@ -120,8 +120,23 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   // ==========================
-  // カレンダー
+  // もっとみる機能
   // ==========================
+  const moreBtn = document.getElementById('lp2025-more-btn');
+  const extraCards = document.getElementById('lp2025-extra-cards');
+
+  if (moreBtn && extraCards) {
+    moreBtn.addEventListener('click', function () {
+      const isOpen = extraCards.classList.toggle('is-open');
+      moreBtn.classList.toggle('is-active', isOpen);
+      const btnText = moreBtn.querySelector('span');
+      if (btnText) {
+        btnText.textContent = isOpen ? '閉じる' : 'もっと見る';
+      }
+    });
+  }
+
+  // カレンダー
   const calPrevBtn = document.getElementById('lp2025-cal-prev');
   const calNextBtn = document.getElementById('lp2025-cal-next');
   const calTitle = document.getElementById('lp2025-cal-title');
@@ -198,19 +213,30 @@ document.addEventListener('DOMContentLoaded', function () {
       const date = td.dataset.date;
       const targetCard = document.querySelector(`.lp2025-card[data-date="${date}"]`);
       if (targetCard) {
+        // もし「もっとみる」の中に隠れていたら開く
+        const parentExtra = targetCard.closest('.lp2025-extra-cards');
+        if (parentExtra && !parentExtra.classList.contains('is-open')) {
+          parentExtra.classList.add('is-open');
+          if (moreBtn) {
+            moreBtn.classList.add('is-active');
+            const btnText = moreBtn.querySelector('span');
+            if (btnText) btnText.textContent = '閉じる';
+          }
+        }
+
         targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
 
-        // 視覚的な強調（ふよん、とする拡大と影）
-        targetCard.style.transition = 'transform 0.3s, box-shadow 0.3s';
-        targetCard.style.transform = 'scale(1.05)';
-        targetCard.style.boxShadow = '0 0 30px rgba(230, 81, 0, 0.4)';
-        targetCard.style.zIndex = '10';
+        // 視覚的な強調
+        targetCard.style.transition = 'transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s';
+        targetCard.style.transform = 'scale(1.08)';
+        targetCard.style.boxShadow = '0 0 40px rgba(var(--lp2025-accent-rgb), 0.5)';
+        targetCard.style.zIndex = '100';
 
         setTimeout(() => {
-          targetCard.style.transform = 'scale(1)';
+          targetCard.style.transform = '';
           targetCard.style.boxShadow = '';
           targetCard.style.zIndex = '';
-        }, 1500);
+        }, 2000);
       }
     });
 
@@ -294,16 +320,35 @@ document.addEventListener('DOMContentLoaded', function () {
   // LINEボタンの表示制御（スクロールで「ぴょこん、ぼいん」と登場）
   const lineWrap = document.getElementById('lp2025-line-wrap');
   if (lineWrap) {
+    const showLine = () => {
+      if (!lineWrap.classList.contains('is-visible')) {
+        lineWrap.classList.add('is-visible');
+      }
+    };
+
     window.addEventListener('scroll', () => {
       const scrollPos = window.pageYOffset || document.documentElement.scrollTop;
-      // 300pxほどスクロールしたら表示
-      if (scrollPos > 300) {
-        if (!lineWrap.classList.contains('is-visible')) {
-          lineWrap.classList.add('is-visible');
-        }
+      const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrollPercent = (scrollPos / windowHeight) * 100;
+
+      // 300px以上 かつ PCなら半分(50%)、スマホなら300px位置
+      const isMobile = window.innerWidth <= 767;
+      const triggerPos = isMobile ? 300 : windowHeight * 0.5;
+
+      if (scrollPos > triggerPos) {
+        showLine();
       } else {
         lineWrap.classList.remove('is-visible');
       }
     });
+
+    // 資料請求ボタンを押した時にも出す（まだ出ていなければ）
+    const fixedReqBtn = document.querySelector('.lp2025-fixed-request');
+    if (fixedReqBtn) {
+      fixedReqBtn.addEventListener('click', () => {
+        // スパッと出すのではなく、スクロール中にボインと出すために少し遅延
+        setTimeout(showLine, 500);
+      });
+    }
   }
 });

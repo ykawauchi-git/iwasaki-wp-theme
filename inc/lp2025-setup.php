@@ -119,11 +119,12 @@ if (function_exists('acf_add_local_field_group')):
                 'default_value' => 0,
             ),
                 array(
-                'key' => 'field_lp_line_url',
-                'label' => 'LINE友達追加URL',
-                'name' => 'lp_line_url',
-                'type' => 'url',
-                'instructions' => 'LINEの友達追加用URLを入力してください。',
+                'key' => 'field_lp_line_bubble_text',
+                'label' => 'LINE吹き出しテキスト',
+                'name' => 'lp_line_bubble_text',
+                'type' => 'text',
+                'instructions' => 'LINEボタンの上に表示される吹き出しのテキストを入力してください。',
+                'placeholder' => 'お気軽にご相談ください！',
                 'conditional_logic' => array(
                         array(
                             array(
