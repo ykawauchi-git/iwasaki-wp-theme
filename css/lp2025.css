@@ -769,7 +769,7 @@
   font-weight: bold;
   text-decoration: none;
   box-shadow: 0 4px 15px rgba(214, 54, 56, 0.4);
-  transition: all 0.3s ease;
+  transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), background 0.3s ease, box-shadow 0.3s ease, visibility 0.4s;
   writing-mode: vertical-rl;
   letter-spacing: 0.1em;
   font-size: 16px;
@@ -777,6 +777,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  opacity: 1;
+  visibility: visible;
+}
+
+.lp2025-fixed-request.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  pointer-events: none;
 }
 
 .lp2025-fixed-request-sp {
@@ -817,6 +826,11 @@
     font-weight: bold;
     text-align: center;
     margin-top: -1px;
+  }
+
+  .lp2025-fixed-request.is-hidden {
+    transform: translateY(100px);
+    /* 下に沈むように */
   }
 }
 

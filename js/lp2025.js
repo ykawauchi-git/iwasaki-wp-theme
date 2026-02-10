@@ -297,9 +297,14 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // 資料請求スムーズスクロール
+  // --------------------------
+  // 資料請求スムーズスクロール & 表示制御
+  // --------------------------
   const fixedReqBtn = document.querySelector('.lp2025-fixed-request');
+  const bottomRequestSection = document.getElementById('lp-request-bottom');
+
   if (fixedReqBtn) {
+    // 1. スムーズスクロール
     fixedReqBtn.addEventListener('click', (e) => {
       const href = fixedReqBtn.getAttribute('href');
       if (href.startsWith('#')) {
@@ -315,6 +320,43 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       }
     });
+
+    // 2. 表示制御ロジック
+    let lastScrollTop = 0;
+    const scrollThreshold = 100; // 最初に少しスクロールしてから制御開始
+
+    window.addEventListener('scroll', () => {
+      const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+      const isMobile = window.innerWidth <= 767;
+
+      // ページ最下部付近（資料請求セクションが見えたら）は隠す
+      let isNearBottom = false;
+      if (bottomRequestSection) {
+        const bottomSectionTop = bottomRequestSection.getBoundingClientRect().top + currentScroll;
+        // セクションの少し手前で消す
+        if (currentScroll + window.innerHeight > bottomSectionTop + 100) {
+          isNearBottom = true;
+        }
+      }
+
+      if (isNearBottom) {
+        fixedReqBtn.classList.add('is-hidden');
+      } else if (currentScroll < scrollThreshold) {
+        // ページトップ付近では常に表示
+        fixedReqBtn.classList.remove('is-hidden');
+      } else {
+        // スクロール方向による制御
+        if (currentScroll > lastScrollTop) {
+          // スクロールダウン: 隠す
+          fixedReqBtn.classList.add('is-hidden');
+        } else {
+          // スクロールアップ: 出す
+          fixedReqBtn.classList.remove('is-hidden');
+        }
+      }
+
+      lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+    }, { passive: true });
   }
 
   // LINEボタンの表示制御（スクロールで「ぴょこん、ぼいん」と登場）
