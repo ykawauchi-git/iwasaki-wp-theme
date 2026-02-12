@@ -119,6 +119,30 @@ if (function_exists('acf_add_local_field_group')):
                 'default_value' => 0,
             ),
                 array(
+                'key' => 'field_lp_line_url',
+                'label' => 'LINE友達追加URL',
+                'name' => 'lp_line_url',
+                'type' => 'url',
+                'instructions' => 'LINE公式アカウントの友達追加URLを入力してください。',
+                'required' => 1,
+                'conditional_logic' => array(
+                        array(
+                            array(
+                            'field' => 'field_lp_show_line',
+                            'operator' => '==',
+                            'value' => '1',
+                        ),
+                    ),
+                ),
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'default_value' => '',
+                'placeholder' => '',
+            ),
+                array(
                 'key' => 'field_lp_line_bubble_text',
                 'label' => 'LINE吹き出しテキスト',
                 'name' => 'lp_line_bubble_text',
@@ -232,7 +256,7 @@ function iwasaki_render_lp_event_metabox($post)
         <td>
             <label>
                 <input type="checkbox" name="lp_event_featured" id="lp_event_featured" value="1" <?php
-                    checked($is_featured, '1' ); ?>>
+    checked($is_featured, '1'); ?>>
                 このイベントをLP上部の「おすすめのイベント」に表示する
             </label>
             <p class="description">チェックされたイベントが1件以上ある場合、その中から1件だけ表示します。</p>
