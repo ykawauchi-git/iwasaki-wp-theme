@@ -133,8 +133,9 @@
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 2;
-  background: #f1f5f9;
+  z-index: 0;
+  /* Move behind the placeholder text */
+  background: transparent;
 }
 
 .lp2025-feature-body {
