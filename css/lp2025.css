@@ -1,9 +1,67 @@
-/* ▼ 全体レイアウト */
 .lp2025-page {
   background: #fff;
+  color: #333;
   margin: 0;
   padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "YuGothic", "Yu Gothic", "Meiryo", sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+@media (prefers-color-scheme: dark) {
+  .lp2025-page {
+    background: #0f172a;
+    /* Deep navy instead of black */
+    color: #e2e8f0;
+  }
+
+  .lp2025-feature-card,
+  .lp2025-card,
+  .lp2025-modal-inner,
+  #lp2025-modal .lp2025-modal-inner {
+    background: #1e293b !important;
+    /* Slightly lighter navy */
+    color: #f1f5f9 !important;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4) !important;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  /* Soften headers in dark mode */
+  .lp2025-title,
+  .lp2025-bottom-title {
+    color: #60a5fa !important;
+    /* Lighter, clearer blue */
+  }
+
+  /* Calendar in Dark Mode */
+  .lp2025-calendar-table th {
+    background: #334155 !important;
+    color: #f1f5f9 !important;
+    border-color: #475569 !important;
+  }
+
+  .lp2025-calendar-table td {
+    background: #1e293b !important;
+    color: #e2e8f0 !important;
+    border-color: #334155 !important;
+  }
+
+  .lp2025-calendar-day.has-event {
+    background: rgba(96, 165, 250, 0.15) !important;
+  }
+
+  .lp2025-calendar-day.has-event:hover {
+    background: #60a5fa !important;
+  }
+
+  .lp2025-filter-buttons button {
+    background: #334155;
+    color: #cbd5e1;
+  }
+
+  .lp2025-bottom-section {
+    background: #1e293b;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
 }
 
 .lp2025-section {
@@ -49,12 +107,34 @@
   flex-shrink: 0;
   border-radius: 16px;
   overflow: hidden;
+  background: #f1f5f9;
+  /* Soft light gray */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 240px;
+  position: relative;
+}
+
+.lp2025-feature-img::after {
+  content: "No Image";
+  font-size: 14px;
+  color: #94a3b8;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .lp2025-feature-img img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
   display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background: #f1f5f9;
 }
 
 .lp2025-feature-body {
